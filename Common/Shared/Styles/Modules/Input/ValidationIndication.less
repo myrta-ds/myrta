@@ -1,0 +1,57 @@
+﻿.page-wrapper {
+    .validate-light.field-valid {
+        border: 1px var(--Green) solid !important;
+
+        &.custom-file-input {
+            border: none !important;
+
+            .qq-gallery.qq-uploader {
+                border-color: var(--Green) !important;
+            }
+
+            .new-custom-file-input__item {
+                border-color: var(--Green) !important;
+            }
+        }
+
+        &.custom-multiple-select {
+            border: none !important;
+
+            .chosen-choices {
+                border-color: var(--Green) !important;
+            }
+        }
+
+        &[disabled] {
+            border: unset !important;
+        }
+    }
+
+    .validate-light.field-invalid {
+        border: 1px var(--Red) solid !important;
+
+        &.custom-file-input {
+            border: none !important;
+
+            .qq-gallery.qq-uploader {
+                border-color: var(--Red) !important;
+            }
+
+            .new-custom-file-input__item {
+                border-color: var(--Red) !important;
+            }
+        }
+
+        &.custom-multiple-select {
+            border: none !important;
+
+            .chosen-choices {
+                border-color: var(--Red) !important;
+            }
+        }
+
+        &[disabled] {
+            border: unset !important;
+        }
+    }
+}

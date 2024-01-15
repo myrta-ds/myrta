@@ -1,0 +1,27 @@
+.mrx-input-datepicker.mrx-input-datepicker {
+  width: 100%;
+  position: relative;
+
+  .mrx-input-datepicker__wrapper {
+    position: relative;
+  }
+
+  .mrx-input-datepicker__input {
+    border: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    transition: outline-width 0.2s, border 0.2s;
+
+    &:focus, &:active {
+      outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+    }
+
+    &:hover {
+      border: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+    }
+
+    &:disabled {
+      background-color: var(--neutral-bg-disabled);
+    }
+  }
+}

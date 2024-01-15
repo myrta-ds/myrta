@@ -1,0 +1,25 @@
+<div class="mrx-breadcrumbs" [class]="getClasses">
+  <ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'link'">
+      <a class="mrx-breadcrumbs__link" *ngIf="item" [href]="item.path">
+        <span class="mrx-icon icon-arrow-left icon-font-16 mr-1" *ngIf="item.isShowArrow"></span>
+        {{item.text}}
+      </a>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      <ul class="mrx-breadcrumbs__list">
+        <li *ngFor="let item of items" class="mrx-breadcrumbs__list-item">
+          <ng-container *ngIf="item.isLink; else span">
+            <a class="mrx-breadcrumbs__link mr-1" [href]="item.path">{{item.text}}</a>
+            <span class="mrx-icon icon-chevron-right icon-font-16 mr-1"></span>
+          </ng-container>
+
+          <ng-template #span>
+            <span class="mrx-breadcrumbs__tag">{{item.text}}</span>
+          </ng-template>
+        </li>
+      </ul>
+    </ng-container>
+  </ng-container>
+</div>
+

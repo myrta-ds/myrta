@@ -1,0 +1,33 @@
+.page-wrapper {
+  .page-activity-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1096px;
+    margin: 0 auto;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 -8px;
+      color: var(--Main2);
+      font-size: 16px;
+      line-height: 125%;
+      font-weight: bold;
+
+      &_prev {
+        margin-right: auto;
+      }
+
+      &_next {
+        margin-left: auto;
+      }
+
+      svg {
+        margin: 0 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,453 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large</mrx-label>
+      <mrx-button size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium</mrx-label>
+      <mrx-button size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small</mrx-label>
+      <mrx-button size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary</mrx-label>
+      <mrx-button type="secondary" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary</mrx-label>
+      <mrx-button type="secondary" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary</mrx-label>
+      <mrx-button type="secondary" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large disabled 1</mrx-label>
+      <mrx-button [disabled]="true" size="large" (click)="logger($event)">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium disabled</mrx-label>
+      <mrx-button [disabled]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small disabled</mrx-label>
+      <mrx-button [disabled]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button [isLoading]="true" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button [isLoading]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button [isLoading]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large with icon</mrx-label>
+      <mrx-button size="large" iconClass="icon-plus">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium with icon</mrx-label>
+      <mrx-button size="medium" iconClass="icon-plus">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small with icon</mrx-label>
+      <mrx-button size="small" iconClass="icon-plus">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading 123</mrx-label>
+      <mrx-button [disabled]="true" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>" (click)="logger($event)">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button [disabled]="true" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button [disabled]="true" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button size="large" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button size="medium" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button size="small" [icon]="icon">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button type="secondary" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button type="secondary" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button type="secondary" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button [disabled]="true" type="secondary" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button [disabled]="true" type="secondary" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button [disabled]="true" type="secondary" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button type="secondary" size="large" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button type="secondary" size="medium" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button type="secondary" size="small" [icon]="icon">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large disabled loading</mrx-label>
+      <mrx-button type="secondary" [disabled]="true" [isLoading]="true" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium disabled loading</mrx-label>
+      <mrx-button type="secondary" [disabled]="true" [isLoading]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small disabled loading</mrx-label>
+      <mrx-button type="secondary" [disabled]="true" [isLoading]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <!---->
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary loading</mrx-label>
+      <mrx-button type="tertiary" [isLoading]="true" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary loading</mrx-label>
+      <mrx-button type="tertiary" [isLoading]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary loading</mrx-label>
+      <mrx-button type="tertiary" [isLoading]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button type="tertiary" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button type="tertiary" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button type="tertiary" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large loading</mrx-label>
+      <mrx-button type="tertiary" size="large" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium loading</mrx-label>
+      <mrx-button type="tertiary" size="medium" [icon]="icon">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small loading</mrx-label>
+      <mrx-button type="tertiary" size="small" [icon]="icon">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large disabled loading</mrx-label>
+      <mrx-button type="tertiary" [disabled]="true" [isLoading]="true" size="large">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium disabled loading</mrx-label>
+      <mrx-button type="tertiary" [disabled]="true" [isLoading]="true" size="medium">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small disabled loading</mrx-label>
+      <mrx-button type="tertiary" [disabled]="true" [isLoading]="true" size="small">Click</mrx-button>
+    </div>
+  </div>
+  <!---->
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large negative</mrx-label>
+      <mrx-button size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive</mrx-label>
+      <mrx-button size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention</mrx-label>
+      <mrx-button size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary negative</mrx-label>
+      <mrx-button type="secondary" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary positive</mrx-label>
+      <mrx-button type="secondary" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary attention</mrx-label>
+      <mrx-button type="secondary" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large negative disabled</mrx-label>
+      <mrx-button [disabled]="true" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive disabled</mrx-label>
+      <mrx-button [disabled]="true" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention disabled</mrx-label>
+      <mrx-button [disabled]="true" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large large loading</mrx-label>
+      <mrx-button [isLoading]="true" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive loading</mrx-label>
+      <mrx-button [isLoading]="true" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention loading</mrx-label>
+      <mrx-button [isLoading]="true" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary large loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary positive loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary attention loading</mrx-label>
+      <mrx-button type="secondary" [isLoading]="true" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large large loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-16'></span>" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large large loading</mrx-label>
+      <mrx-button [disabled]="true" icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive loading</mrx-label>
+      <mrx-button [disabled]="true" icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention loading</mrx-label>
+      <mrx-button [disabled]="true" icon="<span class='mrx-icon icon-plus icon-font-16'></span>" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary large loading</mrx-label>
+      <mrx-button type="secondary" [icon]="icon" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary positive loading</mrx-label>
+      <mrx-button type="secondary" [icon]="icon" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary attention loading</mrx-label>
+      <mrx-button type="secondary" [icon]="icon" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large large loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention loading</mrx-label>
+      <mrx-button icon="<span class='mrx-icon icon-plus icon-font-16'></span>" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large secondary large loading</mrx-label>
+      <mrx-button type="secondary"  icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium secondary positive loading</mrx-label>
+      <mrx-button type="secondary"  icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small secondary attention loading</mrx-label>
+      <mrx-button type="secondary"  icon="<span class='mrx-icon icon-plus icon-font-24'></span>" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large large disabled loading</mrx-label>
+      <mrx-button [disabled]="true" [isLoading]="true" size="large" color="negative">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium positive disabled loading</mrx-label>
+      <mrx-button [disabled]="true" [isLoading]="true" size="medium" color="positive">Click</mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small attention disabled loading</mrx-label>
+      <mrx-button [disabled]="true" [isLoading]="true" size="small" color="attention">Click</mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large icon</mrx-label>
+      <mrx-button [iconOnly]="true" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium icon</mrx-label>
+      <mrx-button [iconOnly]="true" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small icon</mrx-label>
+      <mrx-button [iconOnly]="true" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>"></mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large icon</mrx-label>
+      <mrx-button type="secondary" [iconOnly]="true" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium icon</mrx-label>
+      <mrx-button type="secondary" [iconOnly]="true" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small icon</mrx-label>
+      <mrx-button type="secondary" [iconOnly]="true" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>"></mrx-button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка large icon</mrx-label>
+      <mrx-button type="tertiary" [iconOnly]="true" size="large" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка medium icon</mrx-label>
+      <mrx-button type="tertiary" [iconOnly]="true" size="medium" icon="<span class='mrx-icon icon-plus icon-font-24'></span>"></mrx-button>
+    </div>
+    <div class="col col-12 col-sm-4 mb-3">
+      <mrx-label>Кнопка small icon</mrx-label>
+      <mrx-button type="tertiary" [iconOnly]="true" size="small" icon="<span class='mrx-icon icon-plus icon-font-16'></span>"></mrx-button>
+    </div>
+  </div>
+</mrx-content-wrapper>

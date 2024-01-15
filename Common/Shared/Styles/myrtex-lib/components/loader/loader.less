@@ -1,0 +1,25 @@
+.mrx-loader.mrx-loader {
+  display: flex;
+
+  svg {
+    shape-rendering: auto;
+  }
+
+  svg {
+    transform: rotate(-35deg);
+    animation-duration: 1.2s;
+    animation-name: icon-loading;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+  }
+
+  @keyframes icon-loading {
+    from {
+      transform: rotate(-35deg);
+    }
+
+    to {
+      transform: rotate(325deg);
+    }
+  }
+}

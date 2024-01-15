@@ -1,0 +1,48 @@
+.mrx-editor.mrx-editor {
+  position: relative;
+  font-family: var(--body-md-font-family);
+  font-size: var(--body-md-font-size);
+  font-weight: var(--body-md-font-weight);
+  line-height: var(--body-md-line-height);
+  
+  .ck-editor {
+    label.ck-label.ck-voice-label {
+      display: none !important;
+    }
+  }
+
+  figure.table.ck-widget {
+    width: 100%;
+  }
+
+  .ck-content {
+    min-height: 80px;
+  }
+
+  .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+    border-top-right-radius: var(--border-radius-1) !important;
+    border-top-left-radius: var(--border-radius-1) !important;
+  }
+
+  .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+    border-bottom-right-radius: var(--border-radius-1) !important;
+    border-bottom-left-radius: var(--border-radius-1) !important;
+  }
+
+  .ck.ck-toolbar {
+    background-color: white;
+  }
+
+  .ck.ck-editor__editable_inline {
+    padding: var(--spacing-3) var(--spacing-4);
+    margin-bottom: 0 !important;
+  }
+
+  .ck.ck-editor__editable_inline>:first-child {
+    margin-top: var(--spacing-helf);
+  }
+
+  .ck.ck-editor__editable_inline>:last-child {
+    margin-bottom: var(--spacing-helf);
+  }
+}

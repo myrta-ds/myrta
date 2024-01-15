@@ -1,0 +1,146 @@
+﻿.warning-lite-header {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #fff;
+    box-shadow: 4px 0px 10px rgba(57, 52, 66, 0.15);
+    border-radius: 4px;
+    padding: 30px 24px;
+    position: fixed;
+    z-index: 9;
+    bottom: 40px;
+    right: 40px;
+    max-width: 450px;
+    font-size: 16px;
+    width: 100%;
+    color: var(--Main1);
+
+    @media screen and (max-width: 530px) {
+        bottom: 10px;
+        right: 10px;
+        max-width: initial;
+        width: calc(~"100% - 20px");
+    }
+
+    &.green {
+        background-color: var(--Green);
+        color: #fff;
+
+        .close-button-container {
+            svg {
+                path {
+                    stroke: #fff;
+                }
+            }
+        }
+
+    }
+
+    &.blue {
+        background-color: var(--Link);
+        color: #fff;
+
+        .close-button-container {
+            svg {
+                path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    &.yellow {
+        background-color: var(--Yellow);
+    }
+
+    &.red {
+        background-color: var(--Red);
+        color: #fff;
+
+        .close-button-container {
+            svg {
+                path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    p {
+        padding: 0px !important;
+        margin: 0;
+    }
+
+    span {
+        padding: 0px !important;
+    }
+
+    .close-button-container {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+
+        svg {
+            transition: 0.2s;
+        }
+
+        &:hover {
+            svg {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        &-text {
+            display: block;
+        }
+    }
+}
+
+.NotifyingMessageBlock {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    max-width: 450px;
+    width: 100%;
+
+    @media screen and (max-width: 530px) {
+        bottom: 10px;
+        right: 10px;
+        max-width: initial;
+        width: calc(~"100% - 20px");
+    }
+
+    .warning-lite-header {
+        max-width: 100%;
+        width: 100%;
+        bottom: initial;
+        right: initial;
+        position: relative;
+        margin-top: 20px;
+
+        @media screen and (max-width: 530px) {
+            bottom: initial;
+            right: initial;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+}
+
+.notifyjs-cocurrency-error,
+.notifyjs-message-info {
+    background: var(--Bg2);
+    box-shadow: 0px 4px 10px rgba(58, 58, 58, 0.25);
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 440px;
+    width: 100%;
+    border: none;
+    font-weight: normal;
+}

@@ -1,0 +1,34 @@
+.mrx-tooltip-trigger.mrx-tooltip-trigger {
+  &.trigger-right {
+    .tooltip-help {
+      font-family: var(--body-sm-font-famil);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--body-sm-font-weight);
+      line-height: var(--body-sm-line-height);
+      white-space: nowrap;
+      width: 0;
+      transition: .2s;
+      overflow: hidden;
+      color: var(--neutral-text-primary);
+      z-index: 1;
+    }
+
+    &:hover {
+      border-radius: var(--border-radius-1);
+
+      .tooltip-help {
+        width: 120px;
+        padding: var(--spacing-0) var(--spacing-1);
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      background: var(--brand-bg-tertiary-hover);
+
+      .tooltip-help {
+        width: 120px;
+        padding: var(--spacing-0) var(--spacing-1);
+      }
+    }
+  }
+}

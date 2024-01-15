@@ -1,0 +1,31 @@
+.mrx-tooltip-trigger.mrx-tooltip-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border-radius: 50%;
+
+  .mrx-icon {
+    background-color: transparent;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    width: max-content;
+
+    &.type-attention {
+      background-color: var(--system-bg-attention-secondary);
+
+      .mrx-icon {
+        background-color: var(--system-bg-attention-secondary);
+      }
+    }
+    &.type-info {
+      background-color: var(--brand-bg-tertiary-hover);
+
+      .mrx-icon {
+        background-color: var(--brand-bg-tertiary-hover);
+      }
+    }
+  }
+}

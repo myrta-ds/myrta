@@ -1,0 +1,60 @@
+.mrx-checkbox.mrx-checkbox {
+  &.mrx-checkbox-indeterminate {
+    .mrx-checkbox__mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--sizing-4);
+      width: var(--sizing-4);
+      min-width: var(--sizing-4);
+      border: var(--border-width-checkbox) solid var(--neutral-bg-stroke-default);
+      border-radius: var(--border-radius-1);
+      transition: 0.2s;
+      position: relative;
+      margin-top: 2px;
+  
+      &:after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 2px;
+        background-color: var(--brand-bg-primary-default);
+        border-radius: var(--border-radius-1);
+      }
+  
+      &:hover {
+        border-color: var(--brand-bg-primary-default);
+      }
+    }
+
+    &.mrx-input-disabled {
+      input {
+        cursor: default;
+      }
+
+      .mrx-checkbox__mark {
+        border-color: var(--neutral-control-bg-accent-disabled);
+
+        &:after {
+          background-color: var(--neutral-control-bg-accent-disabled);
+        }
+      }
+    }
+  
+    &:hover {
+      .mrx-checkbox__mark {
+        border-color: var(--neutral-bg-stroke-hover);
+      }
+
+      &.mrx-input-disabled {
+        .mrx-checkbox__mark {
+          border-color: var(--neutral-control-bg-accent-disabled);
+
+          &:after {
+            background-color: var(--neutral-control-bg-accent-disabled);
+          }
+        }
+      }
+    }
+  }
+}

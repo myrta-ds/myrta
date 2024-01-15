@@ -1,0 +1,186 @@
+footer.footer-gorchakov {
+    background: #9193AC;
+    position: relative;
+
+    .wrap {
+        position: relative;
+        display: flex;
+        padding-top: 48px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            padding-top: 120px;
+        }
+    }
+
+    .footer-border {
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.099841);
+        width: 100%;
+        top: 38px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .block {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        &.slim-gorchakov {
+            max-width: 134px;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                max-width: none;
+            }            
+        }       
+
+        a {
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+            opacity: 0.7;
+            margin-bottom: 8px;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+            opacity: 0.7;
+            margin-bottom: 8px;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        .title {
+            display: block;
+            font-family: "FuturaMedium";
+            font-size: 14px;
+            line-height: 22px;
+            color: #E9F0EE;
+            opacity: 0.8;
+            text-transform: uppercase;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            width: 100%;
+
+            a{
+                font-family: "FuturaMedium";
+                opacity: 0.8;
+                display: inline-block !important;
+                margin: 0;
+            }
+
+            @media (max-width: 768px) {                
+                border-bottom: 1px solid rgba(255, 255, 255, 0.099841);
+            }
+        }
+
+        .network{
+            margin-top: 35px;
+
+            @media (min-width: 1101px) {
+                justify-content: flex-end; 
+            }        
+
+            @media (max-width: 768px) {
+                position: absolute;
+                top: 0;
+                margin-top: 48px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.099841);
+                width: calc(100% - 40px);
+            }
+            
+            a{
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+                
+                &:hover{
+                    svg{
+                        path {
+                            fill: #FFCC00;
+                        }
+                    }
+                }
+            }
+        }
+
+        .accordion{
+
+            @media (max-width: 768px) {
+                opacity: 0;
+                visibility: hidden;
+                transition: height 0ms 400ms, opacity 400ms 0ms;
+                height: 0;
+            }
+
+            &.open{
+                visibility: visible;
+                opacity: 1;
+                margin-bottom: 32px;
+                transition: height 0ms 0ms, opacity 600ms 0ms;
+                height: auto;
+            }
+        }
+    }
+
+    .contacts {
+        text-align: right;
+        padding-left: 40px;
+        max-width: 300px;
+
+        span{
+            max-width: 300px;
+        }
+
+        @media (max-width: 1100px) {
+            text-align: left;
+            padding-left: 0;
+            width: 100%;
+            max-width: 1100px;
+            margin: 50px 0px 0px auto;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            max-width: 768px;
+            margin-top: 10px;
+        }       
+    }
+
+    .text {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: right;
+        color: #FFFFFF;
+        opacity: 0.7;
+        margin-top: 43px;
+        padding-bottom: 45px;
+
+        @media (max-width: 1100px) {
+            text-align: left;
+            margin-top: 55px;
+        }
+
+        span {
+            display: block;            
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}

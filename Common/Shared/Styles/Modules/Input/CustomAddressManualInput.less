@@ -1,0 +1,42 @@
+.address-manual-dropdown {
+    border: var(--Stroke) solid 1px;
+    border-radius: 6px;
+    margin-top: 50px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+    overflow-y: scroll;
+    height: 200px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: var(--Secondary);
+    }
+
+    &__item {
+        height: 20px;
+        padding-left: 10px;
+
+        &:hover {
+            background-color: var(--Stroke);
+            cursor: pointer;
+        }
+    }
+}
+
+.custom-address-manual-input {
+    overflow: unset !important;
+}

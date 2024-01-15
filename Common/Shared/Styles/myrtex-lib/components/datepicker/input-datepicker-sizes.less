@@ -1,0 +1,32 @@
+.mrx-input-datepicker.mrx-input-datepicker {
+  &.mrx-input-datepicker-lg {
+    .mrx-input-datepicker__input {
+      // 15px = 12px(3 шага отступа) + 2px(половина шага) - 1px(ширина бордера)
+      padding: calc(var(--spacing-3) + var(--spacing-helf) - var(--border-width-default)) calc(var(--spacing-4) - var(--border-width-default));
+      font-family: var(--body-md-font-family);
+      font-size: var(--body-md-font-size);
+      font-weight: var(--body-md-font-weight);
+      line-height: var(--body-md-line-height);
+    }
+  }
+
+  &.mrx-input-datepicker-md {
+    .mrx-input-datepicker__input {
+      padding: calc(var(--spacing-2) + var(--spacing-helf) - var(--border-width-default)) calc(var(--spacing-3) - var(--border-width-default));
+      font-family: var(--body-md-font-family);
+      font-size: var(--body-md-font-size);
+      font-weight: var(--body-md-font-weight);
+      line-height: var(--body-md-line-height);
+    }
+  }
+
+  &.mrx-input-datepicker-sm {
+    .mrx-input-datepicker__input {
+      padding: calc(var(--spacing-2) - var(--border-width-default)) calc(var(--spacing-2) - var(--border-width-default));
+      font-family: var(--body-sm-font-family);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--body-sm-font-weight);
+      line-height: var(--body-sm-line-height);
+    }
+  }
+}

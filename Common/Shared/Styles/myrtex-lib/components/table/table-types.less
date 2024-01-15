@@ -1,0 +1,118 @@
+.mrx-table__wrapper.mrx-table__wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+
+  .mrx-table__wrapper--substrate {
+    padding-top: 8px;
+  }
+}
+
+.mrx-table.mrx-table {
+  &.type-default {
+    table {
+      width: 100%;
+      text-align: left;
+      background-color: transparent;
+      border-spacing: 0;
+
+      thead {
+        &.table-head-gray {
+          background: var(--Disabled);
+        }
+
+        .sort-asc {
+          .custom-table__sort {
+            path {
+              &:nth-child(2){
+                fill: var(--Main2);
+              }
+            }
+          }
+        }
+
+        .sort-desc {
+          .custom-table__sort {
+            path {
+              &:nth-child(1){
+                fill: var(--Main2);
+              }
+            }
+          }
+        }
+      }
+
+      td {
+        max-width: 340px;
+        vertical-align: top;
+
+        .link-wrapper {
+          display: block;
+          color: initial;
+          height: 100%;
+
+          &:active {
+            color: var(--Main1);
+          }
+        }
+
+        .left-border {
+          border-left: 4px solid var(--Main2);
+        }
+        .light-border {
+          border-left: 4px solid transparent;
+        }
+
+        .warning-back {
+          background-color: #FFECE7;
+        }
+        .disabled-back {
+          background-color: #FAFAFA;
+        }
+        .link-colored {
+          color: var(--Main2);
+
+          &:active {
+            color: var(--Main2);
+          }
+        }
+      }
+
+      th {
+        padding: 8px;
+        vertical-align: bottom;
+        word-break: inherit;
+        font-weight: bold;
+
+        svg {
+          margin-left: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.type-cards {
+
+  }
+
+  .mrx-table-card-header {
+    position: relative;
+
+    &--substrate {
+      padding-left: 24px;
+      padding-right: 24px;
+      background: #FFFFFF;
+      box-shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+      border-radius: 4px;
+    }
+  }
+
+  .mrx-table__wrapper {
+    &--substrate {
+      background: #FFFFFF;
+      box-shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+      border-radius: 4px;
+    }
+  }
+}

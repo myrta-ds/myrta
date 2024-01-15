@@ -1,0 +1,33 @@
+.mrx-input-number.mrx-input-number {
+  &.mrx-input-error {
+    input {
+      border-color: var(--system-bg-controls-negative-default);
+
+      &:hover {
+        border: var(--border-width-default) solid var(--system-bg-controls-negative-default);
+      }
+    }
+  }
+
+  &.mrx-input-checked-error {
+    input {
+      border-color: var(--system-bg-controls-negative-default);
+      background-color: var(--system-bg-negative-secondary);
+
+      &:hover {
+        border: var(--border-width-default) solid var(--system-bg-controls-negative-default);
+      }
+    }
+  }
+
+  &.mrx-input-checked-success {
+    input {
+      background-color: var(--system-bg-positive-secondary);
+      border-color: var(--system-bg-controls-positive-default);
+
+      &:hover {
+        border: var(--border-width-default) solid var(--system-bg-controls-positive-default);
+      }
+    }
+  }
+}

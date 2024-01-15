@@ -1,0 +1,107 @@
+.mrx-editor.mrx-editor {
+  &.mrx-input-error, &.mrx-input-checked-error {
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-toolbar.ck-toolbar_grouping {
+        transition: border .2s;
+        border-top: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        border-left: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        border-right: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+      }
+
+      .ck.ck-editor__editable_inline {
+        transition: border .2s;
+        border: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+      }
+
+      &.focused {
+        outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+
+        .ck.ck-toolbar.ck-toolbar_grouping {
+          border-top: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+          border-left: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+          border-right: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        }
+
+        .ck.ck-editor__editable_inline {
+          border: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        }
+      }
+
+      &:hover {
+        .ck.ck-toolbar.ck-toolbar_grouping {
+          border-top: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+          border-left: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+          border-right: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        }
+        .ck.ck-editor__editable_inline {
+          border: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+        }
+      }
+    }
+
+    .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+      box-shadow: none;
+    }
+  }
+
+  &.mrx-input-success, &.mrx-input-checked-success {
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-toolbar.ck-toolbar_grouping {
+        transition: border .2s;
+        border-top: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        border-left: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        border-right: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+      }
+
+      .ck.ck-editor__editable_inline {
+        transition: border .2s;
+        border: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+      }
+
+      &.focused {
+        outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+
+        .ck.ck-toolbar.ck-toolbar_grouping {
+          border-top: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+          border-left: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+          border-right: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        }
+
+        .ck.ck-editor__editable_inline {
+          border: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        }
+      }
+
+      &:hover {
+        .ck.ck-toolbar.ck-toolbar_grouping {
+          border-top: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+          border-left: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+          border-right: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        }
+        .ck.ck-editor__editable_inline {
+          border: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+        }
+      }
+    }
+
+    .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+      box-shadow: none;
+    }
+  }
+
+  &.mrx-input-checked-error {
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-editor__editable_inline {
+        background-color: var(--system-bg-negative-secondary) !important;
+      }
+    }
+  }
+
+  &.mrx-input-checked-success {
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-editor__editable_inline {
+        background-color: var(--system-bg-positive-secondary) !important;
+      }
+    }
+  }
+}

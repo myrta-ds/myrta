@@ -1,0 +1,55 @@
+.mrx-tooltip-trigger.mrx-tooltip-trigger {
+  &.trigger-top {
+    position: relative;
+    width: calc(var(--sizing-4) + var(--sizing-helf));
+
+    .tooltip-help {
+      position: absolute;
+      left: 50%;
+      top: -28px;
+      z-index: 1;
+      transform: translateX(-50%);
+      overflow: hidden;
+      font-family: var(--body-sm-font-famil);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--body-sm-font-weight);
+      line-height: var(--body-sm-line-height);
+      text-align: center;
+      color: var(--neutral-text-primary);
+      box-shadow: var(--box-shadow-secondary-x) var(--box-shadow-secondary-y) var(--box-shadow-secondary-blur) var(--box-shadow-secondary-spread) var(--box-shadow-secondary-color);
+      border-radius: var(--border-radius-1);
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: auto;
+      height: 0;
+    }
+
+    &:hover {
+      background: transparent;
+
+      .tooltip-help {
+        padding: var(--spacing-1);
+        height: auto;
+        width: max-content;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &.type-attention {
+    &.trigger-top {
+      .tooltip-help {
+        background-color: var(--system-bg-attention-secondary);
+      }
+    }
+  }
+  &.type-info {
+    &.trigger-top {
+      .tooltip-help {
+        background-color: var(--brand-bg-tertiary-hover);
+      }
+    }
+  }
+}

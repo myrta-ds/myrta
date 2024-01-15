@@ -1,0 +1,21 @@
+.mrx-btn.mrx-btn {
+  &.icon-loading {
+    svg {
+      transform: rotate(-40deg);
+      animation-duration: 1.2s;
+      animation-name: icon-loading;
+      animation-iteration-count: infinite;
+      transition-timing-function: ease-in-out;
+    }
+
+    @keyframes icon-loading {
+      from {
+        transform: rotate(-40deg);
+      }
+
+      to {
+        transform: rotate(320deg);
+      }
+    }
+  }
+}

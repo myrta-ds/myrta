@@ -1,0 +1,17 @@
+<div class="mrx-alert" [class]="getClasses" [style]="{backgroundColor: customColor}">
+    <span
+        *ngIf="closable"
+        class="mrx-icon icon-close icon-font-16"
+        (click)="onCloseClick()"
+    ></span>
+    <span
+        *ngIf="title || message"
+        [class]="getIconClass"
+        style="margin-top: 1px"
+        class="mrx-icon icon-alert icon-font-16 mr-2"
+    ></span>
+    <div *ngIf="title" class="mrx-alert-title mb-1" [class.ml-4]="getIconClass" [innerHTML]="title"></div>
+    <div *ngIf="message" class="mrx-alert-message" [class.ml-4]="getIconClass" [innerHTML]="message"></div>
+
+    <ng-content></ng-content>
+</div>

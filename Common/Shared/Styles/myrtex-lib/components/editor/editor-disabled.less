@@ -1,0 +1,21 @@
+.mrx-editor.mrx-editor {
+  &.mrx-editor-disabled {
+    * {
+      color: var(--neutral-text-tertiary);
+    }
+
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-editor__editable_inline {
+        background-color: var(--neutral-bg-disabled) !important;
+      }
+    }
+  }
+
+  &.mrx-editor-readonly {
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+      .ck.ck-editor__editable_inline {
+        background-color: var(--neutral-bg-disabled) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "myrta",
+  "version": "1.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^13.3.11",
+    "@angular/common": "^13.3.11",
+    "@angular/compiler": "^13.3.11",
+    "@angular/core": "^13.3.11",
+    "@angular/forms": "^13.3.11",
+    "@angular/platform-browser": "^13.3.11",
+    "@angular/platform-browser-dynamic": "^13.3.11",
+    "@angular/router": "^13.3.11",
+    "@ngrx/effects": "^13.2.0",
+    "@ngrx/router-store": "^13.2.0",
+    "@ngrx/store": "^13.2.0",
+    "myrtex-mf-templates": "1.0.47",
+    "myrtex-mf-ui": "1.5.30",
+    "dayjs": "^1.11.7",
+    "libphonenumber-js": "^1.10.30",
+    "rxjs": "~6.6.7",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^13.3.11",
+    "@angular/cli": "~13.3.11",
+    "@angular/compiler-cli": "^13.3.11",
+    "@types/jasmine": "~3.6.0",
+    "jasmine-core": "~3.8.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^13.0.0",
+    "typescript": "~4.6.4"
+  }
+}

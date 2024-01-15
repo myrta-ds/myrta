@@ -1,0 +1,159 @@
+.mrx-btn.mrx-btn {
+  &.mrx-btn-tertiary {
+    background-color: transparent;
+    color: var(--brand-text-controls-default);
+    border: var(--border-width-default) solid transparent;
+
+    &:not(.red, .green, .yellow, .color-positive, .color-negative, .color-attention) {
+      .icon-loading {
+        path {
+          stroke: var(--brand-text-controls-default);
+        }
+
+        circle {
+          stroke: var(--brand-text-controls-default);
+        }
+      }
+
+      .mrx-icon {
+        color: var(--brand-text-controls-default);
+      }
+
+      svg:not(.icon-loading) {
+        &.fill {
+          path {
+            fill: var(--brand-text-controls-default);
+          }
+
+          circle {
+            fill: var(--brand-text-controls-default);
+          }
+
+          &-rect {
+            rect {
+              fill: var(--brand-text-controls-default);
+            }
+          }
+        }
+
+        &.stroke {
+          path {
+            stroke: var(--brand-text-controls-default);
+          }
+
+          circle {
+            stroke: var(--brand-text-controls-default);
+          }
+
+          &-rect {
+            rect {
+              stroke: var(--brand-text-controls-default);
+            }
+          }
+        }
+      }
+    }
+
+    &.red, &.color-negative {
+      .icon-loading {
+        path {
+          stroke: var(--system-bg-controls-negative-default);
+        }
+
+        circle {
+          stroke: var(--system-bg-controls-negative-default);
+        }
+      }
+
+      .mrx-icon {
+        color: var(--system-bg-controls-negative-default);
+      }
+    }
+
+    &.green, &.color-positive {
+      .icon-loading {
+        path {
+          stroke: var(--system-bg-controls-positive-default);
+        }
+
+        circle {
+          stroke: var(--system-bg-controls-positive-default);
+        }
+      }
+
+      .mrx-icon {
+        color: var(--system-bg-controls-positive-default);
+      }
+    }
+
+    &.yellow, &.color-attention {
+      .icon-loading {
+        path {
+          stroke: var(--Orange);
+        }
+
+        circle {
+          stroke: var(--Orange);
+        }
+      }
+
+      .mrx-icon {
+        color: var(--Orange);
+      }
+    }
+
+    &:hover, &.active {
+      color: var(--brand-text-controls-hover);
+
+      &:not(.red, .green, .yellow, .color-positive, .color-negative, .color-attention) {
+        .icon-loading {
+          path {
+            stroke: var(--brand-text-controls-hover);
+          }
+
+          circle {
+            stroke: var(--brand-text-controls-hover);
+          }
+        }
+
+        .mrx-icon {
+          color: var(--brand-text-controls-hover);
+        }
+
+        svg:not(.icon-loading) {
+          &.fill {
+            path {
+              fill: var(--brand-text-controls-hover);
+            }
+
+            circle {
+              fill: var(--brand-text-controls-hover);
+            }
+
+            &-rect {
+              rect {
+                fill: var(--brand-text-controls-hover);
+              }
+            }
+          }
+
+          &.stroke {
+            path {
+              stroke: var(--brand-text-controls-hover);
+            }
+
+            circle {
+              stroke: var(--brand-text-controls-hover);
+            }
+
+            &-rect {
+              rect {
+                stroke: var(--brand-text-controls-hover);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

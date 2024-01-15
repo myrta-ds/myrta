@@ -1,0 +1,50 @@
+.mrx-switch.mrx-switch {
+  &.mrx-switch-lg {
+    .mrx-switch-checkbox {
+      .mrx-switch-slider {
+        display: block;
+        position: relative;
+        border-radius: calc(var(--sizing-module) * 5);
+        width: var(--sizing-8);
+        min-width: var(--sizing-8);
+        height: calc(var(--sizing-module) * 5);
+
+        &:before {
+          width: var(--sizing-4);
+          height: var(--sizing-4);
+          left: var(--spacing-helf);
+          top: var(--spacing-helf);
+        }
+      }
+
+      input:checked + .mrx-switch-slider:before {
+        transform: translateX(var(--sizing-3));
+      }
+    }
+  }
+
+  &.mrx-switch-sm {
+    .mrx-switch-checkbox {
+      .mrx-switch-slider {
+        display: block;
+        position: relative;
+        border-radius: 20px;
+        height: var(--sizing-4);
+        width: var(--sizing-6);
+        min-width: var(--sizing-6);
+        margin-top: var(--spacing-helf);
+
+        &:before {
+          width: var(--sizing-3);
+          height: var(--sizing-3);
+          left: var(--spacing-helf);
+          top: var(--spacing-helf);
+        }
+      }
+
+      input:checked + .mrx-switch-slider:before {
+        transform: translateX(var(--sizing-2));
+      }
+    }
+  }
+}

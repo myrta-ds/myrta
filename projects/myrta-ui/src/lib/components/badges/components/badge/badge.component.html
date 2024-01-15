@@ -1,0 +1,28 @@
+<ng-container [ngSwitch]="tag">
+  <ng-container *ngSwitchCase="'button'">
+    <button
+        class="mrx-badge"
+        [class]="getClasses"
+        [style]="{ backgroundColor: getCustomColor }"
+        (click)="onClick($event)"
+    >
+      <ng-container *ngTemplateOutlet="content"></ng-container>{{text}}
+    </button>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'link'">
+    <a [href]="path" class="mrx-badge" [class]="getClasses" [style]="{ backgroundColor: getCustomColor }">
+      <ng-container *ngTemplateOutlet="content"></ng-container>{{text}}
+    </a>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <span class="mrx-badge" [class]="getClasses" [style]="{ backgroundColor: getCustomColor }">
+      <ng-container *ngTemplateOutlet="content"></ng-container>{{text}}
+    </span>
+  </ng-container>
+</ng-container>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

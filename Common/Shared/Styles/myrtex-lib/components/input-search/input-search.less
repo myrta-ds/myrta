@@ -1,0 +1,45 @@
+.mrx-input-search.mrx-input-search {
+  width: 100%;
+  position: relative;
+
+  .mrx-input-search__wrapper {
+    position: relative;
+  }
+
+  &:hover {
+    input {
+      border: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+    border: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    outline: none;
+    transition: outline-width 0.2s, border 0.2s;
+
+    &:focus, &:active {
+      outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+    }
+
+    &:disabled {
+      background-color: var(--neutral-bg-disabled);
+    }
+  }
+
+  &.mrx-input__readonly {
+    input[type=tel] {
+      &:disabled {
+        background-color: inherit;
+      }
+    }
+  }
+
+  &.mrx-input__readonly {
+    input {
+      background-color: inherit;
+    }
+  }
+}

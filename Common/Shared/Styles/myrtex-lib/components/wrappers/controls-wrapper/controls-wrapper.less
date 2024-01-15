@@ -1,0 +1,70 @@
+.mrx-controls-wrapper.mrx-controls-wrapper {
+  position: relative;
+
+  .mrx-controls-wrapper__controls {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    box-shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+    border-radius: 4px;
+    display: flex;
+
+    &--item {
+      height: 24px;
+      min-width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #FFFFFF;
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      &:hover {
+        background-color: #EEF0F4;
+      }
+    }
+
+    &--separator {
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 1px;
+        background-color: #BFC5CC;
+        border-radius: 4px;
+      }
+    }
+
+    &.visibility-auto {
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &.visibility-hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    .visibility-auto {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

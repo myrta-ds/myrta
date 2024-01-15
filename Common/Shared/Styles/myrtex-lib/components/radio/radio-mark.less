@@ -1,0 +1,54 @@
+.mrx-radio.mrx-radio {
+  &.mrx-radio-default {
+    .mrx-radio__mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--sizing-4);
+      width: var(--sizing-4);
+      min-width: var(--sizing-4);
+      border: var(--border-width-checkbox) solid var(--neutral-bg-stroke-default);
+      border-radius: 50%;
+      transition: border 0.2s;
+      position: relative;
+
+      .mrx-radio__mark__inner {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--brand-bg-primary-default);
+        opacity: 0;
+        transition: opacity .2s;
+      }
+    }
+
+    &:hover {
+      .mrx-radio__mark {
+        border-color: var(--brand-bg-primary-default);
+      }
+    }
+
+    input[type="radio"] {
+      &:checked {
+        & + .mrx-radio__mark {
+          border-color: var(--brand-bg-primary-default);
+
+          .mrx-radio__mark__inner {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:disabled {
+        & + .mrx-radio__mark {
+          border-color: var(--neutral-control-bg-accent-disabled);
+
+          .mrx-radio__mark__inner {
+            background: var(--neutral-control-bg-accent-disabled);
+          }
+        }
+      }
+    }
+  }
+}

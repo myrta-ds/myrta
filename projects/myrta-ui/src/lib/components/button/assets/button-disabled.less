@@ -1,0 +1,90 @@
+// disabled нкнопка
+.mrx-btn.mrx-btn {
+  &.disabled,
+  &:disabled,
+  &[disabled="disabled"],
+  &[disabled] {
+    color: var(--neutral-text-tertiary) !important;
+    cursor: default;
+
+    &:disabled {
+      .mrx-icon {
+        color: var(--neutral-icon-disabled) !important;
+      }
+    }
+
+    .icon-loading {
+      path {
+        stroke: var(--neutral-text-tertiary) !important;
+      }
+
+      circle {
+        stroke: var(--neutral-text-tertiary) !important;
+      }
+    }
+
+    svg:not(.icon-loading) {
+      &.fill {
+        path {
+          fill: var(--neutral-text-tertiary) !important;
+        }
+
+        circle {
+          fill: var(--neutral-text-tertiary) !important;
+        }
+
+        &-rect {
+          rect {
+            fill: var(--neutral-text-tertiary) !important;
+          }
+        }
+      }
+
+      &.stroke {
+        path {
+          stroke: var(--neutral-text-tertiary) !important;
+        }
+
+        circle {
+          stroke: var(--neutral-text-tertiary) !important;
+        }
+
+        &-rect {
+          rect {
+            stroke: var(--neutral-text-tertiary) !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.mrx-btn-primary {
+    &.disabled,
+    &:disabled,
+    &[disabled="disabled"],
+    &[disabled] {
+      background-color: var(--neutral-bg-disabled) !important;
+      border-color: var(--neutral-bg-disabled) !important;
+    }
+  }
+
+  &.mrx-btn-secondary {
+    &.disabled,
+    &:disabled,
+    &[disabled="disabled"],
+    &[disabled] {
+      background-color: transparent !important;
+      border-color: var(--neutral-bg-stroke-default) !important;
+    }
+  }
+
+  &.mrx-btn-tertiary {
+    &.disabled,
+    &:disabled,
+    &[disabled="disabled"],
+    &[disabled] {
+      background-color: transparent !important;
+      border-color: transparent !important;
+    }
+  }
+}

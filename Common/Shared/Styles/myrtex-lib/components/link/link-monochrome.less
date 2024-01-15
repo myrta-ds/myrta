@@ -1,0 +1,21 @@
+.mrx-link.mrx-link {
+  &.mrx-link-monochrome {
+    &.mrx-link-navigational {
+      color: var(--neutral-text-primary);
+      border-bottom: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+
+      &:hover {
+        border-bottom: var(--border-width-default) solid var(--neutral-text-primary);
+      }
+    }
+
+    &.mrx-link-pseudo {
+      color: var(--neutral-text-primary);
+      border-bottom: var(--border-width-default) dashed var(--neutral-bg-stroke-default);
+
+      &:hover {
+        border-bottom: var(--border-width-default) dashed var(--neutral-text-primary);
+      }
+    }
+  }
+}

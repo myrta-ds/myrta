@@ -1,0 +1,64 @@
+.mrx-table.mrx-table {
+  .mrx-table-sort {
+    &.mrx-table-sort--is-card {
+      justify-content: flex-start;
+    }
+
+    &.mrx-table-sort--is-table {
+      justify-content: flex-start;
+    }
+
+    &-scale {
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      cursor: pointer;
+
+      &__title {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--Main1);
+        margin-right: 12px;
+      }
+
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .ng-select {
+      max-width: 215px;
+      margin-bottom: 0;
+
+      .ng-select-container.ng-select-container {
+        min-height: auto !important;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        height: 100% !important;
+      }
+
+      .ng-value-container.ng-value-container {
+        padding-left: 0 !important;
+        margin-right: 8px;
+      }
+
+      .ng-arrow-wrapper.ng-arrow-wrapper {
+        min-height: auto;
+        width: auto !important;
+      }
+
+      .ng-dropdown-panel.ng-dropdown-panel {
+        width: 100vw;
+        max-width: 215px;
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}

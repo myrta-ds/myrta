@@ -1,0 +1,127 @@
+.admin-nav {
+    &__item {
+        display: flex;
+        align-items: center;
+        border: solid 1px var(--Stroke);
+        background-color: #fff;
+        border-right: none;
+        width: 150px;
+        max-width: 150px;
+        height: 65px;
+        max-height: 65px;
+        padding-left: 10px;
+        opacity: .7;
+        font-size: 14px;
+        font-weight: 500;
+
+        &__subitem {
+            width: 120px;
+        }
+
+        &__link {
+            font-size: 16px;
+            color: var(--Main1);
+
+            &__name {
+                p {
+                    padding-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.67;
+                }
+
+                .subname {
+                    font-size: 12px;
+                }
+
+                .active {
+                    color: #b16d12;
+                }
+            }
+
+            &:visited {
+                color: var(--Main1);
+            }
+        }
+    }
+
+    &__subitem {
+        display: flex;
+        align-items: center;
+        border: solid 1px var(--Stroke);
+        background-color: #fff;
+        border-right: none;
+        width: 130px;
+        max-width: 150px;
+        height: 65px;
+        max-height: 65px;
+        padding-left: 10px;
+        opacity: .7;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 20px;
+
+        &__link {
+            font-size: 16px;
+            color: var(--Main1);
+
+            &__name {
+                p {
+                    padding-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.67;
+                }
+
+                .subname {
+                    font-size: 12px;
+                }
+
+                .active {
+                    color: #b16d12;
+                }
+            }
+
+            &:visited {
+                color: var(--Main1);
+            }
+        }
+    }
+
+    &__item a {
+        display: block;
+        width: 100%;
+    }
+
+    &__item.active {
+        background-color: #fff;
+        position: relative;
+        opacity: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            top: 0;
+            right: -1px;
+            background-color: #fff;
+        }
+    }
+
+    &__subitem.active {
+        border-left: solid 4px var(--Main2);
+    }
+
+    &--hidden {
+        display: none;
+        position: absolute;
+        z-index: 99;
+
+        @media (max-width: 1060px) {
+            max-width: unset;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.mrx-label-wrapper.mrx-label-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mrx-label.mrx-label {
+  display: inline-block;
+  min-height: 20px;
+  color: var(--neutral-text-primary);
+
+  &:not(&.bold-label) {
+    font-family: var(--body-md-font-family);
+    font-size: var(--body-md-font-size);
+    font-weight: var(--body-md-font-weight);
+    line-height: var(--body-md-line-height);
+  }
+
+  &.bold-label {
+    font-family: var(--body-md-bold-font-family);
+    font-size: var(--body-md-bold-font-size);
+    font-weight: var(--body-md-bold-font-weight);
+    line-height: var(--body-md-bold-line-height);
+  }
+
+  .required-active {
+    font-family: var(--body-md-bold-font-family);
+    font-size: var(--body-md-bold-font-size);
+    font-weight: var(--body-md-bold-font-weight);
+    line-height: var(--body-md-bold-line-height);
+    color: var(--system-icon-negative);
+    margin-left: var(--spacing-1);
+    position: relative;
+    display: inline-block;
+  }
+}

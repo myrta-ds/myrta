@@ -1,0 +1,132 @@
+.page-wrapper {
+    .field-status {
+        width: 100%;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            font-size: 12px;
+            padding: 0 4px;
+            z-index: 2;
+        }
+    }
+
+    .field-success {
+
+        &:before {
+            content: "сохранено";
+            color: var(--Green);
+            font-weight: 500;
+            -moz-animation: cssAnimationContent 0s ease-in 3s forwards;
+            -webkit-animation: cssAnimationContent 0s ease-in 3s forwards;
+            -o-animation: cssAnimationContent 0s ease-in 3s forwards;
+            animation: cssAnimationContent 0s ease-in 3s forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            position: absolute;
+            right: 0;
+        }
+
+        input:not(.chosen-search-input),
+        textarea,
+        .styledSelect,
+        .chosen-container-multi {
+            -moz-animation: cssAnimationBorder 0s ease-in 3s forwards;
+            -webkit-animation: cssAnimationBorder 0s ease-in 3s forwards;
+            -o-animation: cssAnimationBorder 0s ease-in 3s forwards;
+            animation: cssAnimationBorder 0s ease-in 3s forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes cssAnimationContent {
+        to {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    @keyframes cssAnimationContentSave {
+        from {
+            content: "сохранение.";
+        }
+
+        50% {
+            content: "сохранение..";
+        }
+
+        to {
+            content: "сохранение...";
+        }
+    }
+
+    @-webkit-keyframes cssAnimationContent {
+        to {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes cssAnimationBorder {
+        to {
+            border: 1px var(--Stroke) solid;
+            color: var(--Main1);
+        }
+    }
+
+    @-webkit-keyframes cssAnimationBorder {
+        to {
+            border: 1px var(--Stroke) solid;
+            color: var(--Main1);
+        }
+    }
+
+    .field-error:before {
+        content: "ошибка";
+        color: var(--Red);
+        font-weight: 500;
+    }
+
+    .field-invalid {
+        width: 100%;
+        position: relative;
+
+        &:before {
+            font-size: 12px;
+            top: 2px;
+            right: 5px;
+            position: absolute;
+            z-index: 2;
+            content: "некорректно";
+            color: var(--Red);
+            font-weight: 500;
+            padding: 0 4px;
+        }
+
+        &.custom-file-input:before {
+            content: "";
+        }
+    }
+
+    .edit-icon-status {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        width: 36px;
+        content: url('../img/save-changes.gif');
+
+        img {
+            width: 36px;
+            content: url('../img/save-changes.gif');
+        }
+    }
+}

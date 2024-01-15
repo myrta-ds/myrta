@@ -1,0 +1,22 @@
+.mrx-table.mrx-table {
+  .mrx-table-toggle {
+    display: flex;
+    
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .mrx-icon {
+        color: #E5E5E5;
+      }
+
+      &.active {
+        .mrx-icon {
+          color: var(--Main2);
+        }
+      }
+    }
+  }
+}

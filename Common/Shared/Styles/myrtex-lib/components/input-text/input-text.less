@@ -1,0 +1,43 @@
+.mrx-input-text.mrx-input-text {
+  width: 100%;
+  position: relative;
+
+  .mrx-input-text__wrapper {
+    position: relative;
+  }
+
+  input {
+    box-sizing: border-box;
+    border: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    outline: none;
+    transition: outline-width 0.2s, border 0.2s;
+
+    &:focus, &:active {
+      outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+    }
+
+    &:hover {
+      border: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+    }
+
+    &:disabled {
+      background-color: var(--neutral-bg-disabled);
+    }
+  }
+
+  &.mrx-input__readonly {
+    input[type=tel] {
+      &:disabled {
+        background-color: inherit;
+      }
+    }
+  }
+
+  &.mrx-input__readonly {
+    input {
+      background-color: inherit;
+    }
+  }
+}

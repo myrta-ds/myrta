@@ -1,0 +1,43 @@
+.mrx-editor.mrx-editor {
+  .ck.ck-button:not(.ck-splitbutton__arrow) {
+    .ck.ck-icon:not(.ck-dropdown__arrow) {
+      width: calc(var(--sizing-6) + 1px);
+      height: 100%;
+      will-change: auto;
+    }
+  }
+
+  &:not(.mrx-editor-theme-default) {
+    .ck.ck-button:not(.ck-disabled):hover, a.ck.ck-button:not(.ck-disabled):hover {
+      background-color: var(--brand-bg-tertiary-selected);
+    }
+
+    .ck.ck-splitbutton.ck-splitbutton_open>.ck-button:not(.ck-on):not(.ck-disabled):not(:hover), .ck.ck-splitbutton:hover>.ck-button:not(.ck-on):not(.ck-disabled):not(:hover) {
+      background-color: var(--brand-bg-tertiary-selected);
+    }
+
+    .ck.ck-button.ck-on, a.ck.ck-button.ck-on {
+      background-color: var(--brand-bg-tertiary-selected);
+    }
+
+    .ck.ck-button.ck-on:not(.ck-disabled):hover, a.ck.ck-button.ck-on:not(.ck-disabled):hover {
+      background-color: var(--brand-bg-tertiary-selected);
+    }
+  }
+
+  .ck-source-editing-button {
+    .ck-icon {
+      margin-right: 0 !important;
+    }
+    .ck-button__label {
+      display: none !important;
+    }
+  }
+
+  .ck.ck-button:active, .ck.ck-button:focus, a.ck.ck-button:active, a.ck.ck-button:focus {
+    border: 1px solid #0000;
+  }
+  .ck.ck-button.ck-disabled:active, .ck.ck-button.ck-disabled:focus, a.ck.ck-button.ck-disabled:active, a.ck.ck-button.ck-disabled:focus {
+    box-shadow: none !important;
+  }
+}

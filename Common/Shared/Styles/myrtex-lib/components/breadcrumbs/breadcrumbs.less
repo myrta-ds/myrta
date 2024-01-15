@@ -1,0 +1,50 @@
+.mrx-breadcrumbs.mrx-breadcrumbs {
+  .mrx-breadcrumbs__link {
+    display: flex;
+    align-items: center;
+    color: var(--brand-bg-primary-default);
+    font-family: var(--body-md-font-family);
+    font-size: var(--body-md-font-size);
+    font-weight: var(--body-md-font-weight);
+    line-height: var(--body-md-line-height);
+
+    .mrx-icon {
+      color: var(--brand-bg-primary-default) !important;
+    }
+
+    &:hover {
+      color: var(--brand-text-controls-hover);
+
+      .mrx-icon {
+        color: var(--brand-text-controls-hover) !important;
+      }
+    }
+  }
+
+  .mrx-breadcrumbs__tag {
+    color: var(--neutral-text-tertiary);
+    font-family: var(--body-md-font-family);
+    font-size: var(--body-md-font-size);
+    font-weight: var(--body-md-font-weight);
+    line-height: var(--body-md-line-height);
+  }
+
+  .mrx-breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+
+    &-item {
+      display: flex;
+
+      .mrx-icon {
+        color: var(--neutral-icon-default) !important;
+      }
+    }
+  }
+}

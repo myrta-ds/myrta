@@ -1,0 +1,41 @@
+.mrx-tabs-group.mrx-tabs-group {  
+  &.mrx-tabs-button {
+    .mrx-tabs-group-wrapper {
+      background: var(--neutral-bg-island-default);
+      padding: var(--spacing-1);
+
+      & > * {
+        padding: 0 var(--spacing-1);;
+
+        &:last-child {
+          padding-right: 0;
+        }
+  
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:not(:last-child) {
+          @media screen and (min-width: 768px) {
+            border-right: var(--border-width-default) solid var(--neutral-bg-divider);
+          }
+        }
+      }
+  
+      @media screen and (max-width: 767px) {
+          flex-direction: column;
+          width: 100%;
+      }
+    }
+
+    &.responsive {  
+      .mrx-tabs-group-wrapper {
+        width: 100%;
+
+        & > * {
+          width: 100%;        
+        }
+      }      
+    }     
+  }
+}

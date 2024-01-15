@@ -1,0 +1,137 @@
+﻿@import './Tokens/generalThemes.less';
+
+:root {
+  --Good: #F1F9F3; // - для таблиц, инпутов и сообщений "Одобрено", цвет разделительных линий
+  --Attention: #FDF7DE; // — для таблиц, инпутов и сообщений "Внимание!"
+  --Warning: #FCDED4; // — для инпутов, таблиц и сообщений "Критическое событие"
+  --BackgroundBlue: #D5E8F8; // — цвет при наведении на системные кнопки
+  --BackgroundOrange: #eee0d2; // — цвет при наведении на системные кнопки
+  --Stroke: #DAD5CE; // — для инпутов, таблиц и сообщений "Критическое событие"
+  --Disabled: #f8f8f8; // — фон и цвет обводки неактивных инпутов, цвет неактивных кнопок
+  --Secondary: #9F9F9F; // — фон и цвет обводки неактивных инпутов, цвет неактивных кнопок
+  --Green: #60A772; // — фон и цвет обводки неактивных инпутов, цвет неактивных кнопок
+  --DarkGreen: #277647; // — цвет зеленых системных кнопок при наведении
+  --Yellow: #FFD415; // — для системных статусов класса "На доработку"
+  --Orange: #CC6E07; // — для критерие и модальных окон
+  --DarkOrange: #A1590D;
+  --Red: #D14114; // — для сообщений об ошибках, предупреждений критической важности,
+  --DarkRed: #912D0F; // — цвет красных системных кнопок при наведении
+  --Blue: #2E8DDE; // — цвет базовых системных кнопок
+  --DarkBlue: #28669D; //— цвет базовых системных кнопок при наведении
+  --Link: #157EFB; // — для активных ссылок статусов класса "Отклонен"
+  --Link-visited: #551A8B; // — для активных ссылок статусов класса "Отклонен"
+  --TooltipBG: #FBF5EE; // — для активных ссылок статусов класса "Отклонен"
+
+  --main_shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+  --secondary_shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+
+  // -- Переменные для ссылок на основании дизайн-системы НАЧАЛО --
+
+  //ТЕКСТОВЫЕ ССЫЛКИ, ВЕДУЩИЕ НА СТОРОННИЕ РЕСУРСЫ ИЛИ ПРИВОДЯТ К ЗАГРУЗКЕ ФАЙЛА
+
+  // стандартное поведение
+  --myrtex-ui-primary-link: #157EFB;
+  // при наведении
+  --myrtex-ui-primary-link-hover: #157EFB;
+  // посещенные
+  --myrtex-ui-primary-link-visited: #551A8B;
+
+  // -- Переменные для ссылок на основании дизайн-системы КОНЕЦ --
+
+  --system-text-negative: @system-text-negative;
+  --system-text-attention: @system-text-attention;
+  --system-text-positive: @system-text-positive;
+  --system-text-link-default: @system-text-link-default;
+  --system-text-link-visited: @system-text-link-visited;
+  --system-bg-satisfactorily: @system-bg-satisfactorily;
+  --system-bg-controls-status-satisfactorily-default: @system-bg-controls-status-satisfactorily-default;
+  --system-bg-controls-status-satisfactorily-hover: @system-bg-controls-status-satisfactorily-hover;
+  --system-bg-controls-positive-default: @system-bg-controls-positive-default;
+  --system-bg-controls-positive-hover: @system-bg-controls-positive-hover;
+  --system-bg-controls-negative-default: @system-bg-controls-negative-default;
+  --system-bg-controls-negative-hover: @system-bg-controls-negative-hover;
+  --system-bg-controls-attention-default: @system-bg-controls-attention-default;
+  --system-bg-controls-attention-hover: @system-bg-controls-attention-hover;
+  --system-bg-positive-primary: @system-bg-positive-primary;
+  --system-bg-positive-primary-hover: @system-bg-positive-primary-hover;
+  --system-bg-positive-secondary: @system-bg-positive-secondary;
+  --system-bg-negative-primary: @system-bg-negative-primary;
+  --system-bg-negative-primary-hover: @system-bg-negative-primary-hover;
+  --system-bg-negative-secondary: @system-bg-negative-secondary;
+  --system-bg-attention-primary: @system-bg-attention-primary;
+  --system-bg-attention-primary-hover: @system-bg-attention-primary-hover;
+  --system-bg-attention-secondary: @system-bg-attention-secondary;
+  --system-icon-positive: @system-icon-positive;
+  --system-icon-negative: @system-icon-negative;
+  --system-icon-attention: @system-icon-attention;
+  --system-icon-status-intermediate: @system-icon-status-intermediate;
+  --system-validation-status-registered: @system-validation-status-registered;
+  --system-validation-status-registered-notes: @system-validation-status-registered-notes;
+  --system-validation-status-limitations: @system-validation-status-limitations;
+  --system-validation-status-wrong-applicant: @system-validation-status-wrong-applicant;
+  --system-validation-status-not-subject-to-review: @system-validation-status-not-subject-to-review;
+  --system-validation-status-expertise: @system-validation-status-expertise;
+  --system-diagram-diagram-1: @system-diagram-diagram-1;
+  --system-diagram-diagram-2: @system-diagram-diagram-2;
+  --system-diagram-diagram-3: @system-diagram-diagram-3;
+  --system-diagram-diagram-4: @system-diagram-diagram-4;
+  --system-diagram-diagram-5: @system-diagram-diagram-5;
+  --system-diagram-diagram-6: @system-diagram-diagram-6;
+  --system-rating-selected: @system-raiting-selected;
+  --system-rating-hover: @system-raiting-hover;
+  --system-rating-default: @system-raiting-default;
+  --sizing-1: @sizing-1;
+  --sizing-2: @sizing-2;
+  --sizing-3: @sizing-3;
+  --sizing-4: @sizing-4;
+  --sizing-5: @sizing-5;
+  --sizing-6: @sizing-6;
+  --sizing-8: @sizing-8;
+  --sizing-10: @sizing-10;
+  --sizing-12: @sizing-12;
+  --sizing-16: @sizing-16;
+  --sizing-18: @sizing-18;
+  --sizing-20: @sizing-20;
+  --sizing-24: @sizing-24;
+  --sizing-module: @sizing-module;
+  --sizing-helf: @sizing-helf;
+  --spacing-0: @spacing-0;
+  --spacing-1: @spacing-1;
+  --spacing-2: @spacing-2;
+  --spacing-3: @spacing-3;
+  --spacing-4: @spacing-4;
+  --spacing-6: @spacing-6;
+  --spacing-8: @spacing-8;
+  --spacing-12: @spacing-12;
+  --spacing-16: @spacing-16;
+  --spacing-module: @spacing-module;
+  --spacing-helf: @spacing-helf;
+  --media-extra-sm-max-width: @media-extra-sm-max-width; // 575px;
+  --media-sm-min-width: @media-sm-min-width; // 576px;
+  --media-sm-max-width: @media-sm-max-width; // 767px;
+  --media-md-min-width: @media-md-min-width; // 768px;
+  --media-md-max-width: @media-md-max-width; // 991px;
+  --media-lg-min-width: @media-lg-min-width; // 992px;
+  --media-lg-max-width: @media-lg-max-width; // 1199px;
+  --media-extra-lg-min-width: @media-extra-lg-min-width; // 1200px;
+  --border-width-focused: @border-width-focused;
+  --border-width-checkbox: @border-width-checkbox;
+  --border-width-default: @border-width-default;
+  --border-radius-1: @border-radius-1;
+  --border-radius-2: @border-radius-2;
+  --border-radius-3: @border-radius-3;
+  --border-radius-tab: @border-radius-tab;
+  --border-radius-helf: @border-radius-helf;
+  --box-shadow-main-color: @box-shadow-main-color;
+  --box-shadow-main-type: @box-shadow-main-type;
+  --box-shadow-main-x: @box-shadow-main-x;
+  --box-shadow-main-y: @box-shadow-main-y;
+  --box-shadow-main-blur: @box-shadow-main-blur;
+  --box-shadow-main-spread: @box-shadow-main-spread;
+  --box-shadow-secondary-color: @box-shadow-secondary-color;
+  --box-shadow-secondary-type: @box-shadow-secondary-type;
+  --box-shadow-secondary-x: @box-shadow-secondary-x;
+  --box-shadow-secondary-y: @box-shadow-secondary-y;
+  --box-shadow-secondary-blur: @box-shadow-secondary-blur;
+  --box-shadow-secondary-spread: @box-shadow-secondary-spread;
+}

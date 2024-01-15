@@ -1,0 +1,51 @@
+.mrx-btn.mrx-btn {
+  &.mrx-btn-primary {
+    border: var(--border-width-default) solid var(--brand-bg-primary-default);
+    background-color: var(--brand-bg-primary-default);
+    color: var(--neutral-text-inverse);
+  
+    &:hover, &.active  {
+      background-color: var(--brand-bg-primary-hover);
+      border-color: var(--brand-bg-primary-hover);
+    }
+  
+    .mrx-icon {
+      color: var(--neutral-text-inverse);
+    }
+  
+    svg:not(.icon-loading) {
+      &.fill {
+        path {
+          fill: var(--neutral-text-inverse);
+        }
+  
+        circle {
+          fill: var(--neutral-text-inverse);
+        }
+  
+        &-rect {
+          rect {
+            fill: var(--neutral-text-inverse);
+          }
+        }
+      }
+  
+      &.stroke {
+        path {
+          stroke: transparent;
+          fill: var(--neutral-text-inverse);
+        }
+  
+        circle {
+          stroke: var(--neutral-text-inverse);
+        }
+  
+        &-rect {
+          rect {
+            stroke: var(--neutral-text-inverse);
+          }
+        }
+      }
+    }
+  }
+}

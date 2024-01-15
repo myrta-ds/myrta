@@ -1,0 +1,55 @@
+.mrx-anti-plagiarism {
+  box-shadow: 0px 2px 10px rgba(58, 58, 58, 0.1);
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+
+  &__header {
+    cursor: pointer;
+    position: relative;
+
+    &--info-text {
+      font-size: 12px;
+      font-weight: bold;
+
+      // вырезать после создания общего компонента для виджета - выравнивание стрелки
+      &~.mrx-icon {
+        margin-bottom: -2px;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    border-top: 1px solid var(--Stroke);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--Stroke);
+      }
+
+      &:not(:first-child) {
+        padding-top: 8px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 8px;
+      }
+
+      &:first-child {
+        padding-top: 16px;
+      }
+
+      &:last-child {
+        padding-bottom: 16px;
+      }
+    }
+  }
+}

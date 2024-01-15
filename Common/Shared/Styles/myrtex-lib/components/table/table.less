@@ -1,0 +1,30 @@
+.mrx-table.mrx-table {
+  display: block;
+  width: 100%;
+
+  .th-wrapper {
+    display: flex;
+    cursor: pointer;
+    word-break: inherit;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    span {
+      word-break: inherit;
+    }
+  }
+
+  .mrx-table__sort-icon {
+    &.asc {
+      path:last-child {
+        fill: var(--brand-bg-primary-default);
+      }
+    }
+
+    &.desc {
+      path:first-child {
+        fill: var(--brand-bg-primary-default);
+      }
+    }
+  }
+}

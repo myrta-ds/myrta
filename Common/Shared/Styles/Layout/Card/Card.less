@@ -1,0 +1,492 @@
+.page-container {
+  .card {
+    background: #fff;
+    box-shadow: var(--main_shadow);
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 1096px;
+    // margin: 0 auto;
+    margin-bottom: 20px;
+    height: calc(~'100% - 20px');
+    display: block;
+    position: relative;
+
+    @media (max-width: 991px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+
+    &:hover {
+      .card-trigger {
+        .function {
+          opacity: 1;
+        }
+      }
+    }
+
+    .no-indent {
+      margin: 0 -24px;
+
+      @media (max-width: 991px) {
+        margin: 0 -20px;
+      }
+
+      @media (max-width: 768px) {
+        margin: 0 -16px;
+      }
+    }
+
+    &.loading {
+      &:after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        content: url("data:image/svg+xml,%3Csvg version='1.1' id='L9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100px' viewBox='0 0 100 100' enable-background='new 0 0 0 0' xml:space='preserve'%3E%3Cpath fill='%23fff' d='M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50' transform='rotate(262.023 50 50)'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='rotate' dur='1s' from='0 50 50' to='360 50 50' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/path%3E%3C/svg%3E");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(134, 181, 206, 0.47);
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    &-header {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &.big {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-head {
+      margin-top: -24px;
+      padding: 24px 0;
+      padding-bottom: 14px;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+
+      @media (max-width: 991px) {
+        margin-top: -20px;
+        padding: 20px 0;
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: -16px;
+        padding: 16px 0;
+        padding-bottom: 6px;
+      }
+
+      >div {
+        display: flex;
+
+        >* {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-block {
+      border-bottom: 1px solid var(--Stroke);
+      padding-bottom: 16px;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    &-trigger {
+      margin: -24px 0;
+      padding: 4px 0;
+      padding-right: 40px;
+      padding-top: 14px;
+      min-height: 60px;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+
+      @media (max-width: 991px) {
+        margin: -20px 0;
+      }
+
+      @media (max-width: 768px) {
+        margin: -16px 0;
+      }
+
+      >div {
+        display: flex;
+
+        >* {
+          margin-bottom: 10px;
+        }
+      }
+
+      .function-row {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 991px) {
+          flex-wrap: wrap;
+        }
+
+        >* {
+          margin-right: 16px;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.vertical-line {
+            border-right: 1px solid var(--Stroke);
+            padding-right: 16px;
+          }
+        }
+
+        .value {
+          height: 38px;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 160%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.green {
+            color: var(--Green);
+          }
+
+          &.yellow {
+            color: var(--Yellow);
+          }
+
+          &.red {
+            color: var(--Red);
+          }
+        }
+
+        .inputbox {
+          margin-bottom: 0;
+
+          input {
+            width: 70px;
+            height: auto;
+            text-align: center;
+            padding: 10px 6px;
+          }
+        }
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 120%;
+        font-weight: bold;
+        max-width: 85%;
+      }
+
+      &__additional {
+        color: var(--Stroke);
+      }
+
+      .trigger {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        line-height: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transform: translateY(-50%);
+        line-height: 0;
+
+        svg {
+          transition: 0.2s;
+          margin: 0;
+        }
+      }
+
+      .function {
+        position: absolute;
+        right: -36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transition: 0.2s;
+
+        @media (max-width: 991px) {
+          right: -32px;
+        }
+
+        @media (max-width: 768px) {
+          right: -27px;
+        }
+
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 4px;
+          width: 24px;
+          height: 24px;
+          border-radius: 100%;
+          box-shadow: var(--secondary_shadow);
+          cursor: pointer;
+          background: #fff;
+          transition: 0.2s;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          svg {
+            line-height: 0;
+
+            path {
+              transition: 0.2s;
+            }
+          }
+
+          &.red {
+            background: var(--Red);
+          }
+
+          &.green {
+            background: var(--Green);
+          }
+
+          &.delete {
+            &:hover {
+              background: var(--Red);
+
+              svg {
+                path {
+                  stroke: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .draggable {
+        position: absolute;
+        left: -24px;
+        top: 50%;
+        cursor: pointer;
+        transform: translateY(-50%);
+        line-height: 0;
+      }
+
+      &.open {
+        .trigger {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      svg {
+        cursor: pointer;
+      }
+    }
+
+    &-content {
+      border-top: 1px solid var(--Stroke);
+      padding-top: 20px;
+      margin-top: 24px;
+    }
+
+    &.info-baner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8px;
+      padding-bottom: 0;
+      margin: 0 -24px;
+      margin-top: -30px;
+      margin-bottom: 24px;
+      border-radius: 0px;
+      min-height: 64px;
+      max-width: initial;
+
+      @media (max-width: 991px) {
+        margin: 0 -20px;
+        margin-top: -24px;
+        margin-bottom: 24px;
+      }
+
+      @media (max-width: 768px) {
+        margin: 0 -16px;
+        margin-top: -24px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 120%;
+        max-width: 590px;
+      }
+
+      .btn {
+        margin-bottom: 10px;
+      }
+
+      .container {
+        max-width: 1096px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: initial;
+        padding: 0;
+      }
+    }
+
+    &.open {
+      .card-trigger {
+        .trigger {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 10px;
+      display: flex;
+
+      &.addition {
+        font-size: 13px;
+        line-height: 160%;
+        display: flex;
+        align-items: center;
+        color: var(--Stroke);
+        font-weight: normal;
+        line-height: 1;
+
+        span {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 160%;
+          color: #000000;
+          margin-left: 8px;
+        }
+      }
+
+      &.this-function {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 1;
+
+        .function {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      &.eror {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 100%;
+        color: var(--Red);
+      }
+
+      .trigger {
+        svg {
+          transition: 0.2s;
+        }
+      }
+
+      &.open {
+        .trigger {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      svg {
+        cursor: pointer;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background: var(--Stroke);
+      margin-top: 16px;
+      margin-bottom: 30px;
+    }
+
+    .sticky-line {
+      position: sticky;
+      top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      z-index: 2;
+      margin: -22px;
+      margin-bottom: 25px;
+      padding: 22px;
+      padding-top: 16px;
+      padding-bottom: 0px;
+
+      >div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

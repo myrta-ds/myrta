@@ -1,0 +1,62 @@
+.mrx-modal-content {
+  &.type-default {
+    .mrx-modal-header {
+      background: var(--brand-bg-primary-default);
+      color: var(--neutral-icon-inverse);
+
+      .icon-close, .icon-arrow-expand, .icon-arrow-collapse, .icon-arrow-left {
+        color: var(--neutral-icon-inverse);
+      }
+    }
+  }
+
+  &.type-info {
+    .mrx-modal-header {
+      background: var(--neutral-bg-island-default);
+      color: var(--neutral-text-primary);
+
+      .icon-close, .icon-arrow-expand, .icon-arrow-collapse, .icon-arrow-left {
+        color: var(--neutral-icon-default);
+      }
+    }
+  }
+
+  &.type-attention {
+    .mrx-modal-header {
+      background: var(--system-bg-controls-attention-default);
+      color: var(--neutral-icon-inverse);
+
+      .icon-close, .icon-arrow-expand, .icon-arrow-collapse, .icon-arrow-left {
+        color: var(--neutral-icon-inverse);
+      }
+    }
+  }
+
+  &.type-negative {
+    .mrx-modal-header {
+      background: var(--system-bg-controls-negative-default);
+      color: var(--neutral-icon-inverse);
+
+      .icon-close, .icon-arrow-expand, .icon-arrow-collapse, .icon-arrow-left {
+        color: var(--neutral-icon-inverse);
+      }
+    }
+  }
+
+  .mrx-modal__back {
+    cursor: pointer;
+    color: var(--brand-text-controls-default);
+
+    .mrx-icon {
+      color: var(--brand-text-controls-default);
+    }
+
+    &:hover {
+      color: var(--brand-text-controls-hover);
+
+      .mrx-icon {
+        color: var(--brand-text-controls-hover);
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<button
+    class="mrx-btn"
+    [class]="getClasses"
+    [class.active]="active"
+    [class.icon-only]="iconOnly"
+    [class.icon-loading]="isLoading && !disabled"
+    [disabled]="disabled"
+    (click)="buttonClick($event)"
+>
+  <ng-template #spinner>
+    <mrx-loader
+        [color]="getLoaderColor"
+        [size]="getLoaderSize"
+    ></mrx-loader>
+  </ng-template>
+
+  <ng-container *ngIf="isIconLeft && isLoading && !disabled">
+    <div
+        class="icon-wrapper"
+        [class.mr-1]="size === 'small' && !iconOnly"
+        [class.mr-2]="(size === 'large' || size === 'medium') && !iconOnly"
+    >
+      <ng-container *ngTemplateOutlet="spinner"></ng-container>
+    </div>
+  </ng-container>
+
+  <div
+      class="icon-wrapper"
+      [class.mr-1]="size === 'small' && !iconOnly"
+      [class.mr-2]="(size === 'large' || size === 'medium') && !iconOnly"
+      *ngIf="icon && isIconLeft && !isLoading" [innerHTML]="getReplacedIcon | safe"
+  ></div>
+
+  <div
+      class="icon-wrapper"
+      [class.mr-1]="size === 'small' && !iconOnly"
+      [class.mr-2]="(size === 'large' || size === 'medium') && !iconOnly"
+      *ngIf="iconClass && isIconLeft && !isLoading"
+  >
+    <span
+        class="mrx-icon"
+        [class]="iconClass"
+        [class.icon-font-24]="size === 'large' || size === 'medium'"
+        [class.icon-font-20]="size === 'small'"
+    ></span>
+  </div>
+
+  <div class="mrx-btn-label">{{ getLabel }}
+    <ng-content></ng-content>
+  </div>
+
+  <div
+      class="icon-wrapper"
+      [class.ml-1]="size === 'small' && !iconOnly"
+      [class.ml-2]="(size === 'large' || size === 'medium') && !iconOnly"
+      *ngIf="iconClass && isIconRight && !isLoading"
+  >
+    <span
+        class="mrx-icon"
+        [class]="iconClass"
+        [class.icon-font-24]="size === 'large' || size === 'medium'"
+        [class.icon-font-20]="size === 'small'"
+    ></span>
+  </div>
+
+  <div
+      class="icon-wrapper"
+      [class.ml-1]="size === 'small' && !iconOnly"
+      [class.ml-2]="(size === 'large' || size === 'medium') && !iconOnly"
+      *ngIf="icon && isIconRight && !isLoading" [innerHTML]="getReplacedIcon | safe"
+  ></div>
+
+  <ng-container *ngIf="isIconRight && isLoading && !disabled">
+    <div
+        class="icon-wrapper"
+        (click)="$event.preventDefault()"
+        [class.ml-1]="size === 'small' && !iconOnly"
+        [class.ml-2]="(size === 'large' || size === 'medium') && !iconOnly"
+    >
+      <ng-container *ngTemplateOutlet="spinner"></ng-container>
+    </div>
+  </ng-container>
+</button>

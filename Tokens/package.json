@@ -1,0 +1,21 @@
+{
+  "name": "tokens-builder",
+  "version": "1.0.1",
+  "description": "tokens-builder",
+  "scripts": {
+    "build": "node config.js",
+    "transform": "npm run sd-themes && npm run sd-fonts",
+    "sd-fonts": "npm run sd-typeThemePtSans",
+    "sd-themes": "npm run sd-generalThemes && npm run sd-colorThemeMinfin",
+    "sd-generalThemes": "npx token-transformer ./myrtex/tokens.json ./transformed/generalThemes.json general,generalColors,systemColors generalColors --expandShadow=true",
+    "sd-colorThemeMinfin": "npx token-transformer ./myrtex/tokens.json ./transformed/colorThemeMinfin.json brandMinfin,generalColors generalColors",
+    "sd-typeThemePtSans": "npx token-transformer ./myrtex/tokens.json ./transformed/typeThemePtSans.json typePtSans,generalType generalType --expandTypography=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "^0.0.27"
+  }
+}

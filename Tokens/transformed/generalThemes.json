@@ -1,0 +1,483 @@
+{
+  "system": {
+    "text": {
+      "negative": {
+        "value": "#8E2100",
+        "type": "color",
+        "description": "цвет негативного текста"
+      },
+      "attention": {
+        "value": "#AC5C06",
+        "type": "color",
+        "description": "цвет текста-предупреждения"
+      },
+      "positive": {
+        "value": "#004A1A",
+        "type": "color",
+        "description": "цвет положительного текста"
+      },
+      "link": {
+        "default": {
+          "value": "#157efb",
+          "type": "color",
+          "description": "цвет ссылок, ведущих на сторонние ресурсы"
+        },
+        "visited": {
+          "value": "#551a8b",
+          "type": "color",
+          "description": "цвет посещенных ссылок, ведущих на сторонние ресурсы"
+        }
+      }
+    },
+    "bg": {
+      "satisfactorily": {
+        "value": "#FFF2C2",
+        "type": "color",
+        "description": "цвет фона элементов оценки удовлетворительно"
+      },
+      "controls": {
+        "status-satisfactorily": {
+          "default": {
+            "value": "#FFCA10",
+            "type": "color",
+            "description": "цвет фона элементов управления статуса неудовлетворительно"
+          },
+          "hover": {
+            "value": "#FFBD01",
+            "type": "color",
+            "description": "цвет элементов управления статуса неудовлетворительно в состоянии hover"
+          }
+        },
+        "positive": {
+          "default": {
+            "value": "#108E3A",
+            "type": "color",
+            "description": "цвет элементов управления с положительным действием"
+          },
+          "hover": {
+            "value": "#007729",
+            "type": "color",
+            "description": "цвет элементов управления с положительным действием в состоянии hover "
+          }
+        },
+        "negative": {
+          "default": {
+            "value": "#B83B15",
+            "type": "color",
+            "description": "цвет элементов управления с негативным действием"
+          },
+          "hover": {
+            "value": "#AA2800",
+            "type": "color",
+            "description": "цвет элементов управления с негативным действием в состоянии hover "
+          }
+        },
+        "attention": {
+          "default": {
+            "value": "#CC6E07",
+            "type": "color",
+            "description": "цвет элементов управления с предупреждением"
+          },
+          "hover": {
+            "value": "#C26807",
+            "type": "color",
+            "description": "цвет элементов управления с предупреждением в состоянии hover"
+          }
+        }
+      },
+      "positive": {
+        "primary": {
+          "value": "#ADE8C0",
+          "type": "color",
+          "description": "цвет для позитивных элементов: тегов, счетчиков и других, требующих дополнительного акцента"
+        },
+        "secondary": {
+          "value": "#E7FFEE",
+          "type": "color",
+          "description": "цвет фона в позитивных уведомлениях, статусах и состояниях"
+        },
+        "primaryHover": {
+          "value": "#7BD297",
+          "type": "color"
+        }
+      },
+      "negative": {
+        "primary": {
+          "value": "#F1C2B4",
+          "type": "color",
+          "description": "цвет для негативных элементов: тегов, счетчиков и других, требующих дополнительного акцента"
+        },
+        "secondary": {
+          "value": "#FFECE7",
+          "type": "color",
+          "description": "цвет фона в негативных уведомлениях, статусах и состояниях"
+        },
+        "primaryHover": {
+          "value": "#E39B85",
+          "type": "color"
+        }
+      },
+      "attention": {
+        "primary": {
+          "value": "#F5D1A9",
+          "type": "color",
+          "description": "цвет для элементов предупреждения: тегов, счетчиков и других, требующих дополнительного акцента"
+        },
+        "secondary": {
+          "value": "#FFF4E7",
+          "type": "color",
+          "description": "цвет фона в предупреждениях"
+        },
+        "primaryHover": {
+          "value": "#ECB16F",
+          "type": "color"
+        }
+      }
+    },
+    "icon": {
+      "positive": {
+        "value": "#2DA454",
+        "type": "color",
+        "description": "цвет иконок в позитивных уведомлениях и статусах"
+      },
+      "negative": {
+        "value": "#C65836",
+        "type": "color",
+        "description": "цвет иконок в негативных уведомлениях и статусах"
+      },
+      "attention": {
+        "value": "#D97508",
+        "type": "color",
+        "description": "цвет иконок в предупреждениях"
+      },
+      "status-intermediate": {
+        "value": "#FFD541",
+        "type": "color",
+        "description": "цвет иконок статуса удовлетворительно"
+      }
+    },
+    "validation-status": {
+      "registered": {
+        "value": "#108E3A",
+        "type": "color",
+        "description": "цвет статуса валидации Зарегистрирован"
+      },
+      "registered-notes": {
+        "value": "#0098a4",
+        "type": "color",
+        "description": "цвет статуса валидации \nЗарегистрирован с замечаниями"
+      },
+      "limitations": {
+        "value": "#4d5157",
+        "type": "color",
+        "description": "цвет статуса валидации Требуется устранение недостатков"
+      },
+      "wrong-applicant": {
+        "value": "#CC6E07",
+        "type": "color",
+        "description": "цвет статуса валидации Ненадлежащий заявитель"
+      },
+      "not-subject-to-review": {
+        "value": "#B83B15",
+        "type": "color",
+        "description": "цвет статуса валидации Не подлежит рассмотрению"
+      },
+      "expertise": {
+        "value": "#932059",
+        "type": "color",
+        "description": "цвет статуса валидации На независимой экспертизе"
+      }
+    },
+    "diagram": {
+      "diagram-1": {
+        "value": "#50BB73",
+        "type": "color",
+        "description": "цвет сектора диаграммы с положительным акцентом"
+      },
+      "diagram-2": {
+        "value": "#6c9cd4",
+        "type": "color",
+        "description": "нейтральный цвет на диаграмме"
+      },
+      "diagram-3": {
+        "value": "#E29239",
+        "type": "color",
+        "description": "цвет сектора диаграммы требующий внимания"
+      },
+      "diagram-4": {
+        "value": "#FFD541",
+        "type": "color",
+        "description": "цвет сектора на диаграмме"
+      },
+      "diagram-5": {
+        "value": "#D4785B",
+        "type": "color",
+        "description": "цвет сектора на диаграмме с негативным окрасом"
+      },
+      "diagram-6": {
+        "value": "#bfc5cc",
+        "type": "color",
+        "description": "нейтральный цвет на диаграмме"
+      }
+    },
+    "raiting": {
+      "selected": {
+        "value": "#FFCA10",
+        "type": "color"
+      },
+      "hover": {
+        "value": "#FFCA10",
+        "type": "color"
+      },
+      "default": {
+        "value": "#DBDFE5",
+        "type": "color"
+      }
+    }
+  },
+  "sizing": {
+    "1": {
+      "value": 4,
+      "type": "sizing"
+    },
+    "2": {
+      "value": 8,
+      "type": "sizing"
+    },
+    "3": {
+      "value": 12,
+      "type": "sizing"
+    },
+    "4": {
+      "value": 16,
+      "type": "sizing"
+    },
+    "5": {
+      "value": 20,
+      "type": "sizing"
+    },
+    "6": {
+      "value": 24,
+      "type": "sizing"
+    },
+    "8": {
+      "value": 32,
+      "type": "sizing"
+    },
+    "10": {
+      "value": 40,
+      "type": "sizing"
+    },
+    "12": {
+      "value": 48,
+      "type": "sizing"
+    },
+    "16": {
+      "value": 64,
+      "type": "sizing"
+    },
+    "18": {
+      "value": 72,
+      "type": "sizing"
+    },
+    "20": {
+      "value": 80,
+      "type": "sizing"
+    },
+    "24": {
+      "value": 96,
+      "type": "sizing"
+    },
+    "module": {
+      "value": 4,
+      "type": "sizing"
+    },
+    "helf": {
+      "value": 2,
+      "type": "sizing"
+    }
+  },
+  "spacing": {
+    "0": {
+      "value": 0,
+      "type": "spacing"
+    },
+    "1": {
+      "value": 4,
+      "type": "spacing"
+    },
+    "2": {
+      "value": 8,
+      "type": "spacing"
+    },
+    "3": {
+      "value": 12,
+      "type": "spacing"
+    },
+    "4": {
+      "value": 16,
+      "type": "spacing"
+    },
+    "6": {
+      "value": 24,
+      "type": "spacing"
+    },
+    "8": {
+      "value": 32,
+      "type": "spacing"
+    },
+    "12": {
+      "value": 48,
+      "type": "spacing"
+    },
+    "16": {
+      "value": 64,
+      "type": "spacing"
+    },
+    "module": {
+      "value": 4,
+      "type": "spacing"
+    },
+    "helf": {
+      "value": 2,
+      "type": "spacing"
+    }
+  },
+  "media": {
+    "extra-sm": {
+      "max-width": {
+        "value": 575,
+        "type": "other"
+      }
+    },
+    "sm": {
+      "min-width": {
+        "value": 576,
+        "type": "other"
+      },
+      "max-width": {
+        "value": 767,
+        "type": "other"
+      }
+    },
+    "md": {
+      "min-width": {
+        "value": 768,
+        "type": "other"
+      },
+      "max-width": {
+        "value": 991,
+        "type": "other"
+      }
+    },
+    "lg": {
+      "min-width": {
+        "value": 992,
+        "type": "other"
+      },
+      "max-width": {
+        "value": 1199,
+        "type": "other"
+      }
+    },
+    "extra-lg": {
+      "min-width": {
+        "value": 1200,
+        "type": "other"
+      }
+    }
+  },
+  "borderWidth": {
+    "default": {
+      "value": 1,
+      "type": "borderWidth",
+      "description": "толщина обводки по умолчанию"
+    },
+    "focused": {
+      "value": 4,
+      "type": "borderWidth"
+    },
+    "checkbox": {
+      "value": 2,
+      "type": "borderWidth"
+    }
+  },
+  "borderRadius": {
+    "1": {
+      "value": 4,
+      "type": "borderRadius",
+      "description": "скругление блоков и элементов интерфейса"
+    },
+    "2": {
+      "value": 8,
+      "type": "borderRadius",
+      "description": "радиус элементов на публичной части портала"
+    },
+    "3": {
+      "value": 12,
+      "type": "borderRadius"
+    },
+    "tab": {
+      "value": "4, 4, 0, 0",
+      "type": "borderRadius"
+    },
+    "helf": {
+      "value": 2,
+      "type": "borderRadius"
+    }
+  },
+  "boxShadow": {
+    "main": {
+      "color": {
+        "value": "#3b43571a",
+        "type": "color"
+      },
+      "type": {
+        "value": "dropShadow",
+        "type": "type"
+      },
+      "x": {
+        "value": 0,
+        "type": "x"
+      },
+      "y": {
+        "value": 1,
+        "type": "y"
+      },
+      "blur": {
+        "value": 4,
+        "type": "blur"
+      },
+      "spread": {
+        "value": 0,
+        "type": "spread"
+      }
+    },
+    "secondary": {
+      "color": {
+        "value": "#3a3a3a4d",
+        "type": "color"
+      },
+      "type": {
+        "value": "dropShadow",
+        "type": "type"
+      },
+      "x": {
+        "value": 0,
+        "type": "x"
+      },
+      "y": {
+        "value": 1,
+        "type": "y"
+      },
+      "blur": {
+        "value": 4,
+        "type": "blur"
+      },
+      "spread": {
+        "value": 0,
+        "type": "spread"
+      }
+    }
+  }
+}

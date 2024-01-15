@@ -1,0 +1,25 @@
+.mrx-input-image-modal.mrx-input-image-modal {
+  .mrx-input-image-cropper {
+    &__wrapper {
+      position: relative;
+    }
+  
+    &__controls {
+      padding: 8px;
+      background: rgba(31, 34, 38, 0.5);
+      border-radius: 4px;
+      position: absolute;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+  
+      svg {
+        cursor: pointer;
+  
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

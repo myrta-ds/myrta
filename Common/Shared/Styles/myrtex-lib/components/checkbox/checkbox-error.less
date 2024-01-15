@@ -1,0 +1,25 @@
+.mrx-checkbox.mrx-checkbox {
+  &.mrx-input-error {
+    &.mrx-checkbox-default:not(.mrx-checkbox-indeterminate) {
+      .mrx-checkbox__mark {
+        border-color: var(--system-bg-controls-negative-default);
+      }
+    }
+  }
+
+  &.mrx-input-checked-error {
+    &.mrx-checkbox-default:not(.mrx-checkbox-indeterminate) {
+      .mrx-checkbox__mark {
+        border-color: var(--system-bg-controls-negative-default);
+      }
+    }
+  }
+
+  &.mrx-input-checked-success {
+    &.mrx-checkbox-default:not(.mrx-checkbox-indeterminate) {
+      .mrx-checkbox__mark {
+        border-color: var(--system-bg-controls-positive-default);
+      }
+    }
+  }
+}
