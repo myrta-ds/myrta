@@ -1,0 +1,84 @@
+.page-wrapper.absolute-theme {
+
+    .project__cards,
+    .news,
+    .news-info,
+    .event,
+    .event-info,
+    .project__present,
+    .project__item,
+    .grant-operator,
+    .hmao-contests,
+    .documents,
+    .hmao-teaching-materials,
+    .faq,
+    .hmao-structure,
+    .hmao-leaders,
+    .hmao-requisites,
+    .contact,
+    .hmao-supervisor,
+    .hmao-expert-council,
+    .hmao-coordination-council,
+    .hmao-contest-direction,
+    .asi-contests {
+
+        .content__title {
+            border: none;
+        }
+
+        .divider {
+            background: transparent;
+        }
+    }
+
+    // ------------File-input------------
+
+    .new-custom-file-input {
+        &__item {
+            &:hover {
+                .qq-file-name {
+                    &:before {
+                        content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 21.25H6C5.30964 21.25 4.75 20.6904 4.75 20V4C4.75 3.30964 5.30964 2.75 6 2.75H13.1893L19.25 8.81066V20C19.25 20.6904 18.6904 21.25 18 21.25Z' stroke='%23FFCC00' stroke-width='1.5'/%3E%3C/svg%3E%0A") !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // ------------File-input------------
+
+    .telerik-link {
+        color: var(--Subsidiary);
+    }
+
+    .btn {
+        // Цвета поменяли местами по просьбе заказчика
+        --Main2: #D0A300;
+        --Subsidiary: #FFDF6B;
+    }
+
+    .footer-wrapper {
+        .footer {
+            background: var(--Bg1); // По просьбе заказчика замененно, должно быть Subsidiary
+        }
+
+        .footer__copyright-text {
+            color: var(--Main1);
+            font-size: 16px;
+            opacity: 1;
+        }
+
+        *{
+            color: var(--Main1) !important;
+        }
+
+        .social-link__top-item .btn-icon--light .btn-icon__img, .social-link__top-item .btn-icon--light use{
+            fill: var(--Main1);
+        }
+
+        .social-link__top-item .btn-icon--light{
+            border-color: var(--Main1);
+            fill: var(--Main1);
+        }
+    }
+}

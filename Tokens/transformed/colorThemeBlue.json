@@ -2,28 +2,28 @@
   "brand": {
     "text": {
       "nav-link": {
-        "value": "#2a6ab8",
+        "value": "#358FE2",
         "type": "color",
         "description": "цвет ссылок, ведущих на другие страницы системы"
       },
       "accent": {
-        "value": "#003780",
+        "value": "#2C659A",
         "type": "color",
         "description": "акцентный цвет для текста"
       },
       "controls": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#358FE2",
           "type": "color",
           "description": "цвет текста в элементах управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#338FD0",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии hover"
         },
         "selected": {
-          "value": "#0f54aa",
+          "value": "#338FD0",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии selected"
         }
@@ -32,24 +32,24 @@
     "bg": {
       "primary": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#358FE2",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#338FD0",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления в состоянии hover"
         }
       },
       "secondary": {
         "default": {
-          "value": "#edf5ff",
+          "value": "#C9E6F4",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента"
         },
         "hover": {
-          "value": "#bed6f1",
+          "value": "#A2D6EF",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента, в состоянии hover"
         }
@@ -61,12 +61,12 @@
           "description": "цвет фона основных контентных блоков"
         },
         "hover": {
-          "value": "#edf5ff",
+          "value": "#F1F6F8",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии hover"
         },
         "selected": {
-          "value": "#edf5ff",
+          "value": "#F1F6F8",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии selected"
         }
@@ -77,7 +77,7 @@
         "description": "прозрачность хедера при скролле"
       },
       "transparent": {
-        "value": "#2a6ab800",
+        "value": "#358fe200",
         "type": "color"
       }
     }
@@ -85,68 +85,68 @@
   "neutral": {
     "bg": {
       "page": {
-        "value": "#EEF0F4",
+        "value": "#F4F4F4",
         "type": "color",
         "description": "фон внутренних страниц системы"
       },
       "modal": {
-        "value": "#26262640",
+        "value": "#28282840",
         "type": "color",
         "description": "прозрачный фон страницы при открытии модального окна"
       },
       "divider": {
-        "value": "#EEF0F4",
+        "value": "#E7E3E1",
         "type": "color",
         "description": "цвет разделителей в таблицах и между блоками"
       },
       "stroke": {
         "default": {
-          "value": "#DBDFE5",
+          "value": "#DAD5CE",
           "type": "color",
           "description": "цвет обводки у элементов управления"
         },
         "hover": {
-          "value": "#BFC5CC",
+          "value": "#BCB5AC",
           "type": "color",
           "description": "цвет обводки у элементов управления в состоянии hover"
         }
       },
       "island": {
         "default": {
-          "value": "#F8F9FA",
+          "value": "#F4F4F4",
           "type": "color",
           "description": "фон для плашек, подложек и элементов управления в состоянии disabled"
         },
         "hover": {
-          "value": "#EEF0F4",
+          "value": "#E7E3E1",
           "type": "color",
           "description": "фон для плашек, подложек и элементов управления в состоянии hover"
         }
       },
       "disabled": {
-        "value": "#EEF0F4",
+        "value": "#F4F4F4",
         "type": "color",
-        "description": "добавлено описание neutral.bg.disabled"
+        "description": "фон неактивных элементов"
       },
       "inverse": {
-        "value": "#33373C",
+        "value": "#464646",
         "type": "color",
         "description": "цвет фона темных элементов на светлом фоне"
       },
       "inverseHover": {
-        "value": "#4D5157",
+        "value": "#636363",
         "type": "color",
         "description": "цвет фона темных элементов на светлом фоне при наведении"
       }
     },
     "icon": {
       "default": {
-        "value": "#33373C",
+        "value": "#464646",
         "type": "color",
         "description": "цвет иконок"
       },
       "disabled": {
-        "value": "#71767E",
+        "value": "#9DA1AB",
         "type": "color",
         "description": "цвет неактивных иконок"
       },
@@ -156,23 +156,23 @@
         "description": "цвет иконок на темном фоне"
       },
       "info": {
-        "value": "#9AA0A8",
+        "value": "#ADA8A6",
         "type": "color"
       }
     },
     "text": {
       "primary": {
-        "value": "#262626",
+        "value": "#2C2C2C",
         "type": "color",
         "description": "основной цвет текста"
       },
       "secondary": {
-        "value": "#4D5157",
+        "value": "#464646",
         "type": "color",
         "description": "цвет текста, для обозначения дополнительной информации и примечаний"
       },
       "tertiary": {
-        "value": "#71767E",
+        "value": "#9DA1AB",
         "type": "color",
         "description": "цвет текста для обозначения третичной информации, например, цвет текста плейсхолдера в полях"
       },
@@ -182,7 +182,7 @@
         "description": "цвет текста на темном фоне"
       },
       "linkMonochrome": {
-        "value": "#262626",
+        "value": "#2C2C2C",
         "type": "color",
         "description": "цвет текста монохромных ссылок"
       }
@@ -190,12 +190,12 @@
     "control": {
       "bg": {
         "disabled": {
-          "value": "#EEF0F4",
+          "value": "#E7E3E1",
           "type": "color"
         },
         "accent": {
           "disabled": {
-            "value": "#71767E",
+            "value": "#9F9F9F",
             "type": "color"
           }
         }

@@ -2,28 +2,28 @@
   "brand": {
     "text": {
       "nav-link": {
-        "value": "#2a6ab8",
+        "value": "#713DD3",
         "type": "color",
         "description": "цвет ссылок, ведущих на другие страницы системы"
       },
       "accent": {
-        "value": "#003780",
+        "value": "#26006E",
         "type": "color",
         "description": "акцентный цвет для текста"
       },
       "controls": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#713DD3",
           "type": "color",
           "description": "цвет текста в элементах управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#5620BA",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии hover"
         },
         "selected": {
-          "value": "#0f54aa",
+          "value": "#5620BA",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии selected"
         }
@@ -32,24 +32,24 @@
     "bg": {
       "primary": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#713DD3",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#5620BA",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления в состоянии hover"
         }
       },
       "secondary": {
         "default": {
-          "value": "#edf5ff",
+          "value": "#EEE5FF",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента"
         },
         "hover": {
-          "value": "#bed6f1",
+          "value": "#DAC6FF",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента, в состоянии hover"
         }
@@ -61,12 +61,12 @@
           "description": "цвет фона основных контентных блоков"
         },
         "hover": {
-          "value": "#edf5ff",
+          "value": "#EEE5FF",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии hover"
         },
         "selected": {
-          "value": "#edf5ff",
+          "value": "#EEE5FF",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии selected"
         }
@@ -77,7 +77,7 @@
         "description": "прозрачность хедера при скролле"
       },
       "transparent": {
-        "value": "#2a6ab800",
+        "value": "#713dd300",
         "type": "color"
       }
     }

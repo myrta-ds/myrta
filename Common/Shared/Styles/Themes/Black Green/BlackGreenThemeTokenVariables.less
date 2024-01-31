@@ -1,0 +1,61 @@
+@import "../../Tokens/colorThemeBlackGreen.less";
+
+.page-wrapper.black-green-theme {
+    --brand-text-nav-link: @brand-text-nav-link;
+    --brand-text-accent: @brand-text-accent;
+    --brand-text-controls-default: @brand-text-controls-default;
+    --brand-text-controls-hover: @brand-text-controls-hover;
+    --brand-text-controls-selected: @brand-text-controls-selected;
+    --brand-bg-primary-default: @brand-bg-primary-default;
+    --brand-bg-primary-hover: @brand-bg-primary-hover;
+    --brand-bg-secondary-default: @brand-bg-secondary-default;
+    --brand-bg-secondary-hover: @brand-bg-secondary-hover;
+    --brand-bg-tertiary-default: @brand-bg-tertiary-default;
+    --brand-bg-tertiary-hover: @brand-bg-tertiary-hover;
+    --brand-bg-tertiary-selected: @brand-bg-tertiary-selected;
+    --brand-bg-header-scroll-up: @brand-bg-header-scroll-up;
+    --brand-bg-transparent: @brand-bg-transparent;
+    --neutral-bg-page: @neutral-bg-page;
+    --neutral-bg-modal: @neutral-bg-modal;
+    --neutral-bg-divider: @neutral-bg-divider;
+    --neutral-bg-stroke-default: @neutral-bg-stroke-default;
+    --neutral-bg-stroke-hover: @neutral-bg-stroke-hover;
+    --neutral-bg-island-default: @neutral-bg-island-default;
+    --neutral-bg-island-hover: @neutral-bg-island-hover;
+    --neutral-bg-disabled: @neutral-bg-disabled;
+    --neutral-bg-inverse: @neutral-bg-inverse;
+    --neutral-icon-default: @neutral-icon-default;
+    --neutral-icon-disabled: @neutral-icon-disabled;
+    --neutral-icon-inverse: @neutral-icon-inverse;
+    --neutral-icon-info: @neutral-icon-info;
+    --neutral-text-primary: @neutral-text-primary;
+    --neutral-text-secondary: @neutral-text-secondary;
+    --neutral-text-tertiary: @neutral-text-tertiary;
+    --neutral-text-inverse: @neutral-text-inverse;
+    --neutral-text-link-monochrome: @neutral-text-link-monochrome;
+    --neutral-control-bg-disabled: @neutral-control-bg-disabled;
+    --neutral-control-bg-accent-disabled: @neutral-control-bg-accent-disabled;
+
+    --Main1: @neutral-text-primary; // - заголовки,текст,иконки,стрелки
+    --Main2: @brand-bg-primary-default; // - активные кнопки,эффект наведения на чекбоксы и радиобатоны,обводка у второстепенных кнопок,наведение на иконки
+    --Subsidiary: @brand-text-accent; // - включенные элементы,текст и иконки на Bg 2,наведение на кнопки,наведение на иконки, цвет футера
+    --Secondary: @neutral-text-tertiary; // - подписи инпутов, название неактивных кнопок
+    --Bg1: @neutral-bg-island-default; // - цвет фона в дополнительных инпутах,цвет фона в блоках,цвет чередующихся строк в таблицах
+    --Bg2: @brand-bg-tertiary-hover; // - цвет фона в блоках,цвет шапки таблицы,цвет фона в мультисилектах,цвет фона строки при наведении
+    --Stroke: @neutral-bg-stroke-default; // — фон и цвет обводки неактивных инпутов, цвет неактивных кнопок
+    --StrokeHover: @neutral-bg-stroke-hover; // - цвет границ инпутов при наведении и в фокусе
+    --Icon: @neutral-icon-default;
+}
+
+.page-main .common-admin__section .color-theme-edit-box-color .box {
+    .BlackGreenTheme {
+        --Main2: @brand-bg-primary-default;
+        --Subsidiary: @brand-text-accent;
+        --Secondary: @neutral-text-tertiary;
+    
+        --ThemePreview: linear-gradient(90deg, var(--Subsidiary) 33.33%, var(--Main2) 33.33%, var(--Main2) 66.66%, var(--Secondary) 66.66%);
+    
+        background-image: var(--ThemePreview);
+    }
+}
+

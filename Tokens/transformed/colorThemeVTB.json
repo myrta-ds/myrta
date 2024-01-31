@@ -2,28 +2,28 @@
   "brand": {
     "text": {
       "nav-link": {
-        "value": "#2a6ab8",
+        "value": "#1E4BD2",
         "type": "color",
         "description": "цвет ссылок, ведущих на другие страницы системы"
       },
       "accent": {
-        "value": "#003780",
+        "value": "#0A2896",
         "type": "color",
         "description": "акцентный цвет для текста"
       },
       "controls": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#1E4BD2",
           "type": "color",
           "description": "цвет текста в элементах управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#1841C3",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии hover"
         },
         "selected": {
-          "value": "#0f54aa",
+          "value": "#1841C3",
           "type": "color",
           "description": "цвет текста в элементах управления в состоянии selected"
         }
@@ -32,24 +32,24 @@
     "bg": {
       "primary": {
         "default": {
-          "value": "#2a6ab8",
+          "value": "#1E4BD2",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления"
         },
         "hover": {
-          "value": "#0f54aa",
+          "value": "#1841C3",
           "type": "color",
           "description": "акцентный цвет для выделения элементов управления в состоянии hover"
         }
       },
       "secondary": {
         "default": {
-          "value": "#edf5ff",
+          "value": "#BDCAEE",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента"
         },
         "hover": {
-          "value": "#bed6f1",
+          "value": "#92A8E7",
           "type": "color",
           "description": "цвет для тегов, счетчиков и других элементов, требующих дополнительного акцента, в состоянии hover"
         }
@@ -61,23 +61,23 @@
           "description": "цвет фона основных контентных блоков"
         },
         "hover": {
-          "value": "#edf5ff",
+          "value": "#EBF0FF",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии hover"
         },
         "selected": {
-          "value": "#edf5ff",
+          "value": "#EBF0FF",
           "type": "color",
           "description": "цвет фона основных контентных блоков, в состоянии selected"
         }
       },
       "headerScrollUp": {
-        "value": "#ffffffe6",
+        "value": "#1e4bd2e6",
         "type": "color",
         "description": "прозрачность хедера при скролле"
       },
       "transparent": {
-        "value": "#2a6ab800",
+        "value": "#1e4bd200",
         "type": "color"
       }
     }
@@ -101,7 +101,7 @@
       },
       "stroke": {
         "default": {
-          "value": "#DBDFE5",
+          "value": "#DCE0EB",
           "type": "color",
           "description": "цвет обводки у элементов управления"
         },
@@ -146,7 +146,7 @@
         "description": "цвет иконок"
       },
       "disabled": {
-        "value": "#71767E",
+        "value": "#BFC5CC",
         "type": "color",
         "description": "цвет неактивных иконок"
       },

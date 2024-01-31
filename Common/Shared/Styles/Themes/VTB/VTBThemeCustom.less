@@ -1,0 +1,96 @@
+.page-wrapper.vtb-theme {
+  .btn-view {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .share-buttons .share-buttons__container {
+    border: none !important;
+  }
+
+  .page-main .edit-document__item .form-group span {
+    height: auto !important;
+  }
+
+  .faq-info .header-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1E4BD2;
+    padding-left: 32px;
+    position: relative;
+    
+    &:after {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 12px;
+      position: absolute;
+      left: 10px;
+      top: calc(50% - 6px);
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1.00012L1 7.00012L7 13.0001' stroke='%231E4BD2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .faq
+  .faq-item .faq-item__wrapper .faq-item__title {
+    font-size: 16px !important;
+  }
+
+  .faq-info .static-content p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  .faq-item .faq-item__wrapper {
+    border-radius: 20px !important;
+  }
+
+  .faq-item:after {
+    border-radius: 20px !important;
+  }
+
+  // footer-wrapper 
+  .footer-wrapper {
+    .footer {
+      background-color: var(--Subsidiary);
+      color: white;
+
+      &__contacts {
+        @media (max-width: 992px) {
+          margin-top: 24px;
+        }
+
+        .bold {
+          font-weight: 600 !important;
+        }
+      }
+
+      &__copyright {
+        width: calc(100% - 400px);
+
+        &-text {
+          color: white;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        @media (max-width: 992px) {
+          width: 50%;
+          order: 4;
+        }
+      }
+
+      &_bottom {
+        &__item {
+          .bold {
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+.page-wrapper.dark-gray-theme {
+    
+    .project__cards,
+    .news,
+    .news-info,
+    .event,
+    .event-info,
+    .project__present,
+    .project__item,
+    .grant-operator,
+    .hmao-contests,
+    .documents,
+    .hmao-teaching-materials,
+    .faq,
+    .hmao-structure,
+    .hmao-leaders,
+    .hmao-requisites,
+    .contact,
+    .hmao-supervisor,
+    .hmao-expert-council,
+    .hmao-coordination-council,
+    .hmao-contest-direction,
+    .asi-contests {
+
+        .content__title {
+            border: none;
+        }
+
+        .divider {
+            background: transparent;
+        }
+    }
+
+    // ------------File-input------------
+
+    .new-custom-file-input {
+        &__item {
+            &:hover {
+                .qq-file-name {
+                    &:before {
+                        content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 21.25H6C5.30964 21.25 4.75 20.6904 4.75 20V4C4.75 3.30964 5.30964 2.75 6 2.75H13.1893L19.25 8.81066V20C19.25 20.6904 18.6904 21.25 18 21.25Z' stroke='%23555A69' stroke-width='1.5'/%3E%3C/svg%3E%0A") !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // ------------File-input------------
+
+    .telerik-link {
+        color: var(--Subsidiary);
+    }
+
+    .edit-slide-menu {
+        .slider__item:hover {
+            .slider__item_caption p {
+                color: var(--Main1);
+            }
+        }
+    }
+
+    .btn {
+        --Subsidiary: #2A3143;
+    }
+
+    .side-menu {
+        &-nav {
+            &__item {
+                &.active {
+                    border-left: solid 4px var(--Main2); // По просьбе заказчика замененно, должно быть Subsidiary
+                    background: var(--Bg1); // По просьбе заказчика замененно, должно быть Bg1
+                }
+
+                &.filled {
+                    .side-menu-nav__item__fill-info {
+                        color: var(--Main2); // должно быть Subsidiary
+                    }
+                }
+            }
+        }
+    }
+
+    input,
+    textarea {
+
+        // Chrome
+        &::-webkit-input-placeholder {
+            color: var(--Subsidiary);
+        }
+
+        // Firefox 19+
+        &::-moz-placeholder {
+            color: var(--Subsidiary);
+        }
+
+        // Firefox 18-
+        &:-moz-placeholder {
+            color: var(--Subsidiary);
+        }
+    }
+
+    .footer-wrapper {
+        .footer__copyright-text {
+            color: #fff;
+            font-size: 16px;
+            opacity: 1;
+        }
+    }
+
+    .news-body {
+        .service-news__item:hover .service-news__item_caption p {
+            color: var(--Main1);
+        }
+    }
+
+    .event-editing {
+        .events__item:hover .events__item_caption p {
+            color: var(--Main1);
+        }
+    }
+
+    .document-body {
+        .document-list__item:hover .document-list__item_caption p {
+            color: var(--Main1);
+        }
+    }
+
+    .faq-body {
+        .faq-list__item:hover .faq-list__item_caption p {
+            color: var(--Main1);
+        }
+    }
+
+    .home-slider-sets-list {
+        .sets-list__item:hover {
+            .sets-list__item_caption p {
+                color: var(--Main1);
+            }
+        }
+    }
+
+
+    // Селект angular
+    .ng-select {
+        &.ng-select-multiple {
+            .ng-select-container {
+                .ng-value-container {
+                    .ng-value {
+                        .ng-value-icon {
+                            color: var(--Main1);
+                        }
+
+                        .ng-value-label {
+                            color: var(--Main1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ng-dropdown-panel.ng-dropdown-panel {
+        .ng-dropdown-panel-items {
+            .ng-option {
+                &.ng-option-marked,
+                &.ng-option-selected {
+                    background: var(--Bg1);
+                    color: var(--Main1);
+                }
+
+                &:hover {
+                    background: var(--Bg1);
+                    color: var(--Main1);
+                }
+            }
+        }
+    }
+
+    // Селект angular
+
+    .widget {
+        .contact {
+            .name {
+                a {
+                    color: var(--Main1);
+                }
+            }
+        }
+    }
+}
