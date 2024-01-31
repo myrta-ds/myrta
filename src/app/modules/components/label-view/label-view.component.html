@@ -1,0 +1,74 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+<div class="row mb-3">
+  <div class="col">
+    <mrx-label>this is label</mrx-label>
+    <mrx-input-text></mrx-input-text>
+  </div>
+  <div class="col">
+    <mrx-label [boldLabel]="false">this is bold label</mrx-label>
+    <mrx-input-text></mrx-input-text>
+  </div>
+  <div class="col">
+    <mrx-label [boldLabel]="true" [required]="true">this is bold label</mrx-label>
+    <mrx-input-text></mrx-input-text>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col">
+    <mrx-label
+      [tooltip]="'this is tooltip'"
+      [isSaveToStorage]="true"
+      [switchValue]="true"
+      [isSwitch]="true"
+      switchLabel="Text"
+      (changeCheckboxValue)="changeCheckboxValue($event)"
+    >this is label this is label this is label this is label this is label this is label this is label this is label this is label</mrx-label>
+    <mrx-input-text></mrx-input-text>
+  </div>
+  <div class="col">
+    <mrx-label
+      [tooltip]="'this is tooltip asd'"
+      [required]="true"
+      [triggerTextPosition]="'right'"
+      [switchValue]="false"
+      [isSwitch]="true"
+      switchLabel="Text"
+      (changeCheckboxValue)="changeCheckboxValue($event)"
+    >this is label</mrx-label>
+    <mrx-input-text></mrx-input-text>
+  </div>
+</div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label
+        [tooltip]="'this is tooltip asd'"
+        [required]="true"
+        [triggerTextPosition]="'right'"
+        [switchValue]="false"
+        [isSwitch]="true"
+        [counter]="3"
+        switchLabel="Text"
+        (changeCheckboxValue)="changeCheckboxValue($event)"
+      >this is label and counter</mrx-label>
+      <mrx-input-text></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-label
+        [tooltip]="'this is tooltip asd'"
+        [required]="true"
+        [triggerTextPosition]="'right'"
+        [switchValue]="false"
+        [isSwitch]="true"
+        [counter]="3"
+        switchLabel="Text"
+        (changeCheckboxValue)="changeCheckboxValue($event)"
+      >{{ 'this is label and counter this is label and counter this is label and counter'.toUpperCase() }}</mrx-label>
+      <mrx-input-text></mrx-input-text>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</mrx-content-wrapper>

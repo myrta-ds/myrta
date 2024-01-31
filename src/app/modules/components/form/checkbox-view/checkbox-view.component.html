@@ -1,0 +1,68 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-checkbox type="default" tooltip="tooltip" [required]="true" [checkInvalid]="true">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-checkbox [indeterminate]="true" [boldLabel]="true">this is label</mrx-checkbox>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Invalid checkbox</mrx-label>
+      <mrx-checkbox type="default" [invalid]="true">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-checkbox [indeterminate]="true" [boldLabel]="true">this is label</mrx-checkbox>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Invalid checkbox</mrx-label>
+      <mrx-checkbox type="default">{{ longText }}</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-checkbox>{{ longText }}</mrx-checkbox>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Disabled checkbox</mrx-label>
+      <mrx-checkbox [disabled]="true">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-label>Disabled indeterminate checkbox</mrx-label>
+      <mrx-checkbox [indeterminate]="false" [disabled]="true" [ngModel]="trueValue">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-label>Readonly checkbox</mrx-label>
+      <mrx-checkbox [readonly]="true">this is label</mrx-checkbox>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-lg-3">
+      <mrx-label>Text</mrx-label>
+      <mrx-input-text></mrx-input-text>
+    </div>
+    <div class="col col-12 col-lg-3">
+      <mrx-label>Text</mrx-label>
+      <mrx-input-text [invalid]="true" invalidMessage="Что то не так, проспитесь"></mrx-input-text>
+    </div>
+    <div class="col col-12 col-lg-3">
+      <mrx-label>Checkbox</mrx-label>
+      <div class="d-flex align-items-center hpx-48 mt-2">
+        <mrx-checkbox>this is label</mrx-checkbox>
+      </div>
+    </div>
+
+    <div class="col col-12 col-lg-3">
+      <div class="d-flex align-items-center hpx-48 mt-4 pt-1">
+        <mrx-checkbox>this is label</mrx-checkbox>
+      </div>
+    </div>
+  </div>
+</mrx-content-wrapper>

@@ -1,0 +1,12 @@
+<button
+  type="button"
+  [title]="title"
+  [hidden]="hidden"
+  [disabled]="disabled"
+  [id]="id"
+  class="angular-editor-button"
+  (click)="mrxClick.emit()"
+  tabindex="-1"
+>
+  <span class="mrx-icon icon-font-16" [class]="getIconClass"></span>
+</button>

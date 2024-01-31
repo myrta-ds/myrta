@@ -8,10 +8,7 @@
     (click)="buttonClick($event)"
 >
   <ng-template #spinner>
-    <mrx-loader
-        [color]="getLoaderColor"
-        [size]="getLoaderSize"
-    ></mrx-loader>
+    <mrx-loader [color]="getLoaderColor" [size]="getLoaderSize"></mrx-loader>
   </ng-template>
 
   <ng-container *ngIf="isIconLeft && isLoading && !disabled">

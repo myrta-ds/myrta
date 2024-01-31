@@ -1,0 +1,30 @@
+<div class="mrx-stepper" [class]="customClasses">
+  <div class="mb-2" *ngIf="!isBottomLabel">
+    <ng-container *ngTemplateOutlet="stepperLabel"></ng-container>
+  </div>
+
+  <mrx-progress [color]="type" [value]="percent"></mrx-progress>
+
+  <div class="mt-2" *ngIf="isBottomLabel">
+    <ng-container *ngTemplateOutlet="stepperLabel"></ng-container>
+  </div>
+</div>
+
+<ng-template #stepperLabel>
+  <div class="mrx-stepper-header">
+    <div class="mrx-stepper-header-item">
+      {{completeText}} <strong class="ml-1 mr-1">{{currentStep}}</strong> из <span class="ml-1">{{totalSteps}}</span>
+    </div>
+    <div class="mrx-stepper-header-item">
+      <!-- если есть не завершенные шаги -->
+      <ng-container *ngIf="!isCompleted">
+        {{requiredText}} <strong class="ml-1">{{difference}}</strong>
+      </ng-container>
+      <!-- если все шаги завершены -->
+      <ng-container *ngIf="isCompleted">
+        <span class="mrx-icon icon-font-24 icon-positive mr-1"></span>
+        {{successText}}
+      </ng-container>
+    </div>
+  </div>
+</ng-template>

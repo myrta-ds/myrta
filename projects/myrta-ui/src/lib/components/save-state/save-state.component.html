@@ -1,0 +1,9 @@
+<div class="mrx-save-state">
+  <ng-container [ngSwitch]="type">
+    <mrx-save-state-input *ngSwitchCase="'input'" [state]="getState"></mrx-save-state-input>
+    <mrx-save-state-checkbox *ngSwitchCase="'checkbox'" [state]="getState"></mrx-save-state-checkbox>
+    <mrx-save-state-checkbox-group *ngSwitchCase="'checkboxGroup'" [state]="getState"></mrx-save-state-checkbox-group>
+    <mrx-save-state-switch *ngSwitchCase="'switch'" [state]="getState"></mrx-save-state-switch>
+    <mrx-save-state-editor *ngSwitchCase="'editor'" [state]="getState"></mrx-save-state-editor>
+  </ng-container>
+</div>

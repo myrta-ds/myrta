@@ -1,0 +1,6 @@
+<div class="mrx-controls-wrapper__controls--item" *ngIf="!separator; else separatorTemplate">
+  <ng-content></ng-content>
+</div>
+<ng-template #separatorTemplate>
+  <div class="mrx-controls-wrapper__controls--separator"></div>
+</ng-template>

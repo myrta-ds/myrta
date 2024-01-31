@@ -16,7 +16,8 @@
       "myrta-ui": [
         "dist/myrta-ui/myrta-ui",
         "dist/myrta-ui"
-      ]
+      ],
+      "@myrta": ["projects/myrta-ui/src/*"]
     },
     "declaration": false,
     "downlevelIteration": true,

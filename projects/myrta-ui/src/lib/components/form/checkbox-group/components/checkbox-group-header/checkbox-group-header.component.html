@@ -1,0 +1,16 @@
+<mrx-label
+  *ngIf="labelText"
+  [counter]="checkedItemsCount"
+  [linkText]="linkText"
+  [tooltip]="tooltip"
+  (clickedLink)="onClearFilters()"
+>{{ labelText }}</mrx-label>
+
+<div class="mrx-checkbox-group-head--search" *ngIf="searchable">
+  <mrx-input-search
+    [ngModel]="searchValue"
+    [size]="'medium'"
+    [placeholder]="searchPlaceholder"
+    (ngModelChange)="changeSearchValue($event)"
+  ></mrx-input-search>
+</div>

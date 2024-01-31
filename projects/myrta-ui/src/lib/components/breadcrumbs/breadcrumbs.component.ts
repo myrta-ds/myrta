@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BreadcrumbsItemI, BreadcrumbsType, BreadcrumbsTypeEnum } from './breadcrumbs.enum';
 
 @Component({
   selector: 'mrx-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
-  styleUrls: ['./breadcrumbs.component.less']
+  styleUrls: ['./breadcrumbs.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BreadcrumbsComponent {
   @Input() type: BreadcrumbsType = 'default'

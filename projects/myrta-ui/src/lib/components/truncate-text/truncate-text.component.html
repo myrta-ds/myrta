@@ -1,0 +1,21 @@
+<div
+  class="mrx-truncate-text"
+  mrxTruncateText
+  [class.mb-2]="isVisibleButton"
+  [count]="count"
+  [responsiveCount]="responsiveCount"
+  [isOpen]="isOpen"
+  [lineHeight]="lineHeight"
+  (changeVisibleButton)="changeVisibleButton($event)"
+>
+  <ng-content></ng-content>
+</div>
+
+<mrx-link
+  *ngIf="isVisibleButton"
+  type="pseudo"
+  [prevent]="true"
+  (click)="isOpen = !isOpen"
+>
+  {{ isOpen ? 'Свернуть' : 'Развернуть' }}
+</mrx-link>

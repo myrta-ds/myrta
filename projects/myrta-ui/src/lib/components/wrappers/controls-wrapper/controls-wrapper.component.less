@@ -1,0 +1,30 @@
+.mrx-controls-wrapper.mrx-controls-wrapper {
+  position: relative;
+
+  .mrx-controls-wrapper__controls {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    box-shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+    border-radius: 4px;
+    display: flex;
+
+    &.visibility-auto {
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &.visibility-hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    .visibility-auto {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="mrx-checkbox-group__item" [class.mrx-checkbox-group__item--buttom-ident]="!isLast">
+  <div class="mrx-checkbox-group__item--array" *ngIf="item.array.length && level < 10; else singleCheckboxTemplate">
+    <div class="mrx-checkbox-group__item--array-head">
+      <div class="mrx-checkbox-group__item--head-icon mr-1">
+        <span class="mrx-icon icon-chevron-down icon-font-16 cursor-pointer" (click)="toggleList(item)"></span>
+      </div>
+
+      <mrx-checkbox
+          [ngModel]="item.value"
+          [indeterminate]="isIndeterminate"
+          (ngModelChange)="checkboxChangeModel($event, item)"
+      >{{ item.text }}</mrx-checkbox>
+    </div>
+
+    <div class="mrx-checkbox-group__item--array-list" [@openList]="animationState" (@openList.done)="onAnimationEvent()">
+      <ng-container>
+        <mrx-checkbox-group-item
+            *ngFor="let item of item.array"
+            [level]="level + 1"
+            [item]="item"
+            [displaced]="true"
+            [animationTrigger]="animationTrigger"
+            (checkboxChanged)="checkboxChanged.emit($event)"
+        ></mrx-checkbox-group-item>
+      </ng-container>
+    </div>
+  </div>
+
+  <ng-template #singleCheckboxTemplate>
+    <div class="mrx-checkbox-group__item--single" [class.item-displaced]="displaced">
+      <mrx-checkbox
+          [ngModel]="item.value"
+          [indeterminate]="false"
+          (ngModelChange)="checkboxChangeModel($event, item)"
+      >{{ item.text }}</mrx-checkbox>
+    </div>
+  </ng-template>
+</div>
+
+

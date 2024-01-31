@@ -1,0 +1,49 @@
+<div class="mrx-modal-content" [class]="getClasses" [@animateExpand]="isEmbed ? 'open' : 'closed'">
+  <div class="mrx-modal-header">
+    <div class="mrx-modal-title" [innerHTML]="title" [style]="{padding: expandable ? '0 56px' : '0 24px'}"></div>
+
+    <span
+        *ngIf="expandable"
+        class="mrx-icon icon-font-24"
+        [class]="isEmbed ? 'icon-arrow-collapse' : 'icon-arrow-expand'"
+        (click)="onExpanding()"
+    ></span>
+    <span class="mrx-icon icon-close icon-font-24" *ngIf="isClose" (click)="onClose()"></span>
+  </div>
+
+  <div class="mrx-modal-body">
+    <div *ngIf="isBack" class="mrx-modal__back d-flex align-items-center mb-3 mt-2" (click)="onBack()">
+      <span class="mrx-icon icon-arrow-left icon-font-16 mr-1"></span>
+      <span>{{ backText }}</span>
+    </div>
+
+    <div class="mrx-modal-body__message" [innerHTML]="message"></div>
+    <ng-content></ng-content>
+  </div>
+
+
+  <div class="mrx-modal-footer" [class]="alignButtonsClass" *ngIf="enableFooter">
+    <ng-container *ngIf="!footerContent; else footerContentTemplate">
+      <mrx-button
+          [customClasses]="'mr-3'"
+          [type]="'secondary'"
+          [color]="getButtonColor"
+          [size]="'medium'"
+          (click)="onClose()"
+      >{{closeText}}</mrx-button>
+
+      <mrx-button
+          [type]="'primary'"
+          [size]="'medium'"
+          [color]="getButtonColor"
+          [iconPosition]="iconPosition"
+          [isLoading]="isLoading"
+          (click)="onOk()"
+      >{{okText}}</mrx-button>
+    </ng-container>
+
+    <ng-template #footerContentTemplate>
+      <ng-container *ngTemplateOutlet="footerContent"></ng-container>
+    </ng-template>
+  </div>
+</div>

@@ -1,274 +1,303 @@
 // Цвет кнопок
-.mrx-btn.mrx-btn {
-  &.mrx-btn-primary {
-    &.green, &.color-positive {
-      background-color: var(--system-bg-controls-positive-default);
-      border-color: var(--system-bg-controls-positive-default);
-      color: var(--neutral-text-inverse);
+:host::ng-deep {
+  .mrx-btn.mrx-btn {
+    &.mrx-btn-primary {
+      &.green, &.mrx-btn-color-positive {
+        background-color: var(--system-bg-controls-positive-default);
+        border-color: var(--system-bg-controls-positive-default);
 
-      &:hover {
-        background-color: var(--system-bg-controls-positive-hover);
-        border-color: var(--system-bg-controls-positive-hover);
+        .mrx-btn-label, .mrx-icon {
+          color: var(--neutral-text-inverse);
+        }
+
+        &:hover {
+          background-color: var(--system-bg-controls-positive-hover);
+          border-color: var(--system-bg-controls-positive-hover);
+        }
+      }
+
+      &.red, &.mrx-btn-color-negative {
+        background-color: var(--system-bg-controls-negative-default);
+        border-color: var(--system-bg-controls-negative-default);
+
+        .mrx-btn-label, .mrx-icon {
+          color: var(--neutral-text-inverse);
+        }
+
+        &:hover {
+          background-color: var(--system-bg-controls-negative-hover);
+          border-color: var(--system-bg-controls-negative-hover);
+        }
+      }
+
+      &.yellow, &.mrx-btn-color-attention {
+        background-color: var(--system-bg-controls-attention-default);
+        border-color: var(--system-bg-controls-attention-default);
+
+        .mrx-btn-label, .mrx-icon {
+          color: var(--neutral-text-inverse);
+        }
+
+        &:hover {
+          background-color: var(--system-bg-controls-attention-hover);
+          border-color: var(--system-bg-controls-attention-hover);
+        }
       }
     }
 
-    &.red, &.color-negative {
-      background-color: var(--system-bg-controls-negative-default);
-      border-color: var(--system-bg-controls-negative-default);
-      color: var(--neutral-text-inverse) !important;
+    &.mrx-btn-secondary {
+      &.green, &.mrx-btn-color-positive {
+        background-color: transparent;
+        border-color: var(--system-bg-controls-positive-default);
 
-      &:hover {
-        background-color: var(--system-bg-controls-negative-hover);
-        border-color: var(--system-bg-controls-negative-hover);
-      }
-    }
+        .mrx-btn-label, .mrx-icon {
+          color: var(--system-bg-controls-positive-default);
+        }
 
-    &.yellow, &.color-attention {
-      background-color: var(--system-bg-controls-attention-default);
-      border-color: var(--system-bg-controls-attention-default);
-      color: var(--neutral-text-inverse);
-
-      &:hover {
-        background-color: var(--system-bg-controls-attention-hover);
-        border-color: var(--system-bg-controls-attention-hover);
-      }
-    }
-  }
-
-  &.mrx-btn-secondary {
-    &.green, &.color-positive {
-      background-color: transparent;
-      border-color: var(--system-bg-controls-positive-default);
-      color: var(--system-bg-controls-positive-default);
-
-      svg {
-        &.fill {
-          path {
-            fill: var(--system-bg-controls-positive-default);
-          }
-
-          circle {
-            fill: var(--system-bg-controls-positive-default);
-          }
-
-          &-rect {
-            rect {
+        svg {
+          &.fill {
+            path {
               fill: var(--system-bg-controls-positive-default);
             }
-          }
-        }
 
-        &.stroke {
-          path {
-            stroke: var(--system-bg-controls-positive-default);
+            circle {
+              fill: var(--system-bg-controls-positive-default);
+            }
+
+            &-rect {
+              rect {
+                fill: var(--system-bg-controls-positive-default);
+              }
+            }
           }
 
-          circle {
-            stroke: var(--system-bg-controls-positive-default);
-          }
-
-          &-rect {
-            rect {
+          &.stroke {
+            path {
               stroke: var(--system-bg-controls-positive-default);
             }
-          }
-        }
-      }
-
-      &:hover, &.active {
-        background-color: var(--system-bg-positive-secondary);
-        color: var(--system-bg-controls-positive-hover);
-        border-color: var(--system-bg-controls-positive-hover);
-
-        svg {
-          &.fill {
-            path {
-              fill: var(--system-bg-controls-positive-hover);
-            }
 
             circle {
-              fill: var(--system-bg-controls-positive-hover);
+              stroke: var(--system-bg-controls-positive-default);
             }
 
             &-rect {
               rect {
+                stroke: var(--system-bg-controls-positive-default);
+              }
+            }
+          }
+        }
+
+        &:hover, &.active {
+          background-color: var(--system-bg-positive-secondary);
+          border-color: var(--system-bg-controls-positive-hover);
+
+          .mrx-btn-label, .mrx-icon {
+            color: var(--system-bg-controls-positive-hover);
+          }
+
+          svg {
+            &.fill {
+              path {
                 fill: var(--system-bg-controls-positive-hover);
               }
-            }
-          }
 
-          &.stroke {
-            path {
-              stroke: var(--system-bg-controls-positive-hover);
+              circle {
+                fill: var(--system-bg-controls-positive-hover);
+              }
+
+              &-rect {
+                rect {
+                  fill: var(--system-bg-controls-positive-hover);
+                }
+              }
             }
 
-            circle {
-              stroke: var(--system-bg-controls-positive-hover);
-            }
-
-            &-rect {
-              rect {
+            &.stroke {
+              path {
                 stroke: var(--system-bg-controls-positive-hover);
               }
+
+              circle {
+                stroke: var(--system-bg-controls-positive-hover);
+              }
+
+              &-rect {
+                rect {
+                  stroke: var(--system-bg-controls-positive-hover);
+                }
+              }
             }
           }
         }
       }
-    }
 
-    &.red, &.color-negative {
-      background-color: transparent;
-      border-color: var(--system-bg-controls-negative-default);
-      color: var(--system-bg-controls-negative-default) !important;
+      &.red, &.mrx-btn-color-negative {
+        background-color: transparent;
+        border-color: var(--system-bg-controls-negative-default);
 
-      svg {
-        &.fill {
-          path {
-            fill: var(--system-bg-controls-negative-default);
-          }
+        .mrx-btn-label, .mrx-icon {
+          color: var(--system-bg-controls-negative-default);
+        }
 
-          circle {
-            fill: var(--system-bg-controls-negative-default);
-          }
-
-          &-rect {
-            rect {
+        svg {
+          &.fill {
+            path {
               fill: var(--system-bg-controls-negative-default);
             }
-          }
-        }
 
-        &.stroke {
-          path {
-            stroke: var(--system-bg-controls-negative-default);
+            circle {
+              fill: var(--system-bg-controls-negative-default);
+            }
+
+            &-rect {
+              rect {
+                fill: var(--system-bg-controls-negative-default);
+              }
+            }
           }
 
-          circle {
-            stroke: var(--system-bg-controls-negative-default);
-          }
-
-          &-rect {
-            rect {
+          &.stroke {
+            path {
               stroke: var(--system-bg-controls-negative-default);
             }
-          }
-        }
-      }
-
-      &:hover, &.active {
-        background-color: var(--system-bg-negative-secondary);
-        color: var(--system-bg-controls-negative-hover);
-        border-color: var(--system-bg-controls-negative-hover);
-
-        svg {
-          &.fill {
-            path {
-              fill: var(--system-bg-controls-negative-hover);
-            }
 
             circle {
-              fill: var(--system-bg-controls-negative-hover);
+              stroke: var(--system-bg-controls-negative-default);
             }
 
             &-rect {
               rect {
+                stroke: var(--system-bg-controls-negative-default);
+              }
+            }
+          }
+        }
+
+        &:hover, &.active {
+          background-color: var(--system-bg-negative-secondary);
+          border-color: var(--system-bg-controls-negative-hover);
+
+          .mrx-btn-label, .mrx-icon {
+            color: var(--system-bg-controls-negative-hover);
+          }
+
+          svg {
+            &.fill {
+              path {
                 fill: var(--system-bg-controls-negative-hover);
               }
-            }
-          }
 
-          &.stroke {
-            path {
-              stroke: var(--system-bg-controls-negative-hover);
+              circle {
+                fill: var(--system-bg-controls-negative-hover);
+              }
+
+              &-rect {
+                rect {
+                  fill: var(--system-bg-controls-negative-hover);
+                }
+              }
             }
 
-            circle {
-              stroke: var(--system-bg-controls-negative-hover);
-            }
-
-            &-rect {
-              rect {
+            &.stroke {
+              path {
                 stroke: var(--system-bg-controls-negative-hover);
+              }
+
+              circle {
+                stroke: var(--system-bg-controls-negative-hover);
+              }
+
+              &-rect {
+                rect {
+                  stroke: var(--system-bg-controls-negative-hover);
+                }
               }
             }
           }
         }
       }
-    }
 
-    &.yellow, &.color-attention {
-      background-color: transparent;
-      border-color: var(--system-bg-controls-attention-default);
-      color: var(--system-bg-controls-attention-default);
+      &.yellow, &.mrx-btn-color-attention {
+        background-color: transparent;
+        border-color: var(--system-bg-controls-attention-default);
 
-      svg {
-        &.fill {
-          path {
-            fill: var(--system-bg-controls-attention-default);
-          }
-
-          circle {
-            fill: var(--system-bg-controls-attention-default);
-          }
-
-          &-rect {
-            rect {
-              fill: var(--system-bg-controls-attention-default);
-            }
-          }
+        .mrx-btn-label, .mrx-icon {
+          color: var(--system-bg-controls-attention-default);
         }
-
-        &.stroke {
-          path {
-            stroke: var(--system-bg-controls-attention-default);
-          }
-
-          circle {
-            stroke: var(--system-bg-controls-attention-default);
-          }
-
-          &-rect {
-            rect {
-              stroke: var(--system-bg-controls-attention-default);
-            }
-          }
-        }
-      }
-
-      &:hover, &.active {
-        background-color: var(--system-bg-attention-secondary);
-        color: var(--system-bg-controls-attention-hover);
-        border-color: var(--system-bg-controls-attention-hover);
 
         svg {
           &.fill {
             path {
-              fill: var(--system-bg-controls-attention-hover);
+              fill: var(--system-bg-controls-attention-default);
             }
 
             circle {
-              fill: var(--system-bg-controls-attention-hover);
+              fill: var(--system-bg-controls-attention-default);
             }
 
             &-rect {
               rect {
-                fill: var(--system-bg-controls-attention-hover);
+                fill: var(--system-bg-controls-attention-default);
               }
             }
           }
 
           &.stroke {
             path {
-              stroke: var(--system-bg-controls-attention-hover);
+              stroke: var(--system-bg-controls-attention-default);
             }
 
             circle {
-              stroke: var(--system-bg-controls-attention-hover);
+              stroke: var(--system-bg-controls-attention-default);
             }
 
             &-rect {
               rect {
+                stroke: var(--system-bg-controls-attention-default);
+              }
+            }
+          }
+        }
+
+        &:hover, &.active {
+          background-color: var(--system-bg-attention-secondary);
+          border-color: var(--system-bg-controls-attention-hover);
+
+          .mrx-btn-label, .mrx-icon {
+            color: var(--system-bg-controls-attention-hover);
+          }
+
+          svg {
+            &.fill {
+              path {
+                fill: var(--system-bg-controls-attention-hover);
+              }
+
+              circle {
+                fill: var(--system-bg-controls-attention-hover);
+              }
+
+              &-rect {
+                rect {
+                  fill: var(--system-bg-controls-attention-hover);
+                }
+              }
+            }
+
+            &.stroke {
+              path {
                 stroke: var(--system-bg-controls-attention-hover);
+              }
+
+              circle {
+                stroke: var(--system-bg-controls-attention-hover);
+              }
+
+              &-rect {
+                rect {
+                  stroke: var(--system-bg-controls-attention-hover);
+                }
               }
             }
           }
@@ -277,3 +306,4 @@
     }
   }
 }
+

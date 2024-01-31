@@ -1,0 +1,252 @@
+<div class="angular-editor-toolbar" *ngIf="showToolbar">
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'return'"
+      [title]="'Undo'"
+      [id]="'undo-'+id"
+      (mrxClick)="triggerCommand('undo')"
+      [hidden]="isButtonHidden('undo')"
+    ></mrx-editor-toolbar-button>
+
+    <mrx-editor-toolbar-button
+      [icon]="'reload'"
+      [title]="'Undo'"
+      [id]="'redo-'+id"
+      (mrxClick)="triggerCommand('redo')"
+      [hidden]="isButtonHidden('redo')"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-bold'"
+      [title]="'Bold'"
+      [id]="'bold-'+id"
+      (mrxClick)="triggerCommand('bold')"
+      [hidden]="isButtonHidden('bold')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-italic'"
+      [title]="'Italic'"
+      [id]="'italic-'+id"
+      (mrxClick)="triggerCommand('italic')"
+      [hidden]="isButtonHidden('italic')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-underline'"
+      [title]="'Underline'"
+      [id]="'underline-'+id"
+      (mrxClick)="triggerCommand('underline')"
+      [hidden]="isButtonHidden('underline')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-strikethrough-text'"
+      [title]="'Strikethrough'"
+      [id]="'strikeThrough-'+id"
+      (mrxClick)="triggerCommand('strikeThrough')"
+      [hidden]="isButtonHidden('strikeThrough')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'negative'"
+      [title]="'Subscript'"
+      [id]="'subscript-'+id"
+      (mrxClick)="triggerCommand('subscript')"
+      [hidden]="isButtonHidden('subscript')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'negative'"
+      [title]="'Superscript'"
+      [id]="'superscript-'+id"
+      (mrxClick)="triggerCommand('superscript')"
+      [hidden]="isButtonHidden('superscript')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-align-left'"
+      [title]="'Justify Left'"
+      [id]="'justifyLeft-'+id"
+      (mrxClick)="triggerCommand('justifyLeft')"
+      [hidden]="isButtonHidden('justifyLeft')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-align-center'"
+      [title]="'Justify Center'"
+      [id]="'justifyCenter-'+id"
+      (mrxClick)="triggerCommand('justifyCenter')"
+      [hidden]="isButtonHidden('justifyCenter')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-align-right'"
+      [title]="'Justify Center'"
+      [id]="'justifyRight-'+id"
+      (mrxClick)="triggerCommand('justifyRight')"
+      [hidden]="isButtonHidden('justifyRight')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-text-align-justify'"
+      [title]="'Justify Center'"
+      [id]="'justifyFull-'+id"
+      (mrxClick)="triggerCommand('justifyFull')"
+      [hidden]="isButtonHidden('justifyFull')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-padding-right'"
+      [title]="'Indent'"
+      [id]="'indent-'+id"
+      (mrxClick)="triggerCommand('indent')"
+      [hidden]="isButtonHidden('indent')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-padding-left'"
+      [title]="'Outdent'"
+      [id]="'outdent-'+id"
+      (mrxClick)="triggerCommand('outdent')"
+      [hidden]="isButtonHidden('outdent')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-ul'"
+      [title]="'Unordered List'"
+      [id]="'insertUnorderedList-'+id"
+      (mrxClick)="triggerCommand('insertUnorderedList')"
+      [hidden]="isButtonHidden('insertUnorderedList')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-ol'"
+      [title]="'Ordered List'"
+      [id]="'insertOrderedList-'+id"
+      (mrxClick)="triggerCommand('insertOrderedList')"
+      [hidden]="isButtonHidden('insertOrderedList')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+
+    <mrx-editor-toolbar-select class="select-heading" [options]="headings"
+               [(ngModel)]="block"
+               (change)="triggerCommand(block)"
+               [disabled]="htmlMode"
+               [hidden]="isButtonHidden('heading')"
+               tabindex="-1"></mrx-editor-toolbar-select>
+  </div>
+  <div class="angular-editor-toolbar-set">
+
+    <mrx-editor-toolbar-select class="select-font" [options]="fonts"
+               [(ngModel)]="fontName"
+               (change)="setFontName(fontName)"
+               [disabled]="htmlMode"
+               [hidden]="isButtonHidden('fontName')"
+               tabindex="-1"></mrx-editor-toolbar-select>
+  </div>
+  <div class="angular-editor-toolbar-set">
+
+    <mrx-editor-toolbar-select class="select-font-size" [options]="fontSizes"
+               [(ngModel)]="fontSize"
+               (change)="setFontSize(fontSize)"
+               [disabled]="htmlMode"
+               [hidden]="isButtonHidden('fontSize')"
+               tabindex="-1">
+    </mrx-editor-toolbar-select>
+  </div>
+  <div class="angular-editor-toolbar-set">
+    <input style="display: none" type="color" (change)="insertColor(fgInput.value, 'textColor')" #fgInput>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-font-color'"
+      [title]="'Text Color'"
+      [id]="'textColor-'+id"
+      (mrxClick)="focus(); ; fgInput.click()"
+      [hidden]="isButtonHidden('textColor')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+
+    <input style="display: none" type="color" (change)="insertColor(bgInput.value, 'backgroundColor')" #bgInput>
+    <mrx-editor-toolbar-button
+      [icon]="'wysiwyg-icons-bg-color'"
+      [title]="'Background Color'"
+      [id]="'backgroundColor-'+id"
+      (mrxClick)="focus(); ; bgInput.click()"
+      [hidden]="isButtonHidden('backgroundColor')"
+      [disabled]="htmlMode"
+    ></mrx-editor-toolbar-button>
+  </div>
+
+  <div *ngIf="_customClasses" class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-select class="select-custom-style" [options]="customClassList"
+               [(ngModel)]="customClassId"
+               (change)="setCustomClass(customClassId)"
+               [disabled]="htmlMode"
+               [hidden]="isButtonHidden('customClasses')"
+               tabindex="-1"></mrx-editor-toolbar-select>
+  </div>
+
+  <div class="angular-editor-toolbar-set">
+    <mrx-editor-toolbar-button
+      [icon]="'link'"
+      [title]="'Insert Link'"
+      [id]="'link-'+id"
+      (mrxClick)="insertUrl()"
+      [hidden]="isButtonHidden('link')"
+      [disabled]="isLinkButtonDisabled"
+    ></mrx-editor-toolbar-button>
+    <mrx-editor-toolbar-button
+      [icon]="'negative'"
+      [title]="'Unlink'"
+      [id]="'unlink-'+id"
+      (mrxClick)="triggerCommand('unlink')"
+      [hidden]="isButtonHidden('unlink')"
+      [disabled]="htmlMode || !linkSelected"
+    ></mrx-editor-toolbar-button>
+
+    <input style="display: none" accept="image/*" type="file" (change)="onFileChanged($event)" #fileInput>
+    <mrx-editor-toolbar-button
+      [icon]="'negative'"
+      [title]="'Insert Image'"
+      [id]="'insertImage-'+id"
+      (mrxClick)="focus(); fileInput.click()"
+      [hidden]="isButtonHidden('insertImage')"
+      [disabled]="htmlMode || !linkSelected"
+    ></mrx-editor-toolbar-button>
+
+    <button type="button" class="angular-editor-button"
+            (click)="insertVideo()" title="Insert Video" [disabled]="htmlMode" [hidden]="isButtonHidden('insertVideo')"
+            tabindex="-1"><i
+      class="fa fa-video-camera"></i></button>
+    <button type="button" title="Horizontal Line" class="angular-editor-button"
+            (click)="triggerCommand('insertHorizontalRule')" [disabled]="htmlMode"
+            [hidden]="isButtonHidden('insertHorizontalRule')" tabindex="-1"><i
+      class="fa fa-minus"></i></button>
+  </div>
+  <div class="angular-editor-toolbar-set">
+    <button type="button" title="Clear Formatting" class="angular-editor-button"
+            (click)="triggerCommand('removeFormat')" [disabled]="htmlMode" [hidden]="isButtonHidden('removeFormat')"
+            tabindex="-1"><i class='fa fa-remove'></i>
+    </button>
+  </div>
+  <div class="angular-editor-toolbar-set">
+    <button type="button" title="HTML Code" class="angular-editor-button"
+            (click)="triggerCommand('toggleEditorMode')" [hidden]="isButtonHidden('toggleEditorMode')" tabindex="-1"><i
+      class='fa fa-code'></i></button>
+  </div>
+  <ng-content></ng-content>
+</div>

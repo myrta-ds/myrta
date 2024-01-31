@@ -1,0 +1,8 @@
+<span
+    *ngFor="let invalidMessage of invalidMessageArray"
+    class="mrx-error-message d-block mt-1"
+    [class]="getClasses"
+>
+  {{invalidMessage}}
+  <ng-content></ng-content>
+</span>

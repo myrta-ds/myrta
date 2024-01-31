@@ -1,0 +1,84 @@
+.mrx-icon-button {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  color: var(--neutral-icon-default);
+
+  &&-state {
+    &-default {
+      background: transparent;
+
+      &:hover {
+        background: var(--brand-bg-tertiary-hover);
+      }
+
+      &:active {
+        background: var(--brand-bg-tertiary-selected);
+      }
+
+      &:disabled {
+        color: var(--neutral-icon-disabled);
+        cursor: default;
+        pointer-events: none;
+        background: transparent;
+      }
+    }
+
+    &-button {
+      box-shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+      background: var(--brand-bg-tertiary-default);
+
+      &:hover {
+        box-shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+      }
+
+      &:disabled {
+        cursor: default;
+        pointer-events: none;
+        color: var(--neutral-icon-disabled);
+
+        &:hover {
+          box-shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+        }
+      }
+
+      &.mrx-icon-button-type-positive {
+        color: var(--system-icon-positive);
+
+        &:active, &.active {
+          color: #fff;
+          background: var(--system-bg-controls-positive-default);
+
+          &:disabled {
+            color: #fff;
+          }
+        }
+
+        &:disabled {
+          color: var(--neutral-icon-disabled);
+        }
+      }
+
+      &.mrx-icon-button-type-negative {
+        color: var(--system-icon-negative);
+
+        &:active, &.active {
+          color: #fff;
+          background: var(--system-bg-controls-negative-default);
+
+          &:disabled {
+            color: #fff;
+          }
+        }
+
+        &:disabled {
+          color: var(--neutral-icon-disabled);
+        }
+      }
+    }
+  }
+}

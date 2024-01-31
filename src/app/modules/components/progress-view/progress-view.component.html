@@ -1,0 +1,35 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default progress</mrx-label>
+      <mrx-progress [value]="value1" color="default"></mrx-progress>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Success progress</mrx-label>
+      <mrx-progress [value]="value2" color="success"></mrx-progress>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Warning progress</mrx-label>
+      <mrx-progress [value]="value3" color="warning"></mrx-progress>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Danger progress</mrx-label>
+      <mrx-progress [value]="value4" color="danger"></mrx-progress>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <mrx-button size="medium" (click)="reRandom()">Random</mrx-button>
+    </div>
+  </div>
+</mrx-content-wrapper>

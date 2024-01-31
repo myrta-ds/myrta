@@ -1,0 +1,7 @@
+<div class="mrx-controls-wrapper">
+  <ng-content></ng-content>
+
+  <div class="mrx-controls-wrapper__controls" [class]="getClasses">
+    <ng-container *ngTemplateOutlet="controls"></ng-container>
+  </div>
+</div>

@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ButtonViewRoutingModule } from './button-view-routing.module';
 import { ButtonViewComponent } from './button-view.component';
-import { ContentWrapperModule, LabelModule } from 'myrtex-mf-ui';
-import { ButtonModule } from 'myrta-ui';
-
+import { ButtonModule, ContentWrapperModule, LabelModule } from '../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [

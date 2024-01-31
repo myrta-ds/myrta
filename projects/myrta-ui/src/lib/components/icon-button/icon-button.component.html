@@ -1,0 +1,9 @@
+<button
+  class="mrx-icon mrx-icon-button"
+  [mrxCdkTooltip]="tooltip"
+  [tooltipActive]="stateTooltip"
+  [class]="getClasses"
+  [class.active]="isActive"
+  [disabled]="disabled"
+  (click)="buttonClick($event)"
+></button>

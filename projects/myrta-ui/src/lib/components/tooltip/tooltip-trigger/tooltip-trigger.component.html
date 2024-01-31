@@ -1,0 +1,11 @@
+<div
+    class="mrx-tooltip-trigger"
+    [class.active]="isVisibleTooltip"
+    [class]="getClasses"
+    (click)="onToggle()"
+>
+  <span class="mrx-icon icon-font-16" [class]="getIconClass"></span>
+  <span class="tooltip-help">
+    {{!isVisibleTooltip ? 'Развернуть подсказку' : 'Свернуть подсказку'}}
+  </span>
+</div>

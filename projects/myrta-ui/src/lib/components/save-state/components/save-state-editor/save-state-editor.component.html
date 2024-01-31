@@ -1,0 +1,66 @@
+<span class="mrx-save-state-editor" [ngSwitch]="state">
+  <ng-container *ngSwitchCase="'saving'">
+    <div class="mrx-save-state__saving">
+        <svg width="20px" height="16px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+          <circle cx="90" cy="50" r="12" fill="var(--neutral-icon-info)">
+            <animate attributeName="r" repeatCount="indefinite" dur="0.5102040816326531s" calcMode="spline"
+                     keyTimes="0;1"
+                     values="10;0" keySplines="0 0.5 0.5 1" begin="0s"></animate>
+            <animate attributeName="fill" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="discrete"
+                     keyTimes="0;0.25;0.5;0.75;1" begin="0s"></animate>
+          </circle>
+          <circle cx="10" cy="50" r="12" fill="var(--neutral-icon-info)">
+            <animate attributeName="r" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="0;0;12;12;12"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"></animate>
+            <animate attributeName="cx" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="10;10;10;50;90"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"></animate>
+          </circle>
+          <circle cx="50" cy="50" r="16" fill="var(--neutral-icon-info)">
+            <animate attributeName="r" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="0;0;12;12;12"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1"
+                     begin="-0.5102040816326531s"></animate>
+            <animate attributeName="cx" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="10;10;10;50;90"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1"
+                     begin="-0.5102040816326531s"></animate>
+          </circle>
+          <circle cx="90" cy="50" r="12" fill="var(--neutral-icon-info)">
+            <animate attributeName="r" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="0;0;12;12;12"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1"
+                     begin="-1.0204081632653061s"></animate>
+            <animate attributeName="cx" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="10;10;10;50;90"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1"
+                     begin="-1.0204081632653061s"></animate>
+          </circle>
+          <circle cx="10" cy="50" r="12" fill="var(--neutral-icon-info)">
+            <animate attributeName="r" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="0;0;12;12;12"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.530612244897959s"></animate>
+            <animate attributeName="cx" repeatCount="indefinite" dur="2.0408163265306123s" calcMode="spline"
+                     keyTimes="0;0.25;0.5;0.75;1" values="10;10;10;50;90"
+                     keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.530612244897959s"></animate>
+          </circle>
+        </svg>
+
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.62542 3.37458C8.47685 3.22601 8.23597 3.22601 8.0874 3.37458L3.67895 7.78303L3.49961 8.50039L4.21697 8.32105L8.62542 3.9126C8.77399 3.76403 8.77399 3.52315 8.62542 3.37458ZM7.19421 2.4814C7.83607 1.83953 8.87674 1.83953 9.5186 2.4814C10.1605 3.12326 10.1605 4.16392 9.5186 4.80579L4.98646 9.33793C4.90552 9.41888 4.8041 9.4763 4.69304 9.50406L2.78477 9.98113C2.56955 10.0349 2.34187 9.97187 2.185 9.815C2.02813 9.65813 1.96506 9.43045 2.01887 9.21523L2.49594 7.30696C2.5237 7.1959 2.58113 7.09449 2.66207 7.01354L7.19421 2.4814Z"
+            fill="var(--neutral-icon-info)"
+          />
+        </svg>
+      </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'saved'">
+    <span class="mrx-save-state__saved">сохранено</span>
+  </ng-container>
+  <ng-container *ngSwitchCase="'error'">
+    <span class="mrx-save-state__error">ошибка</span>
+  </ng-container>
+</span>

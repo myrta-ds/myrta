@@ -5,7 +5,9 @@
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
     "dayjs": "^1.11.7",
-    "libphonenumber-js": "^1.10.30"
+    "libphonenumber-js": "^1.10.30",
+    "lodash-es": "^4.17.21",
+    "uuid": "^8.3.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"

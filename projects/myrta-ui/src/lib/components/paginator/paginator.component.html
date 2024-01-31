@@ -1,0 +1,55 @@
+<div class="mrx-paginator" [class]="getClasses" *ngIf="total">
+  <ul class="mrx-paginator__list">
+    <li
+        class="mrx-paginator__previous"
+        [class.disabled]="currentPage <= 1"
+        (click)="currentPage > 1 && onChangeCurrentPage(currentPage - 1)">
+      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 5.00195L7.5 10.002L12.5 15.002" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </li>
+
+    <li class="mrx-paginator__item" *ngIf="currentPage > 3 && getItems > 5" (click)="onChangeCurrentPage(1)">1</li>
+    <li class="mrx-paginator__item dots" *ngIf="currentPage > 3 && getItems > 5">...</li>
+
+    <li
+        class="mrx-paginator__item"
+        *ngFor="let item of getViewItems; trackBy: trackByFn"
+        (click)="onChangeCurrentPage(item.index)"
+        [class.active]="currentPage === item.index"
+    >
+      {{item.index}}
+    </li>
+
+    <li class="mrx-paginator__item dots" *ngIf="currentPage < getItems - 2 && getItems > 5">...</li>
+    <li class="mrx-paginator__item" *ngIf="currentPage < getItems - 2 && getItems > 5"
+        (click)="onChangeCurrentPage(getItems)">{{getItems}}</li>
+
+    <li
+        class="mrx-paginator__next"
+        [class.disabled]="currentPage >= getItems"
+        (click)="currentPage < getItems && onChangeCurrentPage(currentPage + 1)">
+      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 15.002L12.5 10.002L7.5 5.00195" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </li>
+  </ul>
+
+  <ng-template #select>
+    <ng-select
+        *ngIf="withPageSize"
+        [(ngModel)]="pageSize"
+        [items]="pageSizes"
+        [clearable]="false"
+        [searchable]="false"
+        (change)="onChangePageSize($event)"
+        class="ml-3"
+    ></ng-select>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="select"></ng-container>
+</div>
+
+

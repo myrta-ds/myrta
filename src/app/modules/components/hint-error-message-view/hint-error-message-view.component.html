@@ -1,0 +1,126 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <h2>Валидация по Вводу</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MaxValue</mrx-label>
+      <mrx-input-text
+        [ngModel]="value1"
+        (ngModelChange)="changeValue1($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="от 0.5 до 0.8"
+        [maxValue]="0.8"
+        [minValue]="0.5"
+        [value]="value1"
+        [checkInvalid]="checkInvalid"
+      ></mrx-hint-error-message>
+    </div>
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MinValue</mrx-label>
+      <mrx-input-text
+        [ngModel]="value2"
+        (ngModelChange)="changeValue2($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="Минимальное количество выбраных вариантов: 1. Осталось {diff}"
+        [minValue]="1"
+        [value]="value2"
+      ></mrx-hint-error-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MaxLength</mrx-label>
+      <mrx-input-text
+        [ngModel]="value3"
+        (ngModelChange)="changeValue3($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="<span>Осталось символов {diff}</span>"
+        [maxLength]="20"
+        [value]="value3"
+      ></mrx-hint-error-message>
+    </div>
+    <div class="col col-12 col-md-6">
+      <mrx-label>Параметр MinLength</mrx-label>
+      <mrx-input-text
+        [ngModel]="value4"
+        [minlength]="10"
+        (ngModelChange)="changeValue4($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="Минимальное количество символов: 10. Осталось {diff}"
+        [minLength]="10"
+        [value]="value4"
+      ></mrx-hint-error-message>
+    </div>
+  </div>
+</mrx-content-wrapper>
+
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <h2>Валидация по Событию</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MaxValue</mrx-label>
+      <mrx-input-text
+        [ngModel]="value1"
+        (ngModelChange)="changeValue1($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="<span>Осталось дней {diff}</span>"
+        [maxValue]="10"
+        [value]="error1"
+      ></mrx-hint-error-message>
+    </div>
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MinValue</mrx-label>
+      <mrx-input-text
+        [ngModel]="value2"
+        (ngModelChange)="changeValue2($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="Минимальное количество выбраных вариантов: 1. Осталось {diff}"
+        [minValue]="1"
+        [value]="error2"
+      ></mrx-hint-error-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-md-6 mb-3">
+      <mrx-label>Параметр MaxLength</mrx-label>
+      <mrx-input-text
+        [ngModel]="value3"
+
+        (ngModelChange)="changeValue3($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="<span>Осталось символов {diff}</span>"
+        [maxLength]="20"
+        [value]="error3"
+      ></mrx-hint-error-message>
+    </div>
+    <div class="col col-12 col-md-6">
+      <mrx-label>Параметр MinLength</mrx-label>
+      <mrx-input-text
+        [ngModel]="value4"
+        [minlength]="10"
+        (ngModelChange)="changeValue4($event)"
+      ></mrx-input-text>
+      <mrx-hint-error-message
+        message="Минимальное количество символов: 10. Осталось {diff}"
+        [minLength]="10"
+        [value]="error4"
+      ></mrx-hint-error-message>
+    </div>
+
+    <mrx-button (click)="verify()">Проверить</mrx-button>
+  </div>
+</mrx-content-wrapper>

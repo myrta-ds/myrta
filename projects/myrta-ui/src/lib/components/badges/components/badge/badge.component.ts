@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   BadgeColorClassesEnum, BadgeColorType, BadgeI, BadgeSizeEnum, BadgeSizeType, BadgeTagType, BadgeTagTypeClassesEnum,
   BadgeType, BadgeTypeEnum,
@@ -6,7 +6,9 @@ import {
 
 @Component({
   selector: 'mrx-badge',
-  templateUrl: './badge.component.html'
+  templateUrl: './badge.component.html',
+  styleUrls: ['./badge.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BadgeComponent {
   @Input() type: BadgeType = 'default'

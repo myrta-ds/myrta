@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { LoaderColorEnum, LoaderColorTypes, LoaderSizesEnum, LoaderSizesTypes } from './loader.enum';
 
 @Component({
-  selector: 'mrx-loader-view.',
+  selector: 'mrx-loader',
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.less']
 })

@@ -1,0 +1,248 @@
+<div class="mrx-table" [class]="getClasses" [class.mb-3]="pageable">
+  <ng-container *ngIf="headerSettings">
+    <div
+      class="mrx-table-card-header pt-2 pb-2 mb-3"
+      [class.mrx-table-card-header--substrate]="headerSettings.substrate"
+      *ngIf="headerSettings.type === 'default'"
+    >
+      <div class="row">
+        <div
+          class="mrx-table-card-header--left col col-12 col-md-6 mb-1 mb-md-0 d-flex justify-content-start align-content-center">
+          <ng-container *ngTemplateOutlet="counterTemplate"></ng-container>
+        </div>
+
+        <div class="mrx-table-card-header--right col col-12 col-md-6 d-flex justify-content-end align-content-center">
+          <ng-container *ngTemplateOutlet="sortTemplate"></ng-container>
+          <div class="ml-4" *ngIf="headerSettings.toggle">
+            <ng-container *ngTemplateOutlet="toggleTemplate"></ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mrx-table-card-header mb-3 pt-2 pb-2"
+      [class.mrx-table-card-header--substrate]="headerSettings.substrate"
+      *ngIf="headerSettings.type === 'second'"
+    >
+      <div class="row">
+        <div
+          class="mrx-table-card-header--left col col-12 col-sm-6 mb-1 mb-sm-0 d-flex justify-content-start align-content-center">
+          <ng-container *ngTemplateOutlet="sortTemplate"></ng-container>
+        </div>
+
+        <div class="mrx-table-card-header--right col col-12 col-sm-6 d-flex justify-content-end align-content-center">
+          <ng-container *ngTemplateOutlet="downloadTemplate"></ng-container>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container [ngSwitch]="type">
+    <div
+      class="mrx-table__wrapper"
+      *ngSwitchCase="'default'"
+      [class.mrx-table__wrapper--substrate]="contentSettings.substrate"
+    >
+      <table
+        [class.table-striped]="striped"
+        [class.table-solid]="!striped"
+        [class.mt-2]="contentSettings.substrate"
+        [class.mb-3]="contentSettings.substrate && data.length">
+        <thead [class.table-head-gray]="!headerSettings || headerSettings.background"
+        >
+          <tr>
+            <th
+              *ngFor="let col of contentChildren; let idx = index; trackBy: trackByFn"
+              [class]="col.customClasses"
+            >
+              <ng-container *ngIf="!col.templateHead; else headerItemTemplate">
+                <ng-container *ngIf="col.sortable; else defaultHeadCol">
+                  <div [class.th-wrapper]="sortable" (click)="onSortColumn(col.name, col.sortable)">
+                    <span>{{ col.label }}</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      [class]="columnSortedDir(col.name)" class="mrx-table__sort-icon">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 9L8 13L12 9" fill="#DAD5CE" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7L8 3L4 7" fill="#DAD5CE" />
+                    </svg>
+                  </div>
+                </ng-container>
+                <ng-template #defaultHeadCol>
+                  <div><span>{{ col.label }}</span></div>
+                </ng-template>
+              </ng-container>
+
+              <ng-template #headerItemTemplate>
+                <ng-container *ngIf="col.sortable; else defaultHeadCol">
+                  <div
+                    [class.th-wrapper]="sortable"
+                    (click)="onSortColumn(col.name, col.sortable)">
+                    <ng-container *ngTemplateOutlet="col.templateHead; context: { $implicit: col }"></ng-container>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      [class]="columnSortedDir(col.name)" class="mrx-table__sort-icon">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 9L8 13L12 9" fill="#DAD5CE" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7L8 3L4 7" fill="#DAD5CE" />
+                    </svg>
+                  </div>
+                </ng-container>
+                <ng-template #defaultHeadCol>
+                  <ng-container *ngTemplateOutlet="col.templateHead; context: { $implicit: col }"></ng-container>
+                </ng-template>
+              </ng-template>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let dataItem of data; let index = index">
+            <td
+              #tableTD
+              class="p-0"
+              *ngFor="let col of contentChildren"
+              [class]="col.customClasses"
+            >
+              <a
+                class="link-wrapper td-content-wrapper"
+                [href]="getLinkForStroke(link, dataItem)"
+                *ngIf="link && col['isLink']; else defaultTemplate"
+              >
+                <ng-container *ngIf="!col.templateCell; else bodyItemTemplate">
+                  <div class="p-2">{{ dataItem[col.name] }}</div>
+                </ng-container>
+
+                <ng-template #bodyItemTemplate>
+                  <ng-container *ngTemplateOutlet="col.templateCell; context: { $implicit: col, row: dataItem }">
+                  </ng-container>
+                </ng-template>
+              </a>
+
+              <ng-template #defaultTemplate>
+                <ng-container *ngIf="!col.templateCell; else bodyItemTemplate">
+                  <div class="p-2 td-content-wrapper">{{ dataItem[col.name] }}</div>
+                </ng-container>
+
+                <ng-template #bodyItemTemplate>
+                  <div class="td-content-wrapper">
+                    <ng-container *ngTemplateOutlet="col.templateCell; context: { $implicit: col, row: dataItem }">
+                    </ng-container>
+                  </div>
+                </ng-template>
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mrx-table__result-message" *ngIf="!data.length">
+        <ng-container *ngTemplateOutlet="emptyResultMsg ? emptyResultMsgTemplateDefault : emptyResultMsgTemplate">
+        </ng-container>
+      </div>
+
+      <div
+        class="mrx-table__overlay"
+        [@visibleLoading]="isLoading ? 'in' : 'out'"
+        [ngClass]="{'open': isLoading}"
+      >
+        <mrx-loader size="large" color="brand"></mrx-loader>
+      </div>
+    </div>
+
+    <div class="mrx-table__wrapper" *ngSwitchCase="'cards'">
+      <ng-container *ngFor="let item of data; let index = index; let first = first; let last = last">
+        <ng-container *ngTemplateOutlet="templateCard; context: { $implicit: item, first, last }"></ng-container>
+      </ng-container>
+
+      <div class="mrx-table__result-message--substrate" *ngIf="!data.length">
+        <ng-container *ngTemplateOutlet="emptyResultMsg ? emptyResultMsgTemplateDefault : emptyResultMsgTemplate">
+        </ng-container>
+      </div>
+
+      <div class="mrx-table__overlay" [@visibleLoading]="isLoading ? 'in' : 'out'" [ngClass]="{'open': isLoading}">
+        <mrx-loader size="large" color="brand"></mrx-loader>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div
+  class="mrx-table__paginator pt-2 pb-2"
+  [class.mrx-table__paginator--substrate]="paginatorSettings.substrate"
+  *ngIf="total"
+>
+  <mrx-paginator
+    *ngIf="pageable"
+    [total]="total"
+    [pageSize]="pageSize"
+    [position]="pageable.position"
+    [pageSizes]="pageable.pageSizes"
+    [currentPage]="currentPage"
+    [withPageSize]="pageable.withPageSize"
+    (dataStateChanged)="onDataStatePaginatorChanged($event)"
+  >
+  </mrx-paginator>
+</div>
+
+<ng-template #counterTemplate>
+  <span
+    class="mrx-table-counter d-flex align-items-center"
+    *ngIf="headerSettings?.count"
+  >
+    {{ total }} {{headerSettings?.countText || 'новостей'}}
+  </span>
+</ng-template>
+
+<ng-template #sortTemplate>
+  <div class="d-flex mrx-table-sort" *ngIf="headerSettings?.sort">
+    <div class="mrx-table-sort-scale" (click)="changeSort()">
+      <span class="mrx-table-sort-scale__title">Сортировать по:</span>
+      <div class="mrx-table-sort-scale__icon">
+        <span *ngIf="sort?.dir === 'desc'" class="mrx-icon icon-sorting-down icon-font-16"></span>
+        <span *ngIf="sort?.dir === 'asc'" class="mrx-icon icon-sorting-up icon-font-16"></span>
+      </div>
+    </div>
+    <ng-select
+      bindLabel="sortLabel"
+      bindValue="name"
+      [items]="colArray"
+      [ngModel]="selectedSort"
+      (change)="updateSortSelect($event)"
+      [clearable]="false"
+      [searchable]="false"
+      [closeOnSelect]="true"
+    ></ng-select>
+  </div>
+</ng-template>
+
+<ng-template #downloadTemplate>
+  <div
+    class="mrx-table-download"
+    (click)="clickToDownload($event)"
+    *ngIf="headerSettings?.download"
+  >
+    <span class="desktop">Скачать данные</span>
+    <span class="mrx-icon icon-download icon-font-24"></span>
+  </div>
+</ng-template>
+
+<ng-template #toggleTemplate>
+  <div class="mrx-table-toggle">
+    <div
+      class="mrx-table-toggle--item mr-1"
+      (click)="onChangeTypeTable('cards')"
+      [class.active]="type === 'cards'"
+    >
+      <span class="mrx-icon icon-cards-view icon-font-24"></span>
+    </div>
+    <div
+      class="mrx-table-toggle--item"
+      (click)="onChangeTypeTable('default')"
+      [class.active]="type === 'default'"
+    >
+      <span class="mrx-icon icon-table-view icon-font-24"></span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #emptyResultMsgTemplateDefault>
+  {{emptyResultMsg}}
+</ng-template>

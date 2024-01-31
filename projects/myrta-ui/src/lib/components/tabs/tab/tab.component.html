@@ -1,0 +1,4 @@
+<div class="mrx-tab" [class]="customClasses" [class.active]="active" (click)="onTabClick()">
+  <ng-content></ng-content>
+  <span *ngIf="subTitle">{{subTitle}}</span>
+</div>

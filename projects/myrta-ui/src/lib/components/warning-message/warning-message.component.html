@@ -1,0 +1,8 @@
+<span
+    *ngFor="let messageArrayText of messageArray"
+    class="mrx-warning-message d-block mt-1"
+    [class]="getClasses"
+>
+  {{messageArrayText}}
+  <ng-content></ng-content>
+</span>

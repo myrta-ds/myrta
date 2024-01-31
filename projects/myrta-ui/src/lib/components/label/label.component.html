@@ -1,0 +1,49 @@
+<div class="mrx-label-wrapper mb-2">
+  <div class="mrx-label-content d-flex align-items-start" [class.mr-2]="isSwitch">
+    <label
+      [class]="getClasses"
+      [class.required]="required"
+      [class.bold-label]="boldLabel"
+      class="mrx-label"
+    >
+      <ng-content></ng-content>
+
+      <span *ngIf="required && !disabled && !requiredHidden" class="required-active">*</span>
+
+      <mrx-tooltip-trigger
+        customClasses="ml-1"
+        *ngIf="tooltipService.getTooltip"
+        (toggleTooltip)="tooltipService.toggleTooltipVisible()"
+        [isVisibleTooltip]="tooltipService.getTooltipVisible"
+        [triggerTextPosition]="triggerTextPosition"
+        [triggerType]="triggerType"
+      ></mrx-tooltip-trigger>
+    </label>
+
+    <mrx-badge *ngIf="counter" customClasses="ml-2" type="circle" size="small">{{ counter }}</mrx-badge>
+  </div>
+
+  <mrx-switch
+    *ngIf="isSwitch"
+    [boldLabel]="boldLabel"
+    [label]="switchLabel"
+    [ngModel]="switchValue"
+    (ngModelChange)="changeCheckboxValue.emit($event)"
+  ></mrx-switch>
+
+  <mrx-link
+    *ngIf="linkText"
+    [prevent]="linkPrevent"
+    [type]="linkType"
+    [monochrome]="linkMonochrome"
+    (click)="onClickToLink($event)"
+  >{{ linkText }}</mrx-link>
+</div>
+
+<mrx-tooltip
+  *ngIf="tooltipService.getTooltip"
+  [tooltip]="tooltipService.getTooltip"
+  [tooltipVisible]="tooltipService.getTooltipVisible"
+  [triggerType]="triggerType"
+></mrx-tooltip>
+

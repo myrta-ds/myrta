@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LoaderViewRoutingModule } from './loader-view-routing.module';
 import { LoaderViewComponent } from './loader-view.component';
-import { LoaderModule } from 'myrta-ui';
-import { ContentWrapperModule, LabelModule } from 'myrtex-mf-ui';
-
+import { LoaderModule, ContentWrapperModule, LabelModule } from '../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [

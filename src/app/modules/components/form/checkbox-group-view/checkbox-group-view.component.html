@@ -1,0 +1,25 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row">
+    <div class="col">
+      <mrx-label>Состояние default</mrx-label>
+      <mrx-checkbox-group
+        [ngModel]="groupCheckboxModel1.values"
+        [scrollable]="false"
+      ></mrx-checkbox-group>
+    </div>
+    <div class="col">
+      <mrx-checkbox-group
+        [ngModel]="groupCheckboxModel2.values"
+        [searchable]="true"
+        [scrollable]="true"
+        [sortable]="true"
+        [scrollMaxHeight]="200"
+        [tooltip]="'This is tooltip'"
+        [labelText]="'Полная комплектация'"
+        [linkText]="'Очистить'"
+        [enableMessage]="'Поиск не дал результатов'"
+        (modelItemChange)="logger($event)"
+      ></mrx-checkbox-group>
+    </div>
+  </div>
+</mrx-content-wrapper>

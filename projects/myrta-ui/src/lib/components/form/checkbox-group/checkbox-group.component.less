@@ -1,0 +1,26 @@
+.mrx-checkbox-group {
+  position: relative;
+
+  &-wrapper {
+    &--scrollable {
+      overflow-y: auto;
+      border-width: 1px 0 1px 0;
+      border-style: solid;
+      border-color: transparent;
+      padding-top: 0;
+      padding-bottom: 0;
+      transition: boder-color .2s, padding-top .2s, padding-bottom .2s;
+
+      &.--active {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-color: var(--neutral-bg-divider);
+      }
+    }
+  }
+
+  &__empty-message {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

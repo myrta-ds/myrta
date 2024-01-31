@@ -1,33 +1,33 @@
-<div class="page-wrapper" [class]="getThemeClasses" style="background-color: #EEF0F4; min-height: 100vh">
-  <header>
-    <a class="px-4 py-2 d-flex" routerLink="/">
-      <img src="/assets/images/logo.svg" class="mr-2">
-      <img src="/assets/images/logo-myrta.svg">
-    </a>
-  </header>
+<header>
+  <a class="px-4 py-2 d-flex" routerLink="/">
+    <img src="/assets/images/logo.svg" class="mr-2">
+    <img src="/assets/images/logo-myrta.svg">
+  </a>
+</header>
 
-  <main>
-    <div class="container py-5">
-      <mrx-content-wrapper type="colored" customClasses="mb-5">
-        <div class="row">
-          <div class="col col-12 col-sm-6 mb-3 mb-sm-0">
-            <mrx-input-select
-              [ngModel]="selectedComponent"
-              [items]="selectComponents"
-              (ngModelChange)="selectComponent($event)"
-            ></mrx-input-select>
-          </div>
-          <div class="col col-12 col-sm-6">
-            <mrx-input-select
-              [ngModel]="selectedTheme"
-              [items]="selectThemes"
-              (ngModelChange)="selectTheme($event)"
-            ></mrx-input-select>
-          </div>
+<main>
+  <div class="container py-5">
+    <mrx-content-wrapper type="colored" customClasses="mb-5">
+      <div class="row">
+        <div class="col col-12 col-sm-6 mb-3 mb-sm-0">
+          <mrx-input-select
+            [ngModel]="selectedComponent"
+            [items]="selectComponents"
+            (ngModelChange)="selectComponent($event)"
+          ></mrx-input-select>
         </div>
-      </mrx-content-wrapper>
+        <div class="col col-12 col-sm-6">
+          <mrx-input-select
+            [ngModel]="selectedTheme"
+            [items]="selectThemes"
+            [clearable]="false"
+            [searchable]="false"
+            (ngModelChange)="selectTheme($event)"
+          ></mrx-input-select>
+        </div>
+      </div>
+    </mrx-content-wrapper>
 
-      <router-outlet></router-outlet>
-    </div>
-  </main>
-</div>
+    <router-outlet></router-outlet>
+  </div>
+</main>

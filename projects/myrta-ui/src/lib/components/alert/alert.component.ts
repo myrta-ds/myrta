@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { AlertColorClasses, AlertColors, AlertIconClasses } from './alert.enum';
 
 @Component({
-  selector: 'mrx-alert-view.',
+  selector: 'mrx-alert',
   templateUrl: 'alert.component.html',
-  styleUrls: ['./alert.component.less']
+  styleUrls: ['./alert.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AlertComponent {
   @Input() customClasses: string = '';
@@ -15,14 +16,15 @@ export class AlertComponent {
   @Input() closable = false;
   @Output() close: EventEmitter<unknown> = new EventEmitter();
 
-  get getClasses() {
+  public get getClasses() {
     return `${AlertColorClasses[this.color] ?? ''} ${this.customClasses}`;
   }
-  get getIconClass() {
+
+  public get getIconClass() {
     return `${AlertIconClasses[this.color]}`;
   }
 
-  onCloseClick() {
+  public onCloseClick(): void {
     this.close.emit(null);
   }
 }

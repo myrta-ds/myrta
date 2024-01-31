@@ -1,0 +1,11 @@
+<mrx-modal
+    [title]="title"
+    okText="Подтвердить"
+    closeText="Отменить"
+    color="attention"
+    [message]="message"
+    (close)="close()"
+    (ok)="ok()"
+>
+    <div *ngFor="let item of list">{{ item }}</div>
+</mrx-modal>

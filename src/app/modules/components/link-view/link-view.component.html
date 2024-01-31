@@ -1,0 +1,34 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      sdfsdf
+      <mrx-link href="/new2">Link</mrx-link>
+      sadfsdfsdf
+      <mrx-link href="/new3" target="_blank">Link</mrx-link>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      sdfsdf
+      <mrx-link href="/new4" type="navigational">Link</mrx-link>
+      sadfsdfsdf
+      <mrx-link href="/new4" type="navigational" [monochrome]="true">Link</mrx-link>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      sdfsdf
+      <mrx-link href="/new1" type="pseudo">Link</mrx-link>
+      sadfsdfsdf
+      <mrx-link href="/new1" type="pseudo" [monochrome]="true">Link</mrx-link>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      sdfsdf
+      <mrx-link href="/new1" type="pseudo" [prevent]="true" (clicked)="logger($event)">Link</mrx-link>
+      sadfsdfsdf
+      <mrx-link href="/new1" type="pseudo" [monochrome]="true" [prevent]="true" (clicked)="logger($event)">Link</mrx-link>
+    </div>
+  </div>
+</mrx-content-wrapper>

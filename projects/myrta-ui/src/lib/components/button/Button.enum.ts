@@ -19,9 +19,9 @@ export enum ButtonColorsEnum {
   'red' = 'red',
   'yellow' = 'yellow',
   'green' = 'green',
-  'attention' = 'color-attention',
-  'positive' = 'color-positive',
-  'negative' = 'color-negative',
+  'attention' = 'mrx-btn-color-attention',
+  'positive' = 'mrx-btn-color-positive',
+  'negative' = 'mrx-btn-color-negative',
 }
 
 export type ButtonColorsTypes= 'red' | 'green' | 'yellow' | 'default' | 'attention' | 'positive' | 'negative'

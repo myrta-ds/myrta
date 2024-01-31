@@ -1,0 +1,14 @@
+<div class="mrx-dropdown d-flex" [class]="customClasses">
+  <div class="mrx-dropdown-toggle" #dropdownToggleEl>
+    <ng-container *ngTemplateOutlet="dropdownToggle"></ng-container>
+  </div>
+
+  <div class="mrx-dropdown-content" #dropdownContent>
+
+    <div class="mrx-dropdown-wrapper">
+      <div class="mrx-dropdown-menu" *ngIf="dropdownMenu">
+        <ng-container *ngTemplateOutlet="dropdownMenu"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>

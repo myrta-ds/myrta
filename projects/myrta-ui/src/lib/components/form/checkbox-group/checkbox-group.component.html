@@ -1,0 +1,36 @@
+<div class="mrx-checkbox-group" [class]="getClasses">
+  <mrx-save-state [id]="uuid" [fields]="fields" type="checkboxGroup"></mrx-save-state>
+
+  <mrx-checkbox-group-header
+    [searchable]="searchable"
+    [searchPlaceholder]="searchPlaceholder"
+    [tooltip]="tooltip"
+    [labelText]="labelText"
+    [linkText]="linkText"
+    [checkedItemsCount]="checkedList.length"
+    (updateCheckboxGroupSearchValue)="updateCheckboxGroupSearchValue($event)"
+    (clearFilters)="clearFilters()"
+  ></mrx-checkbox-group-header>
+
+  <div
+      #groupItemsWrapper
+      *ngIf="filteredList?.length; else enableMessageTemplate"
+      class="mrx-checkbox-group-wrapper"
+      [class.mrx-checkbox-group-wrapper--scrollable]="scrollable"
+      [class.--active]="getShowScroll"
+      [style.max-height]="scrollable ? scrollMaxHeight + 'px' : 'auto'">
+    <mrx-checkbox-group-item
+        *ngFor="let item of filteredList; let last = last"
+        [displaced]="displaced || false"
+        [item]="item"
+        [isLast]="last"
+        [animationTrigger]="!!isSearchValue"
+        (animationEnd)="checkHeightGroupWrapper()"
+        (checkboxChanged)="checkboxChanged($event)"
+    ></mrx-checkbox-group-item>
+  </div>
+
+  <ng-template #enableMessageTemplate>
+    <p class="mrx-checkbox-group__empty-message">{{ enableMessage }}</p>
+  </ng-template>
+</div>

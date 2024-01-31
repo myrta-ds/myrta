@@ -1,19 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { LoaderColorTypes, LoaderSizesTypes } from '../loader/loader.enum';
 import {
   ButtonColorsEnum,
-  ButtonColorsTypes, ButtonIconPositionEnum,
+  ButtonColorsTypes,
+  ButtonIconPositionEnum,
   ButtonIconPositionTypes,
   ButtonSizesEnum,
   ButtonSizesTypes,
   ButtonTypes,
   ButtonTypesEnum
-} from './Button.enum';
-import { LoaderColorTypes, LoaderSizesTypes } from '../loader/loader.enum';
+} from './button.enum';
 
 @Component({
-  selector: 'mrx-button-view.',
+  selector: 'mrx-button',
   templateUrl: 'button.component.html',
-  styleUrls: ['./button.component.less']
+  styleUrls: ['./button.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   @Input() size: ButtonSizesTypes = 'large';

@@ -18,11 +18,11 @@ export enum BadgeTagTypeClassesEnum {
 export type BadgeTagType = 'tag' | 'link' | 'button'
 
 export enum BadgeColorClassesEnum {
-  'positive' = 'color-positive',
-  'negative' = 'color-negative',
-  'attention' = 'color-attention',
-  'neutral' = 'color-neutral',
-  'brand' = 'color-brand',
+  'positive' = 'mrx-badge-color-positive',
+  'negative' = 'mrx-badge-color-negative',
+  'attention' = 'mrx-badge-color-attention',
+  'neutral' = 'mrx-badge-color-neutral',
+  'brand' = 'mrx-badge-color-brand',
 }
 
 export type BadgeColorType = 'positive' | 'negative' | 'attention' | 'neutral' | 'brand'

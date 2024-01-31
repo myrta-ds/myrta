@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MyrtaUiModule } from '../../projects/myrta-ui/src/lib/myrta-ui.module';
 import { MenuAdminModule } from 'myrtex-mf-templates';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContentWrapperModule, InputSelectModule } from 'myrtex-mf-ui';
+import { InputSelectModule } from 'myrtex-mf-ui';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -20,8 +20,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MyrtaUiModule,
     MenuAdminModule,
-    InputSelectModule,
-    ContentWrapperModule
+    InputSelectModule
   ],
   providers: [
 

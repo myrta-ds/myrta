@@ -1,0 +1,32 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-stepper [currentStep]="value1" [totalSteps]="100"></mrx-stepper>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-stepper type="success" [currentStep]="value2" [totalSteps]="100"></mrx-stepper>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-stepper type="warning" [currentStep]="value3" [totalSteps]="100"></mrx-stepper>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-stepper type="danger" [currentStep]="value4" [totalSteps]="100"></mrx-stepper>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <mrx-button customClasses="mr-2" size="medium" (click)="reRandom()">Random</mrx-button>
+      <mrx-button size="medium" (click)="ending()">Complete</mrx-button>
+    </div>
+  </div>
+</mrx-content-wrapper>

@@ -1,0 +1,28 @@
+<mrx-table
+  [data]="data"
+  [headerSettings]="headerSettings"
+  [contentSettings]="contentSettings"
+  [paginatorSettings]="paginatorSettings"
+  [isLoading]="isLoading"
+  [type]="type"
+  [total]="data.length"
+  [pageable]="pageable"
+  [sort]="sort"
+  [sortable]="true"
+  (dataStateChanged)="changeState($event)"
+>
+  <mrx-column name="id" label="id" [sortable]="true" sortLabel="id"></mrx-column>
+  <mrx-column name="number" label="number" [sortable]="false"></mrx-column>
+  <mrx-column name="name" label="name" [sortable]="false"></mrx-column>
+  <mrx-column name="price" label="price" [sortable]="false"></mrx-column>
+
+  <ng-template #templateCard>
+    <div>asdasdasdasdas</div>
+  </ng-template>
+
+  <ng-template #emptyResultMsgTemplate>
+    <span>Фффсе пропало!!!</span>
+  </ng-template>
+</mrx-table>
+
+<mrx-button (click)="isLoading = !isLoading">IsLoading</mrx-button>

@@ -1,0 +1,9 @@
+<ng-container *ngIf="asString as string">
+  <div class="mrx-cdk-tooltip" [style.max-width]="getMaxWidth" [innerHtml]="string"></div>
+</ng-container>
+
+<ng-container *ngIf="asTemplate as template">
+  <div class="mrx-cdk-tooltip" [style.max-width]="getMaxWidth">
+    <ng-template [ngTemplateOutlet]="template"></ng-template>
+  </div>
+</ng-container>

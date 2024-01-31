@@ -1,0 +1,113 @@
+<div>
+  <mrx-content-wrapper type="colored" customClasses="mb-3 mt-5">
+    <div class="row mb-4">
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          [tooltipActive]="true"
+          tooltipPosition="top"
+          (click)="changeActive()"
+        >Tooltip Top</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="bottom"
+          (click)="changeActive()"
+        >Tooltip Top</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="left"
+          (click)="changeActive()"
+        >Tooltip Left</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="right"
+          (click)="changeActive()"
+        >Tooltip Right</mrx-button>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="top-start"
+          (click)="changeActive()"
+        >Tooltip Top Start</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="top-end"
+          (click)="changeActive()"
+        >Tooltip Top End</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="bottom-start"
+          (click)="changeActive()"
+        >Tooltip Bottom Start</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          tooltipPosition="bottom-end"
+          (click)="changeActive()"
+        >Tooltip Bottom End</mrx-button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          [tooltipMaxWidth]="200"
+          tooltipPosition="top-start"
+          (click)="changeActive()"
+        >Tooltip Top Start (maxWidth: 200)</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          [tooltipMaxWidth]="200"
+          tooltipPosition="top-end"
+          (click)="changeActive()"
+        >Tooltip Top End (maxWidth: 200)</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          [tooltipMaxWidth]="200"
+          tooltipPosition="bottom-start"
+          (click)="changeActive()"
+        >Tooltip Bottom Start (maxWidth: 200)</mrx-button>
+      </div>
+      <div class="col">
+        <mrx-button
+          class="d-inline-flex"
+          [mrxCdkTooltip]="getTooltipMessage"
+          [tooltipMaxWidth]="200"
+          tooltipPosition="bottom-end"
+          (click)="changeActive()"
+        >Tooltip Bottom End (maxWidth: 200)</mrx-button>
+      </div>
+    </div>
+  </mrx-content-wrapper>
+</div>

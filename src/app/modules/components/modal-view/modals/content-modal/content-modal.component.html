@@ -1,0 +1,37 @@
+<mrx-modal
+    message="Ok google"
+    [title]="title"
+    [expandable]="true"
+    size="extra-large"
+    okText="Подтвердить"
+    closeText="Отменить"
+    (close)="close()"
+    (ok)="ok()"
+>
+  <div class="row mt-3">
+    <div class="col col-12 mb-3">
+      <mrx-label>Введите имя</mrx-label>
+      <mrx-input-text></mrx-input-text>
+    </div>
+    <div class="col col-12 mb-3">
+      <mrx-label>Введите имя</mrx-label>
+      <mrx-input-text></mrx-input-text>
+    </div>
+  </div>
+
+  <ng-template #footerContent>
+    <mrx-button
+        [customClasses]="'mr-3'"
+        [type]="'secondary'"
+        [size]="'medium'"
+        (click)="close()"
+    >Отмена
+    </mrx-button>
+    <mrx-button
+        [type]="'primary'"
+        [size]="'medium'"
+        (click)="ok()"
+    >Сохранить
+    </mrx-button>
+  </ng-template>
+</mrx-modal>

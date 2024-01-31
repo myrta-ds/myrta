@@ -1,0 +1,13 @@
+::ng-deep {
+  .mrx-modal {
+    &.fade-anim {
+      transition: opacity 400ms ease-in-out;
+      will-change: opacity;
+      opacity: 0;
+    }
+
+    &.fade-anim.in {
+      opacity: 1;
+    }
+  }
+}
