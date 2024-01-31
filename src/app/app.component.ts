@@ -38,7 +38,20 @@ export class AppComponent implements OnInit {
   public selectedTheme: any = { id: 0, label: 'Minfin', theme: 'minfin-theme', font: 'PtSans' };
   public selectThemes: any[] = [
     { id: 0, label: 'Minfin', theme: 'minfin-theme', font: 'PtSans' },
-    { id: 1, label: 'Default', theme: 'default-theme', font: 'PtSans' }
+    { id: 1, label: 'Default', theme: 'default-theme', font: 'PtSans' },
+    { id: 2, label: 'VK', theme: 'vk blue-theme', font: 'VKSansDisplay' },
+    { id: 3, label: 'VTB', theme: 'vtb-theme', font: 'VTBGroup' },
+    { id: 4, label: 'Travel', theme: 'travel-theme', font: 'PtSans' },
+    { id: 5, label: 'Timchenko', theme: 'timchenko-theme', font: 'TimchenkoFonts' },
+    { id: 6, label: 'Absolute', theme: 'absolute-theme', font: 'PtSans' },
+    { id: 7, label: 'Black Green', theme: 'black-green-theme', font: 'PtSans' },
+    { id: 8, label: 'Blue', theme: 'blue-theme', font: 'PtSans' },
+    { id: 9, label: 'Brown', theme: 'brown-theme', font: 'PtSans' },
+    { id: 10, label: 'Dark Gray', theme: 'dark-gray-theme', font: 'PtSans' },
+    { id: 11, label: 'Pink', theme: 'pink-theme', font: 'PtSans' },
+    { id: 12, label: 'Red', theme: 'red-theme', font: 'PtSans' },
+    { id: 13, label: 'Turquoise', theme: 'turquoise-theme', font: 'PtSans' },
+    { id: 14, label: 'Yellow', theme: 'yellow-theme', font: 'PtSans' },
   ];
 
   constructor(
