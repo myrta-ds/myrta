@@ -1,0 +1,105 @@
+<mrx-modal
+  [title]="title"
+  [size]="'medium'"
+  (close)="close()"
+>
+  <div class="row">
+    <div class="col col-12">
+      <p>Выбранная область будет показываться на обложке страницы</p>
+    </div>
+
+    <div class="col col-12">
+      <div class="mrx-input-image-cropper__wrapper">
+        <image-cropper
+          [imageFile]="fileImage"
+          [maintainAspectRatio]="true"
+          [aspectRatio]="1 / 1"
+          format="png"
+          (imageCropped)="imageCropped($event)"
+          (imageLoaded)="imageLoaded($event)"
+          (cropperReady)="cropperReady()"
+          (loadImageFailed)="loadImageFailed()"
+          [backgroundColor]="'#000000'"
+          [canvasRotation]="canvasRotation"
+          [transform]="transform"
+        ></image-cropper>
+
+        <div class="mrx-input-image-cropper__controls">
+          <svg (click)="rotateLeft()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="15" width="8" height="8" rx="0.888889" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 18.5C5.05228 18.5 5.5 18.0523 5.5 17.5C5.5 16.9477 5.05228 16.5 4.5 16.5C3.94772 16.5 3.5 16.9477 3.5 17.5C3.5 18.0523 3.94772 18.5 4.5 18.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99978 20.3333L7.77756 18.1111L2.88867 23" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.1575 21.6842C18.5932 21.6842 22.9996 17.2777 22.9996 11.8421C22.9996 6.40646 18.5932 2 13.1575 2C7.72189 2 3.31543 6.40646 3.31543 11.8421" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M1.00026 10.1052L3.31605 12.421L5.63184 10.1052" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <svg (click)="rotateRight()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="15" width="8" height="8" rx="0.888889" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 18.5C17.0523 18.5 17.5 18.0523 17.5 17.5C17.5 16.9477 17.0523 16.5 16.5 16.5C15.9477 16.5 15.5 16.9477 15.5 17.5C15.5 18.0523 15.9477 18.5 16.5 18.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.9998 20.3333L19.7776 18.1111L14.8887 23" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.8425 21.6842C5.40682 21.6842 1.00036 17.2777 1.00036 11.8421C1.00036 6.40646 5.40682 2 10.8425 2C16.2781 2 20.6846 6.40646 20.6846 11.8421" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M22.9997 10.1052L20.684 12.421L18.3682 10.1052" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</mrx-modal>
+
+<!--<div class="modal-content accent-head md mrx-input-image-modal">-->
+<!--  <div class="modal-header">-->
+<!--    <div class="modal-title justify-content-start" [innerHTML]="title"></div>-->
+<!--    <span class='close close-click' (click)="close()">-->
+<!--            <svg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'>-->
+<!--              <path d='M13 1L1 13M1 1l12 12' stroke='#3A3A3A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>-->
+<!--            </svg>-->
+<!--        </span>-->
+<!--  </div>-->
+<!--  <div class="modal-body">-->
+<!--    <div class="row">-->
+<!--      <div class="col col-12">-->
+<!--        <p>Выбранная область будет показываться на обложке страницы</p>-->
+<!--      </div>-->
+
+<!--      <div class="col col-12">-->
+<!--        <div class="mrx-input-image-cropper__wrapper">-->
+<!--          <image-cropper-->
+<!--              [imageFile]="fileImage"-->
+<!--              [maintainAspectRatio]="true"-->
+<!--              [aspectRatio]="1 / 1"-->
+<!--              format="png"-->
+<!--              (imageCropped)="imageCropped($event)"-->
+<!--              (imageLoaded)="imageLoaded($event)"-->
+<!--              (cropperReady)="cropperReady()"-->
+<!--              (loadImageFailed)="loadImageFailed()"-->
+<!--              [backgroundColor]="'#000000'"-->
+<!--              [canvasRotation]="canvasRotation"-->
+<!--              [transform]="transform"-->
+<!--          ></image-cropper>-->
+
+<!--          <div class="mrx-input-image-cropper__controls">-->
+<!--            <svg (click)="rotateLeft()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <rect x="2" y="15" width="8" height="8" rx="0.888889" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 18.5C5.05228 18.5 5.5 18.0523 5.5 17.5C5.5 16.9477 5.05228 16.5 4.5 16.5C3.94772 16.5 3.5 16.9477 3.5 17.5C3.5 18.0523 3.94772 18.5 4.5 18.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path d="M9.99978 20.3333L7.77756 18.1111L2.88867 23" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path d="M13.1575 21.6842C18.5932 21.6842 22.9996 17.2777 22.9996 11.8421C22.9996 6.40646 18.5932 2 13.1575 2C7.72189 2 3.31543 6.40646 3.31543 11.8421" stroke="white" stroke-width="1.5" stroke-linecap="round"/>-->
+<!--              <path d="M1.00026 10.1052L3.31605 12.421L5.63184 10.1052" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+
+<!--            <svg (click)="rotateRight()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <rect x="14" y="15" width="8" height="8" rx="0.888889" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 18.5C17.0523 18.5 17.5 18.0523 17.5 17.5C17.5 16.9477 17.0523 16.5 16.5 16.5C15.9477 16.5 15.5 16.9477 15.5 17.5C15.5 18.0523 15.9477 18.5 16.5 18.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path d="M21.9998 20.3333L19.7776 18.1111L14.8887 23" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--              <path d="M10.8425 21.6842C5.40682 21.6842 1.00036 17.2777 1.00036 11.8421C1.00036 6.40646 5.40682 2 10.8425 2C16.2781 2 20.6846 6.40646 20.6846 11.8421" stroke="white" stroke-width="1.5" stroke-linecap="round"/>-->
+<!--              <path d="M22.9997 10.1052L20.684 12.421L18.3682 10.1052" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="modal-footer">-->
+<!--    <button class="btn btn-outline" (click)="close()">Отменить</button>-->
+<!--    <button class="btn" (click)="ok()">Подтвердить</button>-->
+<!--  </div>-->
+<!--</div>-->

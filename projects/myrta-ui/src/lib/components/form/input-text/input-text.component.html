@@ -1,0 +1,41 @@
+<div
+  class="mrx-input-text"
+  [class]="getClasses"
+  [class.mrx-input-error]="invalid"
+  [mrxCdkTooltip]="getTooltipValue"
+  [tooltipPosition]="'top-start'"
+>
+  <div class="mrx-input-text__wrapper">
+    <input
+      autocomplete="nope"
+      #inputElement
+      [type]="'text'"
+      [ngModel]="value"
+      (ngModelChange)="updateValue($event)"
+      (blur)="updateSelection($event)"
+      [attr.title]="placeholder || ''"
+      [disabled]="disabled"
+      [readOnly]="readonly"
+      [attr.minlength]="minlength > 0 ? minlength : null"
+      [attr.maxlength]="maxlength > 0 ? maxlength : null"
+      [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
+      [mask]="mask"
+      [prefix]="maskPrefix"
+      [showMaskTyped]="showMaskTyped"
+      [dropSpecialCharacters]="maskDropSpecialCharacters"
+    />
+
+    <mrx-chars-left
+      *ngIf="!disabled && maxlength"
+      [value]="value"
+      [maxlength]="maxlength">
+    </mrx-chars-left>
+  </div>
+
+  <mrx-error-message
+    *ngIf="(!isValid || invalid) && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
+  ></mrx-error-message>
+
+  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>
+</div>

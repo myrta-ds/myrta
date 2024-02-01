@@ -98,6 +98,54 @@ const routes: Routes = [
     path: 'components/form/checkbox-group',
     loadChildren: () => import ('./modules/components/form/checkbox-group-view/checkbox-group-view.module').then(x => x.CheckboxGroupViewModule)
   },
+  {
+    path: 'components/form/input-text',
+    loadChildren: () => import ('./modules/components/form/input-text-view/input-text-view.module').then(x => x.InputTextViewModule)
+  },
+  {
+    path: 'components/form/input-textarea',
+    loadChildren: () => import ('./modules/components/form/input-textarea-view/input-textarea-view.module').then(x => x.InputTextareaViewModule)
+  },
+  {
+    path: 'components/form/input-number',
+    loadChildren: () => import ('./modules/components/form/input-number-view/input-number-view.module').then(x => x.InputNumberViewModule)
+  },
+  {
+    path: 'components/form/input-phone',
+    loadChildren: () => import ('./modules/components/form/input-phone-view/input-phone-view.module').then(x => x.InputPhoneViewModule)
+  },
+  {
+    path: 'components/form/input-search',
+    loadChildren: () => import ('./modules/components/form/input-search-view/input-search-view.module').then(x => x.InputSearchViewModule)
+  },
+  {
+    path: 'components/form/input-select',
+    loadChildren: () => import ('./modules/components/form/input-select-view/input-select-view.module').then(x => x.InputSelectViewModule)
+  },
+  {
+    path: 'components/form/input-file',
+    loadChildren: () => import ('./modules/components/form/input-file-view/input-file-view.module').then(x => x.InputFileViewModule)
+  },
+  {
+    path: 'components/form/input-file-image',
+    loadChildren: () => import ('./modules/components/form/input-file-image-view/input-file-image-view.module').then(x => x.InputFileImageViewModule)
+  },
+  {
+    path: 'components/form/radio',
+    loadChildren: () => import ('./modules/components/form/radio-view/radio-view.module').then(x => x.RadioViewModule)
+  },
+  {
+    path: 'components/form/radio-group',
+    loadChildren: () => import ('./modules/components/form/radio-group-view/radio-group-view.module').then(x => x.RadioGroupViewModule)
+  },
+  {
+    path: 'components/form/rating',
+    loadChildren: () => import ('./modules/components/form/rating-view/rating-view.module').then(x => x.RatingViewModule)
+  },
+  {
+    path: 'components/form/switch',
+    loadChildren: () => import ('./modules/components/form/switch-view/switch-view.module').then(x => x.SwitchViewModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,15 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row">
+    <div class="col">
+      <mrx-input-number
+        [ngModel]="value"
+        [maxValue]="20"
+        [maxlength]="200"
+        [numberType]="type"
+        [invalidMessage]="'Максимальное значение'"
+        [readonly]="true"
+        (ngModelChange)="changeValue($event)"
+      ></mrx-input-number>
+    </div>
+  </div>
+</mrx-content-wrapper>

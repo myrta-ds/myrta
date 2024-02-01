@@ -1,0 +1,32 @@
+<div
+    class="mrx-input-number"
+    [class]="getClasses"
+    [class.mrx-input-error]="!isValid || invalid"
+>
+  <div class="mrx-input-number__wrapper">
+    <form [formGroup]="numberForm">
+      <div>
+        <input
+            #inputElement
+            autocomplete="nope"
+            formControlName="number"
+            type="text"
+            [thousandSeparator]="thousandsSeparator"
+            [decimalMarker]="decimalMarker"
+            [class]="innerClass"
+            [mask]="'separator.' + decimals"
+            [allowNegativeNumbers]="allowNegative"
+            [placeholder]="placeholder ? placeholder : ''"
+        />
+      </div>
+    </form>
+  </div>
+
+  <mrx-error-message *ngIf="!isValid && invalidMessageStart">
+    {{invalidMessageStart}}
+    <a href="#" (click)="resetToMax($event)">{{maxMessage}}</a>
+    {{invalidMessageEnd}}
+  </mrx-error-message>
+
+  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>
+</div>

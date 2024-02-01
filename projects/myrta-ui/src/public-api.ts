@@ -77,12 +77,50 @@ export * from './lib/components/truncate-text/truncate-text.component';
 export * from './lib/components/warning-message/warning-message.module';
 export * from './lib/components/warning-message/warning-message.component';
 
+
+// FORM
+export * from './lib/components/form/input-text/input-text.module';
+export * from './lib/components/form/input-text/input-text.component';
+
+export * from './lib/components/form/input-textarea/input-textarea.module';
+export * from './lib/components/form/input-textarea/input-textarea.component';
+
+export * from './lib/components/form/input-phone/input-phone.module';
+export * from './lib/components/form/input-phone/input-phone.component';
+export * from './lib/components/form/input-phone/models/country.model';
+
+export * from './lib/components/form/input-search/input-search.module';
+export * from './lib/components/form/input-search/input-search.component';
+
+export * from './lib/components/form/input-number/input-number.module';
+export * from './lib/components/form/input-number/input-number.component';
+export * from './lib/components/form/input-number/input-number.enum';
+
+export * from './lib/components/form/input-select/input-select.module';
+export * from './lib/components/form/input-select/input-select.component';
+
+export * from './lib/components/form/input-file/input-file.module';
+export * from './lib/components/form/input-file/input-file.component';
+
+export * from './lib/components/form/input-file-image/input-file-image.module';
+export * from './lib/components/form/input-file-image/input-file-image.component';
+
 export * from './lib/components/form/checkbox/checkbox.module';
 export * from './lib/components/form/checkbox/checkbox.module';
 export * from './lib/components/form/checkbox/checkbox.component';
 
 export * from './lib/components/form/checkbox-group/checkbox-group.module';
 export * from './lib/components/form/checkbox-group/checkbox-group.component';
+
+export * from './lib/components/form/radio/radio.module';
+export * from './lib/components/form/radio/radio.component';
+
+export * from './lib/components/form/switch/switch.module';
+export * from './lib/components/form/switch/switch.component';
+
+export * from './lib/components/form/rating/rating.module';
+export * from './lib/components/form/rating/rating.component';
+
 
 // WRAPPERS
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.module';
@@ -91,6 +129,7 @@ export * from './lib/components/wrappers/content-wrapper/content-wrapper.compone
 export * from './lib/components/wrappers/controls-wrapper/controls-wrapper.module';
 export * from './lib/components/wrappers/controls-wrapper/controls-wrapper.component';
 export * from './lib/components/wrappers/controls-wrapper/components/controls-item/controls-item.component';
+
 
 // PIPES
 export * from './lib/pipes/safe/safe.module';
@@ -109,5 +148,9 @@ export * from './lib/pipes/currency/currency.pipe';
 export * from './lib/pipes/truncate/truncate.module';
 export * from './lib/pipes/truncate/truncate.pipe';
 
+
 // SERVICES
 export * from './lib/services/index';
+
+// MODELS
+export * from './lib/models/index';

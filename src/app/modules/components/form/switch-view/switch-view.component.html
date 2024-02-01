@@ -1,0 +1,62 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-switch size="large">
+        <span class="d-flex align-items-center">
+            this is label
+            <span
+              [mrxCdkTooltip]="'tooltip text'"
+              class="mrx-icon icon-info ml-1 icon-font-16 cursor-pointer"
+            ></span>
+        </span>
+      </mrx-switch>
+      <div class="d-flex align-items-center">
+        <mrx-switch size="large">this is label</mrx-switch>
+        <span
+          [mrxCdkTooltip]="'tooltip text'"
+          class="mrx-icon icon-info ml-1 icon-font-16 cursor-pointer"
+        ></span>
+      </div>
+    </div>
+    <div class="col">
+      <mrx-switch size="small" label="this is label"></mrx-switch>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-switch size="large" label="this is label" [boldLabel]="true"></mrx-switch>
+    </div>
+    <div class="col">
+      <mrx-switch size="small" label="this is label" [boldLabel]="true"></mrx-switch>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-switch size="large" label="this is label" [disabled]="true"></mrx-switch>
+    </div>
+    <div class="col">
+      <mrx-switch size="small" label="this is label" [disabled]="true"></mrx-switch>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-switch size="large" label="this is label" [readonly]="true" [ngModel]="true"></mrx-switch>
+    </div>
+    <div class="col">
+      <mrx-switch size="small" label="this is label" [readonly]="true" [ngModel]="true"></mrx-switch>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <mrx-switch type="toggle" [disabled]="true" [boldLabel]="true" [ngModel]="value" (ngModelChange)="logger($event)"></mrx-switch>
+    </div>
+    <div class="col">
+      <mrx-switch type="toggle" [boldLabel]="true" [ngModel]="value" (ngModelChange)="logger($event)"></mrx-switch>
+    </div>
+  </div>
+
+</mrx-content-wrapper>

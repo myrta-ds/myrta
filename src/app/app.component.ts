@@ -31,8 +31,20 @@ export class AppComponent implements OnInit {
     { id: 18, label: 'Truncate Text', link: '/components/truncate-text' },
     { id: 19, label: 'Warning Message', link: '/components/warning-message' },
     { id: 20, label: 'Controls Wrapper', link: '/components/controls-wrapper' },
-    { id: 21, label: 'Checkbox', link: '/components/form/checkbox' },
-    { id: 22, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
+    { id: 21, label: 'Input Text', link: '/components/form/input-text' },
+    { id: 22, label: 'Input Textarea', link: '/components/form/input-textarea' },
+    { id: 23, label: 'Input Number', link: '/components/form/input-number' },
+    { id: 24, label: 'Input Phone', link: '/components/form/input-phone' },
+    { id: 25, label: 'Input Search', link: '/components/form/input-search' },
+    { id: 26, label: 'Input Select', link: '/components/form/input-select' },
+    { id: 27, label: 'Input File', link: '/components/form/input-file' },
+    { id: 28, label: 'Input File Image', link: '/components/form/input-file-image' },
+    { id: 29, label: 'Checkbox', link: '/components/form/checkbox' },
+    { id: 30, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
+    { id: 31, label: 'Radio', link: '/components/form/radio' },
+    { id: 32, label: 'Radio Group', link: '/components/form/radio-group' },
+    { id: 33, label: 'Rating', link: '/components/form/rating' },
+    { id: 34, label: 'Switch', link: '/components/form/switch' },
   ];
 
   public selectedTheme: any = { id: 0, label: 'Minfin', theme: 'minfin-theme', font: 'PtSans' };

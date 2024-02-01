@@ -1,5 +1,5 @@
 import {
-  AfterViewInit,
+  AfterViewInit, ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   ElementRef,
@@ -24,6 +24,7 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
   selector: 'mrx-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     TooltipService,
     {

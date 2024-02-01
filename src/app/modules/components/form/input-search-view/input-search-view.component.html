@@ -1,0 +1,151 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        size="large"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        size="medium"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        size="small"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValue"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValueEmpty"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [ngModel]="textValue"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-search
+        [disabled]="true"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-search>
+    </div>
+    <div class="col">
+      <mrx-input-search
+        [readonly]="true"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-search>
+    </div>
+  </div>
+
+</mrx-content-wrapper>

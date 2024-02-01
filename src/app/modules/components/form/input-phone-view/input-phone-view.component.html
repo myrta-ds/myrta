@@ -1,0 +1,81 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Phone input</mrx-label>
+      <mrx-input-phone
+        [ngModel]="value"
+        [onlyCountries]="allowedCountries"
+        [showMaskTyped]="true"
+        [maskDropSpecialCharacters]="false"
+        (modelChange)="numberTestChangeValue($event)"
+        maskPrefix="8"
+        mask=" (000) 000-00-00"
+      ></mrx-input-phone>
+    </div>
+    <div class="col">
+      <mrx-label>Phone input masked</mrx-label>
+      <mrx-input-phone
+        [selectedCountryISO]="countryISO.Russia"
+        [onlyCountries]="countries"
+        [autoMask]="true"
+        [ngModel]="value"
+        [showMaskTyped]="true"
+        [maskDropSpecialCharacters]="true"
+        (modelChange)="numberTestChangeValue($event)"
+      ></mrx-input-phone>
+    </div>
+  </div>
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Инпут номера телефона</mrx-label>-->
+  <!--      <mrx-input-phone-->
+  <!--          [ngModel]="value"-->
+  <!--          mask=" (000) 000-0000"-->
+  <!--          maskPrefix="8"-->
+  <!--          [checkInvalid]="false"-->
+  <!--          [showMaskTyped]="true"-->
+  <!--          [onlyCountries]="allowedCountries"-->
+  <!--          [maskDropSpecialCharacters]="false"-->
+  <!--          (ngModelChange)="changeValue($event)"-->
+  <!--          (numberChange)="changeNumber($event)"-->
+  <!--      ></mrx-input-phone>-->
+  <!--    </div>-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Изменить номер</mrx-label>-->
+  <!--      <mrx-button (click)="value = '+79809516123'">Click</mrx-button>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Инпут номера телефона</mrx-label>-->
+  <!--      <mrx-input-phone-->
+  <!--          [ngModel]="value"-->
+  <!--          mask=" (000) 000-0000"-->
+  <!--          maskPrefix="8"-->
+  <!--          [checkInvalid]="false"-->
+  <!--          [showMaskTyped]="true"-->
+  <!--          [maskDropSpecialCharacters]="false"-->
+  <!--          (ngModelChange)="changeValue($event)"-->
+  <!--          (numberChange)="changeNumber($event)"-->
+  <!--      ></mrx-input-phone>-->
+  <!--    </div>-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Инпут номера телефона</mrx-label>-->
+  <!--      <mrx-input-phone-->
+  <!--          [ngModel]="value"-->
+  <!--          [checkInvalid]="false"-->
+  <!--          (ngModelChange)="changeValue($event)"-->
+  <!--      ></mrx-input-phone>-->
+  <!--    </div>-->
+
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Инпут номера телефона</mrx-label>-->
+  <!--      <mrx-input-phone-->
+  <!--        [ngModel]="value2"-->
+  <!--        [searchCountryFlag]="true"-->
+  <!--        (numberChange)="numberChangeValue($event)"-->
+  <!--      ></mrx-input-phone>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</mrx-content-wrapper>

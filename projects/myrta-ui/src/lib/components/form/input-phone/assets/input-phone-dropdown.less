@@ -1,0 +1,46 @@
+.mrx-input-phone {
+  &__country-list {
+    position: relative;
+    border: none;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+
+    &--dropup {
+      bottom: 100%;
+      margin-bottom: 1px;
+    }
+
+    padding: 0;
+    margin: 0 0 0 1px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    background-color: white;
+    white-space: nowrap;
+
+    @media (max-width: 500px) {
+      white-space: normal;
+    }
+
+    max-height: 200px;
+    overflow-y: scroll;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__country {
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__country.iti__highlight {
+    background-color: gray;
+  }
+
+  &__flag-box, &__country-name, &__dial-code {
+    vertical-align: middle;
+  }
+  &__flag-box, &__country-name {
+    margin-right: 6px;
+  }
+}

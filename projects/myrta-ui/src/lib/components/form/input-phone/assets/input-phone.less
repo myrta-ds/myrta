@@ -1,0 +1,85 @@
+.mrx-input-phone {
+  width: 100%;
+  position: relative;
+
+  .mrx-input-phone__wrapper {
+    position: relative;
+  }
+
+  input {
+    box-sizing: border-box;
+    border: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    outline: none;
+    transition: outline-width 0.2s, border 0.2s;
+
+    &:focus, &:active {
+      outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+    }
+
+    &:hover {
+      border: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+    }
+
+    &:disabled {
+      background-color: var(--neutral-bg-disabled);
+    }
+
+    &::placeholder {
+      color: var(--neutral-text-tertiary);
+    }
+  }
+
+  &.mrx-input__readonly {
+    input[type=tel] {
+      &:disabled {
+        background-color: inherit;
+      }
+    }
+  }
+
+  &.mrx-input__readonly {
+    input {
+      background-color: inherit;
+    }
+  }
+
+  &__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+  }
+
+  &__flag {
+
+  }
+
+  &__arrow {
+    margin-left: 4px;
+
+    &--up {
+      border-top: none;
+      border-bottom: 4px solid #555;
+    }
+  }
+
+  &__dial-code {
+    color: #999;
+  }
+
+  &__flag-box, &__country-name, &__dial-code {
+    vertical-align: middle;
+  }
+  &__flag-box, &__country-name {
+    margin-right: 6px;
+  }
+
+  &__divider {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+  }
+}

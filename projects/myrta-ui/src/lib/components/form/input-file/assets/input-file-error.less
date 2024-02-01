@@ -1,0 +1,36 @@
+::ng-deep {
+  .new-custom-file-input__item {
+    &.file-error {
+      border-color: var(--system-bg-controls-negative-default);
+    }
+  }
+  .ng-custom-file-input-error {
+    white-space: nowrap;
+    font-family: var(--body-sm-font-family);
+    font-size: var(--body-sm-font-size);
+    font-weight: var(--body-sm-font-weight);
+    line-height: var(--body-sm-line-height);
+  }
+
+  .ng-form-file-input {
+    &.mrx-input-error {
+      .ng-custom-file-input .ngx-file-drop__drop-zone {
+        border-color: var(--system-bg-controls-negative-default);
+      }
+    }
+
+    &.mrx-input-checked-error {
+      .ng-custom-file-input .ngx-file-drop__drop-zone {
+        border-color: var(--system-bg-controls-negative-default);
+        background-color: var(--system-bg-negative-secondary);
+      }
+    }
+
+    &.mrx-input-checked-success {
+      .ng-custom-file-input .ngx-file-drop__drop-zone {
+        border-color: var(--system-bg-controls-positive-default);
+        background-color: var(--system-bg-positive-secondary);
+      }
+    }
+  }
+}

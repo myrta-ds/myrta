@@ -1,0 +1,34 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default radio</mrx-label>
+      <mrx-radio [(ngModel)]="value" name="testRadio" [value]="1" (ngModelChange)="changeValue($event)">Первый</mrx-radio>
+    </div>
+    <div class="col">
+      <mrx-label>Default radio</mrx-label>
+      <mrx-radio [(ngModel)]="value" name="testRadio" [value]="2" (ngModelChange)="changeValue($event)">Второй</mrx-radio>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Disabled radio</mrx-label>
+      <mrx-radio [disabled]="true" [(ngModel)]="value" [value]="1" (ngModelChange)="changeValue($event)">Первый</mrx-radio>
+    </div>
+    <div class="col">
+      <mrx-label>Disabled radio</mrx-label>
+      <mrx-radio [disabled]="true" [(ngModel)]="value" [value]="2" (ngModelChange)="changeValue($event)">Второй</mrx-radio>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Invalid radio</mrx-label>
+      <mrx-radio [invalid]="true" [(ngModel)]="value" [value]="1" (ngModelChange)="changeValue($event)">Первый</mrx-radio>
+    </div>
+    <div class="col">
+      <mrx-label>Invalid disabled radio</mrx-label>
+      <mrx-radio [invalid]="true" [disabled]="true" [(ngModel)]="value" [value]="2" (ngModelChange)="changeValue($event)">Второй</mrx-radio>
+    </div>
+  </div>
+</mrx-content-wrapper>

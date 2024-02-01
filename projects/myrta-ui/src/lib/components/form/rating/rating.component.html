@@ -1,0 +1,40 @@
+<div class="mrx-rating-wrapper" [class]="getWrapperClasses">
+  <div class="mrx-rating" [class]="getClasses" (mouseleave)="resetElementHandle()">
+    <ng-container *ngFor="let item of elements; let idx = index; trackBy: trackByFn">
+      <div class="mrx-rating-item" [class.disabled]="disabled || readonly">
+        <div *ngIf="double" class="mrx-rating-item-double-wrapper">
+          <span
+            class="mrx-icon"
+            [class]="iconClass"
+            [class.icon-font-16]="size === 'small'"
+            [class.icon-font-24]="size === 'large'"
+            [class.filled]="item.filled && item.double"
+            (mouseenter)="canActive && hoverElementHandle(item, 'double')"
+            (click)="canActive && changeValue(item.value, 'double')"
+          ></span>
+        </div>
+
+        <div class="mrx-rating-item-wrapper">
+          <span
+            class="mrx-icon"
+            [class]="iconClass"
+            [class.icon-font-16]="size === 'small'"
+            [class.icon-font-24]="size === 'large'"
+            [class.filled]="item.filled && !item.double"
+            (mouseenter)="canActive && hoverElementHandle(item, 'single')"
+            (click)="canActive && changeValue(item.value, 'single')"
+          ></span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-container [ngSwitch]="viewMode">
+    <span *ngSwitchCase="'text'" [class]="getValueClasses">{{ ratingText }}</span>
+    <span *ngSwitchCase="'value'" [class]="getValueClasses">{{ toNumberFormatFunc(value) }}</span>
+    <span *ngSwitchCase="'text-with-value'" [class]="getValueClasses">{{ ratingText }} ({{ toNumberFormatFunc(value) }})</span>
+  </ng-container>
+</div>
+
+<mrx-error-message *ngIf="(!isValid || invalid) && isInvalidMessage" [invalidMessage]="invalidMessage">
+</mrx-error-message>

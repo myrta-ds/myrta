@@ -6,8 +6,6 @@ import { EditorToolbarButtonComponent } from './components/editor-toolbar-button
 import { EditorToolbarSelectComponent } from './components/editor-toolbar-select/editor-toolbar-select.component';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     InputEditorComponent,

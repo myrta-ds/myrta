@@ -1,0 +1,53 @@
+<div class="mrx-switch" [class]="getClasses">
+  <mrx-save-state [id]="uuid" [fields]="fields" type="switch"></mrx-save-state>
+
+  <ng-container [ngSwitch]="type">
+
+    <ng-container *ngSwitchCase="'toggle'">
+      <p
+          class="mr-1 cursor-pointer mrx-switch__trigger"
+          [class.text-bold]="boldLabel"
+          (click)="!(disabled || readonly) && updateValue(false)"
+      >
+        {{ leftText }}
+      </p>
+      <label class="mrx-switch-checkbox">
+        <input
+            type="checkbox"
+            [required]="required"
+            [disabled]="disabled || readonly"
+            [readOnly]="readonly"
+            [ngModel]="value"
+            (ngModelChange)="updateValue($event)"
+        >
+        <span class="mrx-switch-slider"></span>
+      </label>
+      <p
+          class="ml-1 cursor-pointer mrx-switch__trigger"
+          [class.text-bold]="boldLabel"
+          (click)="!(disabled || readonly) && updateValue(true)"
+      >
+        {{ rightText }}
+      </p>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+      <label class="mrx-switch-checkbox">
+        <input
+            type="checkbox"
+            [required]="required"
+            [disabled]="disabled || readonly"
+            [readOnly]="readonly"
+            [ngModel]="value"
+            (ngModelChange)="updateValue($event)"
+        >
+        <span class="mrx-switch-slider"></span>
+
+        <p class="ml-2" [class]="boldLabel ? 'mrx-switch__label--bold' : 'mrx-switch__label'">
+          {{label}}
+          <ng-content></ng-content>
+        </p>
+      </label>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,129 @@
+<div
+  class="ng-form-file-input"
+  [class]="getClasses"
+  [class.mrx-input-error]="invalid">
+  <div class="form-row" *ngIf="disabled; else notDisabled">
+    <div *ngIf="!files || files.length == 0"
+         class="col-sm-12 col-md-6">
+      <span class="file-link absent">
+        <svg class="fill" xmlns="http://www.w3.org/2000/svg" fill="none" width='16' viewBox="0 0 16 20">
+          <defs/>
+          <path fill="#B79B7E" fill-rule="evenodd"
+                d="M2 0C.896 0 0 .896 0 2v16c0 1.104.896 2 2 2h12c1.104 0 2-.896 2-2V6l-6-6H2zm8 7H9V2l5 5h-4z"
+                clip-rule="evenodd"/>
+        </svg>
+        Документов нет
+      </span>
+    </div>
+
+    <div *ngFor="let file of files; index as i; trackBy: trackByFn"
+         [ngClass]="{'col-12 col-md': files.length === 1, 'col-12 col-md-6': files.length > 1}">
+      <a class="file-link" [href]="downloadUrl(file)">
+        <svg class="fill" xmlns="http://www.w3.org/2000/svg" fill="none" width='16' viewBox="0 0 16 20">
+          <defs/>
+          <path fill="#B79B7E" fill-rule="evenodd"
+                d="M2 0C.896 0 0 .896 0 2v16c0 1.104.896 2 2 2h12c1.104 0 2-.896 2-2V6l-6-6H2zm8 7H9V2l5 5h-4z"
+                clip-rule="evenodd"/>
+        </svg>
+        {{ file.name }}
+      </a>
+    </div>
+    <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
+  </div>
+
+  <ng-template #notDisabled>
+    <ng-container *ngIf="!bottomFiles">
+      <ng-container *ngTemplateOutlet="fileListTemplate"></ng-container>
+      <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
+    </ng-container>
+
+    <ngx-file-drop
+      *ngIf="canAdd"
+      [className]="'ng-custom-file-input'"
+      [accept]="extensions || ''"
+      [disabled]="lightDisabled"
+      (onFileDrop)="dropped($event)"
+    >
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        <div
+          class="ng-custom-file-input-content"
+          (click)="!lightDisabled ? openFileSelector() : undefined"
+        >
+          <div class="text-center">
+            <div class="ng-custom-file-input-content--placeholder mb-2">
+              {{placeholder}}
+            </div>
+            <div class="ng-custom-file-input-content--size">
+              {{placeholderFileMaxSize}} {{formatBytes(maxSize)}}
+            </div>
+            <div class="ng-custom-file-input-content--extensions" *ngIf="extensions">
+              {{placeholderFileFormat}} {{extensions}}
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngx-file-drop>
+
+    <ng-container *ngIf="bottomFiles">
+      <ng-container *ngTemplateOutlet="fileListTemplate"></ng-container>
+      <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
+    </ng-container>
+  </ng-template>
+</div>
+
+<mrx-error-message
+  *ngIf="(!isValid || invalid) && isInvalidMessage"
+  [invalidMessage]="invalidMessage"
+></mrx-error-message>
+
+<ng-template #fileListTemplate>
+  <ul class="new-custom-file-input" *ngIf="files.length">
+    <li
+      class="new-custom-file-input__item"
+      *ngFor="let file of files; trackBy: trackByFn"
+      [ngClass]="{'file-error': file.error}"
+      [mrxCdkTooltip]="getTooltipValue(fileNamePlaceholder ? fileNamePlaceholder : file.name || '')"
+      [tooltipPosition]="'top-start'"
+    >
+      <ng-container *ngIf="autoUpload">
+        <a class="qq-download-link" [href]="downloadUrl(file)" *ngIf="file.uuid && isDownloadingFile"></a>
+      </ng-container>
+      <div class="qq-file-info">
+        <div class="d-flex align-items-center">
+          <span class="mrx-icon icon-file icon-font-24 mr-2"></span>
+          <span
+            class="qq-upload-file-selector qq-upload-file"
+          >{{fileNamePlaceholder ? fileNamePlaceholder : file.name}}</span>
+        </div>
+        <div class="info">
+          <div class="ng-custom-file-input_progress" *ngIf="file.uploading">
+            <span [ngStyle]="{width: file.percentage + '%'}"></span>
+          </div>
+
+          <span class="qq-upload-size-selector qq-upload-size" *ngIf="!file.error">{{formatBytes(file.size)}}</span>
+
+          <span
+            *ngIf="!disabled && file.uuid && showDeleteButton"
+            (click)="delete(file)"
+            class="mrx-icon icon-delete icon-font-24"
+            aria-label="Удалить"
+          ></span>
+
+          <div class="ng-custom-file-input-error" *ngIf="file.error">
+            <span class="mrx-icon icon-attention icon-color-red icon-font-16 mr-1"></span>
+            <span class="color-negative">{{file.error}}</span>
+          </div>
+
+          <button
+            type="button"
+            class="ng-custom-file-input-btn-stop ml-2"
+            *ngIf="(file.error && !file.uuid) || canCancelUploading(file)"
+            (click)="clear(file)"
+          >
+            <span class="mrx-icon icon-close icon-font-24"></span>
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>

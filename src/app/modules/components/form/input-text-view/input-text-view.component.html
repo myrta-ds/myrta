@@ -1,0 +1,155 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label [required]="true" tooltip="asdasdas">asdasdasda</mrx-label>
+      <mrx-input-text
+        [(ngModel)]="model.name"
+        [placeholder]="'placeholder'"
+        [isTooltipValue]="true"
+        [invalid]="form.errors.name"
+        [invalidMessage]="form.errors.name"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        size="large"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        size="medium"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        size="small"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValue"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValueEmpty"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [ngModel]="textValue"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-text
+        [disabled]="true"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-text>
+    </div>
+    <div class="col">
+      <mrx-input-text
+        [readonly]="true"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-text>
+    </div>
+  </div>
+
+</mrx-content-wrapper>

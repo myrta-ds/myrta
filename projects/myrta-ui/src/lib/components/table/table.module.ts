@@ -6,7 +6,7 @@ import { ColumnComponent } from './components/column/column.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { LoaderModule } from '../loader/loader.module';
-import { InputSelectModule } from 'myrtex-mf-ui';
+import { InputSelectModule } from '../form/input-select/input-select.module';
 
 @NgModule({
   declarations: [

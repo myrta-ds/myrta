@@ -1,0 +1,82 @@
+<div class="mrx-input-select" [class.mrx-input-error]="invalid" [class]="wrapperCustomClasses">
+  <div [class.inputbox-error]="showEmptyFields && required && !isVerified"
+       [class.inputbox-success]="showEmptyFields && required && isVerified">
+
+    <ng-select
+      [items]="items"
+      [ngModel]="value"
+      [addTag]="addTag"
+      [bindValue]="bindValue"
+      [bindLabel]="bindLabel"
+      [multiple]="multiple"
+      [maxSelectedItems]="maxSelectedItems"
+      [groupBy]="groupBy ? groupBy : ''"
+      [placeholder]="placeholder"
+      [trackByFn]="trackByFn"
+      [virtualScroll]="virtualScroll"
+      [loading]="loading"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [clearable]="clearable"
+      [class]="getClasses"
+      [searchable]="searchable"
+      [closeOnSelect]="closeOnSelect"
+      [searchFn]="customSearchFn"
+      [notFoundText]="notFoundText"
+      [inputAttrs]="{
+        maxlength: maxLength.toString() || 'none'
+      }"
+      clearAllText="Очистить"
+      addTagText="Добавить"
+      loadingText="Загрузка..."
+      (ngModelChange)="updateValue($event)"
+      (search)="updateSearch($event)"
+    >
+      <ng-template ng-label-tmp let-item="item" *ngIf="disabled && disabledFromDisplay">
+        {{ displayValue }}
+      </ng-template>
+      <ng-template ng-option-tmp let-item="item" let-clear="clear" *ngIf="selectOptionsTemplate">
+        <ng-container *ngTemplateOutlet="selectOptionsTemplate; context:{item: item, clear: clear}"></ng-container>
+      </ng-template>
+      <ng-template ng-label-tmp let-item="item" *ngIf="labelTemplate">
+        <ng-container *ngTemplateOutlet="labelTemplate; context:{item: item}"></ng-container>
+      </ng-template>
+      <ng-template ng-tag-tmp let-items="items" *ngIf="tagTemplate">
+        <ng-container *ngTemplateOutlet="tagTemplate; context:{items: items}"></ng-container>
+      </ng-template>
+      <ng-template ng-loadingtext-tmp>
+        <div class="ng-option disabled">{{ loadLabel || 'Загрузка' }}</div>
+      </ng-template>
+      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear" *ngIf="multiLabelTemplate">
+        <ng-container *ngTemplateOutlet="multiLabelTemplate; context:{items: items, clear: clear}"></ng-container>
+      </ng-template>
+      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear" *ngIf="multiCollapseCount">
+        <ng-container *ngIf="value.length < multiCollapseCount">
+          <div class="ng-value" *ngFor="let item of items">
+            <span class="ng-value-label">{{item['label']}}</span>
+            <span class="ng-value-icon right" (click)="clear(item)">×</span>
+          </div>
+        </ng-container>
+        <div *ngIf="value.length >= multiCollapseCount" class="ng-summary-list">
+          <div class="ng-value ng-value-empty">
+            <span class="ng-value-label">Выбрано: {{ value.length }}</span>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template ng-loadingspinner-tmp>
+        <mrx-loader
+            [ngStyle]="{display: 'flex'}"
+            [color]="'brand'" size="small"
+            customClasses="align-self-center"
+        ></mrx-loader>
+      </ng-template>
+    </ng-select>
+  </div>
+
+  <mrx-error-message
+      *ngIf="invalid && isInvalidMessage"
+      [invalidMessage]="invalidMessage"
+  ></mrx-error-message>
+
+<!--  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>-->
+</div>

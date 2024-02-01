@@ -1,0 +1,84 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Size large</mrx-label>
+      <mrx-rating
+        [ngModel]="value1"
+        viewMode="value"
+        (ngModelChange)="changeValue($event, 'value1')"
+        [invalid]="true"
+        [invalidMessage]="'Ффффсе пропало!!!!'"
+      ></mrx-rating>
+    </div>
+    <div class="col">
+      <mrx-label>Size small</mrx-label>
+      <mrx-rating
+        [ngModel]="value2"
+        (ngModelChange)="changeValue($event, 'value2')"
+        size="small"
+        viewMode="value"
+      ></mrx-rating>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Size large Double</mrx-label>
+      <mrx-rating
+        [ngModel]="value1"
+        [double]="true"
+        (ngModelChange)="changeValue($event, 'value1')"
+        viewMode="text"
+      ></mrx-rating>
+    </div>
+    <div class="col">
+      <mrx-label>Size small Double</mrx-label>
+      <mrx-rating
+        [ngModel]="value2"
+        [double]="true"
+        (ngModelChange)="changeValue($event, 'value2')"
+        size="small"
+        viewMode="text"
+        valueSize="small"
+      ></mrx-rating>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Size large</mrx-label>
+      <mrx-rating
+        [ngModel]="value1"
+        (ngModelChange)="changeValue($event, 'value1')"
+        iconClass="icon-view"
+      ></mrx-rating>
+    </div>
+    <div class="col">
+      <mrx-label>Size small</mrx-label>
+      <mrx-rating
+        [ngModel]="value2"
+        (ngModelChange)="changeValue($event, 'value2')"
+        size="small"
+        iconClass="icon-view"
+      ></mrx-rating>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Size large & Count</mrx-label>
+      <mrx-rating
+        [ngModel]="value3"
+        viewMode="text"
+        (ngModelChange)="changeValue($event, 'value3')"
+        [ratingCount]="10"
+      ></mrx-rating>
+    </div>
+    <div class="col">
+      <mrx-label>Size small & Count</mrx-label>
+      <mrx-rating
+        [ngModel]="value4"
+        (ngModelChange)="changeValue($event, 'value4')"
+        [ratingCount]="10"
+        size="small"
+      ></mrx-rating>
+    </div>
+  </div>
+</mrx-content-wrapper>

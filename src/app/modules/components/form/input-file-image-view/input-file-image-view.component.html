@@ -1,0 +1,18 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-file-image
+        type="avatar"
+        [allowedExtensions]="['png']"
+        [maxFiles]="4"
+        (filesChanged)="filesChanged($event)"
+      ></mrx-input-file-image>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>asdasdasd asdasdasd</mrx-label>
+      <mrx-input-file-image [maxFiles]="4"></mrx-input-file-image>
+    </div>
+  </div>
+</mrx-content-wrapper>

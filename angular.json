@@ -59,7 +59,11 @@
               "./Common/Shared/Styles/Themes/_Fonts/Timchenko.less",
               "./Common/Shared/Styles/Themes/_Fonts/VKSansDisplay.less",
               "./Common/Shared/Styles/Themes/_Fonts/VTBGroup.less",
-              "./Common/Shared/Styles/Modules/Input/CustomNg-Select.less"
+              "./Common/Shared/Styles/Modules/Input/CustomNg-Select.less",
+
+              "./Common/Shared/Styles/Modules/Input/CustomFileInput.less",
+              "./Common/Shared/Styles/Modules/Input/NewCustomFileInput.less",
+              "./Common/Shared/Styles/Modules/Input/ng-custom-file-input.less"
             ],
             "scripts": []
           },

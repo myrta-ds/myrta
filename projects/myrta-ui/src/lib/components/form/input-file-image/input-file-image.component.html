@@ -1,0 +1,143 @@
+<div class="mrx-input-file-image" [class]="getClasses">
+
+  <ng-container *ngIf="type === 'default'">
+    <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
+
+    <ngx-file-drop *ngIf="canAdd" (onFileDrop)="dropped($event)"
+                   [className]="getDropZoneClasses"
+                   [accept]="extensions || ''"
+                   [disabled]="disabled"
+                   (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        <div
+            class="ng-custom-file-input-content"
+            (click)="!disabled ? openFileSelector() : undefined"
+        >
+          <div class="text-center">
+            <span>{{placeholder || getDefaultPlaceholder}}</span>
+            <br/>
+            <span style="font-size: 12px">Размер файла: до {{formatBytes(maxSize)}}</span>
+            <br/>
+            <span *ngIf="extensions" style="font-size: 12px">Формат файла: {{extensions}}</span>
+          </div>
+        </div>
+      </ng-template>
+    </ngx-file-drop>
+
+    <div class="mrx-input-file-image-preview">
+      <div class="row">
+        <div class="col col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let file of files">
+          <div class="mrx-input-file-image-preview__item p-3" [class.mrx-input-file-image-error]="file.error">
+            <ng-container *ngIf="file.error">
+              <span class="mrx-icon icon-close icon-font-24" (click)="delete($event, file)"></span>
+              <div class="mrx-input-file-image-preview__item--error p-2">
+                <span class="mrx-icon icon-image icon-font-24 icon-filled-color-negative mb-2"></span>
+                {{ file.error }}
+              </div>
+              <span class="mrx-input-file-image-preview__item--name mb-2">
+                {{ file.name }}
+              </span>
+              <span class="mrx-input-file-image-preview__item--description">
+                {{ formatBytes(file.size) }}
+              </span>
+            </ng-container>
+
+            <ng-container *ngIf="file.uploading && !file.error">
+              <div class="mrx-input-file-image-preview__item--uploading p-2">
+                <span class="mb-2">Загрузка...</span>
+                <div class="mrx-input-file-image-preview__item--uploading-progress">
+                  <span [ngStyle]="{width: file.percentage + '%'}"></span>
+                </div>
+              </div>
+            </ng-container>
+
+            <ng-container *ngIf="!file.uploading && !file.error">
+              <img class="mb-2" [src]="file.url || downloadUrl(file)" [alt]="file.name">
+
+              <span class="mrx-input-file-image-preview__item--name mb-2">
+                {{ file.name }}
+              </span>
+              <span class="mrx-input-file-image-preview__item--description">
+                {{ formatBytes(file.size) }}
+              </span>
+
+              <div class="mrx-input-file-image__controls">
+                <div class="mrx-input-file-image__controls-item" (click)="changePreview($event, file)">
+                  <span class="mrx-icon icon-pen icon-font-16"></span>
+                </div>
+                <div class="mrx-input-file-image__controls-item" (click)="delete($event, file)">
+                  <span class="mrx-icon icon-delete icon-font-16"></span>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="type === 'avatar'">
+    <ngx-file-drop (onFileDrop)="dropped($event)"
+                   [className]="getDropZoneClasses"
+                   [accept]="extensions || ''"
+                   [disabled]="disabled"
+                   (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+
+        <div
+            *ngIf="!files.length; else avatarTemplate"
+            class="ng-custom-file-input-content"
+            [class.mrx-input-file-image__disabled]="disabled"
+             (click)="!disabled ? openFileSelector() : undefined"
+        >
+          <div class="text-center">
+            <span>{{placeholder || getDefaultPlaceholder}}</span>
+            <br/>
+            <span style="font-size: 12px">Размер файла: до {{formatBytes(maxSize)}}</span>
+            <br/>
+            <span *ngIf="extensions" style="font-size: 12px">Формат файла: {{extensions}}</span>
+          </div>
+        </div>
+
+        <ng-template #avatarTemplate>
+          <div class="mrx-input-file-image-avatar" (click)="openFileSelector()">
+            <div *ngFor="let file of files">
+              <div class="mrx-input-file-image-avatar__item" [class.mrx-input-file-image-error]="file.error">
+                <ng-container *ngIf="file.error">
+                  <span class="mrx-icon icon-close icon-font-24" (click)="delete($event, file)"></span>
+                  <div class="mrx-input-file-image-avatar__item--error p-2">
+                    <span class="mrx-icon icon-image icon-font-24 icon-filled-color-negative mb-2"></span>
+                    {{ file.error }}
+                  </div>
+                </ng-container>
+
+                <ng-container *ngIf="file.uploading && !file.error">
+                  <div class="mrx-input-file-image-avatar__item--uploading p-2">
+                    <span class="mb-2">Загрузка...</span>
+                    <div class="mrx-input-file-image-avatar__item--uploading-progress">
+                      <span [ngStyle]="{width: file.percentage + '%'}"></span>
+                    </div>
+                  </div>
+                </ng-container>
+
+                <ng-container *ngIf="!file.uploading && !file.error">
+                  <img [src]="file.url || downloadUrl(file)" [alt]="file.name">
+
+                  <div class="mrx-input-file-image__controls">
+                    <div class="mrx-input-file-image__controls-item" (click)="changePreview($event, file)">
+                      <span class="mrx-icon icon-pen icon-font-16"></span>
+                    </div>
+                    <div class="mrx-input-file-image__controls-item" (click)="delete($event, file)">
+                      <span class="mrx-icon icon-delete icon-font-16"></span>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+      </ng-template>
+    </ngx-file-drop>
+  </ng-container>
+</div>

@@ -8,7 +8,7 @@ import { CheckboxGroupHeaderComponent } from './components/checkbox-group-header
 import { ErrorMessageModule } from '../../error-message/error-message.module';
 import { LabelModule } from '../../label/label.module';
 import { SaveStateModule } from '../../save-state/save-state.module';
-import { InputSearchModule } from 'myrtex-mf-ui';
+import { InputSearchModule } from '../input-search/input-search.module';
 
 @NgModule({
   declarations: [CheckboxGroupComponent, CheckboxGroupItemComponent, CheckboxGroupHeaderComponent],

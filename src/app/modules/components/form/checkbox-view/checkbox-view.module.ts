@@ -4,8 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { CheckboxViewRoutingModule } from './checkbox-view-routing.module';
 import { CheckboxViewComponent } from './checkbox-view.component';
-import { CheckboxModule, ContentWrapperModule, LabelModule } from '../../../../../../projects/myrta-ui/src/public-api';
-import { InputTextModule } from 'myrtex-mf-ui';
+import { CheckboxModule, ContentWrapperModule, LabelModule, InputTextModule } from '../../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [

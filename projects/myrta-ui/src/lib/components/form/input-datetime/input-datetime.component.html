@@ -1,0 +1,54 @@
+<div
+    class="mrx-input-datepicker"
+    [class.mrx-input-error]="invalid"
+    [class.mrx-input-readonly]="readonly"
+    [class]="getClasses()"
+>
+  <div class="mrx-input-datepicker__wrapper">
+    <input
+        #dateInput
+        autocomplete="nope"
+        class="mrx-input-datepicker__input"
+        [mask]="mask"
+        [title]="placeholder"
+        [disabled]="disabled || readonly"
+        [name]="name"
+        [required]="required"
+        [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
+        [ngModel]="value"
+        (ngModelChange)="validateDataValue($event)"
+        [readOnly]="!isManualInput"
+        [attr.maxlength]="maxlength > 0 ? maxlength : null"
+    />
+
+    <div
+        *ngIf="!disabled"
+        class="mrx-input-datepicker__icons"
+
+    >
+      <span
+          class="mrx-icon icon-close"
+          *ngIf="isViewCleanIcon"
+          (click)="clickToIconClear()"
+          [class.icon-font-16]="size === 'small'"
+          [class.icon-font-24]="size === 'medium' || size === 'large'"
+      ></span>
+
+      <span
+          class="mrx-icon icon-calendar"
+          (click)="clickToIconCalendar()"
+          [class.icon-font-16]="size === 'small'"
+          [class.icon-font-24]="size === 'medium' || size === 'large'"
+      ></span>
+
+    </div>
+  </div>
+
+  <mrx-error-message
+      *ngIf="invalid && isInvalidMessage"
+      [invalidMessage]="invalidMessage"
+  ></mrx-error-message>
+</div>
+
+
+

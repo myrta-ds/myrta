@@ -26,6 +26,17 @@ import { TruncateTextModule } from './components/truncate-text/truncate-text.mod
 import { WarningMessageModule } from './components/warning-message/warning-message.module';
 import { CheckboxModule } from './components/form/checkbox/checkbox.module';
 import { CheckboxGroupModule } from './components/form/checkbox-group/checkbox-group.module';
+import { InputTextModule } from './components/form/input-text/input-text.module';
+import { InputTextareaModule } from './components/form/input-textarea/input-textarea.module';
+import { InputNumberModule } from './components/form/input-number/input-number.module';
+import { InputPhoneModule } from './components/form/input-phone/input-phone.module';
+import { InputSearchModule } from './components/form/input-search/input-search.module';
+import { RadioModule } from './components/form/radio/radio.module';
+import { RatingModule } from './components/form/rating/rating.module';
+import { SwitchModule } from './components/form/switch/switch.module';
+import { InputSelectModule } from './components/form/input-select/input-select.module';
+import { InputFileModule } from './components/form/input-file/input-file.module';
+import { InputFileImageModule } from './components/form/input-file-image/input-file-image.module';
 
 @NgModule({
   imports: [
@@ -56,6 +67,17 @@ import { CheckboxGroupModule } from './components/form/checkbox-group/checkbox-g
     ControlsWrapperModule,
     CheckboxModule,
     CheckboxGroupModule,
+    InputTextModule,
+    InputTextareaModule,
+    InputNumberModule,
+    InputPhoneModule,
+    InputSearchModule,
+    RadioModule,
+    RatingModule,
+    SwitchModule,
+    InputSelectModule,
+    InputFileModule,
+    InputFileImageModule
   ],
   exports: [
     ButtonModule,
@@ -85,6 +107,17 @@ import { CheckboxGroupModule } from './components/form/checkbox-group/checkbox-g
     ControlsWrapperModule,
     CheckboxModule,
     CheckboxGroupModule,
+    InputTextModule,
+    InputTextareaModule,
+    InputNumberModule,
+    InputPhoneModule,
+    InputSearchModule,
+    RadioModule,
+    RatingModule,
+    SwitchModule,
+    InputSelectModule,
+    InputFileModule,
+    InputFileImageModule
   ]
 })
 export class MyrtaUiModule { }

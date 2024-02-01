@@ -1,0 +1,90 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [items]="items"
+        placeholder="write text"
+        [multiple]="true"
+        [addTag]="addTagFn"
+        (changed)="logger($event)"
+      ></mrx-input-select>
+    </div>
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [multiple]="true"
+        [items]="items"
+        [ngModel]="value2"
+        (ngModelChange)="changeValue2($event)"
+      ></mrx-input-select>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [items]="items"
+        [ngModel]="value1"
+        (ngModelChange)="changeValue1($event)"
+      ></mrx-input-select>
+    </div>
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [multiple]="true"
+        [items]="items"
+        [ngModel]="value2"
+        [multiCollapseCount]="2"
+        (ngModelChange)="changeValue2($event)"
+      ></mrx-input-select>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-select
+        [invalid]="true"
+        [checkInvalid]="true"
+        invalidMessage="Ффффсе пропало!"
+      ></mrx-input-select>
+    </div>
+    <div class="col">
+      <mrx-input-select [items]="selectItems"></mrx-input-select>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-select [items]="selectItems"></mrx-input-select>
+    </div>
+    <div class="col">
+      <mrx-input-select
+        [multiple]="true"
+        [ngModel]="selected"
+        [invalid]="getInvalid"
+        [items]="selectItems"
+        [multiCollapseCount]="2"
+        invalidMessage="Выбрано мало вариантов"
+        (ngModelChange)="logger($event)"
+      ></mrx-input-select>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [multiple]="false"
+        [ngModel]="value1"
+        [items]="items"
+        size="medium"
+        (ngModelChange)="changeValue1($event)"
+      ></mrx-input-select>
+    </div>
+    <div class="col col-12 col-md-6">
+      <mrx-input-select
+        [ngModel]="value1"
+        [items]="items"
+        size="medium"
+        bindLabel="label"
+        (ngModelChange)="changeValue2($event)"
+        [placeholder]="value2 ? '' : 'Выберите значение'"
+      ></mrx-input-select>
+    </div>
+  </div>
+</mrx-content-wrapper>

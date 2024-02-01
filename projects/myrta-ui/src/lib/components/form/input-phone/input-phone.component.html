@@ -1,0 +1,86 @@
+<div class="mrx-input-phone mrx-input-phone-lg" [class]="getClasses" [class.mrx-input-error]="invalid">
+  <div class="mrx-input-phone__wrapper" [ngClass]="separateDialCodeClass">
+    <input
+      #phoneInput
+      type="tel"
+      [id]="inputId"
+      [(ngModel)]="phoneNumber"
+      (ngModelChange)="onPhoneNumberChange()"
+      [ngClass]="cssClass"
+      [autocomplete]="'off'"
+      [disabled]="disabled"
+      [placeholder]="resolvePlaceholder()"
+      [attr.maxLength]="maxLength"
+      [attr.validation]="phoneValidation"
+      [mask]="innerMask || mask"
+      [prefix]="innerMaskPrefix || maskPrefix"
+      [showMaskTyped]="showMaskTyped"
+      [dropSpecialCharacters]="autoMask ? false : maskDropSpecialCharacters"
+      (blur)="onTouched()"
+      (keypress)="onInputKeyPress($event)"
+      #focusable
+    >
+    <div class="mrx-input-phone__flag-container" [ngClass]="{'disabled': disabled}">
+      <mrx-dropdown customClasses="h-100">
+        <ng-template #dropdownToggle>
+          <div class="mrx-input-phone__selected-flag dropdown-toggle">
+            <div
+              class="mrx-input-phone__flag"
+              [ngClass]="selectedCountry.flagClass || ''"
+            ></div>
+            <div *ngIf="separateDialCode" class="selected-dial-code">+{{selectedCountry.dialCode}}</div>
+            <div class="mrx-input-phone__arrow">
+              <span class="mrx-icon icon-chevron-down"></span>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template #dropdownMenu>
+          <div class="search-container" *ngIf="searchCountryFlag && searchCountryField">
+            <input id="country-search-box"
+                   [(ngModel)]="countrySearchText"
+                   (keyup)="searchCountry()"
+                   (click)="$event.stopPropagation()"
+                   [placeholder]="searchCountryPlaceholder"
+                   autofocus>
+          </div>
+
+          <ul class="mrx-input-phone__country-list" #countryList>
+            <li class="mrx-input-phone__country iti__preferred"
+                *ngFor="let country of preferredCountriesInDropDown"
+                (click)="onCountrySelect(country, focusable)"
+                [id]="country.htmlId+'-preferred'">
+              <div class="mrx-input-phone__flag-box">
+                <div class="mrx-input-phone__flag"
+                     [ngClass]="country.flagClass"></div>
+              </div>
+              <span class="mrx-input-phone__country-name">{{country.name}}</span>
+              <span class="mrx-input-phone__dial-code">+{{country.dialCode}}</span>
+            </li>
+
+            <li class="mrx-input-phone__divider" *ngIf="preferredCountriesInDropDown?.length"></li>
+
+            <li class="mrx-input-phone__country iti__standard"
+                *ngFor="let country of allCountries"
+                (click)="onCountrySelect(country, focusable)"
+                [id]="country.htmlId">
+              <div class="mrx-input-phone__flag-box">
+                <div class="mrx-input-phone__flag" [ngClass]="country.flagClass"></div>
+              </div>
+              <span class="mrx-input-phone__country-name">{{country.name}}</span>
+              <span class="mrx-input-phone__dial-code">+{{country.dialCode}}</span>
+            </li>
+
+          </ul>
+        </ng-template>
+      </mrx-dropdown>
+    </div>
+  </div>
+
+  <mrx-error-message
+    *ngIf="(!isValid || invalid) && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
+  ></mrx-error-message>
+
+  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>
+</div>

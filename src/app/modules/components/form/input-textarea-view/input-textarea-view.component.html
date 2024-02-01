@@ -1,0 +1,201 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [rows]="4"
+        [autosize]="true"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        [disabled]="true"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        [maxlength]="200"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        size="large"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        size="medium"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        size="small"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [invalid]="true"
+        [invalidMessage]="'this is error'"
+        [maxlength]="200"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValueEmpty"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [invalid]="true"
+        [checkInvalid]="true"
+        [invalidMessage]="'this is error'"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValueEmpty"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [checkInvalid]="false"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [disabled]="true"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [disabled]="true"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [readonly]="true"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [readonly]="true"
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-input-textarea
+        [rows]="4"
+        [autosize]="false"
+        [ngModel]="textValueEmpty"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValueEmpty($event)"
+      ></mrx-input-textarea>
+    </div>
+    <div class="col">
+      <mrx-input-textarea
+        [ngModel]="textValue"
+        [placeholder]="'placeholder'"
+        (ngModelChange)="changeTextValue($event)"
+      ></mrx-input-textarea>
+    </div>
+  </div>
+</mrx-content-wrapper>

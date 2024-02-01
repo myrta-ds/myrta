@@ -1,0 +1,39 @@
+.mrx-rating {
+  .mrx-rating-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform .2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &-wrapper, &-double-wrapper {
+      display: flex;
+      align-items: center;
+
+      .mrx-icon {
+        color: var(--system-rating-default);
+
+        &.filled {
+          color: var(--system-rating-selected);
+          opacity: 1;
+        }
+      }
+    }
+
+    &-double-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      overflow: hidden;
+
+      .mrx-icon {
+        opacity: 0;
+      }
+    }
+  }
+}

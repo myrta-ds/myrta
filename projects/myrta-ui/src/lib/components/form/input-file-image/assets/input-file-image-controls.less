@@ -1,0 +1,35 @@
+.mrx-input-file-image {
+  &-preview, &-avatar {
+    &__item {
+      &:hover {
+        .mrx-input-file-image__controls {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+
+    &-item {
+      min-width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        position: relative;
+        padding-right: 8px;
+        border-right: 1px solid #BFC5CC;;
+        margin-right: 8px;
+      }
+    }
+  }
+}
