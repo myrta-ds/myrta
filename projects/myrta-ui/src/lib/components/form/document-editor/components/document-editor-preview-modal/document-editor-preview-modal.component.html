@@ -1,0 +1,20 @@
+<mrx-modal
+  [title]="title"
+  [expandable]="true"
+  size="extra-large"
+  color="info"
+  [enableFooter]="false"
+  (close)="close()"
+  (ok)="ok()"
+>
+  <div>
+    <div *ngIf="content">
+      <iframe
+        #iframeTemplate
+        frameborder="0"
+        class="w-100"
+        [srcdoc]="sanitizer.bypassSecurityTrustHtml(content)"
+      ></iframe>
+    </div>
+  </div>
+</mrx-modal>

@@ -4,12 +4,10 @@ import { CommonModule } from '@angular/common';
 import { ErrorMessageViewRoutingModule } from './error-message-view-routing.module';
 import { ErrorMessageViewComponent } from './error-message-view.component';
 import {
-  InputDatetimeModule,
-  InputNumberModule, InputSearchModule,
-  InputSelectModule, InputTextareaModule,
-  InputTextModule, JdEditorModule
-} from 'myrtex-mf-ui';
-import { ContentWrapperModule } from '../../../../../projects/myrta-ui/src/public-api';
+  ContentWrapperModule, EditorModule, InputDatetimeModule,
+  InputNumberModule, InputSearchModule, InputSelectModule, InputTextareaModule,
+  InputTextModule
+} from '../../../../../projects/myrta-ui/src/public-api';
 
 
 @NgModule({
@@ -25,7 +23,7 @@ import { ContentWrapperModule } from '../../../../../projects/myrta-ui/src/publi
     InputSelectModule,
     InputSearchModule,
     InputTextareaModule,
-    JdEditorModule,
+    EditorModule,
     ContentWrapperModule
   ]
 })

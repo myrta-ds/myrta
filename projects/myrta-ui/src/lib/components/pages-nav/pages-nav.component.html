@@ -1,0 +1,20 @@
+<div *ngIf="prevLink || nextLink" class="mrx-pages-nav">
+  <a
+    *ngIf="prevLink"
+    [href]="prevLink"
+    [target]="getTarget"
+    class="mrx-pages-nav__left"
+  >
+    <div class="mrx-icon icon-font-24 icon-chevron-left"></div>
+    {{prevText}}
+  </a>
+  <a
+    *ngIf="nextLink"
+    [href]="nextLink"
+    [target]="getTarget"
+    class="mrx-pages-nav__right"
+  >
+    {{nextText}}
+    <div class="mrx-icon icon-font-24 icon-chevron-right"></div>
+  </a>
+</div>

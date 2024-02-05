@@ -1,0 +1,29 @@
+.mrx-editor {
+  .jodit-container {
+    transition: border .2s;
+    border: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+
+    &:not(.jodit_inline), .jodit-workplace {
+      border-radius: 4px;
+    }
+
+    .jodit-toolbar__box:not(:empty) {
+      transition: border .2s;
+      border-bottom: var(--border-width-default) solid var(--neutral-bg-stroke-default);
+    }
+
+    &:hover {
+      border: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+
+      .jodit-toolbar__box:not(:empty) {
+        border-bottom: var(--border-width-default) solid var(--neutral-bg-stroke-hover);
+      }
+    }
+  }
+
+  &.mrx-input-focused {
+    .jodit-container {
+      outline: var(--neutral-bg-island-default) solid var(--border-width-focused);
+    }
+  }
+}

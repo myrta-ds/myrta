@@ -92,6 +92,24 @@ export * from './lib/components/form/input-phone/models/country.model';
 export * from './lib/components/form/input-search/input-search.module';
 export * from './lib/components/form/input-search/input-search.component';
 
+export * from './lib/components/form/input-datepicker/input-datepicker.module';
+export * from './lib/components/form/input-datepicker/input-datepicker.component';
+
+export * from './lib/components/form/input-timepicker/input-timepicker.module';
+export * from './lib/components/form/input-timepicker/input-timepicker.component';
+
+export * from './lib/components/form/editor/editor.module';
+export * from './lib/components/form/editor/editor.component';
+
+export * from './lib/components/form/document-editor/document-editor.module';
+export * from './lib/components/form/document-editor/document-editor.component';
+
+export * from './lib/components/form/rating/rating.module';
+export * from './lib/components/form/rating/rating.component';
+
+export * from './lib/components/form/input-search/input-search.module';
+export * from './lib/components/form/input-search/input-search.component';
+
 export * from './lib/components/form/input-number/input-number.module';
 export * from './lib/components/form/input-number/input-number.component';
 export * from './lib/components/form/input-number/input-number.enum';
@@ -121,6 +139,15 @@ export * from './lib/components/form/switch/switch.component';
 export * from './lib/components/form/rating/rating.module';
 export * from './lib/components/form/rating/rating.component';
 
+// deprecated FORM
+export * from './lib/components/form/input-date/input-date.module';
+export * from './lib/components/form/input-date/input-date.component';
+
+export * from './lib/components/form/input-date-time/input-date-time.module';
+export * from './lib/components/form/input-date-time/input-date-time.component';
+
+export * from './lib/components/form/input-datetime/input-datetime.module';
+export * from './lib/components/form/input-datetime/input-datetime.component';
 
 // WRAPPERS
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.module';

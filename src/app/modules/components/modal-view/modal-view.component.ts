@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SimpleModalService } from 'ngx-simple-modal';
 import { AlertService, DialogColor, DialogType } from 'myrtex-mf-ui-composite';
-import { AssessmentService } from 'myrtex-mf-assessment';
 import { SmallModalComponent } from './modals/small-modal/small-modal.component';
 import { MediumModalComponent } from './modals/medium-modal/medium-modal.component';
 import { LargeModalComponent } from './modals/large-modal/large-modal.component';
@@ -22,7 +21,6 @@ export class ModalViewComponent implements OnInit {
   constructor(
     private simpleModalService: SimpleModalService,
     private alertService: AlertService,
-    private assessmentService: AssessmentService
   ) {
 
   }
@@ -156,7 +154,7 @@ export class ModalViewComponent implements OnInit {
   }
 
   showAssessmentModal() {
-    this.assessmentService.showModal({role: 1, email: 'АВЫЫААААаа', isSupport: false})
+    // this.assessmentService.showModal({role: 1, email: 'АВЫЫААААаа', isSupport: false})
     // this.simpleModalService.addModal(AssessmentModalComponent, {
     //   role: 7,
     //   email: 'АВЫЫААААаа',

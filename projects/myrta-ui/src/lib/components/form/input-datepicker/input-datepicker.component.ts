@@ -33,7 +33,7 @@ import { getDateObject } from './helpers/get-date-object';
 @Component({
   selector: 'mrx-input-datepicker',
   templateUrl: 'input-datepicker.component.html',
-  styleUrls: ['input-datepicker.components.scss'],
+  styleUrls: ['input-datepicker.components.less'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputDatepickerComponent), multi: true }
   ]

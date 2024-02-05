@@ -1,0 +1,37 @@
+<div class="mrx-widget">
+  <div class="mrx-widget__header" (click)="changeVisibleContent()">
+    <div class="mrx-widget__header-content mr-4 flex-column flex-sm-row align-items-start align-items-sm-center">
+      <div class="mrx-widget__header-content--left justify-content-start">
+        <div class="mrx-widget__header-title">
+          <h6 class="mrx-widget__header-title--wrapper">
+            <span class="mrx-icon icon-font-24" [class]="iconClass" *ngIf="!templateHeadTitle; else titleTemplate"></span>
+            <span class="mrx-widget__header-title--text">{{ title }}</span>
+          </h6>
+          <span class="mrx-widget__header-title--info" *ngIf="titleInfo">{{ titleInfo }}</span>
+        </div>
+        <ng-template #titleTemplate>
+          <ng-container *ngTemplateOutlet="templateHeadTitle"></ng-container>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="templateHeadLeft"></ng-container>
+      </div>
+      <div class="mrx-widget__header-content--right justify-content-start">
+        <ng-container *ngTemplateOutlet="templateHeadRight"></ng-container>
+      </div>
+    </div>
+    <div class="mrx-widget__header-arrow">
+      <span class="mrx-widget__header-arrow--text mr-2 d-none d-md-flex justify-content-end">{{ isOpen ? 'Свернуть' : 'Развернуть' }}</span>
+      <span
+        [ngStyle]="{transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)'}"
+        class="mrx-icon icon-chevron-up icon-font-16"
+      ></span>
+    </div>
+  </div>
+
+  <div class="mrx-widget__content" [@expandedPanel]="isOpenState">
+    <div class="mrx-widget__content-box px-4 py-3">
+      <ng-container *ngTemplateOutlet="templateContent"></ng-container>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,33 @@
+.mrx-editor {
+  &.mrx-input-error, &.mrx-input-checked-error {
+    .jodit-container {
+      border: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+
+      .jodit-toolbar__box:not(:empty) {
+        border-bottom: var(--border-width-default) solid var(--system-bg-controls-negative-default) !important;
+      }
+    }
+  }
+
+  &.mrx-input-success, &.mrx-input-checked-success {
+    .jodit-container {
+      border: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+
+      .jodit-toolbar__box:not(:empty) {
+        border-bottom: var(--border-width-default) solid var(--system-bg-controls-positive-default) !important;
+      }
+    }
+  }
+
+  &.mrx-input-checked-error {
+    .jodit-workplace {
+      background-color: var(--system-bg-negative-secondary) !important;
+    }
+  }
+
+  &.mrx-input-checked-success {
+    .jodit-workplace {
+      background-color: var(--system-bg-positive-secondary) !important;
+    }
+  }
+}

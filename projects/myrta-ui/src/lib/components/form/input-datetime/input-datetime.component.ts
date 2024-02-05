@@ -21,7 +21,7 @@ export type InputDatetimeValueTypes = string | string[];
 @Component({
   selector: 'mrx-input-datetime',
   templateUrl: 'input-datetime.component.html',
-  styleUrls: ['input-datetime.components.scss'],
+  styleUrls: ['input-datetime.components.less'],
   providers: [
     {provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputDatetimeComponent), multi: true},
   ]

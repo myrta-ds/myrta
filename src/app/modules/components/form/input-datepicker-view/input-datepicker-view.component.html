@@ -1,0 +1,47 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-datepicker
+        [ngModel]="firstValue"
+        format="DD.MM.YYYY HH:mm"
+        [maxDate]="secondValue"
+        (ngModelChange)="changeNewValue($event, 'firstValue')"
+      ></mrx-input-datepicker>
+    </div>
+
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-datepicker
+        [ngModel]="secondValue"
+        format="DD.MM.YYYY HH:mm"
+        [minDate]="firstValue"
+        (ngModelChange)="changeNewValue($event, 'secondValue')"
+      ></mrx-input-datepicker>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-datepicker
+        [ngModel]="firstValue"
+        format="DD.MM.YYYY HH:mm"
+        [maxDate]="secondValue"
+        [inline]="true"
+        (ngModelChange)="changeNewValue($event, 'firstValue')"
+      ></mrx-input-datepicker>
+    </div>
+
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-datepicker
+        [ngModel]="secondValue"
+        format="DD.MM.YYYY HH:mm"
+        [minDate]="firstValue"
+        [inline]="true"
+        (ngModelChange)="changeNewValue($event, 'secondValue')"
+      ></mrx-input-datepicker>
+    </div>
+  </div>
+</mrx-content-wrapper>

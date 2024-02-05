@@ -1,0 +1,41 @@
+<div class="mrx-jd-document-editor">
+  <div class="mrx-jd-document-editor__shortcode-buttons mb-2">
+    <ng-container *ngFor="let shortCode of sliceShortCodeButtons">
+      <mrx-button
+        size="small"
+        type="secondary"
+        (mrxClick)="insertShortCode(shortCode)"
+      >{{ shortCode.viewName }}</mrx-button>
+    </ng-container>
+    <mrx-button
+      *ngIf="isSliced"
+      size="small"
+      (mrxClick)="showAllShortCodes()"
+    >Еще</mrx-button>
+  </div>
+
+  <div class="mrx-jd-document-editor__editor mb-2">
+    <mrx-editor
+      #editor
+      [ngModel]="transformedValue"
+      [toolbar]="toolbar"
+      [customClasses]="customClasses"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [iframe]="true"
+      [editHTMLDocumentMode]="editHTMLDocumentMode"
+      (ngModelChange)="updateValue($event)"
+    ></mrx-editor>
+  </div>
+
+  <div class="mrx-jd-document-editor__preview">
+    <mrx-button
+      size="medium"
+      type="secondary"
+      iconClass="icon-view"
+      [disabled]="!transformedValue"
+      (mrxClick)="openPreviewModal()"
+    >Предпросмотр</mrx-button>
+  </div>
+</div>

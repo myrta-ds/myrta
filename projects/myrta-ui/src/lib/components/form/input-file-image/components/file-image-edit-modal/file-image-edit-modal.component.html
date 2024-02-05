@@ -44,6 +44,22 @@
       </div>
     </div>
   </div>
+
+  <ng-template #footerContent>
+    <mrx-button
+      [customClasses]="'mr-3'"
+      [type]="'secondary'"
+      [size]="'medium'"
+      (click)="close()"
+    >Отменить
+    </mrx-button>
+    <mrx-button
+      [type]="'primary'"
+      [size]="'medium'"
+      (click)="ok()"
+    >Подтвердить
+    </mrx-button>
+  </ng-template>
 </mrx-modal>
 
 <!--<div class="modal-content accent-head md mrx-input-image-modal">-->

@@ -6,7 +6,7 @@
         [(ngModel)]="model.name"
         [placeholder]="'placeholder'"
         [isTooltipValue]="true"
-        [invalid]="form.errors.name"
+        [invalid]="!!form.errors.name"
         [invalidMessage]="form.errors.name"
         (ngModelChange)="changeTextValueEmpty($event)"
       ></mrx-input-text>

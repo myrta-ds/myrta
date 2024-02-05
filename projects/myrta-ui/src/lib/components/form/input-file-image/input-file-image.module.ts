@@ -8,6 +8,7 @@ import { SimpleModalModule } from 'ngx-simple-modal';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { FileImageEditModalComponent } from './components/file-image-edit-modal/file-image-edit-modal.component';
 import { ModalModule } from '../../modal/modal.module';
+import { ButtonModule } from '../../button/button.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ModalModule } from '../../modal/modal.module';
     HttpClientModule,
     NgxFileDropModule,
     ModalModule,
+    ButtonModule,
     SimpleModalModule.forRoot({
       container: (() => document.querySelector('.page-wrapper') as HTMLElement)()}
     ),

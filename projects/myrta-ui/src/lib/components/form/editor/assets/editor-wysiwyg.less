@@ -1,0 +1,21 @@
+.mrx-editor {
+  position: relative;
+
+  .jodit-container {
+    .jodit-wysiwyg {
+      padding: var(--spacing-3) var(--spacing-4);
+    }
+
+    &:not(.jodit_inline) {
+      &.jodit_disabled {
+        .jodit-toolbar__box {
+          background-color: var(--neutral-bg-island-default);
+        }
+        .jodit-workplace {
+          opacity: 1;
+          background-color: var(--neutral-bg-disabled);
+        }
+      }
+    }
+  }
+}

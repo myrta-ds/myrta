@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WarningMessageViewRoutingModule } from './warning-message-view-routing.module';
 import { WarningMessageViewComponent } from './warning-message-view.component';
-import { WarningMessageModule, ContentWrapperModule } from '../../../../../projects/myrta-ui/src/public-api';
-import { InputTextModule } from 'myrtex-mf-ui';
+import { WarningMessageModule, ContentWrapperModule, InputTextModule } from '../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [

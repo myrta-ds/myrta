@@ -1,12 +1,9 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { LinkTypes } from 'myrtex-mf-ui/lib/components/link/link.enum';
-import {
-  TooltipTextPositionTypes,
-  TooltipTriggerTypes
-} from 'myrtex-mf-ui/lib/components/tooltip/tooltip-trigger/tooltip-trigger.enum';
-import { SwitchValueTypes } from 'myrtex-mf-ui/lib/components/form/switch/switch.enum';
-import { TooltipService } from 'myrtex-mf-ui';
+import { TooltipTextPositionTypes, TooltipTriggerTypes } from '../tooltip/tooltip-trigger/tooltip-trigger.enum';
+import { TooltipService } from '../tooltip/services/tooltip.service';
+import { LinkTypes } from '../link/link.enum';
+import { SwitchValueTypes } from '../form/switch/switch.enum';
 
 @Component({
   selector: 'mrx-label',

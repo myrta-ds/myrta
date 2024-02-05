@@ -35,7 +35,7 @@ import { createPopper } from '@popperjs/core';
 @Component({
   selector: 'mrx-input-date-time',
   templateUrl: 'input-date-time.component.html',
-  styleUrls: ['input-date-time.components.scss'],
+  styleUrls: ['input-date-time.components.less'],
   providers: [
     {provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputDateTimeComponent), multi: true}
   ]

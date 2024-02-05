@@ -88,7 +88,7 @@ const routes: Routes = [
   },
   {
     path: 'components/controls-wrapper',
-    loadChildren: () => import ('./modules/components/controls-wrapper-view/controls-wrapper-view.module').then(x => x.ControlsWrapperViewModule)
+    loadChildren: () => import ('./modules/components/wrappers/controls-wrapper-view/controls-wrapper-view.module').then(x => x.ControlsWrapperViewModule)
   },
   {
     path: 'components/form/checkbox',
@@ -145,6 +145,34 @@ const routes: Routes = [
   {
     path: 'components/form/switch',
     loadChildren: () => import ('./modules/components/form/switch-view/switch-view.module').then(x => x.SwitchViewModule)
+  },
+  {
+    path: 'components/form/input-datepicker',
+    loadChildren: () => import ('./modules/components/form/input-datepicker-view/input-datepicker-view.module').then(x => x.InputDatepickerViewModule)
+  },
+  {
+    path: 'components/form/input-timepicker',
+    loadChildren: () => import ('./modules/components/form/input-timepicker-view/input-timepicker-view.module').then(x => x.InputTimepickerViewModule)
+  },
+  {
+    path: 'components/form/input-date',
+    loadChildren: () => import ('./modules/components/form/input-date-view/input-date-view.module').then(x => x.InputDateViewModule)
+  },
+  {
+    path: 'components/form/input-date-time',
+    loadChildren: () => import ('./modules/components/form/input-date-time-view/input-date-time-view.module').then(x => x.InputDateTimeViewModule)
+  },
+  {
+    path: 'components/form/input-datetime',
+    loadChildren: () => import ('./modules/components/form/input-datetime-view/input-datetime-view.module').then(x => x.InputDatetimeViewModule)
+  },
+  {
+    path: 'components/form/editor',
+    loadChildren: () => import ('./modules/components/form/editor-view/editor-view.module').then(x => x.EditorViewModule)
+  },
+  {
+    path: 'components/form/document-editor',
+    loadChildren: () => import ('./modules/components/form/document-editor-view/document-editor-view.module').then(x => x.DocumentEditorViewModule)
   },
 ];
 

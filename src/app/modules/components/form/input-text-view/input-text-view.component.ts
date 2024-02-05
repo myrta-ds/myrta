@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MrxFormValidator } from 'myrtex-mf-ui';
+import {
+  MrxFormValidator
+} from '../../../../../../projects/myrta-ui/src/lib/services/mrx-form-validator/mrx-form-validator';
 
 @Component({
   selector: 'mrx-input-text-view',

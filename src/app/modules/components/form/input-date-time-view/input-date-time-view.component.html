@@ -1,0 +1,62 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе в исходном состоянии в формате ISO</mrx-label>
+      {{ date | dateFormat }}
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе</mrx-label>
+      {{ value1 | dateTimeFormat }}
+    </div>
+    <div class="col">
+      <mrx-label>Дата в московском часовом поясе</mrx-label>
+      {{ value1 | dateTimeFormat: 'mos' }}
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе {{ value1 }}</mrx-label>
+      <mrx-input-date-time
+        [ngModel]="value1"
+        (ngModelChange)="changeValue1($event)"
+        [timepicker]="false"
+      ></mrx-input-date-time>
+      <mrx-button (click)="clean()">Reset</mrx-button>
+    </div>
+    <div class="col">
+      <mrx-label>Дата в московском часовом поясе</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value1"
+        (ngModelChange)="changeValue1($event)"
+        timezone="Europe/Moscow"
+        [timepicker]="false"
+        [invalid]="true"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value2"
+        (ngModelChange)="changeValue2($event)"
+        [timepicker]="false"
+        [maxDate]="value3"
+        [inline]="true"
+      ></mrx-input-date-time>
+    </div>
+    <div class="col">
+      <mrx-label>Дата конца</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value3"
+        (ngModelChange)="changeValue3($event)"
+        [minDate]="value2"
+        [timepicker]="false"
+        [inline]="true"
+        [addMaxTime]="true"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+</mrx-content-wrapper>

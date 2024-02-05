@@ -195,7 +195,7 @@ export class InputFileImageComponent {
       this.simpleModalService.addModal(FileImageEditModalComponent, {
         title: 'Обложка',
         fileImage: convertBase64ToFile(base64Url, file.name || '', 'image/png')
-      }, {wrapperDefaultClasses: 'modal slide-anim'})
+      }, {wrapperDefaultClasses: 'mrx-modal fade-anim'})
         .subscribe((res) => {
           if (res.result) {
             const findFile = this.files.find(s => {

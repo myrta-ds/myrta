@@ -1,0 +1,97 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+    <div class="row mb-5">
+      <div class="col">
+        <mrx-label>Дата начала</mrx-label>
+        <mrx-input-date
+            [ngModel]="value"
+            [timepicker]="true"
+            [maxDate]="endDate"
+            (ngModelChange)="changeStartValue($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{startDate}}</mrx-label>
+      </div>
+      <div class="col">
+        <mrx-label>Дата конца</mrx-label>
+        <mrx-input-date
+            [ngModel]="endDate"
+            [timepicker]="true"
+            [minDate]="startDate"
+            (ngModelChange)="changeEndValue($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{endDate}}</mrx-label>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col">
+        <mrx-label>Дата начала Europe/Moscow</mrx-label>
+        <mrx-input-date
+            [ngModel]="startDate2"
+            [timepicker]="true"
+            [maxDate]="endDate2"
+            timezone="Europe/Moscow"
+            (ngModelChange)="changeStartValue2($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{startDate2}}</mrx-label>
+      </div>
+      <div class="col">
+        <mrx-label>Дата конца Europe/Moscow</mrx-label>
+        <mrx-input-date
+            [ngModel]="endDate2"
+            [timepicker]="true"
+            [minDate]="startDate2"
+            timezone="Europe/Moscow"
+            (ngModelChange)="changeEndValue2($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{endDate2}}</mrx-label>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col">
+        <mrx-label>Дата начала</mrx-label>
+        <mrx-input-date
+            [ngModel]="startDate3"
+            [timepicker]="false"
+            [maxDate]="endDate3"
+            (ngModelChange)="changeStartValue3($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{startDate3}}</mrx-label>
+      </div>
+      <div class="col">
+        <mrx-label>Дата конца</mrx-label>
+        <mrx-input-date
+            [ngModel]="endDate3"
+            [timepicker]="false"
+            [minDate]="startDate3"
+            (ngModelChange)="changeEndValue3($event)"
+        ></mrx-input-date>
+        <mrx-label customClasses="mt-4">{{endDate3}}</mrx-label>
+      </div>
+    </div>
+
+  <div class="row mb-5">
+        <div class="col">
+          <mrx-input-date
+              [ngModel]="startDate"
+              [timepicker]="true"
+              [maxDate]="endDate"
+              [timezone]="'Europe/Moscow'"
+              dateLabel="Date"
+              timeLabel="Time"
+              (ngModelChange)="changeStartValue($event)"
+          ></mrx-input-date>
+        </div>
+        <div class="col">
+          <mrx-input-date
+              [ngModel]="endDate"
+              [timepicker]="true"
+              [minDate]="startDate"
+              [timezone]="'Europe/Moscow'"
+              dateLabel="Date"
+              timeLabel="Time"
+              (ngModelChange)="changeEndValue($event)"
+          ></mrx-input-date>
+        </div>
+  </div>
+</mrx-content-wrapper>

@@ -29,7 +29,7 @@ export type InputDateValueTypes = string;
 @Component({
   selector: 'mrx-input-date',
   templateUrl: 'input-date.component.html',
-  styleUrls: ['input-date.components.scss'],
+  styleUrls: ['input-date.components.less'],
   providers: [
     {provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputDateComponent), multi: true}
   ]

@@ -1,0 +1,40 @@
+.mrx-pages-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+
+  &__left, &__right {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--brand-text-controls-default);
+
+    .mrx-icon {
+      color: var(--brand-bg-primary-default);
+    }
+  }
+
+  &__left {
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: 8px;
+
+    .mrx-icon {
+      margin-right: 8px;
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 8px;
+
+    .mrx-icon {
+      margin-left: 8px;
+    }
+  }
+}

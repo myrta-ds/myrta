@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BadgesModule } from '../badges/badges.module';
 import { LinkModule } from '../link/link.module';
 import { TooltipModule } from '../tooltip/tooltip.module';
-import { SwitchModule } from 'myrtex-mf-ui';
+import { SwitchModule } from '../form/switch/switch.module';
 
 
 @NgModule({

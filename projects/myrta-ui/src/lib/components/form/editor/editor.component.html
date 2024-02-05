@@ -1,0 +1,24 @@
+<div
+  class="mrx-editor"
+  [class.mrx-input-focused]="isFocused"
+  [class.mrx-input-error]="!isValid || invalid"
+  [class]="getClasses"
+>
+  <jodit-editor
+    #editorElementRef
+    [config]="defaultConfig"
+    [ngModel]="value"
+    (ngModelChange)="updateValue($event)"
+    (onFocus)="changeFocused(true)"
+    (onBlur)="changeFocused(false)"
+  ></jodit-editor>
+
+  <mrx-error-message
+    *ngIf="(!isValid || invalid) && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
+  ></mrx-error-message>
+
+  <mrx-chars-left [maxlength]="maxLength" [valueLength]="valueLength"></mrx-chars-left>
+
+  <mrx-save-state type="editor" [id]="uuid" [fields]="fields"></mrx-save-state>
+</div>

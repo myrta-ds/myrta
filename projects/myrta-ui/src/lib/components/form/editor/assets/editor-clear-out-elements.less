@@ -1,0 +1,46 @@
+.jodit.jodit-popup-container {
+  .jodit-popup {
+    .jodit-popup__content {
+      &:not(:empty) {
+        background-color: #fff;
+        padding: 4px;
+      }
+    }
+
+    .jodit-ui-group {
+      flex-wrap: wrap;
+      gap: var(--sizing-1);
+    }
+
+    .jodit-toolbar-button {
+      &.jodit-toolbar-button_with-trigger_true {
+        &:hover:not([disabled]) {
+          border-color: transparent;
+          box-shadow: 0px 1px 4px rgba(58, 58, 58, 0.3);
+        }
+      }
+      .jodit-toolbar-button__button {
+        &:hover:not([disabled]) {
+          background-color: var(--brand-bg-tertiary-hover);
+        }
+      }
+      .jodit-toolbar-button__trigger {
+        &:hover:not([disabled]) {
+          background-color: var(--brand-bg-tertiary-hover);
+        }
+      }
+    }
+  }
+  .jodit-toolbar-button_nullable {
+    display: none !important;
+  }
+
+  .jodit-form__table-creator-box {
+    .jodit-form__container {
+      span.jodit_hovered {
+        background-color: var(--system-diagram-diagram-2);
+        border-color: var(--system-diagram-diagram-2);
+      }
+    }
+  }
+}

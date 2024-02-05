@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { UploadedResultModel } from 'myrtex-mf-ui';
+import { UploadedResultModel } from '../../models';
 
 @Injectable({
   providedIn: 'root'

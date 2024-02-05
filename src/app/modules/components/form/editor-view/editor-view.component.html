@@ -1,0 +1,57 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default</mrx-label>
+      <!--      <mrx-input-editor></mrx-input-editor>-->
+      <mrx-editor
+        [ngModel]="emptyValue"
+        (ngModelChange)="updateValue($event)"
+      ></mrx-editor>
+    </div>
+  </div>
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Error + Error Message</mrx-label>-->
+  <!--      <mrx-jd-editor-->
+  <!--        [ngModel]="emptyValue"-->
+  <!--        [invalid]="true"-->
+  <!--        [invalidMessage]="invalidMessage"-->
+  <!--      ></mrx-jd-editor>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Checked error</mrx-label>-->
+  <!--      <mrx-jd-editor-->
+  <!--        [ngModel]="emptyValue"-->
+  <!--        [invalid]="false"-->
+  <!--        [checkInvalid]="false"-->
+  <!--        [invalidMessage]="invalidMessage"-->
+  <!--      ></mrx-jd-editor>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Checked success</mrx-label>-->
+  <!--      <mrx-jd-editor-->
+  <!--        [ngModel]="emptyValue"-->
+  <!--        [invalid]="true"-->
+  <!--        [checkInvalid]="true"-->
+  <!--        [invalidMessage]="invalidMessage"-->
+  <!--      ></mrx-jd-editor>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="row mb-3">-->
+  <!--    <div class="col">-->
+  <!--      <mrx-label>Change options toolbar</mrx-label>-->
+  <!--      <mrx-jd-editor-->
+  <!--        [ngModel]="value"-->
+  <!--        [toolbar]="{-->
+  <!--          buttons: [-->
+  <!--            'image'-->
+  <!--          ]-->
+  <!--        }"-->
+  <!--      ></mrx-jd-editor>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</mrx-content-wrapper>
