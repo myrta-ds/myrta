@@ -12,6 +12,8 @@ export enum ButtonSizesEnum {
   'large' = 'mrx-btn-lg',
 }
 
+export type ButtonAttrTypes = 'button' | 'reset' | 'submit'
+
 export type ButtonSizesTypes = 'small' | 'medium' | 'large'
 
 export enum ButtonColorsEnum {

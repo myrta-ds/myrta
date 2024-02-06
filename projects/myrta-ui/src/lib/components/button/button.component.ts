@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 
 import { LoaderColorTypes, LoaderSizesTypes } from '../loader/loader.enum';
 import {
+  ButtonAttrTypes,
   ButtonColorsEnum,
   ButtonColorsTypes,
   ButtonIconPositionEnum,
@@ -31,6 +32,7 @@ export class ButtonComponent {
   @Input() label: string = '';
   @Input() icon: string = '';
   @Input() iconClass: string = '';
+  @Input() buttonType: ButtonAttrTypes = 'button';
 
   @Output() mrxClick = new EventEmitter<MouseEvent>();
 

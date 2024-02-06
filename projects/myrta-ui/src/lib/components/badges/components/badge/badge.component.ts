@@ -1,8 +1,17 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import {
-  BadgeColorClassesEnum, BadgeColorType, BadgeI, BadgeSizeEnum, BadgeSizeType, BadgeTagType, BadgeTagTypeClassesEnum,
-  BadgeType, BadgeTypeEnum,
+  BadgeColorClassesEnum,
+  BadgeColorType,
+  BadgeI,
+  BadgeSizeEnum,
+  BadgeSizeType,
+  BadgeTagType,
+  BadgeTagTypeClassesEnum,
+  BadgeTargetTypes,
+  BadgeType,
+  BadgeTypeEnum,
 } from '../../badge.enum';
+import { LinkTargetTypesEnum } from '../../../link/link.enum';
 
 @Component({
   selector: 'mrx-badge',
@@ -19,6 +28,7 @@ export class BadgeComponent {
   @Input() text = ''
   @Input() path: string | undefined
   @Input() customClasses = ''
+  @Input() target: BadgeTargetTypes = '_self';
 
   @Output() clicked: EventEmitter<BadgeI> = new EventEmitter<BadgeI>();
 
@@ -28,6 +38,10 @@ export class BadgeComponent {
 
   public get getClasses(): string {
     return `${this.customClasses} ${BadgeTagTypeClassesEnum[this.tag]} ${BadgeTypeEnum[this.type]} ${this.customColor ? '' : BadgeColorClassesEnum[this.color]} ${BadgeSizeEnum[this.size]}`;
+  }
+
+  public get getTarget(): string {
+    return LinkTargetTypesEnum[this.target]
   }
 
   public onClick($event: MouseEvent): void {

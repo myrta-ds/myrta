@@ -1,17 +1,17 @@
 <ng-container [ngSwitch]="tag">
   <ng-container *ngSwitchCase="'button'">
     <button
-        class="mrx-badge"
-        [class]="getClasses"
-        [style]="{ backgroundColor: getCustomColor }"
-        (click)="onClick($event)"
+      class="mrx-badge"
+      [class]="getClasses"
+      [style]="{ backgroundColor: getCustomColor }"
+      (click)="onClick($event)"
     >
       <ng-container *ngTemplateOutlet="content"></ng-container>{{text}}
     </button>
   </ng-container>
 
   <ng-container *ngSwitchCase="'link'">
-    <a [href]="path" class="mrx-badge" [class]="getClasses" [style]="{ backgroundColor: getCustomColor }">
+    <a [href]="path" class="mrx-badge" [class]="getClasses" [style]="{ backgroundColor: getCustomColor }" [target]="getTarget">
       <ng-container *ngTemplateOutlet="content"></ng-container>{{text}}
     </a>
   </ng-container>

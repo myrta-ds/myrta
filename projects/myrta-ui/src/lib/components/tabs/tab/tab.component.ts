@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mrx-tab',
   templateUrl: 'tab.component.html',
-  styleUrls: ['./tab.component.less']
+  styleUrls: ['./tab.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabComponent {
   @Input() id!: number| string;

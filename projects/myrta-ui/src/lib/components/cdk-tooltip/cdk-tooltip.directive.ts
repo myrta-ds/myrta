@@ -6,7 +6,7 @@ import { ConnectedPositionVariantsType, positionStrategy } from './constants';
 import {  TooltipDataValue } from './models/tooltip-data';
 
 @Directive({
-  selector: '[mrxCdkTooltip]'
+  selector: '[mrxCdkTooltip]',
 })
 export class CdkTooltipDirective implements OnDestroy {
   @Input() mrxCdkTooltip!: TooltipDataValue;
@@ -22,27 +22,6 @@ export class CdkTooltipDirective implements OnDestroy {
     private overlay: Overlay,
     private viewContainer: ViewContainerRef,
   ) {}
-
-  @HostListener('mouseenter')
-  @HostListener('focus')
-  showTooltip(): void {
-    if (this.mrxCdkTooltip === null || !this.tooltipActive) {
-      return;
-    }
-    if (this.overlayRef?.hasAttached() === true) {
-      return;
-    }
-
-    this.attachTooltip();
-  }
-
-  @HostListener('mouseleave')
-  @HostListener('blur')
-  hideTooltip(): void {
-    if (this.overlayRef?.hasAttached() === true) {
-      this.overlayRef?.detach();
-    }
-  }
 
   ngOnDestroy(): void {
     this.overlayRef?.dispose();
@@ -78,5 +57,26 @@ export class CdkTooltipDirective implements OnDestroy {
       .position()
       .flexibleConnectedTo(this.element)
       .withPositions(positionStrategy[this.tooltipPosition]);
+  }
+
+  @HostListener('mouseenter')
+  @HostListener('focus')
+  showTooltip(): void {
+    if (this.mrxCdkTooltip === null || !this.tooltipActive) {
+      return;
+    }
+    if (this.overlayRef?.hasAttached() === true) {
+      return;
+    }
+
+    this.attachTooltip();
+  }
+
+  @HostListener('mouseleave')
+  @HostListener('blur')
+  hideTooltip(): void {
+    if (this.overlayRef?.hasAttached() === true) {
+      this.overlayRef?.detach();
+    }
   }
 }

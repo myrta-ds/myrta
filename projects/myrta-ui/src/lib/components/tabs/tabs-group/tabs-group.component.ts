@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import {
   TabsClasses,
   TabSize, TabsTypesClasses, TabTypes,
@@ -7,7 +7,8 @@ import {
 @Component({
   selector: 'mrx-tabs-group',
   templateUrl: 'tabs-group.component.html',
-  styleUrls: ['./tabs-group.component.less']
+  styleUrls: ['./tabs-group.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabsGroupComponent {
 

@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mrx-hint-error-message',
   templateUrl: './hint-error-message.component.html',
-  styleUrls: ['./hint-error-message.component.less']
+  styleUrls: ['./hint-error-message.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 /**
  * @param message string (text или HTML) <br/>

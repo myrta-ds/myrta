@@ -1,4 +1,12 @@
-import { Component, ContentChild, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  EventEmitter,
+  Input,
+  Output,
+  TemplateRef
+} from '@angular/core';
 import {
   ModalAlignButtonsEnum,
   ModalAlignButtonsTypes,
@@ -14,6 +22,7 @@ import { ButtonColorsTypes, ButtonIconPositionTypes } from '../button/button.enu
   selector: 'mrx-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('animateExpand', [
       state('open', style({

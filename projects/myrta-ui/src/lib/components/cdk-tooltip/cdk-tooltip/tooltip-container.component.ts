@@ -10,17 +10,17 @@ export const TOOLTIP_DATA = new InjectionToken<TooltipData>('Data to display in 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TooltipContainerComponent {
-  get asString(): string | false {
+  constructor(@Inject(TOOLTIP_DATA) public tooltipData: TooltipData) {}
+
+  public get asString(): string | false {
     return typeof this.tooltipData.value === 'string' ? this.tooltipData.value : false;
   }
 
-  get asTemplate(): TemplateRef<void> | null {
+  public get asTemplate(): TemplateRef<void> | null {
     return this.tooltipData.value instanceof TemplateRef ? this.tooltipData.value : null;
   }
 
-  get getMaxWidth(): string {
+  public get getMaxWidth(): string {
     return this.tooltipData.maxWidth ? this.tooltipData.maxWidth + 'px' : '480px'
   }
-
-  constructor(@Inject(TOOLTIP_DATA) public tooltipData: TooltipData) {}
 }

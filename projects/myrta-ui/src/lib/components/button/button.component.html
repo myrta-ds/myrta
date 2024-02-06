@@ -5,6 +5,7 @@
     [class.icon-only]="iconOnly"
     [class.icon-loading]="isLoading && !disabled"
     [disabled]="disabled"
+    [type]="buttonType"
     (click)="buttonClick($event)"
 >
   <ng-template #spinner>

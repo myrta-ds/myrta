@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ProgressClasses, ProgressColors } from './progress.enum';
 
 @Component({
   selector: 'mrx-progress',
   templateUrl: 'progress.component.html',
-  styleUrls: ['./progress.component.less']
+  styleUrls: ['./progress.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class ProgressComponent {

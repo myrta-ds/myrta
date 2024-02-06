@@ -34,3 +34,12 @@ export interface BadgeI {
   path?: string,
   text: string
 }
+
+export enum BadgeTargetTypesEnum {
+  '_self' = '_self',
+  '_blank' = '_blank',
+  '_parent' = '_parent',
+  '_top' = '_top',
+}
+
+export type BadgeTargetTypes = '_self' | '_blank' | '_parent' | '_top'

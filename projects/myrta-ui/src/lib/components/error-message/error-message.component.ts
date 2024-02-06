@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mrx-error-message',
   templateUrl: './error-message.component.html',
-  styleUrls: ['error-message.component.less']
+  styleUrls: ['error-message.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ErrorMessageComponent {
   @Input() public invalidMessage: string | string[] = '';

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   IconButtonTypeEnum,
   IconButtonTypeTypes,
@@ -11,10 +11,10 @@ import {
 @Component({
   selector: 'mrx-icon-button',
   templateUrl: './icon-button.component.html',
-  styleUrls: ['./icon-button.component.less']
+  styleUrls: ['./icon-button.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconButtonComponent {
-
   @Input() size: IconButtonSizeTypes = 'small';
   @Input() state: IconButtonStateTypes = 'default';
   @Input() type: IconButtonTypeTypes = 'positive';
