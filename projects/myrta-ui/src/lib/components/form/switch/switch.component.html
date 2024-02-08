@@ -5,27 +5,27 @@
 
     <ng-container *ngSwitchCase="'toggle'">
       <p
-          class="mr-1 cursor-pointer mrx-switch__trigger"
-          [class.text-bold]="boldLabel"
-          (click)="!(disabled || readonly) && updateValue(false)"
+        class="mr-1 cursor-pointer mrx-switch__trigger"
+        [class.text-bold]="boldLabel"
+        (click)="!(disabled || readonly) && updateValue(false)"
       >
         {{ leftText }}
       </p>
       <label class="mrx-switch-checkbox">
         <input
-            type="checkbox"
-            [required]="required"
-            [disabled]="disabled || readonly"
-            [readOnly]="readonly"
-            [ngModel]="value"
-            (ngModelChange)="updateValue($event)"
+          type="checkbox"
+          [required]="required"
+          [disabled]="disabled || readonly"
+          [readOnly]="readonly"
+          [ngModel]="value"
+          (ngModelChange)="updateValue($event)"
         >
         <span class="mrx-switch-slider"></span>
       </label>
       <p
-          class="ml-1 cursor-pointer mrx-switch__trigger"
-          [class.text-bold]="boldLabel"
-          (click)="!(disabled || readonly) && updateValue(true)"
+        class="ml-1 cursor-pointer mrx-switch__trigger"
+        [class.text-bold]="boldLabel"
+        (click)="!(disabled || readonly) && updateValue(true)"
       >
         {{ rightText }}
       </p>
@@ -34,12 +34,12 @@
     <ng-container *ngSwitchDefault>
       <label class="mrx-switch-checkbox">
         <input
-            type="checkbox"
-            [required]="required"
-            [disabled]="disabled || readonly"
-            [readOnly]="readonly"
-            [ngModel]="value"
-            (ngModelChange)="updateValue($event)"
+          type="checkbox"
+          [required]="required"
+          [disabled]="disabled || readonly"
+          [readOnly]="readonly"
+          [ngModel]="value"
+          (ngModelChange)="updateValue($event)"
         >
         <span class="mrx-switch-slider"></span>
 

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   forwardRef,
@@ -21,6 +22,7 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
   selector: 'mrx-switch',
   templateUrl: './switch.component.html',
   styleUrls: ['./switch.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
