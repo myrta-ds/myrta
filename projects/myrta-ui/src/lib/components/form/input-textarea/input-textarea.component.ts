@@ -30,18 +30,17 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
     },
   ],
 })
-export class InputTextareaComponent implements ControlValueAccessor, AfterViewChecked {
+export class InputTextareaComponent implements ControlValueAccessor {
   public value: InputTextareaValueTypes = '';
   public selectionStart: number | undefined;
   public selectionEnd: number | undefined;
   private _innerHtml?: string;
 
   // SAVE STATE
-  public uuid: string = uuidv4()
+  public uuid: string = uuidv4();
   @Input() public fields: Field[] = [];
 
   @Input() public disabled = false;
-  @Input() public required = false;
   @Input() public readonly = false;
   @Input() public autosize = true;
   @Input() public maxlength = 0;
@@ -58,11 +57,8 @@ export class InputTextareaComponent implements ControlValueAccessor, AfterViewCh
   @ViewChild('inputElement') inputElement!: ElementRef;
 
   @Output() public changed: EventEmitter<InputTextareaValueTypes> = new EventEmitter<InputTextareaValueTypes>();
+  @Output() public blurred: EventEmitter<InputTextareaValueTypes> = new EventEmitter<InputTextareaValueTypes>();
   @Output() public modelChange: EventEmitter<InputTextareaValueWithId> = new EventEmitter<InputTextareaValueWithId>();
-
-  ngAfterViewChecked(): void {
-    this.autogrow()
-  }
 
   public get isInvalidMessage(): boolean {
     return !!this.invalidMessage || !!this.invalidMessage.length;
@@ -87,7 +83,7 @@ export class InputTextareaComponent implements ControlValueAccessor, AfterViewCh
   public get checkValidClasses(): string {
     return this.checkInvalid === false ?
       'mrx-input-checked-success' :
-      this.checkInvalid === true ? 'mrx-input-checked-error' : ''
+      this.checkInvalid === true ? 'mrx-input-checked-error' : '';
   }
 
   public get getClasses(): string {
@@ -114,8 +110,14 @@ export class InputTextareaComponent implements ControlValueAccessor, AfterViewCh
     return true;
   }
 
-  private onChange = (value: InputTextareaValueTypes) => {};
-  private onTouched = () => {};
+  public onFocus(): void {
+    this.inputElement.nativeElement.focus()
+  }
+
+  private onChange = (value: InputTextareaValueTypes) => {
+  };
+  private onTouched = () => {
+  };
 
   public registerOnChange(fn: any) {
     this.onChange = fn;
@@ -130,7 +132,7 @@ export class InputTextareaComponent implements ControlValueAccessor, AfterViewCh
   }
 
   public writeValue(outsideValue: InputTextareaValueTypes): void {
-    if ((this.inputElement && document.activeElement !== this.inputElement.nativeElement) || this.disabled) {
+    if ((this.inputElement?.nativeElement && document.activeElement !== this.inputElement.nativeElement) || this.disabled) {
       this.value = outsideValue;
     }
 
@@ -140,32 +142,15 @@ export class InputTextareaComponent implements ControlValueAccessor, AfterViewCh
     }
   }
 
-  public setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
-    if (this.inputElement) {
-      setTimeout(() => {
-        this.inputElement.nativeElement.style.overflow = 'hidden';
-        this.inputElement.nativeElement.style.overflowWrap = 'break-word';
-        this.inputElement.nativeElement.style.height = '0px';
-        this.inputElement.nativeElement.style.height = this.inputElement.nativeElement.scrollHeight + 2 + 'px';
-      }, 0)
-    }
-  }
-
   public updateValue(insideValue: InputTextareaValueTypes): void {
     this.value = insideValue;
     this.changed.emit(insideValue);
-    this.modelChange.emit({value: insideValue, id: this.uuid})
+    this.modelChange.emit({ value: insideValue, id: this.uuid });
     this.onChange(insideValue);
     this.onTouched();
   }
 
-  public autogrow(): void {
-    if (!this.disabled && this.autosize) {
-      this.inputElement.nativeElement.style.overflow = 'hidden';
-      this.inputElement.nativeElement.style.overflowWrap = 'break-word';
-      this.inputElement.nativeElement.style.height = '0px';
-      this.inputElement.nativeElement.style.height = this.inputElement.nativeElement.scrollHeight + 2 + 'px';
-    }
+  public blurUpdateValue(): void {
+    this.blurred.emit(this.value)
   }
 }

@@ -1,41 +1,42 @@
 <div
-    class="mrx-input-textarea"
-    [class]="getClasses"
-    [class.mrx-input-error]="invalid"
+  class="mrx-input-textarea"
+  [class]="getClasses"
+  [class.mrx-input-error]="invalid"
 >
   <div class="mrx-input-textarea__wrapper">
     <div *ngIf="disabled"
          class="mrx-input-textarea__disabled-block"
-         [innerHtml]="innerHtml"
+         [innerHtml]="disabled ? innerHtml : ''"
     ></div>
 
     <textarea
-        #inputElement
-        *ngIf="!disabled"
-        [ngModel]="value"
-        (ngModelChange)="updateValue($event)"
-        (input)="autogrow()"
-        [disabled]="disabled"
-        [readonly]="readonly"
-        [required]="required"
-        [attr.rows]="rows > 0 ? rows : null"
-        [attr.minlength]="minlength > 0 ? minlength : null"
-        [attr.maxlength]="maxlength > 0 ? maxlength : null"
-        [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
-
+      #inputElement
+      *ngIf="!disabled"
+      mrxAutosize
+      [id]="uuid"
+      [ngModel]="value"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [rows]="rows"
+      [autosize]="autosize"
+      [attr.minlength]="minlength > 0 ? minlength : null"
+      [attr.maxlength]="maxlength > 0 ? maxlength : null"
+      [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
+      (ngModelChange)="updateValue($event)"
+      (blur)="blurUpdateValue()"
     ></textarea>
 
     <mrx-chars-left
-        *ngIf="!disabled && maxlength"
-        [value]="value"
-        [maxlength]="maxlength">
+      *ngIf="!disabled && maxlength"
+      [value]="value"
+      [maxlength]="maxlength">
     </mrx-chars-left>
 
     <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>
   </div>
 
   <mrx-error-message
-      *ngIf="(!isValid || invalid) && isInvalidMessage"
-      [invalidMessage]="invalidMessage"
+    *ngIf="(!isValid || invalid) && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
   ></mrx-error-message>
 </div>

@@ -6,6 +6,7 @@ import { CharsLeftModule } from '../../chars-left/chars-left.module';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ErrorMessageModule } from "../../error-message/error-message.module";
 import { SaveStateModule } from "../../save-state/save-state.module";
+import { AutosizeModule } from '../../../directives/autosize/autosize.module';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -21,7 +22,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     CharsLeftModule,
     ErrorMessageModule,
     SaveStateModule,
-    NgxMaskModule.forRoot(maskConfigFunction)
+    NgxMaskModule.forRoot(maskConfigFunction),
+    AutosizeModule
   ],
   exports: [InputTextareaComponent],
 })
