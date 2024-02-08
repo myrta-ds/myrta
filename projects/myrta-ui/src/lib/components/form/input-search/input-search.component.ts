@@ -5,7 +5,6 @@ import {
   EventEmitter,
   forwardRef,
   Input,
-  OnInit,
   Output,
   ViewChild
 } from '@angular/core';
@@ -70,7 +69,7 @@ export class InputSearchComponent implements ControlValueAccessor {
   public get isVerified(): boolean {
     return (
       !this.required ||
-        (this.required && this.value != null && this.value !== '' && this.isValid)
+      (this.required && this.value != null && this.value !== '' && this.isValid)
     );
   }
 
@@ -81,7 +80,7 @@ export class InputSearchComponent implements ControlValueAccessor {
   public get checkValidClasses(): string {
     return this.checkInvalid === false ?
       'mrx-input-checked-success' :
-      this.checkInvalid === true ? 'mrx-input-checked-error' : ''
+      this.checkInvalid === true ? 'mrx-input-checked-error' : '';
   }
 
   public get getClasses(): string {
@@ -89,18 +88,18 @@ export class InputSearchComponent implements ControlValueAccessor {
   }
 
   public get isShowCloseIcon(): boolean {
-    return this.value !== '' && this.value !== undefined
+    return this.value !== '' && this.value !== undefined;
   }
 
   public onClear(): void {
-    this.updateValue('')
+    this.updateValue('');
     setTimeout(() => {
-      this.cleared.emit()
-    }, 0)
+      this.cleared.emit();
+    }, 0);
   }
 
   public onSearch(): void {
-    this.searched.emit()
+    this.searched.emit();
   }
 
   public insertPositionText(tagText: string): void {
@@ -131,8 +130,10 @@ export class InputSearchComponent implements ControlValueAccessor {
     this.selectionEnd = event.target.selectionEnd;
   }
 
-  private onChange = (value: InputSearchValueTypes) => {};
-  private onTouched = () => {};
+  private onChange = (value: InputSearchValueTypes) => {
+  };
+  private onTouched = () => {
+  };
 
   public registerOnChange(fn: any) {
     this.onChange = fn;
