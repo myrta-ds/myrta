@@ -1,6 +1,5 @@
 import {
-  AfterViewInit, ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -34,9 +33,8 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
     },
   ],
 })
-export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterViewInit {
+export class CheckboxComponent implements ControlValueAccessor, OnInit {
   public value: CheckboxValueTypes = false;
-  public isEmptyLabel = true;
 
   private _tooltip = '';
   private _tooltipInitialVisible = false;
@@ -85,15 +83,8 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterVie
   @Output() public modelChange: EventEmitter<CheckboxValueWithId> = new EventEmitter<CheckboxValueWithId>();
 
   constructor(
-    public tooltipService: TooltipService,
-    private changeDetection: ChangeDetectorRef
+    public tooltipService: TooltipService
   ) {
-  }
-
-  ngAfterViewInit(): void {
-    this.isEmptyLabel = !this.labelContent.nativeElement.innerText.length;
-
-    this.changeDetection.detectChanges();
   }
 
   public get getWrapperClasses(): string {
