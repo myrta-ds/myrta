@@ -1,24 +1,24 @@
 <div
-    #input
-    class="mrx-checkbox__wrapper"
-    [class]="getWrapperClasses"
+  #input
+  class="mrx-checkbox__wrapper"
+  [class]="getWrapperClasses"
 >
   <mrx-save-state [id]="uuid" [fields]="fields" type="checkbox"></mrx-save-state>
 
   <label
-      class="mrx-checkbox"
-      [class]="getClasses"
-      [class.mrx-checkbox-indeterminate]="indeterminate"
-      [class.mrx-input-error]="invalid"
-      [class.mrx-input-disabled]="disabled"
+    class="mrx-checkbox"
+    [class]="getClasses"
+    [class.mrx-checkbox-indeterminate]="indeterminate"
+    [class.mrx-input-error]="invalid"
+    [class.mrx-input-disabled]="disabled"
   >
     <input
-        type="checkbox"
-        [disabled]="disabled || readonly"
-        [readonly]="readonly"
-        [ngModel]="value"
-        (ngModelChange)="updateValue($event)"
-        [attr.placeholder]="placeholder"
+      type="checkbox"
+      [disabled]="disabled || readonly"
+      [readonly]="readonly"
+      [ngModel]="value"
+      (ngModelChange)="updateValue($event)"
+      [attr.placeholder]="placeholder"
     />
     <span class="mrx-checkbox__mark">
       <span class="mrx-icon icon-check icon-font-12 text-bold" *ngIf="!indeterminate"></span>
@@ -35,14 +35,14 @@
   </label>
 
   <mrx-tooltip-trigger
-      *ngIf="tooltipService.getTooltip"
-      (toggleTooltip)="tooltipService.toggleTooltipVisible()"
-      [isVisibleTooltip]="tooltipService.getTooltipVisible"
+    *ngIf="tooltipService.getTooltip"
+    (toggleTooltip)="tooltipService.toggleTooltipVisible()"
+    [isVisibleTooltip]="tooltipService.getTooltipVisible"
   ></mrx-tooltip-trigger>
 </div>
 
 <mrx-tooltip
-    *ngIf="tooltipService.getTooltip"
-    [tooltip]="tooltipService.getTooltip"
-    [tooltipVisible]="tooltipService.getTooltipVisible"
+  *ngIf="tooltipService.getTooltip"
+  [tooltip]="tooltipService.getTooltip"
+  [tooltipVisible]="tooltipService.getTooltipVisible"
 ></mrx-tooltip>

@@ -43,7 +43,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterVie
   private _isSaveToStorage = false;
 
   // SAVE STATE
-  public uuid: string = uuid()
+  public uuid: string = uuid();
   @Input() public fields: Field[] = [];
 
   @Input() public required = false;
@@ -87,7 +87,8 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterVie
   constructor(
     public tooltipService: TooltipService,
     private changeDetection: ChangeDetectorRef
-  ) {}
+  ) {
+  }
 
   ngAfterViewInit(): void {
     this.isEmptyLabel = !this.labelContent.nativeElement.innerText.length;
@@ -106,7 +107,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterVie
   public get checkValidClasses(): string {
     return this.checkInvalid === false ?
       'mrx-input-checked-success' :
-      this.checkInvalid === true ? 'mrx-input-checked-error' : ''
+      this.checkInvalid === true ? 'mrx-input-checked-error' : '';
   }
 
   private onChange = (value: CheckboxValueTypes) => {
@@ -133,7 +134,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit, AfterVie
   public updateValue(insideValue: CheckboxValueTypes) {
     this.value = insideValue;
     this.changed.emit(insideValue);
-    this.modelChange.emit({value: insideValue, id: this.uuid})
+    this.modelChange.emit({ value: insideValue, id: this.uuid });
     this.onChange(insideValue);
     this.onTouched();
   }
