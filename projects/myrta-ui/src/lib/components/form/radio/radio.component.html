@@ -1,24 +1,24 @@
 <div class="mrx-radio__wrapper">
   <label
-      class="mrx-radio"
-      [class]="getClasses"
-      [class.mrx-input-error]="invalid"
+    class="mrx-radio"
+    [class]="getClasses"
+    [class.mrx-input-error]="invalid"
   >
     <input
-        type="radio"
-        [name]="name"
-        [value]="value"
-        [(ngModel)] ="modelValue"
-        [disabled]="disabled || readonly"
-        [readonly]="readonly"
-        (change)="valueChanged(value)"
+      type="radio"
+      [name]="name"
+      [value]="value"
+      [(ngModel)]="modelValue"
+      [disabled]="disabled || readonly"
+      [readonly]="readonly"
+      (change)="valueChanged(value)"
     />
 
     <span class="mrx-radio__mark"><span class="mrx-radio__mark__inner"></span></span>
 
     <span class="ml-2" [class]="boldLabel ? 'mrx-radio__label--bold' : 'mrx-radio__label'">
         {{label}}
-        <ng-content></ng-content>
+      <ng-content></ng-content>
         <span *ngIf="required && !disabled" class="required-active">*</span>
     </span>
   </label>

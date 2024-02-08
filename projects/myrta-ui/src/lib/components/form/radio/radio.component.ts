@@ -39,7 +39,7 @@ export class RadioComponent implements ControlValueAccessor {
 
   set value(value) {
 
-    if(!!value){
+    if (!!value) {
       this._value = value;
       this.onChange(value);
       this.onTouched();
@@ -50,8 +50,10 @@ export class RadioComponent implements ControlValueAccessor {
     return `${RadioTypesEnum[this.type]} ${this.customClasses}`;
   }
 
-  private onChange = (value: any) => {};
-  private onTouched = () => {};
+  private onChange = (value: any) => {
+  };
+  private onTouched = () => {
+  };
 
   registerOnChange(fn: () => {}) {
     this.onChange = fn;
@@ -65,12 +67,12 @@ export class RadioComponent implements ControlValueAccessor {
     this.modelValue = outsideValue;
   }
 
-  toggleChange(event: any){
+  toggleChange(event: any) {
     // Is a mapping here necessary to assign the outer ngModel bound
     // property it's new value??
   }
 
-  valueChanged(event: any){
+  valueChanged(event: any) {
 
     this.onChange(this.modelValue);
 
