@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
 import {
   RatingElement,
   RatingSizesEnum,
@@ -14,6 +14,7 @@ import { toNumberFormat } from '../../../helpers/number-format';
   selector: 'mrx-rating',
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

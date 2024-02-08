@@ -32,7 +32,9 @@
   <ng-container [ngSwitch]="viewMode">
     <span *ngSwitchCase="'text'" [class]="getValueClasses">{{ ratingText }}</span>
     <span *ngSwitchCase="'value'" [class]="getValueClasses">{{ toNumberFormatFunc(value) }}</span>
-    <span *ngSwitchCase="'text-with-value'" [class]="getValueClasses">{{ ratingText }} ({{ toNumberFormatFunc(value) }})</span>
+    <span *ngSwitchCase="'text-with-value'" [class]="getValueClasses">
+      {{ ratingText }} ({{ toNumberFormatFunc(value) }})
+    </span>
   </ng-container>
 </div>
 
