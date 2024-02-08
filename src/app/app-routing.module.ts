@@ -174,6 +174,10 @@ const routes: Routes = [
     path: 'components/form/document-editor',
     loadChildren: () => import ('./modules/components/form/document-editor-view/document-editor-view.module').then(x => x.DocumentEditorViewModule)
   },
+  {
+    path: 'components/gallery',
+    loadChildren: () => import ('./modules/components/gallery-view/gallery-view.module').then(x => x.GalleryViewModule)
+  },
 ];
 
 @NgModule({

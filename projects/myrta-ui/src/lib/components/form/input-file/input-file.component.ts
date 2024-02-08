@@ -38,6 +38,7 @@ export class InputFileComponent {
   @Input() public showDeleteButton = true;
   @Input() public isTooltipValue = false;
   @Input() public isDownloadingFile = true;
+  @Input() public isHideListFiles = false;
   @Input() public deleteConfirm?: (file: UploadedFileModel, result: (ok: boolean) => void) => void;
 
   @Input() public innerTemplate!: TemplateRef<any>;

@@ -24,6 +24,7 @@ import { TooltipModule } from './components/tooltip/tooltip.module';
 import { TruncateTextModule } from './components/truncate-text/truncate-text.module';
 import { WarningMessageModule } from './components/warning-message/warning-message.module';
 import { PagesNavModule } from './components/pages-nav/pages-nav.module';
+import { GalleryModule } from './components/gallery/gallery.module';
 
 import { CheckboxModule } from './components/form/checkbox/checkbox.module';
 import { CheckboxGroupModule } from './components/form/checkbox-group/checkbox-group.module';
@@ -87,6 +88,7 @@ const MODULES = [
   ContentWrapperModule,
   ControlsWrapperModule,
   PagesNavModule,
+  GalleryModule,
 
   // FORM
   EditorModule,

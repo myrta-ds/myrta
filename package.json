@@ -36,6 +36,7 @@
     "air-datepicker": "^3.2.0",
     "libphonenumber-js": "^1.10.30",
     "google-libphonenumber": "^3.2.31",
+    "mrx-gallery-lib": "^1.0.2",
     "lodash-es": "^4.17.21",
     "uuid": "^8.3.2",
     "@popperjs/core": "^2.11.5",

@@ -9,7 +9,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   public selectedComponent: any = {};
-  public selectComponents: any[] = [
+  private defaultElements = [
     { id: 0, label: 'Button', link: '/components/button' },
     { id: 1, label: 'Alert', link: '/components/alert' },
     { id: 2, label: 'Loader', link: '/components/loader' },
@@ -31,27 +31,41 @@ export class AppComponent implements OnInit {
     { id: 18, label: 'Truncate Text', link: '/components/truncate-text' },
     { id: 19, label: 'Warning Message', link: '/components/warning-message' },
     { id: 20, label: 'Controls Wrapper', link: '/components/controls-wrapper' },
-    { id: 21, label: 'Input Text', link: '/components/form/input-text' },
-    { id: 22, label: 'Input Textarea', link: '/components/form/input-textarea' },
-    { id: 23, label: 'Input Number', link: '/components/form/input-number' },
-    { id: 24, label: 'Input Phone', link: '/components/form/input-phone' },
-    { id: 25, label: 'Input Search', link: '/components/form/input-search' },
-    { id: 26, label: 'Input Datepicker', link: '/components/form/input-datepicker' },
-    { id: 27, label: 'Input Timepicker', link: '/components/form/input-timepicker' },
-    { id: 28, label: 'Input Select', link: '/components/form/input-select' },
-    { id: 29, label: 'Input File', link: '/components/form/input-file' },
-    { id: 30, label: 'Input File Image', link: '/components/form/input-file-image' },
-    { id: 31, label: 'Editor', link: '/components/form/editor' },
-    { id: 32, label: 'Document Editor', link: '/components/form/document-editor' },
-    { id: 33, label: 'Checkbox', link: '/components/form/checkbox' },
-    { id: 34, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
-    { id: 35, label: 'Radio', link: '/components/form/radio' },
-    { id: 36, label: 'Radio Group', link: '/components/form/radio-group' },
-    { id: 37, label: 'Rating', link: '/components/form/rating' },
-    { id: 38, label: 'Switch', link: '/components/form/switch' },
-    { id: 39, label: 'Input Date', link: '/components/form/input-date' },
-    { id: 40, label: 'Input Date Time', link: '/components/form/input-date-time' },
-    { id: 41, label: 'Input Datetime', link: '/components/form/input-datetime' },
+    { id: 21, label: 'Gallery', link: '/components/gallery' }
+  ];
+  private formElements = [
+    { id: 1, label: 'Input Text', link: '/components/form/input-text' },
+    { id: 2, label: 'Input Textarea', link: '/components/form/input-textarea' },
+    { id: 3, label: 'Input Number', link: '/components/form/input-number' },
+    { id: 4, label: 'Input Phone', link: '/components/form/input-phone' },
+    { id: 5, label: 'Input Search', link: '/components/form/input-search' },
+    { id: 6, label: 'Input Datepicker', link: '/components/form/input-datepicker' },
+    { id: 7, label: 'Input Timepicker', link: '/components/form/input-timepicker' },
+    { id: 8, label: 'Input Select', link: '/components/form/input-select' },
+    { id: 9, label: 'Input File', link: '/components/form/input-file' },
+    { id: 10, label: 'Input File Image', link: '/components/form/input-file-image' },
+    { id: 11, label: 'Editor', link: '/components/form/editor' },
+    { id: 12, label: 'Document Editor', link: '/components/form/document-editor' },
+    { id: 13, label: 'Checkbox', link: '/components/form/checkbox' },
+    { id: 14, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
+    { id: 15, label: 'Radio', link: '/components/form/radio' },
+    { id: 16, label: 'Radio Group', link: '/components/form/radio-group' },
+    { id: 17, label: 'Rating', link: '/components/form/rating' },
+    { id: 18, label: 'Switch', link: '/components/form/switch' },
+    { id: 19, label: 'Input Date', link: '/components/form/input-date' },
+    { id: 20, label: 'Input Date Time', link: '/components/form/input-date-time' },
+    { id: 21, label: 'Input Datetime', link: '/components/form/input-datetime' },
+  ];
+  private pipes = [];
+  private directives = [];
+  private services = [];
+
+  public selectComponents: any[] = [
+    ...this.defaultElements,
+    ...this.formElements,
+    ...this.pipes,
+    ...this.directives,
+    ...this.services
   ];
 
   public selectedTheme: any = { id: 0, label: 'Minfin', theme: 'minfin-theme', font: 'PtSans' };
@@ -78,11 +92,11 @@ export class AppComponent implements OnInit {
     private renderer: Renderer2,
     private router: Router,
   ) {
-    this.changeBodyClass()
+    this.changeBodyClass();
   }
 
   public get getThemeClasses(): string {
-    return this.selectedTheme.theme
+    return this.selectedTheme.theme;
   }
 
   private changeBodyClass(): void {
@@ -99,9 +113,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
-        this.selectedComponent = this.selectComponents.find(s => s.link === e.url)
+        this.selectedComponent = this.selectComponents.find(s => s.link === e.url);
       }
-    })
+    });
   }
 
   selectComponent(event: any) {
@@ -111,8 +125,8 @@ export class AppComponent implements OnInit {
 
   selectTheme(event: any) {
     if (event) {
-      this.selectedTheme = event
-      this.changeBodyClass()
+      this.selectedTheme = event;
+      this.changeBodyClass();
     }
   }
 }

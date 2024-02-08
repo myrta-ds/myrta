@@ -1,0 +1,132 @@
+{
+  "gallery": {
+    "data": [
+      {
+        "uuid": "11111111",
+        "eventId": "1",
+        "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "previewUrl": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "imageName": "image-1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "111"
+      },
+      {
+        "uuid": "22222222",
+        "eventId": "1",
+        "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "previewUrl": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "imageName": "image-2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "222"
+      },
+      {
+        "uuid": "33333333",
+        "eventId": "1",
+        "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "previewUrl": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "imageName": "image-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "333"
+      },
+      {
+        "uuid": "44444444",
+        "eventId": "1",
+        "url": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "previewUrl": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "imageName": "image-1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "444"
+      },
+      {
+        "uuid": "55555555",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/4/2000x1500",
+        "previewUrl": "https://lipsum.app/id/4/200x150",
+        "imageName": "image-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "555"
+      },
+      {
+        "uuid": "6666666",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/5/2000x1500",
+        "previewUrl": "https://lipsum.app/id/5/200x150",
+        "imageName": "image-5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "666"
+      },
+      {
+        "uuid": "777777777",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/6/2000x1500",
+        "previewUrl": "https://lipsum.app/id/6/200x150",
+        "imageName": "image-6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "777"
+      },
+      {
+        "uuid": "88888888",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/7/2000x1500",
+        "previewUrl": "https://lipsum.app/id/7/200x150",
+        "imageName": "image-7",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "888"
+      },
+      {
+        "uuid": "99999999",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/8/2000x1500",
+        "previewUrl": "https://lipsum.app/id/8/200x150",
+        "imageName": "image-8",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "999"
+      },
+      {
+        "uuid": "101010101010",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/9/2000x1500",
+        "previewUrl": "https://lipsum.app/id/9/200x150",
+        "imageName": "image-9",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "101010"
+      },
+      {
+        "uuid": "1111111111111111111",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/10/2000x1500",
+        "previewUrl": "https://lipsum.app/id/10/200x150",
+        "imageName": "image-10",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "1111111"
+      },
+      {
+        "uuid": "12121212121211212",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/11/2000x1500",
+        "previewUrl": "https://lipsum.app/id/11/200x150",
+        "imageName": "image-11",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "121212"
+      },
+      {
+        "uuid": "1313131313131313113",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/12/2000x1500",
+        "previewUrl": "https://lipsum.app/id/12/200x150",
+        "imageName": "image-12",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "131313"
+      },
+      {
+        "uuid": "1414141414141414141",
+        "eventId": "1",
+        "url": "https://lipsum.app/id/13/2000x1500",
+        "previewUrl": "https://lipsum.app/id/13/200x150",
+        "imageName": "image-13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "previewImageId": "141414"
+      }
+    ]
+  }
+}

@@ -1,44 +1,44 @@
 <div
-    class="mrx-input-search"
-    [class]="getClasses"
-    [class.mrx-input-error]="invalid">
+  class="mrx-input-search"
+  [class]="getClasses"
+  [class.mrx-input-error]="invalid">
   <div class="mrx-input-search__wrapper">
     <input
-        autocomplete="nope"
-        #inputElement
-        [type]="'text'"
-        [ngModel]="value"
-        (ngModelChange)="updateValue($event)"
-        (blur)="updateSelection($event)"
-        [mask]="mask"
-        [attr.title]="placeholder || ''"
-        [disabled]="disabled"
-        [readOnly]="readonly"
-        [attr.minlength]="minlength > 0 ? minlength : null"
-        [attr.maxlength]="maxlength > 0 ? maxlength : null"
-        [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
+      autocomplete="nope"
+      #inputElement
+      [type]="'text'"
+      [ngModel]="value"
+      (ngModelChange)="updateValue($event)"
+      (blur)="updateSelection($event)"
+      [mask]="mask"
+      [attr.title]="placeholder || ''"
+      [disabled]="disabled"
+      [readOnly]="readonly"
+      [attr.minlength]="minlength > 0 ? minlength : null"
+      [attr.maxlength]="maxlength > 0 ? maxlength : null"
+      [attr.placeholder]="!disabled && placeholder ? placeholder : ''"
     />
 
     <div class="mrx-input-search__icons">
       <span
-          class="mrx-icon icon-close mr-2"
-          [class.icon-font-16]="size === 'small' || size === 'medium'"
-          [class.icon-font-24]="size === 'large'"
-          *ngIf="isShowCloseIcon"
-          (click)="onClear()"
+        class="mrx-icon icon-close mr-2"
+        [class.icon-font-16]="size === 'small' || size === 'medium'"
+        [class.icon-font-24]="size === 'large'"
+        *ngIf="isShowCloseIcon"
+        (click)="onClear()"
       ></span>
 
       <span
-          class="mrx-icon icon-search"
-          [class.icon-font-16]="size === 'small' || size === 'medium'"
-          [class.icon-font-24]="size === 'large'"
-          (click)="onSearch()"
+        class="mrx-icon icon-search"
+        [class.icon-font-16]="size === 'small' || size === 'medium'"
+        [class.icon-font-24]="size === 'large'"
+        (click)="onSearch()"
       ></span>
     </div>
   </div>
 
   <mrx-error-message
-      *ngIf="(!isValid || invalid) && isInvalidMessage"
-      [invalidMessage]="invalidMessage"
+    *ngIf="(!isValid || invalid) && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
   ></mrx-error-message>
 </div>

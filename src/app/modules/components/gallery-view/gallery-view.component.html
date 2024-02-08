@@ -1,0 +1,18 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-button (mrxClick)="addPreview()">click</mrx-button>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-gallery
+        [data]="galleryData"
+        [rotateEndPoint]="'https://jsonplaceholder.typicode.com/todos'"
+        [isExpandable]="true"
+        [isEditing]="true"
+        [descriptionMaxLength]="100"
+      ></mrx-gallery>
+    </div>
+  </div>
+</mrx-content-wrapper>

@@ -1,0 +1,57 @@
+<div class="mrx-gallery-item">
+  <div class="mrx-gallery-item__preview" (click)="onOpenGalleryModal()">
+
+    <img [src]="getImageUrl()" [alt]="preview.imageName || 'image'" *ngIf="!isLoadingImage; else skeletonTemplate">
+
+    <ng-template #skeletonTemplate>
+      <div class="d-flex align-items-center justify-content-center w-100 h-100">
+        <mrx-loader size="medium" color="brand"></mrx-loader>
+      </div>
+    </ng-template>
+
+    <div class="mrx-gallery-item__preview-overlay" *ngIf="!isLoadingImage"></div>
+
+    <div class="mrx-gallery-item__preview-controls" *ngIf="!isLoadingImage">
+      <a class="mrx-gallery-item__preview-controls--icon" [href]="yandexCheckUrl" target="_blank" (click)="$event.stopPropagation()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <g clip-path="url(#clip0_12346_12076)">
+            <path d="M8.00031 15.9838C12.4096 15.9838 15.984 12.4093 15.984 8.00006C15.984 3.59078 12.4096 0.0163574 8.00031 0.0163574C3.59103 0.0163574 0.0166016 3.59078 0.0166016 8.00006C0.0166016 12.4093 3.59103 15.9838 8.00031 15.9838Z" fill="white"/>
+            <path d="M10.8893 13.0118H9.1367V4.34361H8.35596C6.92484 4.34361 6.17521 5.05916 6.17521 6.12731C6.17521 7.33916 6.69225 7.90065 7.76188 8.6162L8.64336 9.21028L6.11003 13.0103H4.22559L6.50559 9.61768C5.19447 8.68139 4.4567 7.76731 4.4567 6.22509C4.4567 4.29768 5.8004 2.98657 8.3441 2.98657H10.8774V13.0088H10.8893V13.0118Z" fill="#FC3F1D"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_12346_12076">
+              <rect width="16" height="16" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <a class="mrx-gallery-item__preview-controls--icon" [href]="googleCheckUrl" target="_blank" (click)="$event.stopPropagation()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M11.5561 4.8901H11.0997V4.86659H5.99967V7.13325H9.20219C8.73497 8.45273 7.47952 9.39992 5.99967 9.39992C4.12202 9.39992 2.59967 7.87757 2.59967 5.99992C2.59967 4.12227 4.12202 2.59992 5.99967 2.59992C6.86639 2.59992 7.65491 2.92689 8.25529 3.46097L9.85811 1.85815C8.84604 0.914935 7.49227 0.333252 5.99967 0.333252C2.87026 0.333252 0.333008 2.8705 0.333008 5.99992C0.333008 9.12934 2.87026 11.6666 5.99967 11.6666C9.12909 11.6666 11.6663 9.12934 11.6663 5.99992C11.6663 5.61997 11.6272 5.24909 11.5561 4.8901Z" fill="#FBC02D"/>
+          <path d="M0.987305 3.36237L2.84909 4.72775C3.35285 3.48052 4.57289 2.59992 6.0006 2.59992C6.86732 2.59992 7.65584 2.92689 8.25622 3.46097L9.85904 1.85815C8.84697 0.914935 7.4932 0.333252 6.0006 0.333252C3.82404 0.333252 1.93647 1.56207 0.987305 3.36237Z" fill="#E53935"/>
+          <path d="M6.0008 11.6665C7.4645 11.6665 8.79447 11.1063 9.80002 10.1954L8.04619 8.7113C7.47725 9.14225 6.77005 9.3998 6.0008 9.3998C4.5269 9.3998 3.27542 8.45999 2.80395 7.14844L0.956055 8.57219C1.89389 10.4073 3.79845 11.6665 6.0008 11.6665Z" fill="#4CAF50"/>
+          <path d="M11.5564 4.88997L11.5519 4.86646H11.1H6V7.13312H9.20252C8.97812 7.76694 8.5704 8.31349 8.04453 8.71157C8.04482 8.71129 8.0451 8.71129 8.04538 8.71101L9.79922 10.1951C9.67512 10.3079 11.6667 8.83312 11.6667 5.99979C11.6667 5.61984 11.6276 5.24896 11.5564 4.88997Z" fill="#1565C0"/>
+        </svg>
+      </a>
+
+      <div class="mrx-gallery-item__preview-controls__button d-flex align-items-center justify-content-center" *ngIf="isEditing" (click)="$event.stopPropagation()">
+        <span class="mrx-icon icon-delete icon-font-16 text-bold" (click)="deleteImage()"></span>
+      </div>
+    </div>
+  </div>
+  <div class="mrx-gallery-item__description">
+    <mrx-input-textarea
+      *ngIf="isEditing; else textTemplate"
+      [ngModel]="preview.description"
+      [autosize]="false"
+      [rows]="2"
+      [maxlength]="descriptionMaxLength"
+      (modelChange)="changeDescription($event)"
+    ></mrx-input-textarea>
+
+    <ng-template #textTemplate>
+      {{ preview.description }}
+    </ng-template>
+  </div>
+</div>

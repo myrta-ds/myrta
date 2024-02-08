@@ -61,7 +61,7 @@ export class InputSelectComponent implements ControlValueAccessor
   @Input() public customSearchFn?: (term: string, item: any) => boolean;
 
   @Input() public isBottomLabel = false;
-  @Input() public search = false;
+  // @Input() public search = false;
   @Input() public required = false;
   @Input() public disabled = false;
   @Input() public readonly = false;

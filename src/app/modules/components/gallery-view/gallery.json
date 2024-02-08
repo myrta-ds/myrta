@@ -1,0 +1,146 @@
+{
+  "gallery": {
+    "data": [
+      {
+        "id": "1",
+        "eventId": "1",
+        "originalImage": "1/2000x1500",
+        "previewImageId": "1/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "1",
+        "eventId": "1",
+        "originalImageId": "1/2000x1500",
+        "previewImageId": "1/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "2",
+        "eventId": "1",
+        "originalImageId": "2/2000x1500",
+        "previewImageId": "2/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "3",
+        "eventId": "1",
+        "originalImageId": "3/2000x1500",
+        "previewImageId": "3/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "4",
+        "eventId": "1",
+        "originalImageId": "4/2000x1500",
+        "previewImageId": "4/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "5",
+        "eventId": "1",
+        "originalImageId": "5/2000x1500",
+        "previewImageId": "5/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "6",
+        "eventId": "1",
+        "originalImageId": "6/2000x1500",
+        "previewImageId": "6/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "7",
+        "eventId": "1",
+        "originalImageId": "7/2000x1500",
+        "previewImageId": "7/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "8",
+        "eventId": "1",
+        "originalImageId": "8/2000x1500",
+        "previewImageId": "8/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "9",
+        "eventId": "1",
+        "originalImageId": "9/2000x1500",
+        "previewImageId": "9/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "10",
+        "eventId": "1",
+        "originalImageId": "10/2000x1500",
+        "previewImageId": "10/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "11",
+        "eventId": "1",
+        "originalImageId": "11/2000x1500",
+        "previewImageId": "11/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "12",
+        "eventId": "1",
+        "originalImageId": "12/2000x1500",
+        "previewImageId": "12/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": "13",
+        "eventId": "1",
+        "originalImageId": "13/2000x1500",
+        "previewImageId": "13/200x150",
+        "imageFileName": "image-1",
+        "fullRelativePath": "41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "fullPath": "myrtex-fileserver-1/pvc-8dc7b71f-1c5c-4e4f-a8dd-1cc24b84fab6/MVC-UploadedFile/41EEC3E2-C663-4486-88E4-73C38348D76C/files/Images/30.04.2023/2ee128e4-d3f5-44b8-aaa5-636e8a532867.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  }
+}

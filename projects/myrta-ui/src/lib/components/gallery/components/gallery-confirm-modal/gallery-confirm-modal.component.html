@@ -1,0 +1,30 @@
+<mrx-modal
+  [title]="title"
+  (close)="close()"
+  size="small"
+  color="negative">
+
+  <div class="row">
+    <div class="col">
+      <p class="text-center">{{message}}</p>
+    </div>
+  </div>
+
+  <ng-template #footerContent>
+    <mrx-button
+      [customClasses]="'mr-3'"
+      [type]="'secondary'"
+      [size]="'medium'"
+      color="negative"
+      (click)="close()"
+    >Отменить
+    </mrx-button>
+    <mrx-button
+      [type]="'primary'"
+      [size]="'medium'"
+      color="negative"
+      (click)="ok()"
+    >Удалить
+    </mrx-button>
+  </ng-template>
+</mrx-modal>

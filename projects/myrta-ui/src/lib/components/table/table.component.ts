@@ -63,6 +63,7 @@ export class TableComponent implements AfterViewInit {
   @Input() striped = true;
   @Input() customClasses = ''
   @Input() emptyResultMsg = ''
+  @Input() hovered = true;
 
   @Input() autoHeight = true
 

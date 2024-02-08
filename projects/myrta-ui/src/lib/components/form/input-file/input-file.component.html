@@ -32,7 +32,7 @@
   </div>
 
   <ng-template #notDisabled>
-    <ng-container *ngIf="!bottomFiles">
+    <ng-container *ngIf="!bottomFiles && !isHideListFiles">
       <ng-container *ngTemplateOutlet="fileListTemplate"></ng-container>
       <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
     </ng-container>
@@ -64,7 +64,7 @@
       </ng-template>
     </ngx-file-drop>
 
-    <ng-container *ngIf="bottomFiles">
+    <ng-container *ngIf="bottomFiles && !isHideListFiles">
       <ng-container *ngTemplateOutlet="fileListTemplate"></ng-container>
       <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
     </ng-container>

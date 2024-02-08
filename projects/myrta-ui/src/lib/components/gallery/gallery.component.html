@@ -1,0 +1,32 @@
+<div class="mrx-gallery" [class]="getClasses">
+  <div class="mrx-gallery-row row">
+    <div *ngFor="let preview of getData; trackBy: trackByFn; let index = index" class="col col-12 col-sm-6 col-md-3">
+      <mrx-gallery-item
+        [preview]="preview"
+        [index]="index"
+        [isEditing]="isEditing"
+        [descriptionMaxLength]="descriptionMaxLength"
+        [rotateSlides]="rotateSlides"
+        [isLoading]="isLoading"
+        [deleteEndPoint]="deleteEndPoint"
+        [updateEndPoint]="updateEndPoint"
+        (openGalleryModal)="openGalleryModal($event)"
+        (deletePhoto)="deletePhoto.emit($event)"
+        (updatePhoto)="updatePhoto.emit($event)"
+      ></mrx-gallery-item>
+    </div>
+  </div>
+
+  <div class="row mt-3" *ngIf="isShowMore">
+    <div class="col d-flex justify-content-center">
+      <mrx-button type="tertiary" (mrxClick)="changeExpanded()">
+        {{ getIsExpanded ? 'Скрыть' : 'Показать все фотографии' }}
+        <span
+          class="mrx-icon icon-font-16 ml-2"
+          [class.icon-chevron-down]="!getIsExpanded"
+          [class.icon-chevron-up]="getIsExpanded"
+        ></span>
+      </mrx-button>
+    </div>
+  </div>
+</div>
