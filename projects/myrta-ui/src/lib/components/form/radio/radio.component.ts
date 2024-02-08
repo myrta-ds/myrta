@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 import { RadioTypes, RadioTypesEnum } from "./radio.enum";
 
@@ -8,6 +8,7 @@ export type RadioValueTypes = false;
   selector: 'mrx-radio',
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -67,14 +68,7 @@ export class RadioComponent implements ControlValueAccessor {
     this.modelValue = outsideValue;
   }
 
-  toggleChange(event: any) {
-    // Is a mapping here necessary to assign the outer ngModel bound
-    // property it's new value??
-  }
-
   valueChanged(event: any) {
-
     this.onChange(this.modelValue);
-
   }
 }
