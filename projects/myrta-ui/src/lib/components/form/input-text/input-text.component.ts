@@ -9,7 +9,14 @@ import {
   ViewChild
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { InputTextSizesEnum, InputTextSizesTypes, InputTextValueTypes, InputTextValueWithId } from './input-text.enum';
+import {
+  InputTextIconColorEnum,
+  InputTextIconColorTypes,
+  InputTextSizesEnum,
+  InputTextSizesTypes,
+  InputTextValueTypes,
+  InputTextValueWithId
+} from './input-text.enum';
 import { v4 as uuidv4 } from 'uuid';
 import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
 
@@ -47,6 +54,8 @@ export class InputTextComponent implements ControlValueAccessor {
   @Input() public customClasses = '';
   @Input() public size: InputTextSizesTypes = 'large';
   @Input() public isTooltipValue = false;
+  @Input() public icon: string | null = null;
+  @Input() public iconColor: InputTextIconColorTypes = 'default';
 
   // MASK
   @Input() mask = '';
@@ -86,6 +95,10 @@ export class InputTextComponent implements ControlValueAccessor {
 
   public get getClasses(): string {
     return `${InputTextSizesEnum[this.size]} ${this.customClasses} ${this.readonlyClass} ${this.checkValidClasses}`;
+  }
+
+  public get getIconClass(): string {
+    return `${this.icon} ${this.size !== 'small' ? 'icon-font-24' : 'icon-font-16'} ${InputTextIconColorEnum[this.iconColor]}`
   }
 
   public get getTooltipValue(): string {

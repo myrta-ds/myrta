@@ -12,3 +12,13 @@ export interface InputTextValueWithId {
   value: InputTextValueTypes,
   id: string
 }
+
+export enum InputTextIconColorEnum {
+  'default' = '',
+  'brand' = 'color-brand',
+  'positive' = 'color-positive',
+  'negative' = 'color-negative',
+  'attention' = 'color-attention',
+}
+
+export type InputTextIconColorTypes = 'default' | 'brand' | 'positive' | 'negative' | 'attention'

@@ -2,10 +2,13 @@
   class="mrx-input-text"
   [class]="getClasses"
   [class.mrx-input-error]="invalid"
+  [class.mrx-input-text-with-icon]="icon"
   [mrxCdkTooltip]="getTooltipValue"
   [tooltipPosition]="'top-start'"
 >
   <div class="mrx-input-text__wrapper">
+    <span *ngIf="icon" class="mrx-icon mrx-input-text-icon" [class]="getIconClass"></span>
+
     <input
       autocomplete="nope"
       #inputElement
