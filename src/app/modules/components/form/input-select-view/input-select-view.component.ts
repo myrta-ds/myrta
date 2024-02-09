@@ -74,4 +74,10 @@ export class InputSelectViewComponent {
   public logger(event: any) {
     console.log(event);
   }
+
+  customSearchFn(term: string, item: any) {
+    console.log('asd');
+    term = term.toLowerCase();
+    return item.name.toLowerCase().indexOf(term) > -1 || item.gender.toLowerCase() === term;
+  }
 }

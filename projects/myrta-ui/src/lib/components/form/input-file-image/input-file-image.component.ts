@@ -30,15 +30,13 @@ export class InputFileImageComponent {
   @HostBinding('class')
   public hostClass = 'ng-form-file-input';
 
-  /**
-   * @param type avatar default
-   */
   @Input() public type: InputFileImageTypeTypes = 'default'
 
   @Input() public preview = ''
   @Input() public customClasses = '';
   @Input() public required = false;
   @Input() public disabled = false;
+  @Input() public lightDisabled = false;
   @Input() public maxSize = 31457280;
   @Input() public maxFiles = 5;
   @Input() public minFiles = 0;

@@ -113,6 +113,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
+        console.log('adasdasd');
         this.selectedComponent = this.selectComponents.find(s => s.link === e.url);
       }
     });

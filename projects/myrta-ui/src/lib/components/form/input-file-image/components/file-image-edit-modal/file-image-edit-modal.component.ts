@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SimpleModalComponent } from 'ngx-simple-modal';
-import { ImageCroppedEvent, ImageTransform, LoadedImage } from 'ngx-image-cropper';
+import { CropperSettings, ImageCroppedEvent, ImageTransform, LoadedImage } from 'ngx-image-cropper';
 import { convertBase64ToFile } from '../../../../../helpers/extension/input-file.extension';
 
 export interface ImageEditSelect {
@@ -29,6 +29,7 @@ export class FileImageEditModalComponent
   croppedImage = '';
   canvasRotation = 0;
   transform: ImageTransform = {};
+  cropperSettings!: CropperSettings;
 
   constructor() {
     super();

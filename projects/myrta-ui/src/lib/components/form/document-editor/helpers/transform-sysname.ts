@@ -4,9 +4,9 @@ export const transformSysNameToViewName = (text: string, shortcodes: ShortCodeI[
   let tempText = text || ''
 
   shortcodes.forEach((shortcode: ShortCodeI) => {
-    const reg1 = '\\[[^\\[]*'
-    const reg2 = '[^\\]]*\\]'
-    const regexp = new RegExp(reg1 + shortcode.systemName + reg2, 'gi')
+    const reg1 = '[[^\\]]'
+    const reg2 = '[\\]$]'
+    const regexp = new RegExp(reg1 + shortcode.systemName + reg2, 'g')
 
     tempText = tempText.replace(regexp, `[${shortcode.viewName}]`);
   })
@@ -18,9 +18,9 @@ export const transformViewNameToSysName = (text: string, shortcodes: ShortCodeI[
   let tempText = text || ''
 
   shortcodes.forEach((shortcode: ShortCodeI) => {
-    const reg1 = '\\[[^\\[]*'
-    const reg2 = '[^\\]]*\\]'
-    const regexp = new RegExp(reg1 + shortcode.viewName + reg2, 'gi')
+    const reg1 = '[[^\\]]'
+    const reg2 = '[\\]$]'
+    const regexp = new RegExp(reg1 + shortcode.viewName + reg2, 'g')
 
     tempText = tempText.replace(regexp, `[${shortcode.systemName}]`);
   })
@@ -32,9 +32,9 @@ export const transformSysNameToPreviewName = (text: string, shortcodes: ShortCod
   let tempText = text || ''
 
   shortcodes.forEach((shortcode: ShortCodeI) => {
-    const reg1 = '\\[[^\\[]*'
-    const reg2 = '[^\\]]*\\]'
-    const regexp = new RegExp(reg1 + shortcode.systemName + reg2, 'gi')
+    const reg1 = '[[^\\]]'
+    const reg2 = '[\\]$]'
+    const regexp = new RegExp(reg1 + shortcode.systemName + reg2, 'g')
 
     tempText = tempText.replace(regexp, shortcode.previewValue);
   })
@@ -46,9 +46,9 @@ export const transformViewNameToPreviewName = (text: string, shortcodes: ShortCo
   let tempText = text || ''
 
   shortcodes.forEach((shortcode: ShortCodeI) => {
-    const reg1 = '\\[[^\\[]*'
-    const reg2 = '[^\\]]*\\]'
-    const regexp = new RegExp(reg1 + shortcode.viewName + reg2, 'gi')
+    const reg1 = '[[^\\]]'
+    const reg2 = '[\\]$]'
+    const regexp = new RegExp(reg1 + shortcode.viewName + reg2, 'g')
 
     tempText = tempText.replace(regexp, shortcode.previewValue);
   })

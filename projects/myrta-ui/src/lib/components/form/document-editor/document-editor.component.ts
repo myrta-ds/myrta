@@ -1,4 +1,13 @@
-import { Component, ElementRef, EventEmitter, forwardRef, Input, Output, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  forwardRef,
+  Input,
+  Output,
+  ViewChild
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ShortCodeI } from './models/document-editor-short-codes.enum';
 import { EditorComponent } from '../editor/editor.component';
@@ -17,6 +26,7 @@ import { ToolbarConfig } from '../editor/models/toolbar.model';
   selector: 'mrx-document-editor',
   templateUrl: './document-editor.component.html',
   styleUrls: ['./document-editor.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

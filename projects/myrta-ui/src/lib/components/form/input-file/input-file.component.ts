@@ -15,7 +15,6 @@ import { ErrorMessagesEnum } from './enums/error-messages.enum';
   styleUrls: ['./input-file.component.less'],
 })
 export class InputFileComponent {
-
   formatBytes = formatBytes;
   extensions?: string;
   allowedExtensions: string[] = [];
@@ -42,6 +41,8 @@ export class InputFileComponent {
   @Input() public deleteConfirm?: (file: UploadedFileModel, result: (ok: boolean) => void) => void;
 
   @Input() public innerTemplate!: TemplateRef<any>;
+
+  @Input() public uploadAdditionalData: any = {};
 
   // ERROR
   @Input() public invalid = false;
@@ -114,8 +115,8 @@ export class InputFileComponent {
     return this.baseValidate();
   }
 
-  public getTooltipValue(value: string): string {
-    return this.isTooltipValue ? value : ''
+  public getTooltipValue(value: string | undefined): string {
+    return this.isTooltipValue && value ? value : ''
   }
 
   protected baseValidate(): boolean {
@@ -229,6 +230,12 @@ export class InputFileComponent {
 
     const formData = this.createFormData();
     formData.append('File', file);
+
+    if (this.uploadAdditionalData && Object.keys(this.uploadAdditionalData).length) {
+      Object.keys(this.uploadAdditionalData).forEach(key => {
+        formData.append(key, this.uploadAdditionalData[key]);
+      })
+    }
 
     if (this.autoUpload) {
       data.execution = this.fileUploadService.upload(this.uploadEndPoint, formData).pipe(

@@ -23,9 +23,7 @@
       [closeOnSelect]="closeOnSelect"
       [searchFn]="customSearchFn"
       [notFoundText]="notFoundText"
-      [inputAttrs]="{
-        maxlength: maxLength.toString() || 'none'
-      }"
+      [maxlength]="maxLength.toString() || 'none'"
       clearAllText="Очистить"
       addTagText="Добавить"
       loadingText="Загрузка..."
@@ -65,18 +63,18 @@
       </ng-template>
       <ng-template ng-loadingspinner-tmp>
         <mrx-loader
-            [ngStyle]="{display: 'flex'}"
-            [color]="'brand'" size="small"
-            customClasses="align-self-center"
+          [ngStyle]="{display: 'flex'}"
+          [color]="'brand'" size="small"
+          customClasses="align-self-center"
         ></mrx-loader>
       </ng-template>
     </ng-select>
   </div>
 
   <mrx-error-message
-      *ngIf="invalid && isInvalidMessage"
-      [invalidMessage]="invalidMessage"
+    *ngIf="invalid && isInvalidMessage"
+    [invalidMessage]="invalidMessage"
   ></mrx-error-message>
 
-<!--  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>-->
+  <mrx-save-state [id]="uuid" [fields]="fields"></mrx-save-state>
 </div>

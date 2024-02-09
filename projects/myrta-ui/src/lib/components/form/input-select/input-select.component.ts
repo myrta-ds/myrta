@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component, ContentChild, ElementRef,
   EventEmitter,
   forwardRef,
@@ -21,6 +22,7 @@ import { Field } from '../../../services';
   selector: 'mrx-input-select',
   templateUrl: './input-select.component.html',
   styleUrls: ['./input-select.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -56,12 +58,11 @@ export class InputSelectComponent implements ControlValueAccessor
   @Input() public trackByFn: any;
   @Input() public displayValue!: string | string[];
   @Input() public disabledFromDisplay!: boolean;
-  @Input() public num = '';
   @Input() public maxLength = 0;
   @Input() public customSearchFn?: (term: string, item: any) => boolean;
 
   @Input() public isBottomLabel = false;
-  // @Input() public search = false;
+  @Input() public search = false;
   @Input() public required = false;
   @Input() public disabled = false;
   @Input() public readonly = false;

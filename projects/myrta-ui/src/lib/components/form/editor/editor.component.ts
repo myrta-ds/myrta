@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   EventEmitter,
@@ -21,6 +22,7 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
   selector: 'mrx-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -30,10 +32,10 @@ import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
   ]
 })
 export class EditorComponent implements ControlValueAccessor, OnChanges {
-  private _isInit = false
-  public value = ''
-  public valueLength = 0
-  public isFocused: boolean | null = false
+  private _isInit = false;
+  public value = '';
+  public valueLength = 0;
+  public isFocused: boolean | null = false;
 
   public defaultConfig: any = {
     ...defaultToolbar,
@@ -46,18 +48,12 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
       noFollowCheckbox: false
     },
     minHeight: 110,
-    // uploader: {
-    //   insertImageAsBase64URI: true
-    // },
-    // limitChars: 10,
-    // limitHTML: 170,
     iframe: false,
     imageDefaultWidth: 200,
     editHTMLDocumentMode: false,
     cleanHTML: {
       fillEmptyParagraph: true
     },
-    // colors: ['#ff0000', '#00ff00', '#0000ff', '#0000ff', '#0000ff', '#0000ff', '/', '#0000ff'],
     placeholder: '',
     toolbarAdaptive: false,
     toolbarInline: true,
@@ -74,15 +70,21 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
     addNewLine: true,
     events: {
       getIcon: changeIconsFunction,
-    }
-  }
+    },
+    // uploader: {
+    //   insertImageAsBase64URI: true
+    // },
+    // limitChars: 10,
+    // limitHTML: 170,
+    // colors: ['#ff0000', '#00ff00', '#0000ff', '#0000ff', '#0000ff', '#0000ff', '/', '#0000ff'],
+  };
 
   // SAVE STATE
-  public uuid: string = uuidv4()
+  public uuid: string = uuidv4();
   @Input() public fields: Field[] = [];
 
-  @Input() public toolbar!: ToolbarConfig
-  @Input() public maxLength = 0
+  @Input() public toolbar!: ToolbarConfig;
+  @Input() public maxLength = 0;
   @Input() public customClasses = '';
   @Input() public placeholder = '';
   @Input() public disabled = false;
@@ -105,40 +107,49 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['toolbar']) {
-      this.defaultConfig = {...this.defaultConfig, ...changes['toolbar'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, ...changes['toolbar'].currentValue };
     }
     if (changes['maxLength']) {
-      this.defaultConfig = {...this.defaultConfig, limitChars: changes['maxLength'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, limitChars: changes['maxLength'].currentValue };
     }
     if (changes['placeholder']) {
-      this.defaultConfig = {...this.defaultConfig, placeholder: changes['placeholder'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, placeholder: changes['placeholder'].currentValue };
     }
     if (changes['disabled']) {
-      this.defaultConfig = {...this.defaultConfig, disabled: changes['disabled'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, disabled: changes['disabled'].currentValue };
     }
     if (changes['readonly']) {
-      this.defaultConfig = {...this.defaultConfig, readonly: changes['readonly'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, readonly: changes['readonly'].currentValue };
     }
     if (changes['iframe']) {
-      this.defaultConfig = {...this.defaultConfig, iframe: changes['iframe'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, iframe: changes['iframe'].currentValue };
     }
     if (changes['editHTMLDocumentMode']) {
-      this.defaultConfig = {...this.defaultConfig, editHTMLDocumentMode: changes['editHTMLDocumentMode'].currentValue}
+      this.defaultConfig = {
+        ...this.defaultConfig,
+        editHTMLDocumentMode: changes['editHTMLDocumentMode'].currentValue
+      };
     }
     if (changes['askBeforePasteHTML']) {
-      this.defaultConfig = {...this.defaultConfig, askBeforePasteHTML: changes['askBeforePasteHTML'].currentValue}
+      this.defaultConfig = { ...this.defaultConfig, askBeforePasteHTML: changes['askBeforePasteHTML'].currentValue };
     }
     if (changes['askBeforePasteFromWord']) {
-      this.defaultConfig = {...this.defaultConfig, askBeforePasteFromWord: changes['askBeforePasteFromWord'].currentValue}
+      this.defaultConfig = {
+        ...this.defaultConfig,
+        askBeforePasteFromWord: changes['askBeforePasteFromWord'].currentValue
+      };
     }
     if (changes['defaultActionOnPaste']) {
-      this.defaultConfig = {...this.defaultConfig, defaultActionOnPaste: changes['defaultActionOnPaste'].currentValue}
+      this.defaultConfig = {
+        ...this.defaultConfig,
+        defaultActionOnPaste: changes['defaultActionOnPaste'].currentValue
+      };
     }
     if (changes['maxLength']) {
-      this.defaultConfig = {...this.defaultConfig, limitChars: changes['maxLength'].currentValue }
+      this.defaultConfig = { ...this.defaultConfig, limitChars: changes['maxLength'].currentValue };
     }
     if (changes['config']) {
-      this.defaultConfig = {...this.defaultConfig, ...changes['config'].currentValue }
+      this.defaultConfig = { ...this.defaultConfig, ...changes['config'].currentValue };
     }
   }
 
@@ -151,7 +162,7 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
   }
 
   public get checkValidClasses(): string {
-    return this.checkInvalid === false ? 'mrx-input-checked-success' : this.checkInvalid === true ? 'mrx-input-checked-error' : ''
+    return this.checkInvalid === false ? 'mrx-input-checked-success' : this.checkInvalid === true ? 'mrx-input-checked-error' : '';
   }
 
   public get getClasses(): string {
@@ -159,12 +170,12 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
   }
 
   public insertPositionText(text: string) {
-    this.editorElementRef.editor.s.insertHTML(text)
+    this.editorElementRef.editor.s.insertHTML(text);
   }
 
   public changeFocused(value: boolean): void {
-    this.isFocused = value
-    this.changeDetection.detectChanges()
+    this.isFocused = value;
+    this.changeDetection.detectChanges();
   }
 
   private onChange = (value: any) => {
@@ -181,17 +192,17 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
   }
 
   public writeValue(outsideValue: any) {
-    this.value = outsideValue;
+    this.value = this._sanitizeValue(outsideValue);
     if (outsideValue !== null) {
       setTimeout(() => {
-        this._isInit = true
-      })
+        this._isInit = true;
+      });
     }
   }
 
   public updateValue(insideValue: string) {
     if (this.maxLength) {
-      this._calculateChartsCount()
+      this._calculateChartsCount();
     }
 
     if (this._isInit) {
@@ -200,6 +211,10 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
       this.onChange(insideValue);
       this.onTouched();
     }
+  }
+
+  private _sanitizeValue(value: string): string {
+    return value ? value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') : value;
   }
 
   private _calculateChartsCount() {

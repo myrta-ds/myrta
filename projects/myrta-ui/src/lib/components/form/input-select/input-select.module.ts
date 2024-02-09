@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LabelModule } from '../../label/label.module';
 import { LoaderModule } from '../../loader/loader.module';
-// import { SaveStateModule } from '../../wrappers/save-state/save-state.module';
 import { ErrorMessageModule } from '../../error-message/error-message.module';
+import { SaveStateModule } from '../../save-state/save-state.module';
 
 @NgModule({
   declarations: [InputSelectComponent],
@@ -15,7 +15,7 @@ import { ErrorMessageModule } from '../../error-message/error-message.module';
     FormsModule,
     LabelModule,
     LoaderModule,
-    // SaveStateModule,
+    SaveStateModule,
     ErrorMessageModule,
     NgSelectModule
   ],

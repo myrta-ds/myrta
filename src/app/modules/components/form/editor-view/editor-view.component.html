@@ -5,6 +5,7 @@
       <!--      <mrx-input-editor></mrx-input-editor>-->
       <mrx-editor
         [ngModel]="emptyValue"
+        [maxLength]="100"
         (ngModelChange)="updateValue($event)"
       ></mrx-editor>
     </div>

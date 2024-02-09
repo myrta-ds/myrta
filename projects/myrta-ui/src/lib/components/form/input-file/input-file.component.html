@@ -93,6 +93,7 @@
           <span class="mrx-icon icon-file icon-font-24 mr-2"></span>
           <span
             class="qq-upload-file-selector qq-upload-file"
+            [title]="fileNamePlaceholder ? fileNamePlaceholder : file.name"
           >{{fileNamePlaceholder ? fileNamePlaceholder : file.name}}</span>
         </div>
         <div class="info">
@@ -101,11 +102,10 @@
           </div>
 
           <span class="qq-upload-size-selector qq-upload-size" *ngIf="!file.error">{{formatBytes(file.size)}}</span>
-
           <span
             *ngIf="!disabled && file.uuid && showDeleteButton"
             (click)="delete(file)"
-            class="mrx-icon icon-delete icon-font-24"
+            class="mrx-icon icon-delete icon-font-24 cursor-pointer"
             aria-label="Удалить"
           ></span>
 
@@ -120,7 +120,7 @@
             *ngIf="(file.error && !file.uuid) || canCancelUploading(file)"
             (click)="clear(file)"
           >
-            <span class="mrx-icon icon-close icon-font-24"></span>
+            <span class="mrx-icon icon-close icon-font-24 cursor-pointer"></span>
           </button>
         </div>
       </div>

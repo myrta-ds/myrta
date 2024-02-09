@@ -55,12 +55,14 @@
     </div>
     <div class="col">
       <mrx-input-select
-        [multiple]="true"
+        placeholder="Выберите значение"
         [ngModel]="selected"
-        [invalid]="getInvalid"
+        [bindLabel]="'label'"
+        [multiple]="true"
         [items]="selectItems"
+        [searchable]="true"
         [multiCollapseCount]="2"
-        invalidMessage="Выбрано мало вариантов"
+        [maxLength]="10"
         (ngModelChange)="logger($event)"
       ></mrx-input-select>
     </div>
