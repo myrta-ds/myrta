@@ -9,139 +9,139 @@ export interface MaskItem {
 
 export const MaskCode: MaskItem = {
   AR: {
-    mask: '00) 0000-0000',
-    maskPrefix: '+54 ('
+    mask: '(00) 0000-0000',
+    maskPrefix: '+54'
   },
   AM: {
-    mask: '00) 000-000',
-    maskPrefix: '+374 ('
+    mask: '(00) 000-000',
+    maskPrefix: '+374'
   },
   BY: {
-    mask: '00) 000-00-00',
-    maskPrefix: '+375 ('
+    mask: '(00) 000-00-00',
+    maskPrefix: '+375'
   },
   BR: {
-    mask: '00) 0000-0000',
-    maskPrefix: '+55 ('
+    mask: '(00) 0000-0000',
+    maskPrefix: '+55'
   },
   BN: {
     mask: '000-0000',
-    maskPrefix: '+673 '
+    maskPrefix: '+673'
   },
   KH: {
-    mask: '00) 000-000',
-    maskPrefix: '+855 ('
+    mask: '(00) 000-000',
+    maskPrefix: '+855'
   },
   CO: {
-    mask: '000) 000-0000',
-    maskPrefix: '+57 ('
+    mask: '(000) 000-0000',
+    maskPrefix: '+57'
   },
   CU: {
-    mask: '0) 000-0000',
-    maskPrefix: '+53 ('
+    mask: '(0) 000-0000',
+    maskPrefix: '+53'
   },
   EC: {
-    mask: '0) 000-0000',
-    maskPrefix: '+593 ('
+    mask: '(0) 000-0000',
+    maskPrefix: '+593'
   },
   EG: {
-    mask: '0) 0000-0000',
-    maskPrefix: '+20 ('
+    mask: '(0) 0000-0000',
+    maskPrefix: '+20'
   },
   GE: {
-    mask: '00) 000-00-00',
-    maskPrefix: '+995 ('
+    mask: '(00) 000-00-00',
+    maskPrefix: '+995'
   },
   IN: {
     mask: '00000-00000',
-    maskPrefix: '+91 '
+    maskPrefix: '+91'
   },
   ID: {
-    mask: '00) 000-0000',
-    maskPrefix: '+62 ('
+    mask: '(00) 000-0000',
+    maskPrefix: '+62'
   },
   IR: {
-    mask: '00) 0000-0000',
-    maskPrefix: '+98 ('
+    mask: '(00) 0000-0000',
+    maskPrefix: '+98'
   },
   KZ: {
     mask: '00000-0-00-00',
-    maskPrefix: '+7 '
+    maskPrefix: '+7'
   },
   KE: {
     mask: '00-0000000',
-    maskPrefix: '+254 '
+    maskPrefix: '+254'
   },
   KG: {
     mask: '000-000-000',
-    maskPrefix: '+996 '
+    maskPrefix: '+996'
   },
   LA: {
     mask: '00-000-000',
-    maskPrefix: '+856 '
+    maskPrefix: '+856'
   },
   MG: {
     mask: '00-00-000-00',
-    maskPrefix: '+261 '
+    maskPrefix: '+261'
   },
   MY: {
     mask: '0-0000-0000',
-    maskPrefix: '+60 '
+    maskPrefix: '+60'
   },
   MX: {
     mask: '000-000-0000',
-    maskPrefix: '+52 '
+    maskPrefix: '+52'
   },
   MM: {
     mask: '0-000-000',
-    maskPrefix: '+95 '
+    maskPrefix: '+95'
   },
   NI: {
     mask: '0000-0000',
-    maskPrefix: '+505 '
+    maskPrefix: '+505'
   },
   PE: {
     mask: '0-0000000',
-    maskPrefix: '+51 '
+    maskPrefix: '+51'
   },
   PH: {
     mask: '0-0000-0000',
-    maskPrefix: '+63 '
+    maskPrefix: '+63'
   },
   RU: {
-    mask: '000) 000-00-00',
-    maskPrefix: '+7 ('
+    mask: '(000) 000-00-00',
+    maskPrefix: '+7'
   },
   RS: {
     mask: '00-000000',
-    maskPrefix: '+381 '
+    maskPrefix: '+381'
   },
   SS: {
     mask: '000-000-000',
-    maskPrefix: '+211 '
+    maskPrefix: '+211'
   },
   TJ: {
     mask: '000-00-0000',
-    maskPrefix: '+992 '
+    maskPrefix: '+992'
   },
   TZ: {
     mask: '00-000-0000',
-    maskPrefix: '+255 '
+    maskPrefix: '+255'
   },
   TH: {
     mask: '0-000-0000',
-    maskPrefix: '+66 '
+    maskPrefix: '+66'
   },
   TM: {
-    mask: '00) 00-00-00',
-    maskPrefix: '+993 ('
+    mask: '(00) 00-00-00',
+    maskPrefix: '+993'
   },
   UZ: {
     mask: '00-000-00-00',
-    maskPrefix: '+998 '
+    maskPrefix: '+998'
   },
   VN: {
     mask: '000-0000-000',
-    maskPrefix: '+84 '
+    maskPrefix: '+84'
   },
 }

@@ -4,12 +4,8 @@
       <mrx-label>Phone input</mrx-label>
       <mrx-input-phone
         [ngModel]="value"
-        [onlyCountries]="allowedCountries"
-        [showMaskTyped]="true"
-        [maskDropSpecialCharacters]="false"
+        [autoMask]="true"
         (modelChange)="numberTestChangeValue($event)"
-        maskPrefix="8"
-        mask=" (000) 000-00-00"
       ></mrx-input-phone>
     </div>
     <div class="col">

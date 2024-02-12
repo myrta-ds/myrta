@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryISO } from '../../../../../../projects/myrta-ui/src/public-api';
+import {
+  CountryISO
+} from '../../../../../../projects/myrta-ui/src/lib/components/form/input-phone/enums/country-iso.enum';
 
 @Component({
   selector: 'mrx-input-phone-view',
@@ -7,6 +9,7 @@ import { CountryISO } from '../../../../../../projects/myrta-ui/src/public-api';
   styleUrls: ['./input-phone-view.component.less']
 })
 export class InputPhoneViewComponent implements OnInit {
+
   public countryISO = CountryISO
   public countries: CountryISO[] = [
     this.countryISO.Argentina,

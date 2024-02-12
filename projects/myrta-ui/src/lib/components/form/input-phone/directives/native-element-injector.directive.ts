@@ -15,8 +15,8 @@ https://stackoverflow.com/a/54075119/1617590
 })
 export class NativeElementInjectorDirective implements OnInit {
   constructor(
-      private controlDir: NgControl,
-      private host: ElementRef<HTMLFormElement>
+    private controlDir: NgControl,
+    private host: ElementRef<HTMLFormElement>
   ) {}
   ngOnInit() {
     if (this.controlDir.control) {

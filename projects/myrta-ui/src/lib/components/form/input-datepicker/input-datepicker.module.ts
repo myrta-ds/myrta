@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ErrorMessageModule } from '../../error-message/error-message.module';
 import { LabelModule } from '../../label/label.module';
-// import { SaveStateModule } from "../../save-state/save-state.module";
+import { SaveStateModule } from "../../save-state/save-state.module";
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -18,7 +18,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
   imports: [
     CommonModule,
     FormsModule,
-    // SaveStateModule,
+    SaveStateModule,
     ErrorMessageModule,
     LabelModule,
     NgxMaskModule.forRoot(maskConfigFunction),

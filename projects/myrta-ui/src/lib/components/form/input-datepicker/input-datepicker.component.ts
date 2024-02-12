@@ -27,6 +27,8 @@ import { getDateDayjsObject } from './helpers/get-date-dayjs-object';
 import dayjs from 'dayjs';
 import { v4 as uuidv4 } from 'uuid';
 import { createPopper } from '@popperjs/core';
+import localeEn from 'air-datepicker/locale/en';
+import localeRu from 'air-datepicker/locale/ru';
 import { Field } from '../../../services';
 import { getDateObject } from './helpers/get-date-object';
 
@@ -53,11 +55,11 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
 
   @Input() public size: InputDateSizesTypes = 'large';
   @Input() public format = 'YYYY-MM-DD HH:mm';
+  @Input() public locale: 'ru' | 'en' = 'ru';
   @Input() public customClasses = '';
   @Input() public dateLabel = '';
   @Input() public timeLabel = '';
   @Input() public datePlaceholder = 'дд.мм.гггг';
-  @Input() public timePlaceholder = '00:00';
   @Input() public disabled = false;
   @Input() public readonly = false;
   @Input() public required = false;
@@ -77,6 +79,8 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
   @Input() public invalidMessage: string | string[] = '';
   @Input() public checkInvalid: true | false | null = null;
 
+  @Input() public isShowMessages = true;
+
   @ViewChild('dateInput') dateInput!: ElementRef;
 
   @Output() public changed: EventEmitter<string> = new EventEmitter();
@@ -88,10 +92,7 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
   ngAfterViewInit(): void {
     this.dt = new AirDatepicker(this.dateInput.nativeElement, {
       container: this.container,
-      locale: {
-        dateFormat: 'dd.MM.yyyy',
-        timeFormat: 'HH:mm',
-      },
+      locale: this.getLocale,
       autoClose: true,
       multipleDatesSeparator: ' - ',
       timepicker: this.timepicker,
@@ -149,8 +150,8 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
       if (changes['maxDate']) {
         if (this.validationType === 'double') {
           const invalid = this.innerInvalid;
-          this.dt.update({ maxDate: this.maxDate });
-          this.value && this.dt.selectDate(dayjs(this.value).toDate(), { updateTime: this.timepicker, silent: true });
+          this.dt.update({ maxDate: this.maxDate ? dayjs(this.maxDate, this.format).toDate() : '' });
+          this.value && this.dt.selectDate(dayjs(this.value, this.format).toDate(), { updateTime: this.timepicker, silent: true });
           const isValid = this.checkingInvalid(this.value, this.maxDate, this.minDate);
 
           if (invalid && isValid) {
@@ -159,13 +160,13 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
             }, 0);
           }
         } else {
-          console.log(changes['maxDate']);
+          // console.log(changes['maxDate']);
         }
       } else if (changes['minDate']) {
         if (this.validationType === 'double') {
           const invalid = this.innerInvalid;
-          this.dt.update({ minDate: this.minDate });
-          this.value && this.dt.selectDate(dayjs(this.value).toDate(), { updateTime: this.timepicker, silent: true });
+          this.dt.update({ minDate: this.minDate ? dayjs(this.minDate, this.format).toDate() : '' });
+          this.value && this.dt.selectDate(dayjs(this.value, this.format).toDate(), { updateTime: this.timepicker, silent: true });
           const isValid = this.checkingInvalid(this.value, this.maxDate, this.minDate);
 
           if (invalid && isValid) {
@@ -174,7 +175,7 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
             }, 0);
           }
         } else {
-          console.log(changes['minDate']);
+          // console.log(changes['minDate']);
         }
       }
     }
@@ -200,6 +201,10 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
     return this.checkInvalid === false ?
       'mrx-input-checked-success' :
       this.checkInvalid === true ? 'mrx-input-checked-error' : '';
+  }
+
+  private get getLocale() {
+    return this.locale === 'ru' ? { ...localeRu, dateFormat: 'dd.MM.yyyy', timeFormat: 'HH:mm' } : { ...localeEn, dateFormat: 'dd.MM.yyyy', timeFormat: 'HH:mm' }
   }
 
   public clickToIconCalendar(): void {
@@ -268,16 +273,21 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
   }
 
   private checkingInvalid(value: string, maxDate: string, minDate: string) {
-    if (maxDate && (dayjs(value).diff(dayjs(maxDate)) === 0)) {
+    if (!this.isShowMessages) {
+      this.invalidMessageOff();
+      return true
+    }
+
+    if (maxDate && (dayjs(value, this.format).diff(dayjs(maxDate, this.format)) === 0)) {
       this.invalidMessageOn('Дата и время окончания не может быть равна дате и времени начала');
       return false;
-    } else if (maxDate && (dayjs(value).diff(dayjs(maxDate)) > 0)) {
+    } else if (maxDate && (dayjs(value, this.format).diff(dayjs(maxDate, this.format)) > 0)) {
       this.invalidMessageOn('Дата окончания не может быть раньше даты начала');
       return false;
-    } else if (minDate && (dayjs(value).diff(dayjs(minDate)) === 0)) {
+    } else if (minDate && (dayjs(value, this.format).diff(dayjs(minDate, this.format)) === 0)) {
       this.invalidMessageOn('Дата и время окончания не может быть равна дате и времени начала');
       return false;
-    } else if (minDate && dayjs(value).diff(dayjs(minDate)) < 0) {
+    } else if (minDate && dayjs(value, this.format).diff(dayjs(minDate, this.format)) < 0) {
       this.invalidMessageOn('Дата окончания не может быть раньше даты начала');
       return false;
     } else {
@@ -324,7 +334,7 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
   public updateValue(insideValue: InputDateTimeValueTypes) {
     this.value = insideValue;
     this.changed.emit(insideValue);
-    // this.modelChange.emit({value: insideValue, id: this.uuid})
+    this.modelChange.emit({value: insideValue, id: this.uuid})
     this.onChange(insideValue);
     this.onTouched();
   }

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -24,13 +25,19 @@ import * as lpn from 'google-libphonenumber';
 import { DomSanitizer } from '@angular/platform-browser';
 import { v4 as uuidv4 } from 'uuid';
 import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
-import { InputPhoneValueTypes, InputPhoneValueWithId } from './enums/input-phone.enum';
+import {
+  InputPhoneSizesEnum,
+  InputPhoneSizesTypes,
+  InputPhoneValueTypes,
+  InputPhoneValueWithId
+} from './enums/input-phone.enum';
 import { MaskCode, MaskI } from './enums/mask.enum';
 
 @Component({
   selector: 'mrx-input-phone',
   templateUrl: './input-phone.component.html',
   styleUrls: ['./input-phone.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     CountryCode,
     {
@@ -72,6 +79,8 @@ export class InputPhoneComponent implements ControlValueAccessor, OnInit, OnChan
   @Input() inputId = 'phone';
   @Input() separateDialCode = false;
   @Input() customClasses = '';
+  @Input() disabled = false;
+  @Input() size: InputPhoneSizesTypes = 'large';
 
   // MASK
   @Input() autoMask = false;
@@ -107,7 +116,7 @@ export class InputPhoneComponent implements ControlValueAccessor, OnInit, OnChan
   preferredCountriesInDropDown: Array<Country> = [];
   // Has to be 'any' to prevent a need to install @types/google-libphonenumber by the package user...
   phoneUtil: any = lpn.PhoneNumberUtil.getInstance();
-  disabled = false;
+
   errors: Array<any> = ['Phone number is required.'];
   countrySearchText = '';
 
@@ -128,7 +137,7 @@ export class InputPhoneComponent implements ControlValueAccessor, OnInit, OnChan
   }
 
   public get getClasses(): string {
-    return `${this.customClasses} ${this.checkValidClasses}`;
+    return `${InputPhoneSizesEnum[this.size]} ${this.customClasses} ${this.checkValidClasses}`;
   }
 
   public get isValid(): boolean {
@@ -231,7 +240,9 @@ export class InputPhoneComponent implements ControlValueAccessor, OnInit, OnChan
       this.innerMaskPrefix = ''
 
       if (this.phoneInput) {
-        this.phoneInput.nativeElement.value = ''
+        this.phoneInput.nativeElement.value = ' '
+        this.value = ' '
+        this.phoneNumber = ' '
       }
       setTimeout(() => {
         if (this.selectedCountry.mask) {
@@ -439,7 +450,6 @@ export class InputPhoneComponent implements ControlValueAccessor, OnInit, OnChan
       this.modelChange.emit({value: null, id: this.uuid})
     }
     this._updateMask()
-    // el.focus();
   }
 
   public onInputKeyPress(event: KeyboardEvent): void {
