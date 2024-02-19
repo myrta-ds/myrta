@@ -1,0 +1,15 @@
+{
+  "name": "myrta.common",
+  "version": "1.0.1",
+  "private": false,
+  "scripts": {
+    "package": "npm version patch && npm publish"
+  },
+  "description": "Collection of static files used by Myrta Design System",
+  "author": "Alexandr Ilyasov",
+  "license": "ISC",
+  "files": [
+    "Shared/Styles/*",
+    "Shared/Fonts/*"
+  ]
+}

@@ -217,7 +217,6 @@
 }
 
 
-
 // Tenor fonts
 
 @font-face {
@@ -794,6 +793,7 @@
   font-style: italic;
   font-display: swap;
 }
+
 /* Montserrat local END */
 
 /* cyrillic-ext */
@@ -1254,17 +1254,14 @@
   font-style: italic;
   font-display: swap;
 }
+
 /* Open Sans local END */
 
 /** FuturaBold **/
 @font-face {
-	font-family: 'FuturaBold';
-	src: url('@{commonFontsRoot}/FuturaBold.eot'); /* IE 9 Compatibility Mode */
-	src: url('@{commonFontsRoot}/FuturaBold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('@{commonFontsRoot}/FuturaBold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('@{commonFontsRoot}/FuturaBold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('@{commonFontsRoot}/FuturaBold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('@{commonFontsRoot}/FuturaBold.svg#futura-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+  font-family: 'FuturaBold';
+  src: url('@{commonFontsRoot}/FuturaBold.eot'); /* IE 9 Compatibility Mode */
+  src: url('@{commonFontsRoot}/FuturaBold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */ url('@{commonFontsRoot}/FuturaBold.woff2') format('woff2'), /* Super Modern Browsers */ url('@{commonFontsRoot}/FuturaBold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */ url('@{commonFontsRoot}/FuturaBold.ttf') format('truetype'), /* Safari, Android, iOS */ url('@{commonFontsRoot}/FuturaBold.svg#futura-bold') format('svg'); /* Chrome < 4, Legacy iOS */
   font-display: swap;
 }
 
@@ -1374,6 +1371,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 /** Inter  END**/
 
 /** Lato  BEGIN**/
@@ -1466,6 +1464,7 @@
   font-style: italic;
   font-display: swap;
 }
+
 /** Lato  END**/
 
 /** VTBGroupUI **/
@@ -1518,21 +1517,63 @@
   font-style: normal;
   font-display: swap;
 }
+
 /** VTBGroupUI END**/
+
+
+/** Verdana **/
+
+@font-face {
+  font-family: 'Verdana';
+  src: local('Verdana'),
+  url('@{commonFontsRoot}/Verdana.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: local('Verdana'),
+  url('@{commonFontsRoot}/Verdana.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: local('Verdana'),
+  url('@{commonFontsRoot}/Verdana-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: local('Verdana-Bold'),
+  url('@{commonFontsRoot}/Verdana-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/** Verdana END**/
 
 
 /** PT Sans Pro**/
 @font-face {
-	font-family: 'PT Sans Pro - Regular';
-	src: local('PT Sans Pro - Regular'),
-  local('PTSansPro-Regular'), 
+  font-family: 'PT Sans Pro - Regular';
+  src: local('PT Sans Pro - Regular'),
+  local('PTSansPro-Regular'),
   url('@{commonFontsRoot}/PTSansPro-Regular.woff') format('woff'),
   url('@{commonFontsRoot}/PTSansPro-Regular.woff2') format('woff2'),
   url('@{commonFontsRoot}PTSansPro-Regular.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-} 
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'PT Sans Pro Caption';
@@ -1557,6 +1598,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 /** PT Sans Pro Caption END**/
 
 //  fonts
@@ -1577,12 +1619,78 @@
 
 @font-face {
   font-family: 'mrx-icon-font';
-  src:  url('@{commonFontsRoot}/mrx-icon-font.eot?gdmeyt');
-  src:  url('@{commonFontsRoot}/mrx-icon-font.eot?gdmeyt#iefix') format('embedded-opentype'),
-    url('@{commonFontsRoot}/mrx-icon-font.ttf?gdmeyt') format('truetype'),
-    url('@{commonFontsRoot}/mrx-icon-font.woff?gdmeyt') format('woff'),
-    url('@{commonFontsRoot}/mrx-icon-font.svg?gdmeyt#icomoon') format('svg');
+  src: url('@{commonFontsRoot}/mrx-icon-font.eot?gdmeyt');
+  src: url('@{commonFontsRoot}/mrx-icon-font.eot?gdmeyt#iefix') format('embedded-opentype'),
+  url('@{commonFontsRoot}/mrx-icon-font.ttf?gdmeyt') format('truetype'),
+  url('@{commonFontsRoot}/mrx-icon-font.woff?gdmeyt') format('woff'),
+  url('@{commonFontsRoot}/mrx-icon-font.svg?gdmeyt#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
+}
+
+// CoFo
+
+@font-face {
+  font-family: 'CoFo Sans Medium';
+  src: url('@{commonFontsRoot}/CoFoSans-Medium.woff2') format('woff2'),
+  url('@{commonFontsRoot}/CoFoSans-Medium.woff') format('woff'),
+  url('@{commonFontsRoot}/CoFoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoFo Sans Regular';
+  src: url('@{commonFontsRoot}/CoFoSans-Regular.woff2') format('woff2'),
+  url('@{commonFontsRoot}/CoFoSans-Regular.woff') format('woff'),
+  url('@{commonFontsRoot}/CoFoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoFo Sans Bold';
+  src: url('@{commonFontsRoot}/CoFoSans-Bold.woff2') format('woff2'),
+  url('@{commonFontsRoot}/CoFoSans-Bold.woff') format('woff'),
+  url('@{commonFontsRoot}/CoFoSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*VK Sans*/
+@font-face {
+  font-family: 'VK Sans Display';
+  src: url('@{commonFontsRoot}/VKSansDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VK Sans Display';
+  src: url('@{commonFontsRoot}/VKSansDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VK Sans Display';
+  src: url('@{commonFontsRoot}/VKSansDisplay-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VK Sans Display';
+  src: url('@{commonFontsRoot}/VKSansDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
