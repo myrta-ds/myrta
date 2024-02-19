@@ -1,12 +1,12 @@
 {
   "name": "myrta-ui",
-  "version": "1.0.1-beta-2",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
     "@angular/cdk": "13.3.9",
     "@ng-select/ng-select": "^8.1.1",
-    "ngx-mask": "13.2.2",
+    "ngx-mask": "~13.1.15",
     "ngx-image-cropper": "^6.2.2",
     "ngx-simple-modal": "^1.4.17",
     "ngx-file-drop": "^13.0.0",

@@ -145,10 +145,10 @@
   <div class="row mb-3">
     <div class="col">
       <mrx-input-textarea
-        [disabled]="true"
-        [ngModel]="textValueEmpty"
+        [readonly]="true"
+        [ngModel]="textValue"
         [placeholder]="'placeholder'"
-        (ngModelChange)="changeTextValueEmpty($event)"
+        (ngModelChange)="changeTextValue($event)"
       ></mrx-input-textarea>
     </div>
     <div class="col">

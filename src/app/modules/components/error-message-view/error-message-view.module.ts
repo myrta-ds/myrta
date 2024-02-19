@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ErrorMessageViewRoutingModule } from './error-message-view-routing.module';
 import { ErrorMessageViewComponent } from './error-message-view.component';
 import {
-  ContentWrapperModule, EditorModule, InputDatetimeModule,
+  ContentWrapperModule, EditorModule, InputDatepickerModule,
   InputNumberModule, InputSearchModule, InputSelectModule, InputTextareaModule,
   InputTextModule
 } from '../../../../../projects/myrta-ui/src/public-api';
@@ -19,7 +19,7 @@ import {
     ErrorMessageViewRoutingModule,
     InputTextModule,
     InputNumberModule,
-    InputDatetimeModule,
+    InputDatepickerModule,
     InputSelectModule,
     InputSearchModule,
     InputTextareaModule,

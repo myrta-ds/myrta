@@ -11,6 +11,6 @@ export type InputNumberSizesTypes = 'small' | 'medium' | 'large';
 export type InputNumberValueTypes = number;
 
 export interface InputNumberValueWithId {
-  value: InputNumberValueTypes,
+  value: InputNumberValueTypes | null,
   id: string
 }

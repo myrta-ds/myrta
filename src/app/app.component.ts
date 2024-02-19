@@ -44,18 +44,18 @@ export class AppComponent implements OnInit {
     { id: 8, label: 'Input Select', link: '/components/form/input-select' },
     { id: 9, label: 'Input File', link: '/components/form/input-file' },
     { id: 10, label: 'Input File Image', link: '/components/form/input-file-image' },
-    { id: 11, label: 'Editor', link: '/components/form/editor' },
-    { id: 12, label: 'Document Editor', link: '/components/form/document-editor' },
-    { id: 13, label: 'Checkbox', link: '/components/form/checkbox' },
-    { id: 14, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
-    { id: 15, label: 'Radio', link: '/components/form/radio' },
-    { id: 16, label: 'Radio Group', link: '/components/form/radio-group' },
-    { id: 17, label: 'Rating', link: '/components/form/rating' },
-    { id: 18, label: 'Switch', link: '/components/form/switch' },
-    { id: 19, label: 'Input Date', link: '/components/form/input-date' },
-    { id: 20, label: 'Input Date Time', link: '/components/form/input-date-time' },
-    { id: 21, label: 'Input Datetime', link: '/components/form/input-datetime' },
+    { id: 11, label: 'Input Opt', link: '/components/form/input-opt' },
+    { id: 12, label: 'Input Password', link: '/components/form/input-password' },
+    { id: 13, label: 'Editor', link: '/components/form/editor' },
+    { id: 14, label: 'Document Editor', link: '/components/form/document-editor' },
+    { id: 15, label: 'Checkbox', link: '/components/form/checkbox' },
+    { id: 16, label: 'Checkbox Group', link: '/components/form/checkbox-group' },
+    { id: 17, label: 'Radio', link: '/components/form/radio' },
+    { id: 18, label: 'Radio Group', link: '/components/form/radio-group' },
+    { id: 19, label: 'Rating', link: '/components/form/rating' },
+    { id: 20, label: 'Switch', link: '/components/form/switch' },
   ];
+
   private pipes = [];
   private directives = [];
   private services = [];

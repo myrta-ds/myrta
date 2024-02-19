@@ -1,0 +1,37 @@
+<form
+  [ngClass]="otpConfig.classList.container"
+  class="mrx-input-otp-container"
+>
+  <div
+    *ngFor="let control of ngxOtpArray.controls; let i = index"
+    [ngClass]="otpConfig.classList.inputBox"
+    [class.mrx-input-error]="invalid"
+    [class]="checkValidClasses"
+    class="mrx-input-otp-box"
+  >
+    <label [attr.aria-label]="ariaLabels[i]">
+      <input
+        #otpInputElement
+        [id]="'mrx-input-otp-' + i"
+        [formControl]="convertToFormControl(control)"
+        [mrxOptPattern]="otpConfig.pattern"
+        [type]="otpConfig.isPasswordInput ? 'password' : 'text'"
+        [ngClass]="styles[i]"
+        (keyup)="handleKeyUp(i, $event.key)"
+        (keyup.backspace)="handleDelete(i)"
+        (keyup.arrowLeft)="stepBackward(i)"
+        (keyup.arrowRight)="stepForward(i)"
+        (focus)="handleFocus(i)"
+        class="mrx-input-otp"
+        maxlength="1"
+        autocapitalize="off"
+        spellcheck="false"
+      />
+    </label>
+  </div>
+</form>
+
+<mrx-error-message
+  *ngIf="invalid && isInvalidMessage"
+  [invalidMessage]="invalidMessage"
+></mrx-error-message>

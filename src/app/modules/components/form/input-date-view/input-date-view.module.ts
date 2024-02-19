@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { InputDateViewRoutingModule } from './input-date-view-routing.module';
 import { InputDateViewComponent } from './input-date-view.component';
-import { InputDateModule, ContentWrapperModule, LabelModule } from '../../../../../../projects/myrta-ui/src/public-api';
+// import { InputDateModule, ContentWrapperModule, LabelModule } from '../../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -14,9 +14,9 @@ import { InputDateModule, ContentWrapperModule, LabelModule } from '../../../../
     CommonModule,
     FormsModule,
     InputDateViewRoutingModule,
-    InputDateModule,
-    ContentWrapperModule,
-    LabelModule
+    // InputDateModule,
+    // ContentWrapperModule,
+    // LabelModule
   ]
 })
 export class InputDateViewModule { }

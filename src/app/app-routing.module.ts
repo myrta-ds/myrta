@@ -131,6 +131,14 @@ const routes: Routes = [
     loadChildren: () => import ('./modules/components/form/input-file-image-view/input-file-image-view.module').then(x => x.InputFileImageViewModule)
   },
   {
+    path: 'components/form/input-password',
+    loadChildren: () => import ('./modules/components/form/input-password-view/input-password-view.module').then(x => x.InputPasswordViewModule)
+  },
+  {
+    path: 'components/form/input-opt',
+    loadChildren: () => import ('./modules/components/form/input-opt-view/input-opt-view.module').then(x => x.InputOptViewModule)
+  },
+  {
     path: 'components/form/radio',
     loadChildren: () => import ('./modules/components/form/radio-view/radio-view.module').then(x => x.RadioViewModule)
   },
@@ -154,18 +162,18 @@ const routes: Routes = [
     path: 'components/form/input-timepicker',
     loadChildren: () => import ('./modules/components/form/input-timepicker-view/input-timepicker-view.module').then(x => x.InputTimepickerViewModule)
   },
-  {
-    path: 'components/form/input-date',
-    loadChildren: () => import ('./modules/components/form/input-date-view/input-date-view.module').then(x => x.InputDateViewModule)
-  },
-  {
-    path: 'components/form/input-date-time',
-    loadChildren: () => import ('./modules/components/form/input-date-time-view/input-date-time-view.module').then(x => x.InputDateTimeViewModule)
-  },
-  {
-    path: 'components/form/input-datetime',
-    loadChildren: () => import ('./modules/components/form/input-datetime-view/input-datetime-view.module').then(x => x.InputDatetimeViewModule)
-  },
+  // {
+  //   path: 'components/form/input-date',
+  //   loadChildren: () => import ('./modules/components/form/input-date-view/input-date-view.module').then(x => x.InputDateViewModule)
+  // },
+  // {
+  //   path: 'components/form/input-date-time',
+  //   loadChildren: () => import ('./modules/components/form/input-date-time-view/input-date-time-view.module').then(x => x.InputDateTimeViewModule)
+  // },
+  // {
+  //   path: 'components/form/input-datetime',
+  //   loadChildren: () => import ('./modules/components/form/input-datetime-view/input-datetime-view.module').then(x => x.InputDatetimeViewModule)
+  // },
   {
     path: 'components/form/editor',
     loadChildren: () => import ('./modules/components/form/editor-view/editor-view.module').then(x => x.EditorViewModule)

@@ -26,7 +26,8 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 import { Field } from '../../../services/mrx-autosave/mrx-autosave.service';
 
-const noop = () => {};
+const noop = () => {
+};
 
 export type DecimalMarkerType = '.' | ',' | ['.', ','];
 
@@ -36,7 +37,7 @@ export type DecimalMarkerType = '.' | ',' | ['.', ','];
   styleUrls: ['./input-number.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    {provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputNumberComponent), multi: true},
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputNumberComponent), multi: true },
   ]
 })
 export class InputNumberComponent implements ControlValueAccessor, OnInit {
@@ -59,7 +60,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
 
 
   // SAVE STATE
-  public uuid: string = uuidv4()
+  public uuid: string = uuidv4();
   @Input() public fields: Field[] = [];
 
   @Input() public placeholder?: string;
@@ -72,6 +73,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
   @Input() public size: InputNumberSizesTypes = 'large';
   @Input() public separator?: string;
   @Input() public decimalSeparator?: DecimalMarkerType;
+  @Input() public isNullableValue = false;
 
   // ERROR
   @Input() public invalid = false;
@@ -163,11 +165,11 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
   get isVerified(): boolean {
     const f = this.getControl('number');
     return !this.required ||
-        (this.required && f.value !== null && f.value !== undefined && this.isValid);
+      (this.required && f.value !== null && f.value !== undefined && this.isValid);
   }
 
-  static initNumberFormat(): void{
-    if(this._delimitersInitialised){
+  static initNumberFormat(): void {
+    if (this._delimitersInitialised) {
       return;
     }
     // системный формат числа с дробной частью и группой разраядов (тысячи)
@@ -179,7 +181,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
     this.thousandsSeparator = t?.charCodeAt(0) === 160 ? ' ' : t || ' ';
 
     // разделитель дробной части
-    this.decimalMarker = (c.find(x => x.type === 'decimal')?.value as (','|'.'));
+    this.decimalMarker = (c.find(x => x.type === 'decimal')?.value as (',' | '.'));
 
     this._delimitersInitialised = true;
   }
@@ -193,14 +195,14 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
           if (num === '') {
             this.propagateChange(null);
           }
-          if (num && typeof(num) === 'string') {
+          if (num && typeof (num) === 'string') {
             numValue = parseFloat(num.replace(',', '.').split(this.thousandsSeparator).join(''));
             this.propagateChange(numValue);
-            this.modelChange.emit({value: numValue, id: this.uuid})
-          } else if (typeof(num) === 'number') {
+            this.modelChange.emit({ value: numValue, id: this.uuid });
+          } else if (typeof (num) === 'number') {
             numValue = num;
             this.propagateChange(numValue);
-            this.modelChange.emit({value: numValue, id: this.uuid})
+            this.modelChange.emit({ value: numValue, id: this.uuid });
           }
         }
       }
@@ -211,7 +213,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
   }
 
   resetToMax(event: any) {
-    event.preventDefault()
+    event.preventDefault();
 
     const f = this.getControl('number');
     f.setValue(this._max);
@@ -224,7 +226,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
 
   writeValue(value: any): void {
     const f = this.getControl('number');
-    f.setValue(value, {emitEvent: false, emitViewToModelChange: false});
+    f.setValue(value, { emitEvent: false, emitViewToModelChange: false });
   }
 
   getControl(name: string) {

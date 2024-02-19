@@ -1,173 +1,173 @@
-<mrx-content-wrapper type="colored" customClasses="mb-3">
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime
-        [ngModel]="firsDate"
-        (ngModelChange)="startValue($event)"
-        [maxDate]="secondDate"
-      ></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [ngModel]="secondDate" (ngModelChange)="endValue($event)" [minDate]="firsDate"></mrx-input-datetime>
-    </div>
-  </div>
+<!--<mrx-content-wrapper type="colored" customClasses="mb-3">-->
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime-->
+<!--        [ngModel]="firsDate"-->
+<!--        (ngModelChange)="startValue($event)"-->
+<!--        [maxDate]="secondDate"-->
+<!--      ></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [ngModel]="secondDate" (ngModelChange)="endValue($event)" [minDate]="firsDate"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime size="large" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime size="medium" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime size="small" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime size="large" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime size="medium" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime size="small" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>С временем</mrx-label>
-      <mrx-input-datetime [timepicker]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>С временем</mrx-label>
-      <mrx-input-datetime [timepicker]="true" [(ngModel)]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>С временем</mrx-label>-->
+<!--      <mrx-input-datetime [timepicker]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>С временем</mrx-label>-->
+<!--      <mrx-input-datetime [timepicker]="true" [(ngModel)]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Двойной</mrx-label>
-      <mrx-input-datetime [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Двойной</mrx-label>
-      <mrx-input-datetime [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной</mrx-label>-->
+<!--      <mrx-input-datetime [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной</mrx-label>-->
+<!--      <mrx-input-datetime [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Двойной с временем</mrx-label>
-      <mrx-input-datetime [rangeMode]="true" [timepicker]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Двойной с временем</mrx-label>
-      <mrx-input-datetime [rangeMode]="true" [timepicker]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной с временем</mrx-label>-->
+<!--      <mrx-input-datetime [rangeMode]="true" [timepicker]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной с временем</mrx-label>-->
+<!--      <mrx-input-datetime [rangeMode]="true" [timepicker]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Мультидаты</mrx-label>
-      <mrx-input-datetime [multiplyMode]="true" [ngModel]="multiValue" (ngModelChange)="changeMultiValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Мультидаты</mrx-label>
-      <mrx-input-datetime [multiplyMode]="true" [ngModel]="multiValue" (ngModelChange)="changeMultiValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Мультидаты</mrx-label>-->
+<!--      <mrx-input-datetime [multiplyMode]="true" [ngModel]="multiValue" (ngModelChange)="changeMultiValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Мультидаты</mrx-label>-->
+<!--      <mrx-input-datetime [multiplyMode]="true" [ngModel]="multiValue" (ngModelChange)="changeMultiValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Мультидаты с временеи</mrx-label>
-      <mrx-input-datetime [multiplyMode]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Мультидаты с временеи</mrx-label>
-      <mrx-input-datetime [multiplyMode]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Мультидаты с временеи</mrx-label>-->
+<!--      <mrx-input-datetime [multiplyMode]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Мультидаты с временеи</mrx-label>-->
+<!--      <mrx-input-datetime [multiplyMode]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime
-        [invalid]="true"
-        [invalidMessage]="'it is error'"
-        [ngModel]="emptyValue"
-        (ngModelChange)="changeEmptyValue($event)"
-      ></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime
-        [invalid]="true"
-        [invalidMessage]="'it is error'"
-        [ngModel]="value"
-        (ngModelChange)="changeValue($event)"
-      ></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime-->
+<!--        [invalid]="true"-->
+<!--        [invalidMessage]="'it is error'"-->
+<!--        [ngModel]="emptyValue"-->
+<!--        (ngModelChange)="changeEmptyValue($event)"-->
+<!--      ></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime-->
+<!--        [invalid]="true"-->
+<!--        [invalidMessage]="'it is error'"-->
+<!--        [ngModel]="value"-->
+<!--        (ngModelChange)="changeValue($event)"-->
+<!--      ></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [checkInvalid]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [checkInvalid]="false" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [checkInvalid]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [checkInvalid]="false" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [disabled]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [disabled]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [disabled]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [disabled]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [readonly]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [readonly]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [readonly]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [readonly]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [inline]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Простой</mrx-label>
-      <mrx-input-datetime [inline]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Простой</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>С временем</mrx-label>
-      <mrx-input-datetime [inline]="true" [timepicker]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>С временем</mrx-label>
-      <mrx-input-datetime [inline]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>С временем</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [timepicker]="true" [ngModel]="emptyValue" (ngModelChange)="changeEmptyValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>С временем</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [timepicker]="true" [ngModel]="value" (ngModelChange)="changeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="row mb-5">
-    <div class="col">
-      <mrx-label>Двойной</mrx-label>
-      <mrx-input-datetime [inline]="true" [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-    <div class="col">
-      <mrx-label>Двойной</mrx-label>
-      <mrx-input-datetime [inline]="true" [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>
-    </div>
-  </div>
-</mrx-content-wrapper>
+<!--  <div class="row mb-5">-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <mrx-label>Двойной</mrx-label>-->
+<!--      <mrx-input-datetime [inline]="true" [rangeMode]="true" [ngModel]="rangeValue" (ngModelChange)="changeRangeValue($event)"></mrx-input-datetime>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</mrx-content-wrapper>-->

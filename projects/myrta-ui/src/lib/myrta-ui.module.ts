@@ -42,10 +42,9 @@ import { InputSearchModule } from './components/form/input-search/input-search.m
 import { InputSelectModule } from './components/form/input-select/input-select.module';
 import { InputFileModule } from './components/form/input-file/input-file.module';
 import { InputFileImageModule } from './components/form/input-file-image/input-file-image.module';
+import { InputOptModule } from './components/form/input-opt/input-opt.module';
+import { InputPasswordModule } from './components/form/input-password/input-password.module';
 import { InputDatepickerModule } from './components/form/input-datepicker/input-datepicker.module';
-import { InputDateModule } from './components/form/input-date/input-date.module';
-import { InputDatetimeModule } from './components/form/input-datetime/input-datetime.module';
-import { InputDateTimeModule } from './components/form/input-date-time/input-date-time.module';
 import { InputTimepickerModule } from './components/form/input-timepicker/input-timepicker.module';
 
 import { ContentWrapperModule } from './components/wrappers/content-wrapper/content-wrapper.module';
@@ -59,6 +58,8 @@ import { SafeModule } from './pipes/safe/safe.module';
 import { PhoneFormatModule } from './pipes/phone/phone-format.module';
 
 import { TruncateDirectiveModule } from './directives/truncate/truncate.module';
+
+// import { SaveStoreModule } from './services/save-store/save-store.module';
 
 const MODULES = [
   ButtonModule,
@@ -85,8 +86,6 @@ const MODULES = [
   TooltipModule,
   TruncateTextModule,
   WarningMessageModule,
-  ContentWrapperModule,
-  ControlsWrapperModule,
   PagesNavModule,
   GalleryModule,
 
@@ -109,12 +108,13 @@ const MODULES = [
   InputSelectModule,
   InputFileModule,
   InputFileImageModule,
-  InputDateModule,
+  InputOptModule,
+  InputPasswordModule,
 
   // WRAPPERS
-  InputDatetimeModule,
-  InputDateTimeModule,
   WidgetWrapperModule,
+  ContentWrapperModule,
+  ControlsWrapperModule,
 
   // PIPES
   TruncateModule,
@@ -124,7 +124,10 @@ const MODULES = [
   PhoneFormatModule,
 
   // DIRECTIVES
-  TruncateDirectiveModule
+  TruncateDirectiveModule,
+
+  // SERVICES
+  // SaveStoreModule
 ]
 
 @NgModule({

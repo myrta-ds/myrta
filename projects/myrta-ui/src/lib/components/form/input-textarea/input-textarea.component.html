@@ -4,14 +4,9 @@
   [class.mrx-input-error]="invalid"
 >
   <div class="mrx-input-textarea__wrapper">
-    <div *ngIf="disabled"
-         class="mrx-input-textarea__disabled-block"
-         [innerHtml]="disabled ? innerHtml : ''"
-    ></div>
-
     <textarea
       #inputElement
-      *ngIf="!disabled"
+      *ngIf="!isShowBlock; else disabledTemplate"
       mrxAutosize
       [id]="uuid"
       [ngModel]="value"
@@ -25,6 +20,15 @@
       (ngModelChange)="updateValue($event)"
       (blur)="blurUpdateValue()"
     ></textarea>
+
+    <ng-template #disabledTemplate>
+      <div
+        class="mrx-input-textarea__disabled-block"
+        [class.-disabled]="disabled"
+        [class.-readonly]="readonly"
+        [innerHtml]="isShowBlock ? innerHtml : ''"
+      ></div>
+    </ng-template>
 
     <mrx-chars-left
       *ngIf="!disabled && maxlength"

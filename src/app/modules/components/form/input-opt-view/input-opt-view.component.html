@@ -1,0 +1,21 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default</mrx-label>
+      <mrx-input-opt
+        [config]="otpConfig"
+        [invalid]="true"
+        [invalidMessage]="'Что то пошло не так'"
+        [checkInvalid]="true"
+        (change)="otpChange($event)"
+        (fillChange)="fill($event)"
+      ></mrx-input-opt>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-button (mrxClick)="changeStatus()">click</mrx-button>
+    </div>
+  </div>
+</mrx-content-wrapper>

@@ -126,6 +126,12 @@ export * from './lib/components/form/input-file/input-file.component';
 export * from './lib/components/form/input-file-image/input-file-image.module';
 export * from './lib/components/form/input-file-image/input-file-image.component';
 
+export * from './lib/components/form/input-opt/input-opt.module';
+export * from './lib/components/form/input-opt/components/input-opt/input-opt.component';
+
+export * from './lib/components/form/input-password/input-password.module';
+export * from './lib/components/form/input-password/input-password.component';
+
 export * from './lib/components/form/checkbox/checkbox.module';
 export * from './lib/components/form/checkbox/checkbox.module';
 export * from './lib/components/form/checkbox/checkbox.component';
@@ -142,15 +148,6 @@ export * from './lib/components/form/switch/switch.component';
 export * from './lib/components/form/rating/rating.module';
 export * from './lib/components/form/rating/rating.component';
 
-// deprecated FORM
-export * from './lib/components/form/input-date/input-date.module';
-export * from './lib/components/form/input-date/input-date.component';
-
-export * from './lib/components/form/input-date-time/input-date-time.module';
-export * from './lib/components/form/input-date-time/input-date-time.component';
-
-export * from './lib/components/form/input-datetime/input-datetime.module';
-export * from './lib/components/form/input-datetime/input-datetime.component';
 
 // WRAPPERS
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.module';

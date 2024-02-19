@@ -114,6 +114,10 @@ export class InputTextareaComponent implements ControlValueAccessor {
     this.inputElement.nativeElement.focus()
   }
 
+  public get isShowBlock() {
+    return this.disabled || this.readonly
+  }
+
   private onChange = (value: InputTextareaValueTypes) => {
   };
   private onTouched = () => {
@@ -132,7 +136,7 @@ export class InputTextareaComponent implements ControlValueAccessor {
   }
 
   public writeValue(outsideValue: InputTextareaValueTypes): void {
-    if ((this.inputElement?.nativeElement && document.activeElement !== this.inputElement.nativeElement) || this.disabled) {
+    if ((this.inputElement?.nativeElement && document.activeElement !== this.inputElement.nativeElement) || this.isShowBlock) {
       this.value = outsideValue;
     }
 

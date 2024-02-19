@@ -21,7 +21,7 @@
       #focusable
     >
     <div class="mrx-input-phone__flag-container" [ngClass]="{'disabled': disabled}">
-      <mrx-dropdown customClasses="h-100">
+      <mrx-dropdown customClasses="h-100" [mainPlacement]="'bottom-start'" [fallbackPlacements]="['top-start']">
         <ng-template #dropdownToggle>
           <div class="mrx-input-phone__selected-flag dropdown-toggle">
             <div
