@@ -27,6 +27,7 @@ export * from './lib/components/label/label.component';
 export * from './lib/components/tooltip/tooltip.module';
 export * from './lib/components/tooltip/tooltip.component';
 export * from './lib/components/tooltip/tooltip-trigger/tooltip-trigger.component';
+export * from './lib/components/tooltip/services/tooltip.service';
 
 export * from './lib/components/save-state/save-state.module';
 export * from './lib/components/save-state/save-state.component';
@@ -198,6 +199,9 @@ export * from './lib/pipes/truncate/truncate.pipe';
 
 // SERVICES
 export * from './lib/services/index';
+
+// FUNCTIONS
+export * from './lib/helpers/index';
 
 // MODELS
 export * from './lib/models/index';
