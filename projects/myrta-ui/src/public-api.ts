@@ -24,6 +24,13 @@ export * from './lib/components/label/label.component';
 export * from './lib/components/label/label.module';
 export * from './lib/components/label/label.component';
 
+export * from './lib/components/tooltip/tooltip.module';
+export * from './lib/components/tooltip/tooltip.component';
+export * from './lib/components/tooltip/tooltip-trigger/tooltip-trigger.component';
+
+export * from './lib/components/save-state/save-state.module';
+export * from './lib/components/save-state/save-state.component';
+
 export * from './lib/components/cdk-tooltip/cdk-tooltip.module'
 export * from './lib/components/cdk-tooltip/cdk-tooltip.directive';
 
@@ -79,7 +86,6 @@ export * from './lib/components/warning-message/warning-message.component';
 
 export * from './lib/components/gallery/gallery.module';
 export * from './lib/components/gallery/gallery.component';
-
 
 // FORM
 export * from './lib/components/form/input-text/input-text.module';
@@ -148,7 +154,6 @@ export * from './lib/components/form/switch/switch.component';
 export * from './lib/components/form/rating/rating.module';
 export * from './lib/components/form/rating/rating.component';
 
-
 // WRAPPERS
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.module';
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.component';
@@ -156,6 +161,10 @@ export * from './lib/components/wrappers/content-wrapper/content-wrapper.compone
 export * from './lib/components/wrappers/controls-wrapper/controls-wrapper.module';
 export * from './lib/components/wrappers/controls-wrapper/controls-wrapper.component';
 export * from './lib/components/wrappers/controls-wrapper/components/controls-item/controls-item.component';
+
+// DIRECTIVES
+export * from './lib/directives/truncate/truncate.module';
+export * from './lib/directives/truncate/truncate.directive';
 
 
 // PIPES
@@ -174,7 +183,6 @@ export * from './lib/pipes/currency/currency.pipe';
 
 export * from './lib/pipes/truncate/truncate.module';
 export * from './lib/pipes/truncate/truncate.pipe';
-
 
 // SERVICES
 export * from './lib/services/index';
