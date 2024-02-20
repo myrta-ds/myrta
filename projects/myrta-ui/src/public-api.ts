@@ -87,6 +87,15 @@ export * from './lib/components/warning-message/warning-message.component';
 export * from './lib/components/gallery/gallery.module';
 export * from './lib/components/gallery/gallery.component';
 
+export * from './lib/components/pages-nav/pages-nav.module';
+export * from './lib/components/pages-nav/pages-nav.component';
+
+export * from './lib/components/chars-left/chars-left.module';
+export * from './lib/components/chars-left/chars-left.component';
+
+export * from './lib/components/gallery/gallery.module';
+export * from './lib/components/gallery/gallery.component';
+
 // FORM
 export * from './lib/components/form/input-text/input-text.module';
 export * from './lib/components/form/input-text/input-text.component';
@@ -155,6 +164,9 @@ export * from './lib/components/form/rating/rating.module';
 export * from './lib/components/form/rating/rating.component';
 
 // WRAPPERS
+export * from './lib/components/wrappers/widget-wrapper/widget-wrapper.module';
+export * from './lib/components/wrappers/widget-wrapper/widget-wrapper.component';
+
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.module';
 export * from './lib/components/wrappers/content-wrapper/content-wrapper.component';
 
