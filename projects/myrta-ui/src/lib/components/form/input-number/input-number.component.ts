@@ -43,8 +43,11 @@ export type DecimalMarkerType = '.' | ',' | ['.', ','];
 export class InputNumberComponent implements ControlValueAccessor, OnInit {
 
   public static decimalMarker?: DecimalMarkerType;
-  public static thousandsSeparator: string;
   private static _delimitersInitialised = false;
+  public static thousandsSeparator: string;
+
+  public disabled = false;
+  public readonly = false;
 
   numberForm: FormGroup;
   invalidMessageStart: string | undefined | null;
@@ -68,8 +71,6 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
   @Input() public customClasses = '';
   @Input() public required = false;
   @Input() public allowNegative = false;
-  @Input() public disabled = false;
-  @Input() public readonly = false;
   @Input() public size: InputNumberSizesTypes = 'large';
   @Input() public separator?: string;
   @Input() public decimalSeparator?: DecimalMarkerType;
@@ -101,6 +102,19 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
   @Input('disabled')
   public set setDisabled(value: boolean) {
     this.invokeChanged = false;
+    this.disabled = value
+    if (value) {
+      this.numberForm.disable();
+    } else {
+      this.numberForm.enable();
+    }
+    this.invokeChanged = true;
+  }
+
+  @Input('readonly')
+  public set setReadonly(value: boolean) {
+    this.invokeChanged = false;
+    this.readonly = value
     if (value) {
       this.numberForm.disable();
     } else {

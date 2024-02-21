@@ -1,7 +1,8 @@
 <div
   class="mrx-input-date"
   [class.mrx-input-error]="invalid || innerInvalid"
-  [class.mrx-input-readonly]="readonly"
+  [class.-disabled]="disabled"
+  [class.-readonly]="readonly"
   [class]="getClasses"
 >
   <div class="">
@@ -17,7 +18,7 @@
         [mask]="mask"
         [leadZeroDateTime]="leadZeroDateTime"
         [validation]="false"
-        [disabled]="disabled"
+        [disabled]="disabled || readonly"
         (input)="updateDateValue(dateInput)"
         (click)="clickToInput(dateInput)"
       />
@@ -25,7 +26,7 @@
       <div *ngIf="!disabled" class="mrx-input-date__icons">
           <span
             class="mrx-icon icon-close"
-            *ngIf="isViewCleanIcon"
+            *ngIf="isViewCleanIcon && !(disabled || readonly)"
             (click)="clickToIconClear()"
             [class.icon-font-16]="size === 'small'"
             [class.icon-font-24]="size === 'medium' || size === 'large'"

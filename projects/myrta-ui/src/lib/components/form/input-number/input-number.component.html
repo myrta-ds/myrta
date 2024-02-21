@@ -2,6 +2,8 @@
     class="mrx-input-number"
     [class]="getClasses"
     [class.mrx-input-error]="!isValid || invalid"
+    [class.-disabled]="disabled"
+    [class.-readonly]="readonly"
 >
   <div class="mrx-input-number__wrapper">
     <form [formGroup]="numberForm">

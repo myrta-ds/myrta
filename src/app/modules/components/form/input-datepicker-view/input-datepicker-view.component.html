@@ -6,6 +6,7 @@
         [ngModel]="firstValue"
         format="DD.MM.YYYY HH:mm"
         [maxDate]="secondValue"
+        [readonly]="true"
         (ngModelChange)="changeNewValue($event, 'firstValue')"
       ></mrx-input-datepicker>
     </div>

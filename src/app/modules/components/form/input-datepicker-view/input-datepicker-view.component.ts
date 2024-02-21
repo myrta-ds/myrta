@@ -13,7 +13,7 @@ export class InputDatepickerViewComponent {
   public endDate2 = ''
   public startDate3 = ''
   public endDate3 = ''
-  public firstValue = ''
+  public firstValue = '22.10.1987 19:20'
   public secondValue = ''
 
   public changeNewValue(e: any, value: 'firstValue' | 'secondValue') {
