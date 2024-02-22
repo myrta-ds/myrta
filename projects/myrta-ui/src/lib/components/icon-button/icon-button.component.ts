@@ -6,7 +6,7 @@ import {
   IconButtonSizeTypes,
   IconButtonStateEnum,
   IconButtonStateTypes
-} from './IconButton.enum';
+} from './icon-button.enum';
 
 @Component({
   selector: 'mrx-icon-button',
