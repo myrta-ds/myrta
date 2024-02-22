@@ -149,11 +149,11 @@ export * from './lib/components/form/input-password/input-password.module';
 export * from './lib/components/form/input-password/input-password.component';
 
 export * from './lib/components/form/checkbox/checkbox.module';
-export * from './lib/components/form/checkbox/checkbox.module';
 export * from './lib/components/form/checkbox/checkbox.component';
 
 export * from './lib/components/form/checkbox-group/checkbox-group.module';
 export * from './lib/components/form/checkbox-group/checkbox-group.component';
+export * from './lib/components/form/checkbox-group/models/checkbox-group.model';
 
 export * from './lib/components/form/radio/radio.module';
 export * from './lib/components/form/radio/radio.component';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbsItemI } from '../../../../../dist/myrta-ui/lib/components/breadcrumbs/breadcrumbs.enum';
+import { BreadcrumbsItemI } from '../../../../../projects/myrta-ui/src/lib/components/breadcrumbs/breadcrumbs.enum';
 
 @Component({
   selector: 'mrx-breadcrumbs-view',
