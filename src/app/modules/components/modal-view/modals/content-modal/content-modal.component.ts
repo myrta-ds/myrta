@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SimpleModalComponent } from 'ngx-simple-modal';
+import { InputFileModel } from 'myrta-ui';
 
 export interface ContentModalParams {
   title: string;
@@ -23,6 +24,10 @@ export class ContentModalComponent extends SimpleModalComponent<ContentModalPara
 
   public ok() {
     this.result = { result: true };
+    this.close();
+  }
+
+  changed($event: InputFileModel[]) {
     this.close();
   }
 }

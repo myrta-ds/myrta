@@ -8,6 +8,7 @@ import { InputFileModel, UploadedFileModel, UploadedResultModel } from '../../..
 import { formatBytes } from '../../../helpers/extension/input-file.extension';
 import { FileUploadService } from '../../../services/file-upload/file-upload.service';
 import { ErrorMessagesEnum } from './enums/error-messages.enum';
+import { InputFileTargetTypes, InputFileTargetTypesEnum } from './input-file.enum';
 
 @Component({
   selector: 'mrx-input-file',
@@ -23,6 +24,7 @@ export class InputFileComponent {
   @Input() public autoUpload = true;
   @Input() public required = false;
   @Input() public disabled = false;
+  @Input() public viewOnly = false;
   @Input() public lightDisabled = false;
   @Input() public bottomFiles = false;
   @Input() public maxSize = 31457280;
@@ -38,6 +40,7 @@ export class InputFileComponent {
   @Input() public isTooltipValue = false;
   @Input() public isDownloadingFile = true;
   @Input() public isHideListFiles = false;
+  @Input() public target: InputFileTargetTypes = '_self';
   @Input() public deleteConfirm?: (file: UploadedFileModel, result: (ok: boolean) => void) => void;
 
   @Input() public innerTemplate!: TemplateRef<any>;
@@ -95,6 +98,10 @@ export class InputFileComponent {
     } else {
       return this.maxFiles > this.files.length;
     }
+  }
+
+  public get getTarget(): string {
+    return InputFileTargetTypesEnum[this.target]
   }
 
   public get isInvalidMessage(): boolean {

@@ -86,7 +86,7 @@
       [tooltipPosition]="'top-start'"
     >
       <ng-container *ngIf="autoUpload">
-        <a class="qq-download-link" [href]="downloadUrl(file)" *ngIf="file.uuid && isDownloadingFile"></a>
+        <a class="qq-download-link" [target]="getTarget" [href]="downloadUrl(file)" *ngIf="file.uuid && isDownloadingFile"></a>
       </ng-container>
       <div class="qq-file-info">
         <div class="d-flex align-items-center">
@@ -103,7 +103,7 @@
 
           <span class="qq-upload-size-selector qq-upload-size" *ngIf="!file.error">{{formatBytes(file.size)}}</span>
           <span
-            *ngIf="!disabled && file.uuid && showDeleteButton"
+            *ngIf="!disabled && file.uuid && showDeleteButton && !viewOnly"
             (click)="delete(file)"
             class="mrx-icon icon-delete icon-font-24 cursor-pointer"
             aria-label="Удалить"
@@ -117,7 +117,7 @@
           <button
             type="button"
             class="ng-custom-file-input-btn-stop ml-2"
-            *ngIf="(file.error && !file.uuid) || canCancelUploading(file)"
+            *ngIf="(file.error && !file.uuid) || canCancelUploading(file) && !viewOnly"
             (click)="clear(file)"
           >
             <span class="mrx-icon icon-close icon-font-24 cursor-pointer"></span>

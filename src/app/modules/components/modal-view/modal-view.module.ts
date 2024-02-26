@@ -14,6 +14,7 @@ import { AttentionModalComponent } from './modals/attention-modal/attention-moda
 import { NegativeModalComponent } from './modals/negative-modal/negative-modal.component';
 import { ContentModalComponent } from './modals/content-modal/content-modal.component';
 import { SimpleModalModule } from 'ngx-simple-modal';
+import { InputFileModule } from 'myrta-ui';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     ModalModule,
     ButtonModule,
     InputTextModule,
-    LabelModule
+    LabelModule,
+    InputFileModule
   ]
 })
 export class ModalViewModule { }

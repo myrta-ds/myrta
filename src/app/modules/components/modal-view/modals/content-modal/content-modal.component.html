@@ -9,14 +9,19 @@
     (ok)="ok()"
 >
   <div class="row mt-3">
-    <div class="col col-12 mb-3">
-      <mrx-label>Введите имя</mrx-label>
-      <mrx-input-text></mrx-input-text>
-    </div>
-    <div class="col col-12 mb-3">
-      <mrx-label>Введите имя</mrx-label>
-      <mrx-input-text></mrx-input-text>
-    </div>
+<!--    <div class="col col-12 mb-3">-->
+<!--      <mrx-label>Введите имя</mrx-label>-->
+<!--      <mrx-input-text></mrx-input-text>-->
+<!--    </div>-->
+<!--    <div class="col col-12 mb-3">-->
+<!--      <mrx-label>Введите имя</mrx-label>-->
+<!--      <mrx-input-text></mrx-input-text>-->
+<!--    </div>-->
+    <mrx-input-file
+      class="w-100"
+      [autoUpload]="false"
+      (filesChanged)="changed($event)"
+    ></mrx-input-file>
   </div>
 
   <ng-template #footerContent>
