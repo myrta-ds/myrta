@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DropdownViewRoutingModule } from './dropdown-view-routing.module';
 import { DropdownViewComponent } from './dropdown-view.component';
+import { DropdownModule } from '../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { DropdownViewComponent } from './dropdown-view.component';
   ],
   imports: [
     CommonModule,
+    DropdownModule,
     DropdownViewRoutingModule
   ]
 })

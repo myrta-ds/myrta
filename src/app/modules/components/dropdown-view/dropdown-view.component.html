@@ -1,1 +1,10 @@
-<p>dropdown-view works!</p>
+<mrx-dropdown [mainPlacement]="'bottom-end'" [fallbackPlacements]="['top-end']">
+  <ng-template #dropdownToggle>
+    <span class="mrx-icon icon-more-vertical icon-font-24"></span>
+  </ng-template>
+  <ng-template #dropdownMenu>
+    <button mrxHideAfterClick>
+      <span>В архив</span>
+    </button>
+  </ng-template>
+</mrx-dropdown>
