@@ -1,5 +1,5 @@
-<div class="mrx-jd-document-editor">
-  <div class="mrx-jd-document-editor__shortcode-buttons mb-2">
+<div class="mrx-document-editor">
+  <div class="mrx-document-editor__shortcode-buttons mb-2">
     <ng-container *ngFor="let shortCode of sliceShortCodeButtons">
       <mrx-button
         size="small"
@@ -14,7 +14,7 @@
     >Еще</mrx-button>
   </div>
 
-  <div class="mrx-jd-document-editor__editor mb-2">
+  <div class="mrx-document-editor__editor mb-2">
     <mrx-editor
       #editor
       [ngModel]="transformedValue"
@@ -29,7 +29,7 @@
     ></mrx-editor>
   </div>
 
-  <div class="mrx-jd-document-editor__preview">
+  <div class="mrx-document-editor__preview">
     <mrx-button
       size="medium"
       type="secondary"

@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild, ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  TemplateRef
+} from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { TooltipTextPositionTypes, TooltipTriggerTypes } from '../tooltip/tooltip-trigger/tooltip-trigger.enum';
 import { TooltipService } from '../tooltip/services/tooltip.service';
@@ -33,6 +42,8 @@ export class LabelComponent implements OnInit {
   @Input() public label = '';
   @Input() public customClasses = '';
   @Input() public triggerTextPosition: TooltipTextPositionTypes = 'default';
+  @Input() public isPublicInfo = false;
+  @Input() public publicInfoTooltip = '';
 
   // CHECKBOX
   @Input() public isSwitch = false;
@@ -50,6 +61,8 @@ export class LabelComponent implements OnInit {
   @Input() href = '#';
 
   @Input() triggerType: TooltipTriggerTypes = 'attention';
+
+  @ContentChild('customIcons') customIcons!: TemplateRef<ElementRef>;
 
   @Output() public changeCheckboxValue: EventEmitter<SwitchValueTypes> =
     new EventEmitter<SwitchValueTypes>();

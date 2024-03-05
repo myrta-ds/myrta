@@ -3,6 +3,7 @@
     <div class="col">
       <mrx-label>Default</mrx-label>
       <mrx-input-opt
+        [ngModel]="value"
         [config]="otpConfig"
         [invalid]="true"
         [invalidMessage]="'Что то пошло не так'"

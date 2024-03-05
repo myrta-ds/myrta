@@ -10,6 +10,12 @@
 
       <span *ngIf="required && !disabled && !requiredHidden" class="required-active">*</span>
 
+      <span
+        *ngIf="isPublicInfo"
+        class="mrx-icon icon-megafon ml-1"
+        [mrxCdkTooltip]="publicInfoTooltip"
+      ></span>
+
       <mrx-tooltip-trigger
         customClasses="ml-1"
         *ngIf="tooltipService.getTooltip"
@@ -18,6 +24,8 @@
         [triggerTextPosition]="triggerTextPosition"
         [triggerType]="triggerType"
       ></mrx-tooltip-trigger>
+
+      <ng-container *ngTemplateOutlet="customIcons"></ng-container>
     </label>
 
     <mrx-badge *ngIf="counter" customClasses="ml-2" type="circle" size="small">{{ counter }}</mrx-badge>

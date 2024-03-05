@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LabelViewRoutingModule } from './label-view-routing.module';
 import { LabelViewComponent } from './label-view.component';
-import { LabelModule, ContentWrapperModule, InputTextModule } from '../../../../../projects/myrta-ui/src/public-api';
+import { LabelModule, ContentWrapperModule, InputTextModule, CdkTooltipModule } from '../../../../../projects/myrta-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { LabelModule, ContentWrapperModule, InputTextModule } from '../../../../
     LabelViewRoutingModule,
     InputTextModule,
     LabelModule,
+    CdkTooltipModule,
     ContentWrapperModule
   ]
 })

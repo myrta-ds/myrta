@@ -9,7 +9,18 @@
     <mrx-input-text></mrx-input-text>
   </div>
   <div class="col">
-    <mrx-label [boldLabel]="true" [required]="true">this is bold label</mrx-label>
+    <mrx-label
+      [boldLabel]="true"
+      [required]="true"
+      [isPublicInfo]="true"
+      [publicInfoTooltip]="'this is tooltip'"
+    >
+      this is bold label
+
+      <ng-template #customIcons>
+        <span [mrxCdkTooltip]="'this is tooltip'" class="mrx-icon icon-attention ml-1 color-attention"></span>
+      </ng-template>
+    </mrx-label>
     <mrx-input-text></mrx-input-text>
   </div>
 </div>
