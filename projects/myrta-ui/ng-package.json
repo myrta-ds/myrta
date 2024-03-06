@@ -3,5 +3,23 @@
   "dest": "../../dist/myrta-ui",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "@angular/cdk",
+    "@ng-select/ng-select",
+    "ngx-mask",
+    "ngx-image-cropper",
+    "ngx-simple-modal",
+    "ngx-file-drop",
+    "jodit",
+    "jodit-angular",
+    "dayjs",
+    "air-datepicker",
+    "libphonenumber-js",
+    "google-libphonenumber",
+    "lodash-es",
+    "uuid",
+    "@popperjs/core",
+    "mrx-gallery-lib"
+  ]
 }
