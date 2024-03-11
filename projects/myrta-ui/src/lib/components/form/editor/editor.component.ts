@@ -85,6 +85,7 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
 
   @Input() public toolbar!: ToolbarConfig;
   @Input() public maxLength = 0;
+  @Input() public minHeight = 110;
   @Input() public customClasses = '';
   @Input() public placeholder = '';
   @Input() public disabled = false;
@@ -145,8 +146,8 @@ export class EditorComponent implements ControlValueAccessor, OnChanges {
         defaultActionOnPaste: changes['defaultActionOnPaste'].currentValue
       };
     }
-    if (changes['maxLength']) {
-      this.defaultConfig = { ...this.defaultConfig, limitChars: changes['maxLength'].currentValue };
+    if (changes['minHeight']) {
+      this.defaultConfig = { ...this.defaultConfig, minHeight: changes['minHeight'].currentValue };
     }
     if (changes['config']) {
       this.defaultConfig = { ...this.defaultConfig, ...changes['config'].currentValue };
