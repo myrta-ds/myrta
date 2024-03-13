@@ -208,6 +208,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnInit {
           let numValue: number;
           if (num === '') {
             this.propagateChange(null);
+            this.modelChange.emit({ value: null, id: this.uuid });
           }
           if (num && typeof (num) === 'string') {
             numValue = parseFloat(num.replace(',', '.').split(this.thousandsSeparator).join(''));

@@ -1,60 +1,61 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { autosaveAddId, error, MrxAutoSaveActionsEnum, saved, stop } from './actions';
-import { map } from 'rxjs/operators';
+import {
+  autosaveStop,
+  autosaveStopFor,
+  MrxAutoSaveActionsEnum,
+} from './actions';
+import { map, switchMap, mergeMap } from 'rxjs/operators';
+import { timer } from 'rxjs';
+import { SaveStoreModel } from '../models/save-store.model';
 
 
 @Injectable({ providedIn: 'platform' })
 export class MrxAutoSaveEffects {
 
-  private _timer!: ReturnType<typeof setTimeout>;
-  private _timer2!: ReturnType<typeof setTimeout>;
+  constructor( private _actions$: Actions, private _store: Store) {}
 
-  constructor(
-    private _actions$: Actions,
-    private _store: Store
-  ) {
-  }
-
-  autosaveAddId$ = createEffect(() => {
-    return this._actions$.pipe(
-      ofType(MrxAutoSaveActionsEnum.AutosaveAddId),
-      map(() => {
-        clearTimeout(this._timer)
-        clearTimeout(this._timer2)
-      })
-    );
-  }, { dispatch: false });
-
-  autosaveSuccess$ = createEffect(() => {
-    return this._actions$.pipe(
+  autosaveSuccess$ = createEffect(
+    () => this._actions$.pipe(
       ofType(MrxAutoSaveActionsEnum.AutosaveSuccess),
-      map(() => {
-        this._store.dispatch(saved());
-        clearTimeout(this._timer)
-        clearTimeout(this._timer2)
+      switchMap(() => timer(1500)
+        .pipe(
+          map(() => {
+            return autosaveStop()
+          })
+        )
+      ))
+  );
 
-        this._timer = setTimeout(() => {
-          this._store.dispatch(stop());
-        }, 1500);
-      })
-    );
-  }, { dispatch: false });
+  autosaveSuccessFor$ = createEffect(
+    () => this._actions$.pipe(
+      ofType(MrxAutoSaveActionsEnum.AutosaveSuccessFor),
+      mergeMap((action: SaveStoreModel) => timer(1500)
+        .pipe(
+          map(() => autosaveStopFor({ id: action.id, groupId: action.groupId }))
+        )
+      ))
+  );
 
-  autosaveError$ = createEffect(() => {
-    return this._actions$.pipe(
+  autosaveError$ = createEffect(
+    () => this._actions$.pipe(
       ofType(MrxAutoSaveActionsEnum.AutosaveError),
-      map(() => {
-        this._store.dispatch(error());
+      switchMap(() => timer(1500)
+        .pipe(
+          map(() => autosaveStop())
+        )
+      )
+    )
+  );
 
-        clearTimeout(this._timer)
-        clearTimeout(this._timer2)
-
-        this._timer2 = setTimeout(() => {
-          this._store.dispatch(stop());
-        }, 1500);
-      })
-    );
-  }, { dispatch: false });
+  autosaveErrorFor$ = createEffect(
+    () => this._actions$.pipe(
+      ofType(MrxAutoSaveActionsEnum.AutosaveErrorFor),
+      mergeMap((action: SaveStoreModel) => timer(1500)
+        .pipe(
+          map(() => autosaveStopFor({ id: action.id, groupId: action.groupId }))
+        )
+      ))
+  );
 }
