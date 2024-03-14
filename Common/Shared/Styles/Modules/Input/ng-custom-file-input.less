@@ -1,60 +1,64 @@
 .ng-form-file-input {
-    .ng-custom-file-input {
-        .ngx-file-drop__drop-zone {
-            background: #fff;
-            border: 1.5px dashed var(--Stroke);
-            border-radius: 4px !important;
-        }
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-        &-content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 10px;
-            justify-content: center;
-            color: var(--Secondary);
-            cursor: pointer;
-        }
-
-        &_progress {
-            position: relative;
-            width: 100px;
-            height: 4px;
-            background: var(--Stroke);
-            border-radius: 4px;
-
-            span {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 100%;
-                background: var(--Main2);
-                border-radius: 4px;
-            }
-        }
-
-        &-btn-stop {
-            z-index: 1;
-            border: none;
-            padding: 0;
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        &-error {
-            display: flex;
-            align-items: center;
-            color: var(--Red);
-
-            svg {
-                margin-right: 8px;
-            }
-        }
+  .ng-custom-file-input {
+    .ngx-file-drop__drop-zone {
+      background: #fff;
+      border: 1.5px dashed var(--Stroke);
+      border-radius: 4px !important;
     }
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      justify-content: center;
+      color: var(--Secondary);
+      cursor: pointer;
+    }
+
+    &_progress {
+      position: relative;
+      width: 100px;
+      height: 4px;
+      background: var(--Stroke);
+      border-radius: 4px;
+
+      span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--Main2);
+        border-radius: 4px;
+      }
+    }
+
+    &-btn-stop {
+      z-index: 1;
+      border: none;
+      padding: 0;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    &-error {
+      display: flex;
+      align-items: center;
+      color: var(--Red);
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
 }
