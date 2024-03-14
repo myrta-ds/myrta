@@ -62,8 +62,7 @@
               "./Common/Shared/Styles/Modules/Input/CustomNg-Select.less",
 
               "./Common/Shared/Styles/Modules/Input/CustomFileInput.less",
-              "./Common/Shared/Styles/Modules/Input/NewCustomFileInput.less",
-              "./Common/Shared/Styles/Modules/Input/ng-custom-file-input.less"
+              "./Common/Shared/Styles/Modules/Input/NewCustomFileInput.less"
             ],
             "scripts": []
           },
