@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InputFileModel } from 'myrta-ui';
 
 @Component({
   selector: 'mrx-input-file-view',
@@ -12,4 +13,7 @@ export class InputFileViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  update(event: InputFileModel[]) {
+    console.log(event);
+  }
 }

@@ -59,7 +59,8 @@ export class InputDatepickerComponent implements ControlValueAccessor, OnChanges
   @Input() public customClasses = '';
   @Input() public dateLabel = '';
   @Input() public timeLabel = '';
-  @Input() public datePlaceholder = 'дд.мм.гггг';
+  @Input() public datePlaceholder = 'дд.мм.гггг'; // deprecated
+  @Input() public placeholder = 'дд.мм.гггг';
   @Input() public disabled = false;
   @Input() public readonly = false;
   @Input() public required = false;

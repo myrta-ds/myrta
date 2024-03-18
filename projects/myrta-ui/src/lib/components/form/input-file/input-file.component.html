@@ -36,7 +36,7 @@
       <ng-container *ngTemplateOutlet="fileListTemplate"></ng-container>
       <ng-container *ngTemplateOutlet="innerTemplate; context:{}"></ng-container>
     </ng-container>
-
+    {{ files | json }}
     <ngx-file-drop
       *ngIf="canAdd"
       [className]="'ng-custom-file-input'"

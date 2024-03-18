@@ -88,6 +88,7 @@ export class InputFileComponent {
   }
 
   @Output() public filesChanged: EventEmitter<InputFileModel[]> = new EventEmitter();
+  @Output() public checkDroppedFile: EventEmitter<InputFileModel> = new EventEmitter();
 
   constructor(private fileUploadService: FileUploadService) {
   }
@@ -283,6 +284,7 @@ export class InputFileComponent {
     } else {
       data.uploading = false;
       data.uuid = data.tempUuid || '';
+
       if (this.files.every(s => !s.uploading)) {
         this.filesChanged.emit(this.files);
       }
@@ -290,6 +292,8 @@ export class InputFileComponent {
   }
 
   private checkForUpload(data: InputFileModel): boolean {
+    this.checkDroppedFile.emit(data)
+
     if (!this.canAdd) {
       data.error = this.messageTooManyFiles;
       data.uploading = false;
@@ -298,16 +302,19 @@ export class InputFileComponent {
     }
 
     this.files.push(data);
+
     if (data.file && data.file.size > this.maxSize) {
       data.error = this.messageFileTooBig;
       data.uploading = false;
       return false;
     }
+
     if (data.file && data.file.size == 0) {
       data.error = this.messageEmptyFile;
       data.uploading = false;
       return false;
     }
+
     if (this.allowedExtensions.length > 0 && !this.allowedExtensions.some(
       s => data.file && data.file.name.toLowerCase().endsWith(s.toLowerCase()))) {
 
@@ -315,6 +322,7 @@ export class InputFileComponent {
       data.uploading = false;
       return false;
     }
+
     return true;
   }
 }

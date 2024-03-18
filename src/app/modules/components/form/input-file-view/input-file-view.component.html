@@ -2,7 +2,13 @@
   <div class="row mb-3">
     <div class="col">
       <mrx-label>asdasdasd asdasdasd</mrx-label>
-      <mrx-input-file [autoUpload]="false" [maxFiles]="4" [allowedExtensions]="['png']"></mrx-input-file>
+      <mrx-input-file
+        [showInputWithError]="false"
+        [autoUpload]="false"
+        [maxFiles]="2"
+        [allowedExtensions]="['png']"
+        (filesChanged)="update($event)"
+      ></mrx-input-file>
     </div>
   </div>
 </mrx-content-wrapper>
