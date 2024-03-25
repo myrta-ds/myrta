@@ -1,14 +1,13 @@
-<div class="mrx-paginator" [class]="getClasses" *ngIf="total">
+<div class="mrx-paginator" [class]="getClasses" *ngIf="isEmptyPaginator || total">
   <ul class="mrx-paginator__list">
     <li
       class="mrx-paginator__previous"
       [class.disabled]="currentPage <= 1"
       (click)="currentPage > 1 && onChangeCurrentPage(currentPage - 1)">
-      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.5 5.00195L7.5 10.002L12.5 15.002" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
+      <div class="mrx-icon icon-chevron-left icon-font-24"></div>
     </li>
+    
+    <li *ngIf="getViewItems.length === 0" class="mrx-paginator__item">0</li>
 
     <li class="mrx-paginator__item" *ngIf="currentPage > 3 && getItems > 5" (click)="onChangeCurrentPage(1)">1</li>
     <li class="mrx-paginator__item dots" *ngIf="currentPage > 3 && getItems > 5">...</li>
@@ -30,10 +29,7 @@
       class="mrx-paginator__next"
       [class.disabled]="currentPage >= getItems"
       (click)="currentPage < getItems && onChangeCurrentPage(currentPage + 1)">
-      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.5 15.002L12.5 10.002L7.5 5.00195" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
+      <div class="mrx-icon icon-chevron-right icon-font-24"></div>
     </li>
   </ul>
 
@@ -50,6 +46,10 @@
   </ng-template>
 
   <ng-container *ngTemplateOutlet="select"></ng-container>
+
+  <div *ngIf="isPaginatorText" class="mrx-paginator__text">
+    Отображены {{paginatorText}} {{getFirstNumberCurrentPage}} - {{getLastNumberCurrentPage}} из {{total}}
+  </div>
 </div>
 
 

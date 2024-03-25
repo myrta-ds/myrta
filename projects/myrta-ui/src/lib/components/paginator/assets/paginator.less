@@ -1,4 +1,4 @@
-.mrx-paginator.mrx-paginator {
+.mrx-paginator {
   display: flex;
   align-items: center;
   list-style: none;
@@ -11,6 +11,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    gap: var(--spacing-1);
 
     li {
       display: flex;
@@ -21,10 +22,10 @@
   }
 
   .mrx-paginator__item {
-    padding-left: 2px;
-    padding-right: 2px;
-    min-width: 24px;
-    height: 24px;
+    padding-left: var(--spacing-3);
+    padding-right: var(--spacing-3);
+    min-width: 32px;
+    min-height: 32px;
     border-radius: 4px;
     font-weight: 400;
     font-size: 16px;
@@ -32,7 +33,7 @@
     transition: .2s;
 
     &.active {
-      background-color: var(--Main2);
+      background-color: var(--brand-bg-primary-default);
       color: white;
     }
 
@@ -41,34 +42,25 @@
     }
 
     &:not(.dots, .active):hover {
-      background-color: var(--Bg2);
+      background-color: var(--brand-bg-tertiary-hover);
     }
   }
 
   .mrx-paginator__previous, .mrx-paginator__next {
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
 
     &.disabled {
-      svg {
-        path {
-          stroke: var(--Secondary);
-        }
-      }
-    }
-
-    svg {
-      path {
-        stroke: var(--Main2);
+      .mrx-icon {
+        color: var(--neutral-icon-disabled);
       }
     }
   }
 
-  &__previous {
-    margin-right: 10px;
-  }
-
-  &__next {
-    margin-left: 10px;
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--neutral-text-primary);
+    margin-left: var(--spacing-4);
   }
 }

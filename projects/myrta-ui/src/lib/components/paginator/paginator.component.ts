@@ -20,6 +20,10 @@ export class PaginatorComponent {
   @Input() total = 0;
   @Input() customClasses = '';
 
+  @Input() isEmptyPaginator: boolean = false;
+  @Input() isPaginatorText: boolean = false;
+  @Input() paginatorText: string = 'записи';
+
   @Input('position')
   public set setPosition(value: PaginatorPosition | undefined) {
     this.position = value || 'centered';
@@ -80,6 +84,27 @@ export class PaginatorComponent {
           item.index === this.currentPage;
       }
     });
+  }
+
+  public get getFirstNumberCurrentPage(): number {
+    if(this.total === 0) {
+      return 0;
+    }
+    if(this.total < this.pageSize * this.currentPage - this.pageSize + 1) {
+      return 1;
+    }
+
+    return (this.pageSize * this.currentPage - this.pageSize) + 1;
+  }
+
+  public get getLastNumberCurrentPage(): number {
+    if(this.total === 0) {
+      return 0;
+    }
+    if(this.total < this.pageSize * this.currentPage) {
+      return this.total;
+    }
+    return this.pageSize * this.currentPage;
   }
 
   public onChangeCurrentPage(value: number): void {
