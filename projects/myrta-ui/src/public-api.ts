@@ -131,6 +131,10 @@ export * from './lib/components/form/input-datepicker/input-datepicker.module';
 export * from './lib/components/form/input-datepicker/input-datepicker.component';
 export * from './lib/components/form/input-datepicker/input-datepicker.enum';
 
+export * from './lib/components/form/input-date-time/input-date-time.module';
+export * from './lib/components/form/input-date-time/input-date-time.component';
+export * from './lib/components/form/input-date-time/enum/timezone';
+
 export * from './lib/components/form/input-timepicker/input-timepicker.module';
 export * from './lib/components/form/input-timepicker/input-timepicker.component';
 
