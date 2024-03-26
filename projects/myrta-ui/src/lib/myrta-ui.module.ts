@@ -45,6 +45,7 @@ import { InputFileImageModule } from './components/form/input-file-image/input-f
 import { InputOptModule } from './components/form/input-opt/input-opt.module';
 import { InputPasswordModule } from './components/form/input-password/input-password.module';
 import { InputDatepickerModule } from './components/form/input-datepicker/input-datepicker.module';
+import { InputDateTimeModule } from "./components/form/input-date-time/input-date-time.module";
 import { InputTimepickerModule } from './components/form/input-timepicker/input-timepicker.module';
 
 import { ContentWrapperModule } from './components/wrappers/content-wrapper/content-wrapper.module';
@@ -104,6 +105,7 @@ const MODULES = [
   InputPhoneModule,
   InputSearchModule,
   InputDatepickerModule,
+  InputDateTimeModule,
   InputTimepickerModule,
   InputSelectModule,
   InputFileModule,
@@ -131,7 +133,8 @@ const MODULES = [
 ]
 
 @NgModule({
-  imports: [ ...MODULES ],
-  exports: [ ...MODULES ]
+  imports: [...MODULES],
+  exports: [...MODULES]
 })
-export class MyrtaUiModule { }
+export class MyrtaUiModule {
+}
