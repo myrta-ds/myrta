@@ -5,9 +5,27 @@
       <mrx-input-opt
         [ngModel]="value"
         [config]="otpConfig"
+        [size]="'responsive'"
         [invalid]="true"
         [invalidMessage]="'Что то пошло не так'"
         [checkInvalid]="true"
+        [customClasses]="'justify-content-center'"
+        (change)="otpChange($event)"
+        (fillChange)="fill($event)"
+      ></mrx-input-opt>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default</mrx-label>
+      <mrx-input-opt
+        [ngModel]="value"
+        [config]="otpConfig"
+        [size]="'medium'"
+        [invalid]="true"
+        [invalidMessage]="'Что то пошло не так'"
+        [checkInvalid]="false"
         (change)="otpChange($event)"
         (fillChange)="fill($event)"
       ></mrx-input-opt>

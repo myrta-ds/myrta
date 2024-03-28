@@ -1,0 +1,23 @@
+.mrx-input-otp-container {
+  .mrx-input-otp-box {
+    &.mrx-input-error {
+      .mrx-input-otp {
+        border-color: var(--system-bg-controls-negative-default);
+      }
+    }
+
+    &.mrx-input-checked-error {
+      .mrx-input-otp {
+        border-color: var(--system-bg-controls-negative-default);
+        background-color: var(--system-bg-negative-secondary);
+      }
+    }
+
+    &.mrx-input-checked-success {
+      .mrx-input-otp {
+        background-color: var(--system-bg-positive-secondary);
+        border-color: var(--system-bg-controls-positive-default);
+      }
+    }
+  }
+}

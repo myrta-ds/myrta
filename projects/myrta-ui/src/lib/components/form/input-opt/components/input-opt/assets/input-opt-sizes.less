@@ -1,0 +1,73 @@
+.mrx-input-otp-container {
+  &.mrx-input-opt-lg {
+    gap: 12px;
+
+    .mrx-input-otp {
+      width: var(--sizing-12);
+      height: var(--sizing-12);
+      border-radius: var(--border-radius-1);
+      border: 1px solid var(--neutral-bg-stroke-default, #DAD5CE);
+      font-family: var(--headlines-lvl-3-font-family);
+      font-weight: var(--headlines-lvl-3-font-weight);
+      line-height: var(--headlines-lvl-3-line-height);
+      font-size: var(--headlines-lvl-3-font-size);
+    }
+  }
+
+  &.mrx-input-opt-md {
+    gap: 10px;
+
+    .mrx-input-otp {
+      width: var(--sizing-10);
+      height: var(--sizing-10);
+      border-radius: var(--border-radius-1);
+      border: 1px solid var(--neutral-bg-stroke-default, #DAD5CE);
+      font-family: var(--headlines-lvl-4-font-family);
+      font-weight: var(--headlines-lvl-4-font-weight);
+      line-height: var(--headlines-lvl-4-line-height);
+      font-size: var(--headlines-lvl-4-font-size);
+    }
+  }
+
+  &.mrx-input-opt-responsive {
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .mrx-input-otp {
+      width: var(--sizing-12);
+      height: var(--sizing-12);
+      border-radius: var(--border-radius-1);
+      border: 1px solid var(--neutral-bg-stroke-default, #DAD5CE);
+      font-family: var(--headlines-lvl-3-font-family);
+      font-weight: var(--headlines-lvl-3-font-weight);
+      line-height: var(--headlines-lvl-3-line-height);
+      font-size: var(--headlines-lvl-3-font-size);
+    }
+
+    @media (max-width: 576px) {
+      gap: 10px;
+
+      .mrx-input-otp {
+        width: var(--sizing-10);
+        height: var(--sizing-10);
+        font-family: var(--headlines-lvl-4-font-family);
+        font-weight: var(--headlines-lvl-4-font-weight);
+        line-height: var(--headlines-lvl-4-line-height);
+        font-size: var(--headlines-lvl-4-font-size);
+      }
+    }
+
+    @media (max-width: 370px) {
+      gap: 8px;
+
+      .mrx-input-otp {
+        width: var(--sizing-8);
+        height: var(--sizing-8);
+        font-family: var(--headlines-lvl-5-font-family);
+        font-weight: var(--headlines-lvl-5-font-weight);
+        line-height: var(--headlines-lvl-5-line-height);
+        font-size: var(--headlines-lvl-5-font-size);
+      }
+    }
+  }
+}

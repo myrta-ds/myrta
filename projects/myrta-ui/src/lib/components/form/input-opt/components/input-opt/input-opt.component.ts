@@ -13,6 +13,7 @@ import { AbstractControl, FormArray, FormControl, Validators } from '@angular/fo
 import { NgxOtpBehavior, NgxOtpInputConfig, NgxOtpStatus } from '../../models/input-opt.model';
 import { Subscription } from 'rxjs';
 import { InputOptService } from '../../services/input-opt.service';
+import { InputOptSizesEnum, InputOptSizesTypes } from "./input-opt.enum";
 
 @Component({
   selector: 'mrx-input-opt',
@@ -52,17 +53,8 @@ export class InputOptComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   };
 
-  @ViewChildren('otpInputElement') otpInputElements!: QueryList<ElementRef>;
-
-  @Output() change: EventEmitter<string[]> = new EventEmitter<string[]>();
-  @Output() fillChange: EventEmitter<string> = new EventEmitter<string>();
-
-  @HostListener('paste', ['$event']) onPaste(event: ClipboardEvent): void {
-    event.preventDefault();
-    // @ts-ignore
-    this.handlePaste(event.clipboardData.getData('text'));
-  }
-
+  @Input() public size: InputOptSizesTypes = 'large'
+  @Input() public customClasses = '';
   @Input() public invalid = false;
   @Input() public invalidMessage: string | string[] = '';
   @Input() public checkInvalid: true | false | null = null;
@@ -85,6 +77,11 @@ export class InputOptComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() set status(status: NgxOtpStatus) {
     this.handleStatusChange(status);
   }
+
+  @ViewChildren('otpInputElement') otpInputElements!: QueryList<ElementRef>;
+
+  @Output() change: EventEmitter<string[]> = new EventEmitter<string[]>();
+  @Output() fillChange: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(
     private readonly otpService: InputOptService,
@@ -120,8 +117,8 @@ export class InputOptComponent implements OnInit, AfterViewInit, OnDestroy {
       this.checkInvalid === true ? 'mrx-input-checked-error' : ''
   }
 
-  getClasses(container: string | string[]) {
-    return Array.isArray(container) ? container.join(' ') : container;
+  get getClasses(): string {
+    return `${InputOptSizesEnum[this.size]} ${this.customClasses}`
   }
 
   convertToFormControl(absCtrl: AbstractControl | null): FormControl {
@@ -330,5 +327,11 @@ export class InputOptComponent implements OnInit, AfterViewInit, OnDestroy {
       this.styles,
       this.otpService.toArray(styles)
     );
+  }
+
+  @HostListener('paste', ['$event']) onPaste(event: ClipboardEvent): void {
+    event.preventDefault();
+    // @ts-ignore
+    this.handlePaste(event.clipboardData.getData('text'));
   }
 }

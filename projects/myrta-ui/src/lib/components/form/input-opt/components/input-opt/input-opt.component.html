@@ -1,6 +1,7 @@
 <form
   [ngClass]="otpConfig.classList.container"
   class="mrx-input-otp-container"
+  [class]="getClasses"
 >
   <div
     *ngFor="let control of ngxOtpArray.controls; let i = index"
@@ -33,5 +34,6 @@
 
 <mrx-error-message
   *ngIf="invalid && isInvalidMessage"
+  customClasses="text-left"
   [invalidMessage]="invalidMessage"
 ></mrx-error-message>
