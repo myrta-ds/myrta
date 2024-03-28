@@ -349,7 +349,10 @@
     align-items: center;
     font-size: 11px;
     height: 17px;
-    background: linear-gradient(to right, var(--adp-time-track-color), var(--adp-time-track-color)) left 50%/100% var(--adp-time-track-height) no-repeat
+    background-image: linear-gradient(to right, var(--adp-time-track-color), var(--adp-time-track-color));
+    background-position: left 50%;
+    background-size: 100% var(--adp-time-track-height);
+    background-repeat: no-repeat;
   }
 
   .air-datepicker-time--row:first-child {
